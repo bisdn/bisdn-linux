@@ -6,11 +6,12 @@
   <remote name="oe" fetch="git://git.openembedded.org/" />
 
   <!-- yocto layer -->
-  <project path="poky" name="poky" remote="yocto" revision="warrior"/>
-  <project path="poky/meta-cloud-services" name="meta-cloud-services" remote="yocto"  revision="warrior"/>
-  <project path="poky/meta-virtualization" name="meta-virtualization" remote="yocto" revision="warrior"/>
+  <project path="poky" name="poky" remote="yocto" revision="dunfell"/>
+  <project path="poky/meta-cloud-services" name="meta-cloud-services" remote="yocto"  revision="dunfell"/>
+  <project path="poky/meta-virtualization" name="meta-virtualization" remote="yocto" revision="dunfell"/>
   <!-- open embedded layer -->
-  <project path="poky/meta-openembedded" name="meta-openembedded" remote="oe" revision="warrior"/>
+  <project path="poky/meta-openembedded" name="meta-openembedded" remote="oe" revision="dunfell"/>
+  <project path="poky/meta-python2" name="meta-python2" remote="oe" revision="dunfell"/>
   <!-- open source bisdn layers -->
   <project path="poky/bisdn-onie-additions" name="bisdn/bisdn-onie-additions.git" remote="github" revision="master" sync-s="true"/>
   <!-- closed source bisdn layers -->
