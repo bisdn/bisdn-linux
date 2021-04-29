@@ -1,6 +1,9 @@
 boostrap BISDN Linux build system
 =========================================
 
+This repository holds the main repo manifest for setting up the build system
+for BISDN Linux, based on Yocto.
+
 Prerequisites
 -------------
 
