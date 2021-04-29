@@ -9,6 +9,16 @@ Prerequisites
 
 * repo tool
 
+Many distros include repo, so you might be able to install from there.
+
+  # Debian/Ubuntu.
+  sudo apt-get install repo
+
+  # Gentoo.
+  sudo emerge dev-vcs/repo
+
+You can install it manually as well as it's a single script.
+
   # install
   mkdir ~/bin
   PATH=~/bin:$PATH
