@@ -28,7 +28,9 @@ You can install it manually as well as it's a single script.
 
 see [1] for further details.
 
-* install your OS specific build essential [2]
+* install your OS specific build essentials for Yocto [2]
+
+Some packages may require additional packages to be present on the host.
 
 Bootsrap build system
 ---------------------
@@ -60,5 +62,5 @@ Build image
 
 
 [1] https://source.android.com/source/using-repo.html
-[2] http://www.yoctoproject.org/docs/current/yocto-project-qs/yocto-project-qs.html#packages
+[2] https://docs.yoctoproject.org/3.1.7/ref-manual/ref-system-requirements.html
 
