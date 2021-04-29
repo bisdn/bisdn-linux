@@ -67,7 +67,13 @@ Chose one the desired image types to build
   # assemble the final image
   IMAGETYPE="<minimal|full>" ../bisdn-onie-additions/mk_onie2
 
+Install Image
+-------------
+
+See [3] on how to install the resulting image.
+
 
 [1] https://source.android.com/source/using-repo.html
 [2] https://docs.yoctoproject.org/3.1.7/ref-manual/ref-system-requirements.html
+[3] https://docs.bisdn.de/getting_started/install_bisdn_linux.html 
 
