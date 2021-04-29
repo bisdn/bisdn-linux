@@ -17,10 +17,6 @@ see [1] for further details.
 
 * install your OS specific build essential [2]
 
-* mk_onie2 script
-
-  TODO add source
-
 Bootsrap build system
 ---------------------
 
@@ -47,7 +43,7 @@ Build image
   bitbake <minimal|full>
 
   # assemble the final image
-  IMAGETYPE="<minimal|full>" mk_onie2
+  IMAGETYPE="<minimal|full>" ../bisdn-onie-additions/mk_onie2
 
 
 [1] https://source.android.com/source/using-repo.html
