@@ -54,6 +54,13 @@ Edit conf/local.conf and set `MACHINE` to your desired target.
 Build image
 -----------
 
+Chose one the desired image types to build
+
+* `minimal`: bare minimum of packages for booting the system. Does not include any
+  closed source packages outside of required firmware files.
+
+* `full`: include the full BISDN Linux system, including baseboxd and OF-DPA.
+
   # build the yocto artifacts
   bitbake <minimal|full>
 
