@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+  <remote name="github" fetch="git://github.com/" />
   <remote name="gitlab" fetch="ssh://git@gitlab.bisdn.de/" />
   <remote name="yocto" fetch="git://git.yoctoproject.org/" />
   <remote name="oe" fetch="git://git.openembedded.org/" />
@@ -10,12 +11,13 @@
   <project path="poky/meta-virtualization" name="meta-virtualization" remote="yocto" revision="warrior"/>
   <!-- open embedded layer -->
   <project path="poky/meta-openembedded" name="meta-openembedded" remote="oe" revision="warrior"/>
-  <!-- bisdn layers -->
+  <!-- open source bisdn layers -->
+  <project path="poky/bisdn-onie-additions" name="bisdn/bisdn-onie-additions.git" remote="github" revision="master" sync-s="true"/>
+  <!-- closed source bisdn layers -->
   <project path="poky/build-bisdn-linux" name="yocto-projects/bisdn-linux.git" remote="gitlab" revision="master"/>
   <project path="poky/meta-ofdpa" name="yocto-meta-layers/meta-ofdpa.git" remote="gitlab" revision="master"/>
   <project path="poky/meta-open-network-linux" name="yocto-meta-layers/meta-open-network-linux.git" remote="gitlab" revision="master"/>
   <project path="poky/meta-switch" name="yocto-meta-layers/meta-switch.git" remote="gitlab" revision="master"/>
-  <project path="poky/bisdn-onie-additions" name="yocto-projects/bisdn-onie-additions.git" remote="gitlab" revision="master" sync-s="true"/>
   <project path="poky/meta-tibit" name="yocto-meta-layers/meta-tibit.git" remote="gitlab" revision="master"/>
 </manifest>
 
