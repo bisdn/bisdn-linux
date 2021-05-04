@@ -30,7 +30,8 @@ see [1] for further details.
 
 * install your OS specific build essentials for Yocto [2]
 
-Some packages may require additional packages to be present on the host.
+Some Yocto packages may require additional utilities to be present on the
+build host.
 
 Bootsrap build system
 ---------------------
@@ -54,7 +55,7 @@ Edit conf/local.conf and set `MACHINE` to your desired target.
 Build image
 -----------
 
-Chose one the desired image types to build
+Chose one of the available image types to build
 
 * `minimal`: bare minimum of packages for booting the system. Does not include any
   closed source packages outside of required firmware files.
