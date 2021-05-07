@@ -1,0 +1,11 @@
+BISDN Linux is based on Yocto. Yocto is comprised of multiple components,
+of which most are licensed under GPLv2 or MIT.
+
+In addition it imports several components from OpenNetworkLinux, which
+itself is licensed under GPLv2.
+
+BISDN Linux' own additions are licensed under MPLv2 or GPLv2, unless
+stated otherwise.
+
+Please see the individual subprojects' license information for additional
+details.
