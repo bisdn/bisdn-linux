@@ -31,7 +31,7 @@ chmod a+x ~/bin/repo
 
 See [the official documentation](https://source.android.com/source/using-repo.html) for further details.
 
-* install your OS specific build essentials for Yocto ([system-requirements](https://docs.yoctoproject.org/3.1.7/ref-manual/ref-system-requirements.html))
+* install your OS specific [build essentials for Yocto](https://docs.yoctoproject.org/3.1.7/ref-manual/ref-system-requirements.html)
 
 Some Yocto packages may require additional utilities to be present on the
 build host.
