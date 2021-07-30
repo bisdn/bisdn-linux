@@ -1,0 +1,236 @@
+BISDN Linux
+v4.0.0 Release Notes
+Date: 2020-08-03
+
+! New in this release
+- New platform Celestica Questone 2A now supported.
+- baseboxd: 
+  - updated version to 1.9.10. This new version now supports VxLAN, except for platform Accton AS4610.
+  - The MAC addresses on the BISDN Linux ports can now be changed. 
+  - Added a flag to control multicast state optional on runtime.
+- BISDN Linux now supports running containers with docker-ce. The docker service is disabled by default.
+- OF-DPA: Updated Broadcom Core Switch SDK to 6.5.22 for improved platform and feature support.
+- yocto: moved from Yocto warrior (2.7) to Yocto dunfell (3.1 LTS).
+- Agema AG5648 now supports autonegotiation on the 25G ports.
+
+! Changed behaviour
+- python2 has been removed.
+- portX interfaces will now have persistent MAC addresses across reboots.
+- basebox-support updated and renamed to bundle-debug-info.
+
+Changes between v3.7.3 and v4.0.0:
+
+For changes due to upgrading Yocto from warrior to dunfell, please check to https://www.yoctoproject.org/software-overview/downloads/ which has release information for all Yocto releases.
+
+meta-ofdpa:
+ofdpa: fix updating l3 unicast group mac addresses on Helix 4
+ofdpa: have ofagent allow VLAN Flow Table entries without a VID match
+ofda: add missing mplsEtherType
+ofdpa: update to SDK 6.5.22
+ofdpa: add compatibility for SDK 6.5.22
+ofdpa: drop bogus feature check SDK change
+ofdpa: drop redundant multicast SDK change
+ofdpa: set *_TERMINATION allowed on the right object for Trident 3
+ofdpa: drop duplicated vxlan modifications breaking Trident 3
+ofdpa: update SRCREV after dropping the sdk in favor of upstream one
+ofdpa: checkout SDK from github
+openbcm-gpl-modules: build modules in separate directory
+ofdpa: update python bindings and scripts to python3
+ofdpa: fix Python include path for python3
+ofdpa: explicitly link against libonlp-platform
+cel-questone-2a: hide the internal 10G port
+ofdpa: add initial Celestica Questone 2A support
+ofdpa: add trident3 firmware as dependency when needed
+ofdpa: package trident 3 cancun firmware files
+ofdpa: add initial trident3 support
+conf: recipes work fine in dunfell
+agema-ag7648: properly setup dport mapping
+openbcm-gpl-modules: add agema ag7648 default parameters
+ofdpa: add agema ag7648 platform code and patches
+ofdpa: add agema ag5648 platform code and patches
+ofdpa: add as4610 platform code and patches
+ofdpa: provide directories for collecting our platform code
+ofdpa: provide ofagent default strings
+ofdpa: export GCC version during build
+ofdpa: ensure INSTALL file is present in outpath
+ofdpa: remove unused files from recipe
+ofdpa: switch to external kernel modules
+openbcm-gpl-modules: move XGS iProc compatibility code here
+openbcm-gpl-modules: package kernel modules as separate package
+ofdpa: update SDK to 6.5.21
+
+meta-open-network-linux:
+linux: fix race when setting addr_gen_mode through netlink
+linux-yocto-onl/5.10: update to 5.10.53
+remove kernel config options in static conf now set automatically
+add additional kernel config options in snippet needed for docker
+enable IP_VS in as kernel config by including snippet
+add kernel config snippet for net/bridge
+enable cgoups kernel config snippet from yocto
+linux-yocto-onl/armel-iproc: select LIBCRC32C
+linux-yocto-onl: slightly clean up CRYPTO config
+linux-yocto-onl: drop GCC_PLUGINS symbols
+linux-yocto-onl/x86_64: drop CRYPTO_ENGINE from config
+linux-yocto-onl: drop PROC_CHILDREN from config
+linux-yocto-onl/x86_64: drop NET_DEVLINK from config
+linux-yocto-onl/x86_64: drop CGROUP_NET_CLASSID config
+linux-yocto-onl: drop NET_NSH from config
+linux-yocto-onl: drop MPLS from config
+linux-yocto-onl/x86_64: drop UBSAN_ALIGNMENT from config
+linux-yocto-onl/x86_64-intel: drop KASAN_STACK from config
+linux-yocto-onl/x86_64-intel: drop LIBCRC32C from config
+linux-yocto-onl/x86_64-intel: drop CRYPTO_ARC4 from config
+linux-yocto-onl/x86_64-intel: drop ARM_GIC_MAX_NR from config
+linux-yocto-onl/x86_64-intel: disable Mellanox drivers
+linux-yocto-onl/x86_64-intel: drop HAVE_IRQ_EXIT_ON_IRQ_STACK from config
+linux-yocto-onl/x86_64-intel: update CPU_FREQ_GOV_SCHEDUTIL in config
+linux-yocto-onl/x86_64-intel: drop ARCH_DEFCONFIG from config
+linux-yocto-onl/x86_64-intel: drop GCC related symbols from config
+linux-yocto-onl: drop REGMAP* from config
+linux-yocto-onl: drop IOMMU_HELPER from config
+linux-yocto-onl/armel-iproc: drop SWIOTLB from config
+linux-yocto-onl/armel-iproc: drop ARCH_SELECT_MEMORY_MODEL from config
+linux-yocto-onl/armel-iproc: drop BUILD_BIN2C from config
+linux-yocto-onl: drop ARCH_CLOCKSOURCE_DATA from config
+linux-yocto-onl: drop LOCALVERSION from config
+linux-yocto-onl/armel-iproc: drop DEFCONFIG_LIST from config
+onl: properly fix build for as4610
+conf: layer is now compatible with dunfell
+accton-as4610: set hash alg to sha1 as its U-Boot does not support sha256
+strace: add version 5.8 to fix kernel 5.10 compatibility
+make-mod-scripts: add missing dependency and c++ flags for dunfell
+linux-yocto-onl: set C++ make flags correctly for dunfell
+accton-as4610: use platform-as4610 as provider for u-boot-default-env
+accton-as4610: move fw_env.config into platform-as4610
+onl: silence false positive in gcc 8 fortify
+add Celestica Questone 2A machine defintion
+add Celestica Questone 2A platform init script
+add Celestica Questone 2A kernel modules
+onl: add Celestica Questone-2a support
+onl: fix build with GCC 9
+onl: update to latest master
+as4610: split platform subdir out of ONL_ARCH
+onl: add support for specifying a platform subdir
+add MPLv2 license file and checksum to recipes
+change licenses for platform specific code from CLOSED to MPL-2.0
+linux-yocto-onl/5.10: enable virtualization options if requested
+linux-yocto-onl/5.10: x86_64-intel: update config to allow virtualitation
+linux-yocto-onl/5.10: armel-iproc: update config to allow virtualitation
+kernel: disable deprecated legacy EEPROM driver
+conf: add agema ag7648 machine definition
+formactor: add agema ag7648 definition
+recipes-core: add agema ag7648 platform init code
+recipes-kernel: add and rename agema ag7648 kernel modules
+conf: add agema ag5648 machine definition
+formfactor: add agema ag5648 definition
+recipes-core: add agema ag5648 platform init code
+recipes-kernel: add and rename agema-ag5648 kernel modules
+conf: add accton-as4610 machine definition
+linux-yocto-onl/5.10: add accton as4610 dts files
+recipes-bsp: add as4610 formactor
+recipes-bsp: add as4610 u-boot config
+platform-as4610: merge the enp rename fix into here
+recipes-core: add as4610 platform init code
+onl: add as4610 build fixes patch
+recipes-kernel: add accton kernel modules
+ym2651y-mod: update to version from meta-accton-as4610
+
+meta-switch:
+distro: Update distro name for version 4.0
+baseboxd: Bump version to 1.9.10
+baseboxd: bump version to 1.9.9
+baseboxd-tools: approximate old output format for bundle-debug-info
+bisdn-linux: bump version to 4.0.0
+baseboxd-tools: add a symlink from basebox-support and warn about it
+baseboxd: bump version to 1.9.8
+rofl-ofdpa: Bump version to 2.0.1
+full.bb: added run-preinsts recipe to full image
+run-preinsts: bitbake recipe rewritten for our case
+run-preinsts: systemd service file updated
+run-preinsts: updated initial shell script to runn preinst
+run-preinsts: added initial preinsts files
+disable docker service by default
+add docker-ce as included package to full image recipe
+remove unneeded -SWITCH from bundle-debug-info output file name
+basebox-tools: fix support tool name
+bundle-debug-info: check for bridge kernel module
+bundle-debug-info: write tarball to /tmp
+bundle-debug-info: copy /usr/lib/os-release
+bundle-debug-info: rename copy_dir -> copy_path
+bundle-debug-info: ignore ofdpa errors
+bundle-debug-info: detect support for bridge vlan database
+bundle-debug-info: update comment
+bundle-debug-info: tweak usage message
+Rename basebox-support -> bundle-debug-info
+basebox-support: update support email address
+basebox-support: add comments for helper functions
+basebox-support: make log functions optional
+basebox-support: add get_port_list()
+basebox-support: add get_frr_support_bundle()
+basebox-support: move techsupport call into get_client_tools_info
+basebox-support: update print_help()
+basebox-support: add section headers in source code
+basebox-support: collect function calls in one place
+basebox-support: unset allexport
+basebox-support: use report_result in log_cmd_output
+basebox-support: update tarball creation
+basebox-support: update onlpdump
+basebox-support: update generate_support_bundle.py
+basebox-support: update "client_drivshell techsupport basic"
+basebox-support: skip commands that are not installed
+basebox-support: add get_client_tools_info()
+basebox-support: support log section titles
+basebox-support: add get_network_state()
+basebox-support: use log_cmd_output in get_package_data
+basebox-support: add get_logs()
+basebox-support: handle dpkg, too, in get_package_data()
+basebox-support: add get_package_data()
+basebox-support: use copy_dir for config files
+basebox-support: add copy_dir()
+basebox-support: add log_cmd_output()
+basebox-support: add more helper functions
+basebox-support: add title() function
+basebox-support: drop errexit
+basebox-support: shebang with /usr/bin/env
+basebox-support: shellcheck fixes
+basebox-support: shfmt fixes
+images: create ONIE NOS installer during image creation
+frr: generate human readable output in support bundle
+add virtualization support to DISTRO_FEATURES
+conf: layer is now compatible with dunfell
+systemd: update modifications for 244.5
+grpc: update modifications for 1.24.3
+keepalived: update patch for the newer version from dunfell
+keepalived: explicitly match on the package version
+onie-tools: update u-boot dependency
+remove unused testing image layer
+remove unmaintained recipe for salt
+images/full: drop python 2 and modules
+python-backports-functools-lru-cache: drop it as nothing uses it anymore
+python-scapy: remove it as nothing uses it
+frr: fix error handling in generate_support_bundle.py
+frr: move scripts to python 3
+mstpd: don't package ifquery to avoid python as a dedencendy
+python: update ryu to python3
+python: add python3-tinyrpc
+python: add python3-gevent-websocket
+python: add python3-oslo.config
+python: add python3-oslo.i18n
+python: add python3-rfc3986
+python: add python3-debtcollector
+python: add python3-jsonext
+python: add python3-arrow
+python: add python3-webob
+python: add python3-sphinx
+python: add python3-routes
+python: add python3-repoze.lru
+python: add python3-ovs
+python3-eventlet: depend on python3-monotonic and -dnspython
+python: add python3-eventlet
+python: add python3-monotonic
+images/full: change python2-ofdpa -> python3-ofdpa
+bisdn-linux: only build tar.xz filesystems
+Reworked systemd files for future simplicity
+uncommented lines to enable debug logging in binary
+mstpd: document compile time debug options
+grpc: match the .bbappend explicitly on the supported version
