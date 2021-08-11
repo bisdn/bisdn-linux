@@ -227,6 +227,12 @@ SSTATE_DIR ?= "/tmp/sstate-cache"
 TMPDIR = "/tmp/${MACHINE}"
 DL_DIR ?= "/tmp/downloads"
 
+# To enable ccache, uncomment the following line
+#INHERIT += "ccache"
+
+# ccache is sharable between different builds, so move it to a common location.
+CCACHE_TOP_DIR ?= "/tmp/ccache"
+
 #INHERIT += "rm_work"
 #RM_WORK_EXCLUDE += "linux-yocto uboot"
 #BB_NUMBER_THREADS = "8"
