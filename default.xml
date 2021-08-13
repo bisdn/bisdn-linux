@@ -13,11 +13,9 @@
   <project path="poky/meta-openembedded" name="meta-openembedded" remote="oe" revision="dunfell"/>
   <!-- open source bisdn layers -->
   <project path="poky/bisdn-onie-additions" name="bisdn/bisdn-onie-additions.git" remote="github" revision="master" sync-s="true"/>
-  <!-- closed source bisdn layers -->
-  <project path="poky/build-bisdn-linux" name="yocto-projects/bisdn-linux.git" remote="gitlab" revision="master"/>
-  <project path="poky/meta-ofdpa" name="yocto-meta-layers/meta-ofdpa.git" remote="gitlab" revision="master"/>
-  <project path="poky/meta-open-network-linux" name="yocto-meta-layers/meta-open-network-linux.git" remote="gitlab" revision="master"/>
-  <project path="poky/meta-switch" name="yocto-meta-layers/meta-switch.git" remote="gitlab" revision="master"/>
+  <project path="poky/meta-ofdpa" name="bisdn/meta-ofdpa.git" remote="github" revision="master"/>
   <project path="poky/meta-tibit" name="yocto-meta-layers/meta-tibit.git" remote="gitlab" revision="master"/>
+  <project path="poky/build-bisdn-linux" name="bisdn/bisdn-linux.git" remote="github" revision="master"/>
+  <project path="poky/meta-open-network-linux" name="bisdn/meta-open-network-linux.git" remote="github" revision="master"/>
+  <project path="poky/meta-switch" name="bisdn/meta-switch.git" remote="github" revision="master"/>
 </manifest>
-
