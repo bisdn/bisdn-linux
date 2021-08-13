@@ -20,7 +20,6 @@ BBLAYERS ?= " \
   ##OEROOT##/meta-virtualization \
   ##OEROOT##/meta-poky \
   ##OEROOT##/meta-yocto-bsp \
-  ##OEROOT##/meta-tibit \
   "
 BBLAYERS_NON_REMOVABLE ?= " \
   ##OEROOT##/meta \
