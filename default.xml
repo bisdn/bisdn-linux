@@ -2,19 +2,18 @@
 <manifest>
   <remote name="github" fetch="ssh://git@github.com/" />
   <remote name="gitlab" fetch="ssh://git@gitlab.bisdn.de/" />
-  <remote name="yocto" fetch="git://git.yoctoproject.org/" />
   <remote name="oe" fetch="git://git.openembedded.org/" />
-
+  <remote name="yocto" fetch="git://git.yoctoproject.org/" />
   <!-- yocto layer -->
-  <project path="poky" name="poky" remote="yocto" revision="dunfell"/>
-  <project path="poky/meta-cloud-services" name="meta-cloud-services" remote="yocto"  revision="dunfell"/>
-  <project path="poky/meta-virtualization" name="meta-virtualization" remote="yocto" revision="dunfell"/>
+  <project name="meta-cloud-services" path="poky/meta-cloud-services" remote="yocto" revision="dunfell"/>
+  <project name="meta-virtualization" path="poky/meta-virtualization" remote="yocto" revision="dunfell"/>
+  <project name="poky" path="poky" remote="yocto" revision="dunfell"/>
   <!-- open embedded layer -->
-  <project path="poky/meta-openembedded" name="meta-openembedded" remote="oe" revision="dunfell"/>
+  <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="dunfell"/>
   <!-- open source bisdn layers -->
-  <project path="poky/bisdn-onie-additions" name="bisdn/bisdn-onie-additions.git" remote="github" revision="master" sync-s="true"/>
-  <project path="poky/meta-ofdpa" name="bisdn/meta-ofdpa.git" remote="github" revision="master"/>
-  <project path="poky/build-bisdn-linux" name="bisdn/bisdn-linux.git" remote="github" revision="master"/>
-  <project path="poky/meta-open-network-linux" name="bisdn/meta-open-network-linux.git" remote="github" revision="master"/>
-  <project path="poky/meta-switch" name="bisdn/meta-switch.git" remote="github" revision="master"/>
+  <project name="bisdn/bisdn-linux.git" path="poky/build-bisdn-linux" remote="github" revision="master"/>
+  <project name="bisdn/bisdn-onie-additions.git" path="poky/bisdn-onie-additions" remote="github" revision="master" sync-s="true"/>
+  <project name="bisdn/meta-ofdpa.git" path="poky/meta-ofdpa" remote="github" revision="master"/>
+  <project name="bisdn/meta-open-network-linux.git" path="poky/meta-open-network-linux" remote="github" revision="master"/>
+  <project name="bisdn/meta-switch.git" path="poky/meta-switch" remote="github" revision="master"/>
 </manifest>
