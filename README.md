@@ -42,7 +42,7 @@ build host.
 # init repo
 mkdir -p ~/workspace/poky-bisdn-linux
 cd !$
-repo init -b BRANCHNAME -u git@gitlab.bisdn.de:yocto-projects/bisdn-linux.git
+repo init -b BRANCHNAME -u git@github.com:bisdn/bisdn-linux.git
 
 # sync repos
 repo sync
