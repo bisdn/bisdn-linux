@@ -67,10 +67,9 @@ Chose one of the available image types to build
 ```bash
 # build the yocto artifacts
 bitbake <minimal|full>
-
-# assemble the final image
-IMAGETYPE="<minimal|full>" ../bisdn-onie-additions/mk_onie2
 ```
+
+The finished image can be found at `/tmp/deploy/${MACHINE}/images/${MACHINE}/onie-bisdn-full-${MACHINE}.bin`.
 
 ## Install image
 
