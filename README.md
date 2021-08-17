@@ -55,9 +55,11 @@ repo sync
 . poky/oe-init-build-env poky/build-bisdn-linux/
 ```
 
-## Configure target machine
+## Configure target machine and cache directory
 
-Edit conf/local.conf and set `MACHINE` to your desired target.
+Edit conf/local.conf and set `MACHINE` to your desired target. Cached files
+will be stored in `/tmp` by default. Change the variables `SSTATE_DIR`,
+`TMPDIR`, `DL_DIR` if you wish to use a different one.
 
 ## Build image
 
