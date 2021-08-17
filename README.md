@@ -77,7 +77,8 @@ Chose one of the available image types to build
 bitbake <minimal|full>
 ```
 
-The finished image can be found at `/tmp/deploy/${MACHINE}/images/${MACHINE}/onie-bisdn-full-${MACHINE}.bin`.
+The finished image can be found at
+`deploy/images/${MACHINE}/onie-bisdn-full-${MACHINE}.bin` in your `TMPDIR`.
 
 ## Install image
 
