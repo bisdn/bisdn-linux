@@ -5,6 +5,10 @@ for BISDN Linux, based on Yocto.
 
 ## Prerequisites
 
+* Disk space
+We recommend a minimum of 150GB free disk space for building a single full
+image. The build process usually requires ~70GB of disk space.
+
 * repo tool
 
 Many distros include repo, so you might be able to install from there.
