@@ -39,7 +39,8 @@ See [the official documentation](https://source.android.com/source/using-repo.ht
 * install your OS specific [build essentials for Yocto](https://docs.yoctoproject.org/3.1.7/ref-manual/ref-system-requirements.html)
 
 Some Yocto packages may require additional utilities to be present on the
-build host.
+build host. F.ex Ubuntu additionally requires `libelf-dev` and `python-yaml`
+packages. 
 
 ## Bootstrap build system
 
