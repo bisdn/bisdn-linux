@@ -78,7 +78,7 @@ bitbake <minimal|full>
 ```
 
 The finished image can be found at
-`deploy/images/${MACHINE}/onie-bisdn-full-${MACHINE}.bin` in your `TMPDIR`.
+`${TMPDIR}/deploy/images/${MACHINE}/onie-bisdn-full-${MACHINE}.bin`.
 
 ## Install image
 
