@@ -11,7 +11,8 @@ image. The build process usually requires ~70GB of disk space.
 
 * repo tool
 
-Many distros include repo, so you might be able to install from there.
+Some distros include [repo](https://android.googlesource.com/tools/repo), so
+you might be able to install from there.
 
 ```bash
 # Debian/Ubuntu.
