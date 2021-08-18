@@ -57,7 +57,7 @@ repo sync
 
 ## Configure target machine and cache directory
 
-Edit conf/local.conf and set `MACHINE` to your desired target. Cached files
+Edit conf/local.conf and set `MACHINE` to your desired target. Cached files and built artifacts
 will be stored in `/tmp` by default. Change the variables `SSTATE_DIR`,
 `TMPDIR`, `DL_DIR` if you wish to use a different one.
 
