@@ -39,8 +39,20 @@ See [the official documentation](https://source.android.com/source/using-repo.ht
 * install your OS specific [build essentials for Yocto](https://docs.yoctoproject.org/3.1.7/ref-manual/ref-system-requirements.html)
 
 Some Yocto packages may require additional utilities to be present on the
-build host. F.ex Ubuntu additionally requires `libelf-dev` and `python-yaml`
-packages. 
+build host.
+
+* BISDN-Linux specific build requirements
+
+Additionally [libelf](https://directory.fsf.org/wiki/Libelf) headers and
+[PyYAML](https://pyyaml.org/) are needed. On Ubuntu (20.04 and newer) this can
+be installed by running.
+
+```bash
+sudo apt-get install libelf-dev python-yaml
+```
+
+For information on installing these requirements on a different OS please visit
+the respective project page.
 
 ## Bootstrap build system
 
