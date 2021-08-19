@@ -59,7 +59,9 @@ repo sync
 
 Edit conf/local.conf and set `MACHINE` to your desired target. Cached files and built artifacts
 will be stored in `/tmp` by default. Change the variables `SSTATE_DIR`,
-`TMPDIR`, `DL_DIR` if you wish to use a different one.
+`TMPDIR`, `DL_DIR` if you wish to use a different location. See the
+[Yocto Project Reference Manual: Variables Glossary](https://docs.yoctoproject.org/ref-manual/variables.html)
+for a complete overview of variable definitions.
 
 ## Build image
 
