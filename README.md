@@ -3,12 +3,16 @@
 This repository holds the main repo manifest for setting up the build system
 for BISDN Linux, based on Yocto.
 
+The build process takes around 3-4 hours with 8 CPU cores and 8GB RAM. A single
+build requires ~70GB of disk space. Adding additional CPU cores speeds up the
+build time significally.
+
 ## Prerequisites
 
-* Disk space
+* Disk space and RAM
 
-We recommend a minimum of 150GB free disk space for building a single full
-image. The build process usually requires ~70GB of disk space.
+We recommend a minimum 8GB RAM and 150GB free disk space for building a single full
+image.
 
 * repo tool
 
