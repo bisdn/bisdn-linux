@@ -44,7 +44,7 @@ build host.
 
 * BISDN-Linux specific build requirements
 
-Additionally [libelf](https://directory.fsf.org/wiki/Libelf) headers and
+Additionally [libelf](https://directory.fsf.org/wiki/Libelf) with development headers and
 [PyYAML](https://pyyaml.org/) are needed. On Ubuntu (20.04 and newer) this can
 be installed by running.
 
