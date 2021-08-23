@@ -5,7 +5,7 @@ for BISDN Linux, based on Yocto.
 
 The build process takes around 3-4 hours with 8 CPU cores and 8 GiB RAM. A single
 build requires ~70 GiB of disk space. Adding additional CPU cores speeds up the
-build time significally.
+build time significantly.
 
 ## Prerequisites
 
