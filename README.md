@@ -11,7 +11,7 @@ build time significally.
 
 * Disk space and RAM
 
-We recommend a minimum 8GB RAM and 150GB free disk space for building a single full
+We recommend a minimum of 8 GiB RAM and 150 GiB free disk space for building a single full
 image.
 
 * repo tool
