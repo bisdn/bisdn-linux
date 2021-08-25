@@ -40,6 +40,16 @@ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
 ```
 
+The repo tool requires an executable named `python` in your path and building
+open network linux is currently still depending on python2. To suffice this
+dependency, we recommend installing python2 with any of the default methods
+fitting for your environment. On Ubuntu 20.04 you can install python2 directly
+via apt.
+
+```bash
+sudo apt-get install python
+```
+
 See [the official documentation](https://source.android.com/source/using-repo.html) for further details.
 
 * install your OS specific [build essentials for Yocto](https://docs.yoctoproject.org/3.1.7/ref-manual/ref-system-requirements.html)
