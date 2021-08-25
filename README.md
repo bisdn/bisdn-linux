@@ -17,7 +17,8 @@ image.
 * repo tool
 
 Some distros include [repo](https://android.googlesource.com/tools/repo), so
-you might be able to install from there.
+you might be able to install from there (Ubuntu 20.04 however does not provide
+those packages).
 
 ```bash
 # Debian/Ubuntu.
