@@ -20,6 +20,7 @@
 #MACHINE ?= "accton-as4610"
 #MACHINE ?= "agema-ag5648"
 #MACHINE ?= "agema-ag7648"
+#MACHINE ?= "cel-questone-2a"
 #
 MACHINE ?= "accton-as4610"
 
