@@ -7,7 +7,7 @@
   
   <project dest-branch="master" name="bisdn/bisdn-linux.git" path="poky/build-bisdn-linux" remote="github" revision="d9250cd4e087247695b5c832327cc3f417e51198" upstream="master"/>
   <project dest-branch="master" name="bisdn/bisdn-onie-additions.git" path="poky/bisdn-onie-additions" remote="github" revision="16e031162807dd9eb9b85457462bb9c4c21568a3" upstream="master"/>
-  <project dest-branch="master" name="bisdn/meta-ofdpa.git" path="poky/meta-ofdpa" remote="github" revision="840242fc9f77926f5e2f4474dbc11cc33547c1fb" upstream="master"/>
+  <project dest-branch="v4.1.0" name="bisdn/meta-ofdpa.git" path="poky/meta-ofdpa" remote="github" revision="37533125ea8329a81c71b1c47bc0667c1755a25d" upstream="v4.1.0"/>
   <project dest-branch="master" name="bisdn/meta-open-network-linux.git" path="poky/meta-open-network-linux" remote="github" revision="cab8dbff85a74db00d217467ed283a8bd96868fd" upstream="master"/>
   <project dest-branch="master" name="bisdn/meta-switch.git" path="poky/meta-switch" remote="github" revision="06605349d61a5ef874712e6e7b7b181d909154c3" upstream="master"/>
   <project dest-branch="dunfell" name="meta-cloud-services" path="poky/meta-cloud-services" remote="yocto" revision="ac62b95147f5e7377e7b86aadbed11ccf75adc40" upstream="dunfell"/>
