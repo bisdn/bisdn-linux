@@ -229,6 +229,10 @@ TMPDIR = "/tmp/${MACHINE}"
 DL_DIR ?= "/tmp/downloads"
 
 # To enable ccache, uncomment the following line
+#
+# ccache use may break reproducability, and may break sharing debug symbols.
+# Its use may leak into some package's configuration, and will alter the
+# resulting binaries or configuration files.
 #INHERIT += "ccache"
 
 # ccache is sharable between different builds, so move it to a common location.
