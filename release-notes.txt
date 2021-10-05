@@ -1,0 +1,80 @@
+BISDN Linux
+4.2.0 Release Notes
+Date: 2021-10-06
+
+! New in this release
+In this release, we add the EdgeCore AS7726-32X as our first Trident3 based 100G switch to the list of supported platforms.
+
+! Bug fixes
+- systemd: drop redundant management interface configuration file
+
+! Changelog
+
+Updated packages:
+linux-yocto-onl (5.10.60+gitAUTOINC+e44a7f9801_2c5bd949b1-r0 => 5.10.70+gitAUTOINC+917c420111_f93026b28e-r0)
+ofdpa (3.0.5.0-EA5+sdk-6.5.22+gitAUTOINC+8a370b491a_f01ceb9cf4-r3 => 3.0.5.0-EA5+sdk-6.5.22+gitAUTOINC+ce97ed9907_f01ceb9cf4-r4)
+python3-arrow (0.12.0-r0 => 0.15.2-r0)
+python3-debtcollector (1.17.1-r0 => 1.22.0-r0)
+python3-eventlet (0.24.0-r0 => 0.25.1-r0)
+python3-oslo.i18n (3.20.0-r0 => 3.17.0+gitAUTOINC+f2729cd36f-r0)
+python3-rfc3986 (0.4.1-r0 => 1.3.2-r0)
+python3-sphinx (1.7.8-r0 => 2.2.0-r0)
+
+Changes between v4.1.0 and v4.2.0:
+
+bisdn-onie-additions:
+accton-as7726-32x: add platform.conf
+
+build-bisdn-linux:
+conf: set release FEEDURIPREFIX
+conf: add accton-as7726-32x to available MACHINEs
+conf: warn about side effects of ccache use
+
+meta-ofdpa:
+conf: drop warrior compatibility
+ofdpa-grpc: make use of FEEDDOMAIN and URIPREFIX
+ofdpa: make use of FEEDDOMAIN and FEEDURIPREFIX
+ofdpa: add support for Accton AS7726-32X
+ofdpa: package Trident 3 X7 firmware files
+ofdpa: make build reproducable by following SOURCE_DATE_EPOCH
+
+meta-openembedded:
+tcpdump: Update CVE-2020-8037 tag
+apache2: upgrade 2.4.48 -> 2.4.49
+dstat: Add missing python-six runtime dependency
+c-ares: Add fix for CVE-2021-3672
+
+meta-open-network-linux:
+u-boot-fw-utils: drop modifications
+conf: drop warrior compatibility
+linux-yocto-onl/5.10: update to 5.10.70
+platform-as7726-32x: enable and switch 10g ports to SFP+
+conf: add Accton AS7726-32X machine configuration
+accton-as7726-32x: Support ACBEL FSF019 PSU
+recipes-kernel: add accton as7726-32x kernel modules
+recipes-bsp: add accton as7726-32x formfactor
+platform-as7726-32x: add package
+onl: as7726-32x: silence ignored return value warnings
+
+meta-switch:
+python: drop python3-monotonic recipe
+python: drop python3-eventlet recipe
+python: drop python3-ovs recipe
+python: drop python3-repoze.lru recipe
+python: drop python3-routes recipe
+python: drop python3-sphinx recipe
+python: drop python3-webob recipe
+python: drop python3-arrow recipe
+python: drop python3-debtcollector recipe
+python: drop python3-rfc3986 recipe
+python: drop python3-oslo.i18n recipe
+python: drop python3-gevent-websocket recipe
+systemd: drop patches for v241
+grpc: drop patches for 1.14.1
+keepalived: drop patch for 2.0.15
+onie-tools: directly depend on libubootenv-bin
+conf: drop warrior compatibility
+distro: update feed defaults to actual nightly location
+distro: bump version to 4.2.0
+python3: disable ccache use
+systemd: drop redundant management interface configuration file
