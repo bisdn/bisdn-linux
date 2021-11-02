@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="github" fetch="git://github.com/" />
+  <remote name="github" fetch="https://github.com/" />
   <remote name="gitlab" fetch="ssh://git@gitlab.bisdn.de/" />
   <remote name="oe" fetch="git://git.openembedded.org/" />
   <remote name="yocto" fetch="git://git.yoctoproject.org/" />
