@@ -1,0 +1,185 @@
+BISDN Linux
+4.3.0 Release Notes
+Date: 2021-11-09
+
+! New in this release
+- BISDN Linux now ships with a default en-us locale, allowing applications
+  that rely on locales like tmux to work.
+- Changing a bridge VLAN's egress tagged or pvid state during runtime is now
+  properly handled.
+- Accton AS4610: Added support for the AS4610-54T (B) model with reversed
+  airflow. Special thanks to Ralf Kundel for helping with testing the
+  compatibility.
+
+! Changed behaviour
+- Accton AS4610: Since we now respect the Bootloader's passed memory limits,
+  the available memory is reduced by 16 MiB.
+
+! Bug fixes
+- Fixed STP not properly working if the untagged default VLAN is not 1.
+- Fixed a race when applying MSTP states.
+- Fixed calculating effective VLAN STP states on STP updates.
+- Fixed baseboxd crashing when adding custom fdb entries.
+- Fixed a check that caused a routing entry for the IPv6 lo address to be
+  created in some situations.
+- Fixed ip(6)tables rules sometimes not being applied during boot.
+- Properly handle clients switching ports and update their forwarding rules.
+- Accton AS4610: Fixed the second CPU sometimes not coming up.
+- Accton AS4610: Properly respect U-Boot's passed memory limits.
+- Accton AS4610: 1G LEDs blink for traffic again.
+
+! Changelog
+
+Updated packages:
+baseboxd (1.9.18-r0 => 1.9.22-r0)
+ca-certificates (20210119-r0 => 20211016-r0)
+e2fsprogs (1.45.4-r0 => 1.45.7-r0)
+linux-yocto-onl (5.10.70+gitAUTOINC+917c420111_f93026b28e-r0 => 5.10.75+gitAUTOINC+d946f3fc08_3a9842b42e-r0)
+ofdpa (3.0.5.0-EA5+sdk-6.5.22+gitAUTOINC+ce97ed9907_f01ceb9cf4-r4 => 3.0.5.0-EA5+sdk-6.5.22+gitAUTOINC+a1b1e04908_f01ceb9cf4-r6)
+rofl-ofdpa (2.0.1-r0 => 2.0.2-r0)
+tzdata (2021a-r0 => 2021e-r0)
+
+Changes between v4.2.0 and v4.3.0:
+
+build-bisdn-linux:
+default.xml: switch git transport to https for github
+
+meta-ofdpa:
+ofdpa: propagate learning mode also to l2 station move
+ofdpa: fix mplsL2Port and tunnelId formatting for client_flowtable_dump
+ofdpa_pktrxtx: fix output and error handling
+ofdpa: treat AS4610-54T (B) as AS4610-54T
+ofdpa: accton-as4610: fix LED blink on activity
+
+meta-openembedded:
+gattlib: Place pkgconfig file in correct package
+gattlib: remove includedir from base package
+
+meta-open-network-linux:
+onl: switch git transport to https for github
+linux-yocto-onl/5.10: update to 5.10.75
+Revert "armel-iproc: reboot on soft lockup for now"
+armel-iproc: replace alignment hack with backported mini-stack removal
+platform-as4610: treat AS4610-54T B as a 54 port switch
+armel-iproc: backport upstream fix for non-128MB aligned mem
+
+meta-switch:
+baseboxd: bump version to 1.9.22
+distro: bump version to 4.3.0
+iptables: remove custom files and use -w parameter
+ip6tables: add -w parameter to solve xtables lock
+treewide: switch git transport to https for github
+baseboxd: Bump version to 1.9.21
+images: full: include en-us locale
+rofl-ofdpa: bump version to 2.0.2
+baseboxd: bump version to 1.9.20
+baseboxd: bump version to 1.9.19
+
+meta-virtualization:
+global: convert github SRC_URIs to use https protocol
+global: convert github SRC_URIs to use https protocol
+crun: update runtime-spec branch to main
+oci-runtime-spec: update branch specification to main
+busybox: Add nsenter for podman runtime
+
+poky:
+bitbake: fetch/git: Handle github dropping git:// support
+tzdata: update 2021d -> 2021e
+tzdata: upgrade 2021a -> 2021d
+ca-certificates: update 20210119 -> 20211016
+wireless-regdb: upgrade 2021.07.14 -> 2021.08.28
+wireless-regdb: upgrade 2021.04.21 -> 2021.07.14
+linux-firmware: upgrade 20210818 -> 20210919
+linux-firmware: upgrade 20210511 -> 20210818
+git: Fix determinism issue
+stress-ng: improve reproducibility
+stress-ng: convert to git, website is down
+waffle: old website is down, update to new project URLs
+mirrors.bbclass: remove dead infozip mirrors
+oeqa/runtime/parselogs: modified drm error in common errors list
+oeqa/runtime: search sys.path explicitly for modules
+oeqa/runtime: load modules using importlib
+testimage: fix unclosed testdata file
+reproducible_build: Drop obsolete sstate workaround
+oe/utils: log exceptions in ThreadedWorker functions
+license.bbclass: implement ast.NodeVisitor.visit_Constant
+oe/license: implement ast.NodeVisitor.visit_Constant
+bitbake.conf: Add gpg-agent as a host tool
+base: Use repr() for printing exceptions
+base: Clean up unneeded len() calls
+sstate: don't silently handle all exceptions in sstate_checkhashes
+devtool: fix modify with patches in override directories
+sstate: fix touching files inside pseudo
+vim: fix 2021-3796
+curl: Whitelist CVE-2021-22897
+poky.yaml: fedora33: add missing pkgs
+selftest/reproducible: adjust exclusion list for dunfell
+classes/reproducible_build: Use atomic rename for SDE file
+reproducible_build: Work around caching issues
+rpm: Deterministically set vendor macro entry
+poky.conf: Add debian 11 as a supported distro
+poky.conf: Add fedora 34 as a supported distro
+uninative: Upgrade to 3.4
+target/ssh.py: add HostKeyAlgorithms option to test commands
+python3: Add a fix for a make install race
+libnewt: Use python3targetconfig to fix reproducibility issue
+libxml2: Use python3targetconfig to fix reproducibility issue
+externalsrc: Fix a source date epoch race in reproducible builds
+externalsrc: Work with reproducible_build
+gobject-introspection: Don't write $HOME into scripts
+libtool: Allow libtool-cross to reproduce
+libtool: Fix lto option passing for reproducible builds
+util-linux: Fix reproducibility
+gnupg: Be deterministic about sendmail
+mesa: Ensure megadrivers runtime mappings are deterministic
+package: Ensure pclist files are deterministic and don't use full paths
+uninative: Upgrade to 3.3, support glibc 2.34
+uninative: Improve glob to handle glibc 2.34
+nativesdk-pseudo: Fix to work with glibc 2.34 systems
+pseudo: Update with fcntl and glibc 2.34 fixes
+pseudo: Fix to work with glibc 2.34 systems
+util-linux: disable raw
+gpgme: Use glibc provided closefrom API when available
+m4: Do not use SIGSTKSZ
+gcc: fix missing dependencies for selftests
+libpsl: Add config knobs for runtime/builtin conversion choices
+patch.bbclass: when the patch fails show more info on the fatal error
+oeqa/selftest/sstatetests: fix typo ware -> were
+tar: filter CVEs using vendor name
+rng-tools: add systemd-udev-settle wants to service
+scriptutils.py: Add check before deleting path
+binutils: Fix a missing break in case statement
+oeqa/manual: Fix no longer valid URLs
+multilib: Avoid sysroot race issues when multilib enabled
+weston: Use systemd notify,
+e2fsprogs: upgrade 1.45.6 -> 1.45.7
+e2fsprogs: update to 1.45.6
+linux-yocto/5.4: update to v5.4.153
+linux-yocto/5.4: update to v5.4.150
+linux-yocto/5.4: update to v5.4.149
+ffmpeg: Add fix for CVEs
+bitbake: fetch2/git: Use os.rename instead of mv
+bitbake: fetch2/git: Avoid races over mirror tarball creation
+bitbake: hashserv: let asyncio discover the running loop
+bitbake: bitbake: correct deprecation warning in process.py
+bitbake: bitbake: adjust parser error check for python 3.10 compatibility
+bitbake: bitbake: do not import imp in layerindexlib
+bitbake: bitbake: fix regexp deprecation warnings
+bitbake: bitbake: correct the collections vs collections.abc deprecation
+bitbake: compat.py: remove file since it no longer actually implements anything
+bitbake: test/fetch: Update urls to match upstream branch name changes
+glew: Stop polluting /tmp during builds
+oeqa/buildproject: Ensure temp directories are cleaned up
+oeqa/selftest/gotoolchain: Fix temp file cleanup
+rm_work.bbclass: Fix for files starting with -
+libc_package/buildstats: Fix python regex quoting warnings
+oeqa/qemurunner: Use oe._exit(), not sys.exit()
+pybootchart: Avoid divide by zero
+libsamplerate0: Set correct soname for 0.1.9
+bzip2: Update soname for libbz2 1.0.8
+common-licenses: add "Unlicense" license file
+systemd: Add fix for systemd-networkd crash during free
+mtd-utils: upgrade 2.1.2 -> 2.1.3
+mtd-utils: upgrade 2.1.1 -> 2.1.2
+openssh: Fix CVE-2021-28041
+vim: fix CVE-2021-3778
