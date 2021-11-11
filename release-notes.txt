@@ -1,6 +1,6 @@
 BISDN Linux
 4.3.0 Release Notes
-Date: 2021-11-09
+Date: 2021-11-12
 
 ! New in this release
 - BISDN Linux now ships with a default en-us locale, allowing applications
@@ -31,7 +31,7 @@ Date: 2021-11-09
 ! Changelog
 
 Updated packages:
-baseboxd (1.9.18-r0 => 1.9.22-r0)
+baseboxd (1.9.18-r0 => 1.9.23-r0)
 ca-certificates (20210119-r0 => 20211016-r0)
 e2fsprogs (1.45.4-r0 => 1.45.7-r0)
 linux-yocto-onl (5.10.70+gitAUTOINC+917c420111_f93026b28e-r0 => 5.10.75+gitAUTOINC+d946f3fc08_3a9842b42e-r0)
@@ -64,6 +64,7 @@ platform-as4610: treat AS4610-54T B as a 54 port switch
 armel-iproc: backport upstream fix for non-128MB aligned mem
 
 meta-switch:
+baseboxd: update to 1.9.23
 baseboxd: bump version to 1.9.22
 distro: bump version to 4.3.0
 iptables: remove custom files and use -w parameter

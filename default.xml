@@ -9,7 +9,7 @@
   <project dest-branch="master" name="bisdn/bisdn-onie-additions.git" path="poky/bisdn-onie-additions" remote="github" revision="58bba961d73ec9bc94fc9ad3383623449447b27c" upstream="master"/>
   <project dest-branch="v4.3.0" name="bisdn/meta-ofdpa.git" path="poky/meta-ofdpa" remote="github" revision="0ecec030524b896becac6d3d86c8ddbc528db31b" upstream="v4.3.0"/>
   <project dest-branch="master" name="bisdn/meta-open-network-linux.git" path="poky/meta-open-network-linux" remote="github" revision="96e3136901d8e512aa270c9b715ed1e87449189f" upstream="master"/>
-  <project dest-branch="master" name="bisdn/meta-switch.git" path="poky/meta-switch" remote="github" revision="1621d30f049c97e42558a810b8d7ed6f4ffcdb46" upstream="master"/>
+  <project dest-branch="master" name="bisdn/meta-switch.git" path="poky/meta-switch" remote="github" revision="96234d3662e53ce63b54210e77bfef2d0244dd34" upstream="master"/>
   <project dest-branch="dunfell" name="meta-cloud-services" path="poky/meta-cloud-services" remote="yocto" revision="ac62b95147f5e7377e7b86aadbed11ccf75adc40" upstream="dunfell"/>
   <project dest-branch="dunfell" name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="814eec96c2a29172da57a425a3609f8b6fcc6afe" upstream="dunfell"/>
   <project dest-branch="dunfell" name="meta-virtualization" path="poky/meta-virtualization" remote="yocto" revision="f0d8a55c220fdec46927c106568657b725e17126" upstream="dunfell"/>
