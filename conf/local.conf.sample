@@ -18,6 +18,7 @@
 # of machines available which can boot and run BISDN Linux.
 #
 #MACHINE ?= "accton-as4610"
+#MACHINE ?= "accton-as4630-54pe"
 #MACHINE ?= "accton-as7726-32x"
 #MACHINE ?= "agema-ag5648"
 #MACHINE ?= "agema-ag7648"
