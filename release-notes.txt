@@ -8,6 +8,12 @@ Date: 2021-11-30
 ! Bug fixes
 - Validate stp arguments in ofdpa-grpc instead of passing them on as is
 
+! Security fixes
+- Fixed an issue where unauthenticated users could inject shell commands
+  executed with root privileges over the network
+- Fixed an issue where local users could inject shell commands executed
+   with root privileges
+
 ! Changelog
 
 Updated packages:
