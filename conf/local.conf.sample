@@ -243,3 +243,6 @@ CCACHE_TOP_DIR ?= "/tmp/ccache"
 #RM_WORK_EXCLUDE += "linux-yocto uboot"
 #BB_NUMBER_THREADS = "8"
 #PARALLEL_MAKE = "-j16"
+
+# Packages base path for release
+FEEDURIPREFIX = "pub/onie/${MACHINE}/packages-v${DISTRO_VERSION}"
