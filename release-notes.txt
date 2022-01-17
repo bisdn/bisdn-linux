@@ -1,73 +1,82 @@
 BISDN Linux
-4.4.0 Release Notes
-Date: 2021-12-15
-
-! New in this release
-- Edgecore EPS202 / AS4630-54PE (48 x 1GbE RJ45 PoE, 4 x 25GbE SFP28 and 2 x 100GbE QSFP28)
-  added as supported platform.
-- Updated Linux kernel to 5.15.
-- Updated FRR to version 8.1.
-- Experimental feature: Support for spanning tree protocol (STP) on bonds.
-- Added git package to all images.
+4.4.1 Release Notes
+Date: 2022-01-18
 
 ! Bug fixes
-- basebox: Fixed disabling VLANs on ports currently subscribed to multicast groups
+- basebox: Fixed handling removal of ip addresses on vlan interfaces.
+- frr: Fixed running generate_support_bundle.py multiple times.
+- EPS202 (AS4630-54PE): fixed errors when printing list of connected SFP modules
+  with onlpdump.
 
 ! Changelog
 
-Changes between v4.3.1 and v4.4.0:
+Updated packages:
+baseboxd (1.9.27-r0 => 1.9.28-r0)
+frr (8.1-r1 => 8.1-r2)
+linux-yocto-onl (5.15.6+gitAUTOINC+df57bc53f6_a2547651bc-r0 => 5.15.14+gitAUTOINC+72e4eafb6b_d114b082be-r0)
 
-meta-ofdpa:
-ofdpa: accton-as4630-54pe: add platform code to build ofdpa and sdk
-ofdpa: BCM56370: enable switch support for the Trident3-X3 ASIC
-ofdpa: update SDK to 6.5.24
-ofdpa: readd dropped include and drop fixup patch
+Changes between v4.4.0 and v4.4.1:
 
 meta-openembedded:
-brotli: add patch to fix CVE-2020-8927
-dovecot: Fix CVE-2020-12674
-dovecot: Fix CVE-2020-12673
-dovecot: Fix CVE-2020-12100
-jansson: whitelist CVE-2020-36325
-sdbus-c++: don't fetch googletest during do_configure
-lmsensors: do not depend on lmsensors-isatools on non-x86
-nss: Fix CVE-2020-12403
-recipes: Update SRC_URI branch and protocols
+postfix: upgrade 3.4.12 -> 3.4.23
+postfix: fix build with glibc 2.34
+dovecot: refresh patches
+postgresql: Update to 12.9
+libmicrohttpd: Add patch to fix CVE-2021-3466
+nss: Fix CVE-2021-43527
+c-ares: switch from master to main
 
 meta-open-network-linux:
-platform-as4630-54pe: attach PoE driver on boot
-accton-as430-54pe: add PoE driver to image
-accton-as4630-54pe-poe-pse: add driver for PoE
-onl: accton-as4630-54pe: Avoid undefined behaviour
-accton-as4630-54pe: add Accton AS4630-54pe machine configuration
-onl: accton-as4630-54pe: Add SFP reset/lpmode sysfs and fix Led drv
-onl: accton-as4630-54pe: Fix fan led show off
-onl: accton-as4630-54pe: Fix platform port config
-onl: accton-as4630-54pe: Validate tx_disable function of 4 SFP+ ports.
-accton-as4630-54pe: rename management interface
-accton-as4630-54pe: add formfactor
-accton-as4630-54pe: add platform psu driver
-accton-as4630-54pe: add platform led driver
-accton-as4630-54pe: add platform cpld driver
-accton-as4630-54pe: add platform init code
-onl: silence compilation breaking error
-linux-yocto-onl/5.15: update to 5.15.6
-linux-yocto-onl: drop 5.10 support
-conf: machine: switch to kernel 5.15
-linux-yocto-onl: add 5.15 support based on 5.15.3
-armel-iproc: use upstream usb quirk implementation
-armel-iproc: properly enable upstream GPIO driver
-armel-iproc: switch to upstream gpio-xgs-iproc driver
-armmel-iproc: drop non helix 4 patches
-armel-iproc: split platform patch
-armel-iproc: reorganize patches
+accton-as4630-54pe-cpld-mod: add missing changes to fix qsfp lpmode
+accton-as4630-54pe: Fix poectl i2c device path
+linux-yocto-onl/5.15: update to 5.15.14
 
 meta-switch:
-baseboxd: bump version to 1.9.27
-baseboxd: bump version to 1.9.26
-full: add git to image
-distro: bump version to 4.4.0
-baseboxd: bump version to 1.9.25
-linux: enable our kernel config for 5.15 as well
-baseboxd: bump version to 1.9.24
-frr: update to 8.1
+distro: bump version to 4.4.1
+frr: fix running generate_support_bundle.py with existing logs
+baseboxd: bump version to 1.9.28
+
+poky:
+linux-yocto/5.4: update genericx86* machines to v5.4.158
+asciidoc: properly detect and compare Python versions >= 3.10
+lib/oe/reproducible: correctly set .git location when recursively looking for git repos
+scripts: Update to use exec_module() instead of load_module()
+selftest: skip virgl test on fedora 35
+scripts/buildhistory-diff: drop use of distutils
+weston: Backport patches to always activate the top-level surface
+oeqa/selftest/tinfoil: Update to use test command
+oeqa/selftest/bbtests: Use YP sources mirror instead of GNU
+openssl: Add reproducibility fix
+libpcre2: update SRC_URI
+linux-firmware: upgrade 20211027 -> 20211216
+grub: fix CVE-2020-14372 and CVE-2020-27779
+bitbake: cooker/command: Add a dummy event for tinfoil testing
+ref-manual: fix patch documentation
+documentation: further updates for 3.1.13
+releases: update to include 3.1.13
+selftest: skip virgl test on fedora 34 entirely
+gstreamer1.0: fix failing ptest
+linux-yocto/5.4: update to v5.4.167
+linux-yocto/5.4: update to v5.4.165
+linux-yocto/5.4: update to v5.4.163
+linux-yocto/5.4: update to v5.4.162
+linux-yocto/5.4: update to v5.4.159
+bootchart2: remove wait_boot logic
+dropbear: Fix CVE-2020-36254
+inetutils: fix CVE-2021-40491
+vim: fix CVE-2021-4069
+openssh: Whitelist CVE-2016-20012
+openssh: Fix CVE-2021-41617
+bluez: fix CVE-2021-0129
+build-appliance-image: Update to dunfell head revision
+selftest: skip virgl test on centos 8 entirely
+selftest/devtool: Check branch in git fetch
+recipetool: Set master branch only as fallback
+runqemu: check the qemu PID has been set before kill()ing it
+lttng-modules: do not search in non-existing folder during install
+wic:direct.py: ignore invalid mountpoints during fstab update
+busybox: Fix multiple security issues in awk
+gcc: Add CVE-2021-37322 to the list of CVEs to ignore
+libgcrypt: solve CVE-2021-33560 and CVE-2021-40528
+cve-extra-exclusions: add db CVEs to exclusion list
+
