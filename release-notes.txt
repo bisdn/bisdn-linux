@@ -5,8 +5,10 @@ Date: 2022-01-18
 ! Bug fixes
 - basebox: Fixed handling removal of ip addresses on vlan interfaces.
 - frr: Fixed running generate_support_bundle.py multiple times.
-- EPS202 (AS4630-54PE): fixed errors when printing list of connected SFP modules
+- EPS202 (AS4630-54PE): Fixed errors when printing list of connected SFP modules
   with onlpdump.
+- EPS202 (AS4630-54PE): Fixed poectl device search path, allowing it to properly
+  configure PoE.
 
 ! Changelog
 
