@@ -19,6 +19,7 @@
 #
 #MACHINE ?= "accton-as4610"
 #MACHINE ?= "accton-as4630-54pe"
+#MACHINE ?= "accton-as5835-54x"
 #MACHINE ?= "accton-as7726-32x"
 #MACHINE ?= "agema-ag5648"
 #MACHINE ?= "agema-ag7648"
