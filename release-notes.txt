@@ -1,0 +1,216 @@
+BISDN Linux
+v4.6.0 Release Notes
+Date: 2022-05-04
+
+! New in this release
+- New platform Edgecore DCS201 (AS5835-54X) is now supported. The DCS201 is a
+  Trident 3 with 48x 10GbE SFP+ ports and 6x 100GbE QSFP28 ports
+- OF-DPA extensions for ryu and sample code added for configuring MPLS
+  pseudowires
+- OF-DPA: new option for controlling memory allocation for Layer 2 and Layer 3
+  tables
+- baseboxd/OF-DPA: Broadcom KNET interfaces are now fully supported
+- baseboxd updated to version 1.11.2
+- Linux kernel updated to version 5.15.35
+- FRR updated to version 8.2.2
+
+! Bug fixes
+- increased max read buffer to avoid loss of netlink messages (and out of sync
+  switch state) under heavy load
+- AS4610: added missing Kernel option to allow BGP MD5 authentication
+- EPS202 (AS4630-54PE): enabled the LM77 driver, fixing reading out temperatures from
+  the fourth sensor in onlp
+- Broadcom-KNET interfaces: now properly generates random MAC addresses
+- Broadcom-KNET interfaces: fixed a race condition on interface creation that
+  could cause system hangs when configuring interfaces using systemd-networkd
+- baseboxd: broadcom-KNET interfaces are now properly removed when stopping
+  baseboxd
+- client_drivshell: Fixed segfault when running 'client_drivshell log'
+
+Changes between v4.5.0 and v4.6.0:
+
+bisdn-onie-additions:
+mk_bisdn_yocto_image.sh: add note on legacy status
+mk_bisdn_yocto_image: document usage
+mk_bisdn_yocto_image: document source
+mk_onie2: add rudimentary code documentation
+accton-as4610/platform.conf: add coments
+accton-as4610/platform.conf: document source
+u-boot-arch/install.sh: add comments
+u-boot-arch/install.sh: document source
+x86_64/install.sh: document source
+installer/install.sh: document functions
+installer/install.sh: add comments
+installer: accton-as4610/platform.conf: fix default configuration
+installer: fix detect_bisdn_linux_msdos_partition
+installer: fix create_bisdn_linux_msdos_partition args
+accton-as5835-54x: add platform.conf
+
+build-bisdn-linux:
+accton-as5835-54x: add platform to local.conf.sample
+
+meta-ofdpa:
+ofdpa: fix issues found during collection of table sizes
+ofdpa: do not disable platforms manually
+openbcm-gpl-modules: bcm-knet: use fully randomized mac addresses
+openbcm-gpl-modules: bcm-knet: fix race between creation and open
+ofdpa: document source of FEEDDOMAIN, FEEDURIPREFIX variables
+ofdpa: accton-as5835-54x: add platform code to build ofdpa and SDK
+ofdpa: drivshell: fix issues with client_drivshell log
+ofdpa: mapping: fix L2/L3 memory alloction mode
+ofdpa: allow setting l2/l3 memory allocation mode
+ofdpa: datapath: end log entry with newline
+
+meta-openembedded:
+mongodb: Pass OBJCOPY to scons so it does not use it from host
+Mariadb: update to 10.4.24
+apache2: upgrade 2.4.52 -> 2.4.53
+python3-urllib3: Fix CVE-2020-26137 and CVE-2021-33503
+polkit: fix overlapping changes in recent CVE patches
+multipath-tools: update SRC_URI
+geoip: Switch to use the main branch
+nodejs: upgrade to 12.22.2
+spirv-tools: update SRC_URI for googletest to main
+breakpad: Update SRC_URI for protobuf and lss
+breakpad: fix branch for gtest in SRC_URI
+cli11: switch from default master branch to main to fix do_fetch failure
+imagemagick: update SRC_URI branch from master to main
+openjpeg: Fix multiple CVE
+p7zip: Fix for CVE-2016-9296
+polkit: fix CVE-2021-3560
+nginx: backport fix for CVE-2019-20372
+p7zip: refresh patches
+p7zip: build and package lib7z.so needed for fastboot
+googletest: Switch branch from master to main
+protobuf: fix patch fuzz
+tcpreplay: Add fix for CVE-2020-24265 and CVE-2020-24266
+pw-am.sh: update to new patcwork system
+polkit: Fix for CVE-2021-4115
+
+meta-open-network-linux:
+platform-questone-2a: fix build by adding missing LIC_FILES_CHECKSUM
+linux-yocto-onl: enable TUN through kernel-meta
+recipes-kernel: update LICENSE of modules to correct SPDX identifiers
+onl: update LICENSE to correct SPDX identifier
+platform-questone-2a: fix LICENSE
+platform-as7726-32x: update LICENSE to correct SPDX identifier
+platform-as5835-54x: update LICENSE to correct SPDX identifier
+platform-as4630-54pe: update LICENSE to correct SPDX identifier
+linux-yocto-onl/5.15: update 5.15.35
+linux-yocto-onl: enable TCP_MD5SIG for armel iproc as well
+linux-yocto-onl: enable LM77 driver for EPS202 (AS4630-54PE)
+as5835-54x: remove FIXME
+kernel: document cross-repo sources in linux-yocto-onl.inc
+kernel: document cross-repo source in bisdn-linux.scc
+kernel: document cross-repo source in machine/accton-as4610.conf
+onl: as5835-54x: rename psu_serial_numer -> psu_serial_number
+onl: as5835-54x: don't ignore PSU2_AC_PMBUS_NODE
+recipes-core: make create_i2c_dev on as5835-54x more robust
+recipes-kernel: import accton-as5835-54x kernel modules
+recipes-core: add accton as5835-54x platform init code
+recipes-bsp: add accton as5835-54x formfactor
+conf: add accton as5835-54x machine definition
+onl: update bigcode to latest HEAD
+onl: update to latest HEAD
+
+meta-switch:
+baseboxd: bump version to 1.11.2
+baseboxd-tools: bundle-debug-info: handle missing bridge module
+distro: bump version to 4.6.0
+mstpd: bump mstpd version to 0.1.0+bisdn2 (dropped python2 for debian)
+frr: update LICENSE to correct SPDX identifier
+rofl-ofdpa: update LICENSE to correct SPDX identifier
+rofl-common: update LICENSE to correct SPDX identifier
+baseboxd: update LICENSE to correct SPDX identifier
+libnl: update LICENSE to correct SPDX identifier
+mstpd: update LICENSE to correct SPDX identifier
+grpc: fix checkout by updating googletest branch to main
+libnl: switch to main branch to fix build
+20-network-io.conf: Set max read buffer size
+ryu: add PR variable to track revisions
+ryu: [2/2] add ryu/app/bisdn/__init__.py to help python recognize package
+ryu: [1/2] add MPLS pseudowire application, ofdpa_vpws.py
+frr: update to version 8.2.2
+ryu: update ofdpa extensions
+baseboxd-tools: update bundle-debug-info to handle newer iputils bridge
+
+meta-virtualization:
+containerd-opencontainers: add EXTRA_EXTLDFLAGS and use it to fix build with gold
+
+poky:
+build-appliance-image: Update to dunfell head revision
+linux-yocto/5.4: update to v5.4.190
+linux-yocto/5.4: update to v5.4.188
+linux-yocto/5.4: update to v5.4.186
+linux-yocto/5.4: update to v5.4.183
+linux-yocto/5.4: update to v5.4.182
+git update from 2.24.3 to 2.24.4
+u-boot: Correct the SRC_URI
+wireless-regdb: upgrade 2022.02.18 -> 2022.04.08
+linux-firmware: upgrade 20220310 -> 20220411
+poky.conf: Bump version for 3.1.16 release
+documentation: update for 3.1.16 release
+libxshmfence: Correct LICENSE to HPND
+metadata_scm.bbclass: Use immediate expansion for the METADATA_* variables
+apt: add -fno-strict-aliasing to CXXFLAGS to fix SHA256 bug
+license_image.bbclass: close package.manifest file
+pseudo: Fix handling of absolute links
+pseudo: Add patch to workaround paths with crazy lengths
+git: Ignore CVE-2022-24975
+xz: fix CVE-2022-1271
+zlib: backport the fix for CVE-2018-25032
+gzip: fix CVE-2022-1271
+vim: Upgrade 8.2.4524 -> 8.2.4681
+conf.py/poky.yaml: Move version information to poky.yaml and read in conf.py
+bitbake: server/process: Disable gc around critical section
+tzdata: update to 2022a
+python3-jinja2: Correct HOMEPAGE
+boost: fix native build with glibc-2.34
+mirrors: Add missing gitsm entries for yocto/oe mirrors
+bind: update to 9.11.37
+bluez5: fix CVE-2022-0204
+go: backport patch fix for CVE-2021-38297
+grub: ignore CVE-2021-46705
+bitbake: fetch2: add check for empty SRC_URI hash string
+xserver-xorg: update to 1.20.14
+xserver-xorg: update to 1.20.13
+xserver-xorg: update to 1.20.12
+xserver-xorg: update to 1.20.11
+xserver-xorg: update to 1.20.10
+xserver-xorg: update to 1.20.9
+util-linux: fix CVE-2022-0563
+oeqa/selftest/tinfoil: Fix intermittent event loss issue in test
+virglrenderer: update SRC_URI
+gnu-config: update SRC_URI
+libxml2: fix CVE-2022-23308 regression
+ghostscript: backport patch fix for CVE-2021-3781
+ghostscript: fix CVE-2020-15900 and CVE-2021-45949 for -native
+apt: backport patch fix for CVE-2020-3810
+qemu: backport patch fix for CVE-2020-13791
+python3: ignore CVE-2022-26488
+libsolv: fix CVE: CVE-2021-44568-71 and CVE-2021-44573-77
+poky: Drop PREMIRRORS entries for scms
+bitbake: tinfoil: Allow run_command not to wait on events
+bitbake: server/process: Note when commands complete in logs
+oeqa/selftest/tinfoil: Improve tinfoil event test debugging
+oeqa/runtime/ping: Improve failure message to include more detail
+python3targetconfig: Use for nativesdk too
+mobile-broadband-provider-info: upgrade 20210805 -> 20220315
+mobile-broadband-provider-info: upgrade 20201225 -> 20210805
+linux-firmware: upgrade 20220209 -> 20220310
+python3: upgrade 3.8.12 -> 3.8.13
+openssl: upgrade 1.1.1l -> 1.1.1n
+bluez5: fix CVE-2021-3658
+qemu: backport fix for CVE-2020-13253
+re2c: backport fix for CVE-2018-21232
+libxml2: move to gitlab.gnome.org
+libxml2: backport fix for CVE-2022-23308
+documentation: update for 3.1.15 release
+build-appliance-image: Update to dunfell head revision
+bind: update to 9.11.36
+perf-tests: add bash into RDEPENDS (v5.12-rc5+)
+tiff: Add backports for two CVEs from upstream
+vim: Update to 8.2.4524 for further CVE fixes
+sstate: inside the threadedpool don't write to the shared localdata
+systemd: Ensure uid/gid ranges are set deterministically
+asciidoc: update git repository
