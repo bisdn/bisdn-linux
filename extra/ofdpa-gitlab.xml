@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remove-project name="bisdn/meta-ofdpa.git" />
-  <project name="yocto-meta-layers/meta-ofdpa.git" path="poky/meta-ofdpa" remote="gitlab" revision="master"/>
+  <project dest-branch="master" name="yocto-meta-layers/meta-ofdpa.git" path="poky/meta-ofdpa" remote="gitlab" revision="5a86e5f067eb381af869d26f663ec99abd95a9d4" upstream="master"/>
 </manifest>
