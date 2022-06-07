@@ -1,0 +1,110 @@
+BISDN Linux
+v4.6.1 Release Notes
+Date: 2022-06-08
+
+! New in this release
+- baseboxd: updated to version 1.11.5
+- Linux kernel updated to version 5.15.44
+- stfp and sftp-server were added in preparation of OpenSSH 9.0+ upgrades on host systems (which changes the default protocol of scp to SFTP)
+
+! Bug fixes
+- baseboxd: a fix was added to properly handle default routes on data ports
+- Edgecore EPS202 (AS4630-54PE): fixed the SFP LEDs
+- Edgecore DCS201 (AS5835-54X): fixed reporting of PSU fan direction in onlpdump
+
+! Changed behaviour
+- baseboxd/rofl-ofdpa: UDP rules were added so that DHCP packets are now forwarded to the CPU port by default. This allows receiving configuration via DHCP on front panel ports, or running a DHCP server on the switch.
+
+Changes between v4.6.0 and v4.6.1:
+
+bisdn-onie-additions:
+installer/install.sh: handle empty disks
+installer/install.sh: log correct partition
+u-boot-arch/install.sh: remove unused code
+
+meta-ofdpa:
+ofdpa: as4630-54pe: enable new accton led data
+ofdpa: make support for accton cmicx led data format generic
+ofdpa: slightly rework led data format logic
+ofdpa: use spaces instead of tabs for indentation
+ofdpa: split out non-common parts into their own include file
+ofdpa: add missing RDEPENDS for Trident 3 X7 firmware
+
+meta-openembedded:
+tcpdump: Add fix for CVE-2018-16301
+opencl-headers: switch to main branch
+fuse: set CVE_PRODUCT to "fuse_project:fuse"
+opencl-icd-loader: switch to main branch
+openjpeg: Whitelist CVE-2020-27844 and CVE-2015-1239
+ostree: prevent ostree-native depending on target virtual/kernel to provide kernel-module-overlay
+python3-cryptography: backport 3 changes to fix CVE-2020-36242
+lua: fix CVE-2022-28805
+atftp: Add fix for CVE-2021-41054 and CVE-2021-46671
+postgresql: Fix build on riscv
+
+meta-open-network-linux:
+platform-as4630-54pe: allow SFP LEDs to be controlled by the switch
+linux-yocto-onl/5.15: update to 5.15.44
+onl: add upstream-status to all patches
+onl: reorder patches into subdirectories
+onl: as4630-54pe: drop obsolete platform port config patch
+onl: move build code into a common include file
+onl: rename onl/ to files/
+as5835-54x: fix reporting of psu fan direction
+accton-as4610: do not try to read out PSU values for YM-1921
+ym2651y: actually apply PSU MFR_MODEL_OPTION fix to module
+ym2651y: fix update when MFR_MODEL_OPTION is uninmplemented
+optoe: add QSFP-DD support
+onl: update to latest HEAD
+
+meta-switch:
+baseboxd: Bump version to 1.11.5
+distro: bump version to 4.6.1
+rofl-ofdpa: Bump version to 2.0.4
+baseboxd: Bump version to 1.11.4
+baseboxd: Bump version to 1.11.3
+images/minimal: add sftp and sftp-server
+rofl-ofpda: bump version to 2.0.3
+
+poky:
+oeqa/selftest/cve_check: add tests for recipe and image reports
+mobile-broadband-provider-info: upgrade 20220315 -> 20220511
+pcre2: CVE-2022-1586 Out-of-bounds read
+cve-check: Fix report generation
+manuals: add missing space in appends
+selftest: skip virgl test on alma 8.6
+linux-firmware: upgrade 20220411 -> 20220509
+linux-firmware: replace mkdir by install
+openssl: Minor security upgrade 1.1.1n to 1.1.1o
+git: Use CVE_CHECK_WHITELIST instead of CVE_CHECK_IGNORE
+freetype: Fix CVEs for freetype
+tiff: Add patches to fix multiple CVEs
+curl: Fix CVEs for curl
+vim: Upgrade 8.2.4681 -> 8.2.4912
+scripts/git: Ensure we don't have circular references
+scripts: Make git intercept global
+base: Avoid circular references to our own scripts
+rootfs-postcommands: fix symlinks where link and output path are equal
+volatile-binds: Change DefaultDependencies from false to no
+cve-check: fix symlinks where link and output path are equal
+cve-check: add JSON format to summary output
+cve-update-db-native: let the user to drive the update interval
+cve-update-db-native: update the CVE database once a day only
+cve-check: no need to depend on the fetch task
+linux-yocto/5.4: update to v5.4.192
+busybox: fix CVE-2022-28391
+libinput: Add fix for CVE-2022-1215
+fribidi: Add fix for CVE-2022-25308, CVE-2022-25309 and CVE-2022-25310
+uninative: Upgrade to 3.6 with gcc 12 support
+neard: Switch SRC_URI to git repo
+base: Drop git intercept
+install/devshell: Introduce git intercept script due to fakeroot issues
+cases/buildepoxy.py: fix typo
+busybox: Use base_bindir instead of hardcoding /bin path
+python3: ignore CVE-2015-20107
+scripts/contrib/oe-build-perf-report-email.py: remove obsolete check for phantomjs and optipng
+perf-build-test/report: Drop phantomjs and html email reports support
+cve-check: add json format
+linux-firmware: correct license for ar3k firmware
+boost: don't specify gcc version
+tiff: Fix CVE-2022-0891
