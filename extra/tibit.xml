@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="yocto-meta-layers/meta-tibit.git" path="poky/meta-tibit" remote="gitlab" revision="master"/>
+  <project dest-branch="master" name="yocto-meta-layers/meta-tibit.git" path="poky/meta-tibit" remote="gitlab" revision="8a6cf0a9f0a173f4137297b3053e5d6c790e6320" upstream="master"/>
 </manifest>
