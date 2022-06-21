@@ -102,6 +102,10 @@ Chose one of the available image types to build
 
 * `full`: include the full BISDN Linux system, including baseboxd and OF-DPA.
 
+> **_NOTE:_** When trying to build a release prior to 4.6.1, please read the
+> [Known Issues](#known-issues) section regarding CVE-2022-24765 before
+> starting.
+
 ```bash
 # build the yocto artifacts
 bitbake <minimal|full>
@@ -113,3 +117,64 @@ The finished image can be found at
 ## Install image
 
 Please refer to our [BISDN Linux docs](https://docs.bisdn.de/getting_started/install_bisdn_linux.html) on how to install the resulting image.
+
+## Known Issues
+
+* The git **CVE-2022-24765** directly affects all builds of BISDN Linux prior to
+  version 4.6.1, since those were release before the required patches were
+  released in yocto itself:
+
+    - https://git.yoctoproject.org/poky/commit/?h=dunfell&id=90cf135b046e4195512daeb8e8f516603d0f5d6c
+    - https://git.yoctoproject.org/poky/commit/?h=dunfell&id=3a9cef8dbe3b5d81521536232c4ac67a9e81ac9a
+    - https://git.yoctoproject.org/poky/commit/?h=dunfell&id=a75678145b35b3722f0cbba51aa699d3fd8f0bef
+    - https://git.yoctoproject.org/poky/commit/?h=dunfell&id=a48231b5bfb5b1ca5de6dad6b3277a051eb6b55c
+
+  Using a patched git version with an unpatched yocto one will cause builds to
+  fail with an error message like:
+
+  ```
+  ERROR: python3-oslo.i18n-3.17.0+gitAUTOINC+f2729cd36f-r0 do_install: 'python3 setup.py install --root=/tmp/accton-as4610/work/cortexa9-vfp-poky-linux-gnueabi/python3-oslo.i18n/3.17.0+gitAUTOINC+f2729cd36f-r0/image     --prefix=/usr     --install-lib=/usr/lib/python3.8/site-packages     --install-data=/usr/share' execution failed.
+  ERROR: python3-oslo.i18n-3.17.0+gitAUTOINC+f2729cd36f-r0 do_install: Execution of '/tmp/accton-as4610/work/cortexa9-vfp-poky-linux-gnueabi/python3-oslo.i18n/3.17.0+gitAUTOINC+f2729cd36f-r0/temp/run.do_install.2518342' failed with exit code 1
+  ERROR: Logfile of failure stored in: /tmp/accton-as4610/work/cortexa9-vfp-poky-linux-gnueabi/python3-oslo.i18n/3.17.0+gitAUTOINC+f2729cd36f-r0/temp/log.do_install.2518342
+  Log data follows:
+  | DEBUG: Executing python function extend_recipe_sysroot
+  | NOTE: Direct dependencies are ['virtual:native:/home/ubuntu/workspace/poky-bisdn-linux/poky/meta/recipes-devtools/python/python3-pbr_5.4.4.bb:do_populate_sysroot', '/home/ubuntu/workspace/poky-bisdn-linux/poky/meta/recipes-core/glibc/glibc_2.31.bb:do_populate_sysroot', '/home/ubuntu/workspace/poky-bisdn-linux/poky/meta/recipes-devtools/python/python3_3.8.13.bb:do_populate_sysroot', '/home/ubuntu/workspace/poky-bisdn-linux/poky/meta/recipes-devtools/quilt/quilt-native_0.66.bb:do_populate_sysroot', '/home/ubuntu/workspace/poky-bisdn-linux/poky/meta/recipes-devtools/python/python3-pbr_5.4.4.bb:do_populate_sysroot', '/home/ubuntu/workspace/poky-bisdn-linux/poky/meta/recipes-devtools/python/python3-pip_20.0.2.bb:do_populate_sysroot', 'virtual:native:/home/ubuntu/workspace/poky-bisdn-linux/poky/meta/recipes-devtools/pseudo/pseudo_git.bb:do_populate_sysroot', '/home/ubuntu/workspace/poky-bisdn-linux/poky/meta/recipes-devtools/gcc/gcc-cross_9.3.bb:do_populate_sysroot', 'virtual:native:/home/ubuntu/workspace/poky-bisdn-linux/poky/meta/recipes-devtools/python/python3_3.8.13.bb:do_populate_sysroot', '/home/ubuntu/workspace/poky-bisdn-linux/poky/meta/recipes-devtools/gcc/gcc-runtime_9.3.bb:do_populate_sysroot', 'virtual:native:/home/ubuntu/workspace/poky-bisdn-linux/poky/meta/recipes-devtools/patch/patch_2.7.6.bb:do_populate_sysroot', 'virtual:native:/home/ubuntu/workspace/poky-bisdn-linux/poky/meta/recipes-devtools/python/python3-setuptools_45.2.0.bb:do_populate_sysroot']
+  | NOTE: Installed into sysroot: []
+  | NOTE: Skipping as already exists in sysroot: ['python3-pbr-native', 'glibc', 'python3', 'quilt-native', 'python3-pbr', 'python3-pip', 'pseudo-native', 'gcc-cross-arm', 'python3-native', 'gcc-runtime', 'patch-native', 'python3-setuptools-native', 'python3-pip-native', 'linux-libc-headers', 'xz', 'libtirpc', 'libxcrypt', 'autoconf-archive', 'gdbm', 'openssl', 'libnsl2', 'readline', 'bzip2', 'opkg-utils', 'sqlite3', 'zlib', 'libffi', 'util-linux', 'libmpc-native', 'binutils-cross-arm', 'autoconf-native', 'zlib-native', 'flex-native', 'automake-native', 'libtool-native', 'gnu-config-native', 'gmp-native', 'texinfo-dummy-native', 'xz-native', 'mpfr-native', 'openssl-native', 'bzip2-native', 'sqlite3-native', 'libffi-native', 'pkgconfig-native', 'util-linux-native', 'libnsl2-native', 'libtirpc-native', 'gdbm-native', 'readline-native', 'libgcc', 'attr-native', 'unzip-native', 'ncurses', 'libcap-ng', 'bash-completion', 'm4-native', 'gettext-minimal-native', 'libpcre2-native', 'ncurses-native', 'libcap-ng-native']
+  | DEBUG: Python function extend_recipe_sysroot finished
+  | DEBUG: Executing shell function do_install
+  | ERROR:root:Error parsing
+  | Traceback (most recent call last):
+  |   File "/tmp/accton-as4610/work/cortexa9-vfp-poky-linux-gnueabi/python3-oslo.i18n/3.17.0+gitAUTOINC+f2729cd36f-r0/recipe-sysroot-native/usr/lib/python3.8/site-packages/pbr/core.py", line 96, in pbr
+  |     attrs = util.cfg_to_args(path, dist.script_args)
+  |   File "/tmp/accton-as4610/work/cortexa9-vfp-poky-linux-gnueabi/python3-oslo.i18n/3.17.0+gitAUTOINC+f2729cd36f-r0/recipe-sysroot-native/usr/lib/python3.8/site-packages/pbr/util.py", line 271, in cfg_to_args
+  |     pbr.hooks.setup_hook(config)
+  |   File "/tmp/accton-as4610/work/cortexa9-vfp-poky-linux-gnueabi/python3-oslo.i18n/3.17.0+gitAUTOINC+f2729cd36f-r0/recipe-sysroot-native/usr/lib/python3.8/site-packages/pbr/hooks/__init__.py", line 25, in setup_hook
+  |     metadata_config.run()
+  |   File "/tmp/accton-as4610/work/cortexa9-vfp-poky-linux-gnueabi/python3-oslo.i18n/3.17.0+gitAUTOINC+f2729cd36f-r0/recipe-sysroot-native/usr/lib/python3.8/site-packages/pbr/hooks/base.py", line 27, in run
+  |     self.hook()
+  |   File "/tmp/accton-as4610/work/cortexa9-vfp-poky-linux-gnueabi/python3-oslo.i18n/3.17.0+gitAUTOINC+f2729cd36f-r0/recipe-sysroot-native/usr/lib/python3.8/site-packages/pbr/hooks/metadata.py", line 25, in hook
+  |     self.config['version'] = packaging.get_version(
+  |   File "/tmp/accton-as4610/work/cortexa9-vfp-poky-linux-gnueabi/python3-oslo.i18n/3.17.0+gitAUTOINC+f2729cd36f-r0/recipe-sysroot-native/usr/lib/python3.8/site-packages/pbr/packaging.py", line 870, in get_version
+  |     raise Exception("Versioning for this project requires either an sdist"
+  | Exception: Versioning for this project requires either an sdist tarball, or access to an upstream git repository. It's also possible that there is a mismatch between the package name in setup.cfg and the argument given to pbr.version.VersionInfo. Project name oslo.i18n was given, but was not able to be found.
+  | error in setup command: Error parsing /tmp/accton-as4610/work/cortexa9-vfp-poky-linux-gnueabi/python3-oslo.i18n/3.17.0+gitAUTOINC+f2729cd36f-r0/git/setup.cfg: Exception: Versioning for this project requires either an sdist tarball, or access to an upstream git repository. It's also possible that there is a mismatch between the package name in setup.cfg and the argument given to pbr.version.VersionInfo. Project name oslo.i18n was given, but was not able to be found.
+  | ERROR: 'python3 setup.py install --root=/tmp/accton-as4610/work/cortexa9-vfp-poky-linux-gnueabi/python3-oslo.i18n/3.17.0+gitAUTOINC+f2729cd36f-r0/image     --prefix=/usr     --install-lib=/usr/lib/python3.8/site-packages     --install-data=/usr/share' execution failed.
+  | WARNING: exit code 1 from a shell command.
+  | ERROR: Execution of '/tmp/accton-as4610/work/cortexa9-vfp-poky-linux-gnueabi/python3-oslo.i18n/3.17.0+gitAUTOINC+f2729cd36f-r0/temp/run.do_install.2518342' failed with exit code 1
+  ERROR: Task (/home/ubuntu/workspace/poky-bisdn-linux/poky/meta-cloud-services/meta-openstack/recipes-devtools/python/python3-oslo.i18n_git.bb:do_install) failed with exit code '1'
+  NOTE: Tasks Summary: Attempted 4488 tasks of which 8 didn't need to be rerun and 1 failed.
+  
+  Summary: 1 task failed:
+    /home/ubuntu/workspace/poky-bisdn-linux/poky/meta-cloud-services/meta-openstack/recipes-devtools/python/python3-oslo.i18n_git.bb:do_install
+  Summary: There were 25 WARNING messages shown.
+  Summary: There were 2 ERROR messages shown, returning a non-zero exit code.
+  ```
+
+  To avoid this you can either try building from version 4.6.1 (or newer), or
+  workaround the git safeguard and manually mark all directories as safe to
+  built from by running:
+
+  ```
+  git config --global safe.directory '*'
+  ```
