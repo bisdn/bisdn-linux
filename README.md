@@ -103,8 +103,7 @@ Chose one of the available image types to build
 * `full`: include the full BISDN Linux system, including baseboxd and OF-DPA.
 
 > **_NOTE:_** When trying to build a release prior to 4.6.1, please read the
-> [Known Issues](#known-issues) section regarding CVE-2022-24765 before
-> starting.
+> [Known issues when building older versions](#known-issues-when-building-older-versions) section before starting.
 
 ```bash
 # build the yocto artifacts
@@ -118,19 +117,10 @@ The finished image can be found at
 
 Please refer to our [BISDN Linux docs](https://docs.bisdn.de/getting_started/install_bisdn_linux.html) on how to install the resulting image.
 
-## Known Issues
+## Known issues when building older versions
 
-* The git **CVE-2022-24765** directly affects all builds of BISDN Linux prior to
-  version 4.6.1, since those were release before the required patches were
-  released in yocto itself:
-
-    - https://git.yoctoproject.org/poky/commit/?h=dunfell&id=90cf135b046e4195512daeb8e8f516603d0f5d6c
-    - https://git.yoctoproject.org/poky/commit/?h=dunfell&id=3a9cef8dbe3b5d81521536232c4ac67a9e81ac9a
-    - https://git.yoctoproject.org/poky/commit/?h=dunfell&id=a75678145b35b3722f0cbba51aa699d3fd8f0bef
-    - https://git.yoctoproject.org/poky/commit/?h=dunfell&id=a48231b5bfb5b1ca5de6dad6b3277a051eb6b55c
-
-  Using a patched git version with an unpatched yocto one will cause builds to
-  fail with an error message like:
+* The fix for git **[CVE-2022-24765](https://github.blog/2022-04-12-git-security-vulnerability-announced/)** directly affects the build of BISDN Linux prior to
+  version 4.6.1, and will cause it to fail with an error message like:
 
   ```
   ERROR: python3-oslo.i18n-3.17.0+gitAUTOINC+f2729cd36f-r0 do_install: 'python3 setup.py install --root=/tmp/accton-as4610/work/cortexa9-vfp-poky-linux-gnueabi/python3-oslo.i18n/3.17.0+gitAUTOINC+f2729cd36f-r0/image     --prefix=/usr     --install-lib=/usr/lib/python3.8/site-packages     --install-data=/usr/share' execution failed.
@@ -172,9 +162,12 @@ Please refer to our [BISDN Linux docs](https://docs.bisdn.de/getting_started/ins
   ```
 
   To avoid this you can either try building from version 4.6.1 (or newer), or
-  workaround the git safeguard and manually mark all directories as safe to
-  built from by running:
+  disable the git safeguard and manually mark all directories as safe to
+  use from by running:
 
   ```
   git config --global safe.directory '*'
   ```
+
+  > **_WARNING_** This will effectively reintroduce the vulnerability of **CVE-2022-24765**, please
+  > read the advisory carefully to make sure you understand the risk.
