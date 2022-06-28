@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<manifest>
-  <project name="yocto-meta-layers/meta-tibit.git" path="poky/meta-tibit" remote="gitlab" revision="master"/>
-</manifest>
