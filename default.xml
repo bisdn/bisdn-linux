@@ -6,7 +6,7 @@
   <remote fetch="git://git.yoctoproject.org/" name="yocto"/>
   
   <project dest-branch="v.7.0" name="bisdn/bisdn-linux.git" path="poky/build-bisdn-linux" remote="github" revision="9ab2fc7188579fc0c8cf3dac251168b04bf23eb1" upstream="v4.7.0"/>
-  <project dest-branch="master" name="bisdn/bisdn-onie-additions.git" path="poky/bisdn-onie-additions" remote="github" revision="410f4b436b100485e60de7649861baf32980c836" upstream="master"/>
+  <project dest-branch="master" name="bisdn/bisdn-onie-additions.git" path="poky/bisdn-onie-additions" remote="github" revision="40c7ef733614a0090e114300e58b3f26bac20029" upstream="master"/>
   <project dest-branch="master" name="bisdn/meta-ofdpa.git" path="poky/meta-ofdpa" remote="github" revision="76852a972056a9edc3957131ac57a8b1f04eac58" upstream="master"/>
   <project dest-branch="master" name="bisdn/meta-open-network-linux.git" path="poky/meta-open-network-linux" remote="github" revision="349798ece2862aabad0e603bdb2e5e55d4b9d833" upstream="master"/>
   <project dest-branch="master" name="bisdn/meta-switch.git" path="poky/meta-switch" remote="github" revision="fad01e45503d8f23b508f98406c440a3c9668e57" upstream="master"/>
