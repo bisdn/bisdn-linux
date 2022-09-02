@@ -1,0 +1,316 @@
+BISDN Linux
+4.8.0 Release Notes
+Date: 2022-09-05
+
+! New in this release
+- added Edgecore EPS201 (AS4630-54TE) as supported platform
+- updated to Linux kernel 5.15.64
+- added MSTPD state related output to collect-debug-info
+
+! Changed behavior
+- moved install path of 90-enp.link to /lib/systemd/network instead of
+  /etc/systemd/network to avoid accidental deletions or changes by users
+- changed default hostname to be set based on ONIE machine name
+- updated installer to check if the platform is supported before installing
+- removed auto creation of bond0 device by including bonding as a module instead
+  of building it directly into the kernel
+
+! Bug fixes
+- amended systemd-networkd configuration of management interface to avoid link
+  flapping on platforms with Intel x86 host CPUs when DHCP sets MTU
+- reverted to old (pre 4.7) syntax in /etc/sudoers.d for backward compatibility
+- made ports with ip configuration work again after attaching and detaching them
+  from a bridge
+- accton as4610: updated bundle-debug-info to not cause the port interfaces to
+  reset
+- accton as4610: allowed system time to be set from RTC at boot to align with
+  other platforms
+- allowed RTC to be updated when receiving a time update via NTP
+
+! Detailed Changelog
+
+Changes between v4.7.0 and v4.8.0:
+
+bisdn-onie-additions (REMOVED)
+
+build-bisdn-linux:
+default.xml: drop now unused bisdn-onie-additions
+
+meta-ofdpa:
+ofdpa: always apply the as4610 patch
+ofdpa: agema-ag5648: convert ifdeffery to property
+ofdpa: agema-ag7648: convert ifdeffery to property
+
+meta-open-network-linux:
+linux-yocto-onl: update to 5.15.64
+linux-yocto-onl: make bonding a module to get rid of the bond0 device
+accton-as7726-32x: fix ONIE_MACHINE_TYPE
+accton-as5835-54x: fix ONIE_MACHINE_TYPE
+conf: drop obsolete GLIBC_ADDONS variable
+conf: drop unused SYSLINUX_OPS variable
+conf: drop redundant SERIAL_CONSOLE variable
+conf: drop unused APPEND append
+conf: drop unused CONSOLE_* variables
+onl: do not override ARCH
+accton-as4610: fix on-demand loading of modules
+onl: limit built platforms to actually support ones
+onl: use ONIE format instead of ONL format for platform names
+cel-questone-2a: fix ONIE_MACHINE_TYPE
+accton-as4630-54pe: fix ONIE_MACHINE_TYPE
+accton-as4610: fix ONIE_MACHINE_TYPE
+platform-as4630-54pe: set pca9548 muxes to disconnect on idle
+onl: accton-as4630-54te: support YM-1151F power supply
+onl: accton-as4630-54te: update thermal threshold
+accton-as4630-54pe: add accton-as4630-54te modules
+onl: enable accton-as4630-54te support
+platform-as4630-54pe: detect and handle accton-as4630-54te
+platform-as4630-54pe: make sure optoe device is present
+onl: delta-ag7648: work around deadlock in module load
+platform-as4630-54pe: install 90-enp.link to /lib instead of /etc
+platform-as4610: install 90-enp.link to /lib instead of /etc
+platform-questone-2a: load switchboard cpld module
+linux-yocto-onl/x86_64-intel.cfg: enable kernel setting system time at boot
+linux-yocto-onl/armel-iproc: Enable kernel setting hardware clock
+onl: always build platform modules
+agema-ag7648: build platform modules via ONL
+agema-ag5648: build platform modules via ONL
+cel-questone-2a: build platform modules via ONL
+accton-as7726-32x: build platform modules via ONL
+accton-as5835-54x: build platform modules via ONL
+accton-as4630-54pe: build platform modules via ONL
+accton-as4610: build platform modules via ONL
+onl: add support for building platform modules
+onl: add support for building common vendor modules
+onl: add remaining module build fixes from our tree
+accton-as4610: reformat MACHINE_EXTRA_RDEPENDS for better readability
+onl: build common kernel modules within onl
+emerson700: drop module
+
+meta-openembedded:
+cryptsetup: Add support for building without SSH tokens
+libwebsockets: Avoid absolute paths in *.cmake files in the sysroot
+yasm: fix buildpaths warning
+frr: fix buildpaths issue
+apache2: Fix the buildpaths issue
+openipmi: Fix buildpaths issue
+freeradius: Fix buildpaths issue
+postgresql: Fix the buildpaths issue
+net-snmp: set ac_cv_path_PSPROG
+ibus: Swith to use main branch instead of master
+polkit: update patches for musl compilation
+polkit: Add --shell /bin/nologin to polkitd user
+polkit-group-rule-udisks2: fix override syntax in RDEPENDS
+polkit: add udisks2 rule
+glmark2: fix compatibility with python-3.11
+tracker: upgrade 3.3.1 -> 3.3.2
+tracker: upgrade 3.3.0 -> 3.3.1
+redis: upgrade 7.0.2 -> 7.0.4
+stunnel: upgrade 5.64 -> 5.65
+stunnel: upgrade 5.63 -> 5.64
+python3-lxml: Security fix CVE-2022-2309
+openjpeg: ignore CVE-2015-1239
+bigbuckbunny-1080p: update SRC_URI
+ndisc6: upgrade 1.0.5 -> 1.0.6
+php: upgrade 8.1.7 -> 8.1.8
+rsyslog: update 8.2202->8.2206
+catfish: fix buildpaths issue
+postgresql: ignore unrelated CVE
+php: ignore patched CVEs
+mongodb: ignore unrelated CVEs
+meta-oe: ignore patched CVEs
+libplist: ignore patched CVEs
+
+meta-switch:
+baseboxd: Bump version to 1.12.2
+systemd-conf: avoid link flapping when DHCP sets MTU
+systemd-conf: replace sed with local copy
+installer: do a platform check based on included machines
+installer: include platform.conf for all enabled platforms
+installer: flatten machines and use ONIE names
+sudo: revert to old syntax for backward compatibility
+baseboxd-tools: bundle-debug-info: disable "switch" by default
+baseboxd-tools: bundle-debug-info: split out techsupport
+set default hostname based on ONIE machine name
+bump distro to version 4.8.0
+baseboxd-tools: fix typo in bundle-debug-info usage message
+baseboxd-tools: bundle MSTPD state as well in collect-debug-info
+baseboxd-tools: allow ignoring failing commands in bundle-debug-info
+baseboxd-tools: allow arbitrary argument order for bundle-debug-info
+onie-nos-installer: use the in-tree copy of the installer
+scripts: import installer scripts from bisdn-one-additions
+baseboxd: Bump version to 1.12.1
+libnl: update to 3.7.0
+libnl: update to 3.6.0
+
+meta-virtualization:
+podman: Fix merge typo
+podman: Patch for CVE-2022-27649
+skopeo: Mark CVE-2019-10214 as fixed
+podman: Rename podman-rootless.conf sysctl file to aid overrides
+ceph: upgrade v15.2.15 -> v15.2.17
+singularity: Drop explicit runtime dep glibc
+cni: Use gcc-based toolchain
+podman: Use gcc-based toolchain
+podman: Backport patch to fix duplicate switch statements
+runc: Backport patch to fix duplicate switch statements
+criu: fix patch fuzz and remove unused patch
+containerd: update to 1.6.6
+
+poky:
+bitbake: utils: Pass lock argument in fileslocked
+wic: depend on cross-binutils
+wic/bootimg-efi: use cross objcopy when building unified kernel image
+wic: add target tools to PATH when executing native commands
+oeqa/gotoolchain: set CGO_ENABLED=1
+oeqa/gotoolchain: put writable files in the Go module cache
+oeqa/selftest: rename git.py to intercept.py
+oeqa/qemurunner: add run_serial() comment
+sanity: add a comment to ensure CONNECTIVITY_CHECK_URIS is correct
+package_rpm: Do not replace square brackets in %files
+oeqa/parselogs: add qemuarmv5 arm-charlcd masking
+kernel-fitimage.bbclass: only package unique DTBs
+sysvinit-inittab/start_getty: Fix respawn too fast
+wpebackend-fdo: upgrade 1.12.0 -> 1.12.1
+wireless-regdb: upgrade 2022.06.06 -> 2022.08.12
+libwebp: upgrade 1.2.3 -> 1.2.4
+libjpeg-turbo: upgrade 2.1.3 -> 2.1.4
+glib-networking: upgrade 2.72.1 -> 2.72.2
+epiphany: upgrade 42.3 -> 42.4
+gdk-pixbuf: update 2.42.8 -> 2.42.9
+gdk-pixbuf: upgrade 2.42.6 -> 2.42.8
+Revert "gdk-pixbuf: CVE-2021-46829 a heap-based buffer overflow"
+xz: update 5.2.5 -> 5.2.6
+tzdata: upgrade 2022a -> 2022b
+linux-yocto/5.10: update genericx86* machines to v5.10.135
+linux-yocto/5.15: update genericx86* machines to v5.15.59
+migration guides: add missing release notes
+ref-manual: add numa to machine features
+vim: Upgrade 9.0.0115 -> 9.0.0242
+packagegroup-self-hosted: update for strace
+create-spdx: handle links to inaccessible locations
+linux-yocto: prepend the the value with a space when append to KERNEL_EXTRA_ARGS
+apt: fix nativesdk-apt build failure during the second time build
+archiver.bbclass: some recipes that uses the kernelsrc bbclass uses the shared source
+perf: Fix reproducibility issues with 5.19 onwards
+libpam: use /run instead of /var/run in systemd tmpfiles
+tcp-wrappers: Fix implicit-function-declaration warnings
+cracklib: Drop using register keyword
+python3-pip: Fix RDEPENDS after the update
+weston: upgrade 10.0.1 -> 10.0.2
+webkitgtk: upgrade 2.36.4 -> 2.36.5
+mobile-broadband-provider-info: upgrade 20220511 -> 20220725
+libwebp: upgrade 1.2.2 -> 1.2.3
+libcap: upgrade 2.64 -> 2.65
+libcap: upgrade 2.63 -> 2.64
+iso-codes: upgrade 4.10.0 -> 4.11.0
+ell: upgrade 0.49 -> 0.50
+libwpe: upgrade 1.12.0 -> 1.12.2
+bluez5: update 5.64 -> 5.65
+go: update v1.17.12 -> v1.17.13
+cve-check: Don't use f-strings
+grub2: fix several CVEs
+u-boot: fix CVE-2022-33967
+u-boot: fix CVE-2022-30552
+connman: Backports for security fixes
+libxml2: Ignore CVE-2016-3709
+libtiff: CVE-2022-34526 A stack overflow was discovered
+bitbake: runqueue: Change pressure file warning to a note
+bitbake: bitbake: runqueue: add memory pressure regulation
+bitbake: bitbake: runqueue: add cpu/io pressure regulation
+lttng-modules: replace mips compaction fix with upstream change
+lttng-modules: fix build against mips and v5.19 kernel
+lttng-modules: fix 5.19+ build
+selftest/wic: Tweak test case to not depend on kernel size
+relocate_sdk.py: ensure interpreter size error causes relocation to fail
+nativesdk: Clear TUNE_FEATURES
+scripts/oe-setup-builddir: make it known where configurations come from
+cmake: remove CMAKE_ASM_FLAGS variable in toolchain file
+boost: fix install of fiber shared libraries
+create-spdx: ignore packing control files from ipk and deb
+create-spdx: Fix supplier field
+archiver.bbclass: remove unsed do_deploy_archives[dirs]
+runqemu: Add missing space on default display option
+devtool/upgrade: catch bb.fetch2.decodeurl errors
+devtool/upgrade: correctly clean up when recipe filename isn't yet known
+devtool: error out when workspace is using old override syntax
+vim: update from 9.0.0063 to 9.0.0115
+zlib: CVE-2022-37434 a heap-based buffer over-read
+gnutls: CVE-2022-2509 Double free during gnutls_pkcs7_verify
+u-boot: fix CVE-2022-33103
+qemu: fix CVE-2022-0216
+qemu: fix CVE-2022-0358
+qemu: fix CVE-2021-4158
+qemu: fix CVE-2021-3929
+qemu: fix CVE-2021-3507
+gdk-pixbuf: CVE-2021-46829 a heap-based buffer overflow
+build-appliance-image: Update to kirkstone head revision
+lttng-modules: Fix build failure for kernel v5.15.58
+lttng-modules: update 2.13.3 -> 2.13.4
+linux-yocto/5.15: fix reproducibility issues
+linux-yocto/5.15: update to v5.15.59
+linux-yocto-rt/5.15: update to -rt48 (and fix -stable merge)
+linux-yocto/5.15: update to v5.15.58
+linux-yocto/5.10: update to v5.10.135
+glibc: revert one upstream change to work around broken DEBUG_BUILD build
+glibc : stable 2.35 branch updates
+poky.conf: bump version for 4.0.3
+yocto-bsps: update to v5.10.130
+yocto-bsps: update to v5.15.54
+yocto-bsps/5.15: fix buildpaths issue with pnmtologo
+yocto-bsps/5.10: fix buildpaths issue with pnmtologo
+yocto-bsps/5.15: fix buildpaths issue with gen-mach-types
+yocto-bsps/5.10: fix buildpaths issue with gen-mach-types
+yocto-bsps: update to v5.15.52 and buildpaths fixes
+yocto-bsps: update to v5.10.128 and buildpaths fixes
+yocto-bsps: update to v5.10.113
+openssh: Add openssh-sftp-server to openssh RDEPENDS
+strace: set COMPATIBLE_HOST for riscv32
+kernel.bbclass: pass LD also in savedefconfig
+linux-firwmare: restore WHENCE_CHKSUM variable
+libgcc: Fix standalone target builds with usrmerge distro feature
+package_manager/ipk: do not pipe stderr to stdout
+binutils: stable 2.38 branch updates
+initscripts: run umountnfs as a KILL script
+bind: Remove legacy python3 PACKAGECONFIG code
+efivar: fix import functionality
+base/reproducible: Change Source Date Epoch generation methods
+perf: fix reproduciblity in older releases of Linux
+udev-extraconf:mount.sh: fix a umount issue
+systemd: Added base_bindir into pkg_postinst:udev-hwdb.
+wic/plugins/rootfs: Fix NameError for 'orig_path'
+oeqa/runtime: add test that the kernel has CONFIG_PREEMPT_RT enabled
+epiphany: upgrade 42.2 -> 42.3
+xwayland: upgrade 22.1.2 -> 22.1.3
+xwayland: upgrade 22.1.1 -> 22.1.2
+webkitgtk: upgrade 2.36.3 -> 2.36.4
+vala: upgrade 0.56.1 -> 0.56.2
+vala: upgrade 0.56.0 -> 0.56.1
+log4cplus: upgrade 2.0.7 -> 2.0.8
+libuv: upgrade 1.44.1 -> 1.44.2
+linux-firmware: update 20220610 -> 20220708
+xserver-xorg: update 21.1.3 -> 21.1.4
+font-util: update 1.3.2 -> 1.3.3
+encodings: update 1.0.5 -> 1.0.6
+xf86-input-synaptics: update 1.9.1 -> 1.9.2
+xmodmap: update 1.0.10 -> 1.0.11
+xev: update 1.2.4 -> 1.2.5
+xorg-app: Tweak handling of compression changes in SRC_URI
+xdpyinfo: upgrade 1.3.2 -> 1.3.3
+mkfontscale: upgrade 1.2.1 -> 1.2.2
+libtirpc: CVE-2021-46828 DoS vulnerability with lots of connections
+qemu: CVE-2022-35414 can perform an uninitialized read on the translate_fail path, leading to an io_readx or io_writex crash
+gcc-runtime: Pass -nostartfiles when building dummy libstdc++.so
+gcc: Backport a fix for gcc bug 105039
+gobject-introspection-data: Disable cache for g-ir-scanner
+rootfs-postcommands.bbclass: move host-user-contaminated.txt to ${S}
+sstatesig: Include all dependencies in SPDX task signatures
+git: upgrade v2.35.3 -> v2.35.4
+go: update v1.17.10 -> v1.17.12
+vim: Upgrade 9.0.0021 -> 9.0.0063
+gnupg: upgrade to 2.3.7 to fix CVE-2022-34903
+gnupg: update 2.3.4 -> 2.3.6
+bind: upgrade 9.18.3 -> 9.18.4
+bind: upgrade 9.18.2 -> 9.18.3
+dpkg: fix CVE-2022-1664
+tiff: Security fixes CVE-2022-1354 and CVE-2022-1355
+lua: Backport fix for CVE-2022-33099
