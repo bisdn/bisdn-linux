@@ -7,12 +7,59 @@ The build process takes around 3-4 hours with 8 CPU cores and 8 GiB RAM. A singl
 build requires ~70 GiB of disk space. Adding additional CPU cores speeds up the
 build time significantly.
 
-## Prerequisites
+## General requirements
 
 * Disk space and RAM
 
 We recommend a minimum of 8 GiB RAM and 150 GiB free disk space for building a single full
 image.
+
+* A functional Yocto build environment
+
+This can be achieved by either installing and configuring everything as
+documented in the section
+[Installing your own build environment](#installing-your-own-build-environment), or
+by starting from the
+[prebuilt Yocto environment](https://github.com/bisdn/docker-yocto-builder) in a
+docker container, as [described below](#using-the-docker-yocto-builder).
+
+## Using the [docker-yocto-builder](https://github.com/bisdn/docker-yocto-builder)
+
+To ease the process of "getting started building BISDN Linux with Yocto", we
+have compiled all dependencies needed by Yocto itself and BISDN Linux
+specifically, into a docker container. This container can be pulled directly
+from the GitHub container registry [ghcr.io](https://ghcr.io)
+[here](https://github.com/orgs/bisdn/packages?repo_name=docker-yocto-builder).
+Please make sure you pull the 'ci' version of the container linked above
+(or switch to the user 'builder' in the 'base' version).
+To continue with the steps documented in the section
+[Bootstrap build system](#bootstrap-build-system) you have to directly
+exec into the container, while ideally also mounting a local path on your
+file system (e.g. a new folder in your local /tmp) to the default TMPDIR
+directly inside of the container. To ensure that this /tmp directory will be
+writable by the builder user inside of the container, please make sure that you
+either have the same UID (1000) as the builder user inside of the container, or
+create the folder beforehand with more permissive access rights.
+This can be achieved by running:
+
+```bash
+# create a folder to be mounted as /tmp inside of the container with very
+# permissive access rights
+mkdir /tmp/builder-tmp && chmod 0777 /tmp/builder-tmp
+# start the docker container and mount the folder previously created as /tmp
+docker run -ti -v /tmp/builder-tmp:/tmp ghcr.io/bisdn/docker-yocto-builder-ci:main bash
+```
+
+If you are planning to overwrite the TMPDIR in the conf/local.conf (`TMPDIR =
+"/tmp/${MACHINE}"` by default) as mentioned in the section
+[Configure target machine and cache directory](#configure-target-machine-and-cache-directory),
+you should also consider to mount your local file system path to this new path
+inside of your container.
+
+After you have successfully exec'd into the container, you are ready to
+[bootstrap the build system](#bootstrap-build-system).
+
+## Installing your own build environment
 
 * repo tool
 
@@ -112,6 +159,12 @@ bitbake <minimal|full>
 
 The finished image can be found at
 `${TMPDIR}/deploy/images/${MACHINE}/onie-bisdn-full-${MACHINE}.bin`.
+
+If you used the docker-yocto-builder container as build environment, you should
+be able to also find the image in the output path you directly mounted into the
+container (e.g.
+/tmp/builder-tmp/deploy/images/${MACHINE}/onie-bisdn-full-${MACHINE}.bin on your
+host system).
 
 ## Install image
 
