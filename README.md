@@ -119,11 +119,17 @@ the respective project page.
 
 ## Bootstrap build system
 
+The commands needed to bootstrap and initialise your build system are shown
+below. Before starting to copy paste those, please make sure to set $BRANCHNAME
+in your environment to an existing branch in the bisdn/bisdn-linux repo from
+which you want to start your build (e.g. `export BRANCHNAME=v4.8.0` or `export
+BRANCHNAME=master`)
+
 ```bash
 # init repo
 mkdir -p ~/workspace/poky-bisdn-linux
 cd !$
-repo init -b BRANCHNAME -u https://github.com/bisdn/bisdn-linux.git
+repo init -b ${BRANCHNAME} -u https://github.com/bisdn/bisdn-linux.git
 
 # sync repos
 repo sync
