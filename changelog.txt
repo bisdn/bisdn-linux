@@ -1,0 +1,185 @@
+Changes between v4.8.0 and v4.8.1:
+
+build-bisdn-linux:
+docs: explain how to set BRANCHNAME when bootstrapping build environment
+docs: update build instructions on how to use the docker-yocto-builder (#68)
+default.xml: replace extra manifests with groups
+
+meta-ofdpa:
+openbcm-gpl-modules: bcm-knet: allow marking packets as offloaded
+man-pages: force overwrite of potentially existing gz
+ofdpa: agema-ag5648: fix LED activity
+ofdpa-grpc: default stg port state to forwarding
+openbcm-gpl-modules: make patches applicable to OpenBCM
+
+meta-open-network-linux:
+linux-yocto-onl: enable NET_SWITCHDEV
+kernel: enable additional features for docker
+agema-ag5648: add support for delta_ag5648v1 variant
+onl: add support for not building platforms
+accton-as4610: no need to remove grub anymore
+linux-yocto-onl: armel-iproc: use upstream IPROC MDIO driver
+
+meta-openembedded:
+postgresql: make sure pam conf installed when pam enabled
+samba: fix buildpaths issue
+samba: upgrade 4.14.13 -> 4.14.14
+libldb: upgrade 2.3.3 -> 2.3.4
+php: upgrade 8.1.8 -> 8.1.9
+safec: Remove unused variable 'len'
+gd: Fix build with clang-15
+ntpsec: Add -D_GNU_SOURCE and fix building with devtool
+wireguard-tools: Add a new package for wg-quick
+wireguard-module: 1.0.20210219 -> 1.0.20220627
+nodejs-oe-cache-native: initial checkin
+lmdb: only set SONAME on the shared library
+libproc-waitstat-perl: Fix LICENSE string
+libnet-telnet-perl: Fix LICENSE string
+libxml-libxml-perl: Fix LICENSE string
+libnet-ldap-perl: Fix LICENSE string
+libauthen-sasl-perl: Fix LICENSE string
+libmime-types-perl: Fix LICENSE string
+libdigest-sha1-perl: Fix LICENSE string
+libio-socket-ssl-perl: Fix LICENSE string
+libdigest-hmac-perl: Fix LICENSE string
+libipc-signal-perl: Fix LICENSE string
+fuse3: fix ptest test_passthrough_hp failure
+fuse3: support ptest
+audit: Upgrade to 3.0.8 and fix build with linux 5.17+
+xrdp: Fix buildpaths warning.
+
+meta-switch:
+bump distro to version 4.8.1
+machine: add delta_ag5648v1 as an alias for delta_ag5648
+installer: add support for overriding onl_platform
+installer: include platform.conf in main installer
+installer: always do the generic platform support check
+installer: remove BISDN_FS_TYPE variable
+installer: define platform variables early
+installer: define onie_platform once
+installer: local var bisdn_linux_mnt -> bisdn_linux_mnt_boot
+installer: rename hw_load function to create_hw_load_str
+installer: drop machine.conf and platform variable
+minimal: install grub only for x86-64 targets
+
+meta-virtualization:
+kubernetes: fixed typos
+buildah: add recipe for buildah v1.26
+catatonit: Integrate version 0.1.7
+
+poky:
+busybox: add devmem 128-bit support
+oeqa/runtime/dnf: fix typo
+tune-neoversen2: support tune-neoversen2 base on armv9a
+gcc: add arm-v9 support
+ltp: Fix pread02 case trigger the glibc overflow detection
+gcc-cross-canadian: add default plugin linker
+Revert "gcc-cross-canadian: Add symlink to real-ld alongside other symlinks"
+linux-libc-headers: switch from SRC_URI:append to SRC_URI +=
+python3-rfc3986-validator: switch from SRC_URI:append to SRC_URI +=
+go-native: switch from SRC_URI:append to SRC_URI +=
+glibc-tests: use += instead of :append
+u-boot: switch from append to += in SRC_URI
+tzdata: Update from 2022b to 2022c
+linux-firmware: package new Qualcomm firmware
+linux-firmware: upgrade 20220708 -> 20220913
+perf: Fix for recent kernel upgrades
+kern-tools: allow 'y' or 'm' to avoid config audit warnings
+kern-tools: fix queue processing in relative TOPDIR configurations
+kernel-yocto: allow patch author date to be commit date
+linux-yocto/5.15: cfg: fix ACPI warnings for -tiny
+linux-yocto/5.15: update to v5.15.68
+linux-yocto/5.15: update to v5.15.65
+linux-yocto/5.15: update to v5.15.63
+linux-yocto/5.10: update to v5.10.143
+linux-yocto/5.10: update to v5.10.141
+vim: Upgrade 9.0.453 -> 9.0.541
+libpng: upgrade 1.6.37 -> 1.6.38
+glibc: stable 2.35 branch updates.
+expat: upgrade 2.4.8 -> 2.4.9
+expat: upgrade 2.4.7 -> 2.4.8
+binutils: fix CVE-2022-38126
+inetutils: fix CVE-2022-39028 - remote DoS vulnerability in inetutils-telnetd
+go: fix CVE-2022-27664
+build-appliance-image: Update to kirkstone head revision
+vim: Upgrade 9.0.0341 -> 9.0.0453
+lighttpd: upgrade 1.4.65 -> 1.4.66
+lighttpd: upgrade 1.4.64 -> 1.4.65
+systemd: Add 'no-dns-fallback' PACKAGECONFIG option
+systemd: Fix unwritable /var/lock when no sysvinit handling
+system-requirements.rst: Add Ubuntu 22.04 to list of supported distros
+poky.conf: bump version for 4.0.4
+poky.conf: add ubuntu-22.04 to tested distros
+runqemu: display host uptime when starting
+oeqa: qemurunner: Report UNIX Epoch timestamp on login
+externalsrc: Don't wipe out src dir when EXPORT_FUNCTIONS is used.
+rootfs.py: dont try to list installed packages for baremetal images
+cairo: Adapt the license information based on what is being built
+rootfs-postcommands.bbclass: avoid moving ssh host keys if etc is writable
+core-image.bbclass: Exclude openssh complementary packages
+libxml2: Port gentest.py to Python-3
+autoconf: Update K & R stype functions
+autoconf: Fix strict prototype errors in generated tests
+kernel: Use consistent make flags for menuconfig
+kernel: Always set CC and LD for the kernel build
+gcc-multilib-config: Fix i686 toolchain relocation issues
+ruby: drop capstone support
+vala: upgrade 0.56.2 -> 0.56.3
+cracklib: upgrade 2.9.7 -> 2.9.8
+bitbake: bitbake-user-manual: npm fetcher: improve description of SRC_URI format
+bitbake: bb/utils: movefile: use the logger for printing
+bitbake: bb/utils: remove: check the path again the expand python glob
+bitbake: bitbake: bitbake-user-manual: hashserv can be accessed on a dedicated domain
+bitbake: fetch2: Ensure directory exists before creating symlink
+bitbake: ConfHandler/BBHandler: Improve comment error messages and add tests
+bitbake: fetch2: gitsm: fix incorrect handling of git submodule relative urls
+bitbake: doc: bitbake-user-manual: document npm and npmsw fetchers
+bitbake: doc: bitbake-user-manual: add explicit target for crates fetcher
+bitbake: bitbake-user-manual: Correct description of the ??= operator
+bitbake: ConfHandler: Remove lingering close
+bitbake: event.py: ignore exceptions from stdout and sterr operations in atexit
+bitbake: cooker: Drop sre_constants usage
+bitbake: runqueue: Fix unihash cache mismatch issues
+npm: use npm_registry to cache package
+lib:npm_registry: initial checkin
+npm: take 'version' directly from 'package.json'
+npm: return content of 'package.json' in 'npm_pack'
+npm: replace 'npm pack' call by 'tar czf'
+kernel-fitimage.bbclass: add padding algorithm property in config nodes
+meta: introduce UBOOT_MKIMAGE_KERNEL_TYPE
+scripts/runqemu.README: fix typos and trailing whitespaces
+pseudo: Update to include recent upstream minor fixes
+bitbake.conf: set BB_DEFAULT_UMASK using ??=
+apr: Cache configure tests which use AC_TRY_RUN
+maintainers: update opkg maintainer
+insane.bbclass: Skip patches not in oe-core by full path
+lz4: upgrade 1.9.3 -> 1.9.4
+libatomic-ops: upgrade 7.6.12 -> 7.6.14
+libwpe: upgrade 1.12.2 -> 1.12.3
+liburcu: upgrade 0.13.1 -> 0.13.2
+libtasn1: upgrade 4.18.0 -> 4.19.0
+vim: Upgrade 9.0.0242 -> 9.0.0341
+cve-check: close cursors as soon as possible
+classes: cve-check: Get shared database lock
+binutils : CVE-2022-38533
+curl: Backport patch for CVE-2022-35252
+sqlite: add CVE-2022-35737 patch to SRC_URI
+bitbake: toaster: fix kirkstone version
+gcr: Define _GNU_SOURCE
+apr: Use correct strerror_r implementation based on libc type
+pinentry: enable _XOPEN_SOURCE on musl for wchar usage in curses
+watchdog: Include needed system header for function decls
+xinetd: Pass missing -D_GNU_SOURCE
+parselogs: Ignore xf86OpenConsole error
+util-linux: Remove --enable-raw from EXTRA_OECONF
+shadow: Avoid nss warning/error with musl
+rootfspostcommands.py: Cleanup subid backup files generated by shadow-utils
+shadow: Enable subid support
+lttng-modules: fix build for kernel 5.10.137
+linux-yocto/5.10: update to v5.10.137
+linux-yocto/5.10: update to v5.10.136
+linux-yocto: Fix COMPATIBLE_MACHINE regex match
+linux-yocto/5.15: update to v5.15.62
+linux-yocto/5.15: update to v5.15.60
+bind: upgrade 9.18.4 -> 9.18.5
+sqlite: fix CVE-2022-35737
