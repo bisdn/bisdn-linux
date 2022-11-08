@@ -1,0 +1,104 @@
+Changes between v4.8.1 and v4.8.2:
+
+meta-openembedded:
+frr: Security fix CVE-2022-37032
+tcpreplay: upgrade 4.4.1 -> 4.4.2
+open-vm-tools: Security fix CVE-2022-31676
+net-snmp: upgrade 5.9.1 -> 5.9.3
+polkit: refresh patch
+libsdl: add CVE-2019-14906 to allowlist
+dnsmasq: upgrade 2.86 -> 2.87
+wireshark: CVE-2022-3190 Infinite loop in legacy style dissector
+minicoredumper: retry elf parsing as long as needed
+libcec: fix runtime dependencies for ${PN}-examples
+frr: Security fix CVE-2022-37035
+lmdb: Don't inherit base
+audit: Revert the tweak done in configure step in do_install
+postgreql: Fix pg_config not working after buildpaths patch
+postgresql: upgrade 14.4 -> 14.5
+php: upgrade 8.1.9 -> 8.1.10
+
+meta-open-network-linux:
+linux-yocto-onl: update to 5.15.77
+linux-yocto-onl: update to 5.15.76
+accton-as4630-54te: do not acccess PSU via pmbus
+linux-yocto-onl: enable some crypto code on armel-iproc
+platform-ag7648: disable LP Mode for QSFP ports
+delta-ag7648: do not reset QSFP modules when IntL is asserted
+
+meta-switch:
+frr: fix CVE-2022-37032, CVE-2022-37035
+installer: accton-as4610: handle wrong partition table type
+bump distro version to 4.8.2
+baseboxd: update to 1.12.4
+mstpd: update to 0.1.0+bisdn4
+baseboxd: update to 1.12.3
+
+meta-virtualization:
+xen: Make xilinx extension generic
+
+poky:
+vim: upgrade 9.0.0614 -> 9.0.0820
+vim: Upgrade 9.0.0598 -> 9.0.0614
+wayland: fix CVE-2021-3782
+expat: backport the fix for CVE-2022-43680
+tiff: fix CVE-2022-2953
+lighttpd: fix CVE-2022-41556
+openssl: Upgrade 3.0.5 -> 3.0.7
+openssl: CVE-2022-3358 Using a Custom Cipher with NID_undef may lead to NULL encryption
+openssl: Fix SSL_CERT_FILE to match ca-certs location
+openssl: export necessary env vars in SDK
+build-appliance-image: Update to kirkstone head revision
+poky.conf: bump version for 4.0.5
+Revert "lttng-tools: Upgrade 2.13.4 -> 2.13.8"
+classes: files: Extend overlayfs-etc class
+files: overlayfs-etc: refactor preinit template
+git: upgrade 2.35.4 -> 2.35.5
+glibc: stable 2.35 branch updates.
+binutils: stable 2.38 branch updates
+linux-yocto/5.10: update to v5.10.149
+linux-yocto/5.10: update to v5.10.147
+bitbake: tests/fetch: Allow handling of a file:// url within a submodule
+local.conf.sample: correct the location of public hashserv
+lttng-modules: Fix crash on powerpc64
+own-mirrors: add crate
+linux-yocto-dev: add qemuarm64
+image_types_wic.bbclass: fix cross binutils dependency
+uninative: Upgrade to 3.7 to work with glibc 2.36
+lttng-tools: Upgrade 2.13.4 -> 2.13.8
+python3: upgrade 3.10.4 -> 3.10.7
+qemu: Backport patches from upstream to support float128 on qemu-ppc64
+qemu: fix CVE-2022-2962
+qemu: Fix CVE-2021-3611
+qemu: Fix CVE-2021-3750 for qemu
+binutils : Fix CVE-2022-38128
+tiff: Security fixes CVE-2022-2867,CVE-2022-2868 and CVE-2022-2869
+dev-manual: fix reference to BitBake user manual
+bitbake: asyncrpc/client: Fix unix domain socket chdir race issues
+bitbake: gitsm: Error out if submodule refers to parent repo
+bitbake: Fix npm to use https rather than http
+bitbake: bitbake: Add copyright headers where missing
+bitbake: siggen: Fix insufficent entropy in sigtask file names
+bitbake: runqueue: Drop deadlock breaking force fail
+bitbake: runqueue: Improve deadlock warning messages
+bitbake: runqueue: Ensure deferred tasks are sorted by multiconfig
+coreutils: add openssl PACKAGECONFIG
+glibc-locale: explicitly remove empty dirs in ${libdir}
+lttng-tools: Disable on riscv32
+stress-cpu: disable float128 math on powerpc64 to avoid SIGILL
+create-pull-request: don't switch the git remote protocol to git://
+lttng-tools: Disable on qemuriscv32
+tzdata: update to 2022d
+bind: upgrade 9.18.6 -> 9.18.7
+bind: upgrade 9.18.5 -> 9.18.6
+rpm: Remove -Wimplicit-function-declaration warnings
+rpm: update 4.17.0 -> 4.17.1
+rsync: update 3.2.4 -> 3.2.5
+rsync: update 3.2.3 -> 3.2.4
+webkitgtk: Update to 2.36.7
+webkitgtk: Upgrade to 2.36.6 minor update
+vim: Upgrade 9.0.0541 -> 9.0.0598
+binutils : Fix CVE-2022-38127
+migration-guides: add 4.0.4 release notes
+poky.yaml.in: update version requirements
+
