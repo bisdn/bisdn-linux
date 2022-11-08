@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="github" fetch="https://github.com/" />
-  <remote name="gitlab" fetch="ssh://git@gitlab.bisdn.de/" />
-  <remote name="oe" fetch="git://git.openembedded.org/" />
-  <remote name="yocto" fetch="git://git.yoctoproject.org/" />
-  <!-- yocto layer -->
-  <project name="meta-cloud-services" path="poky/meta-cloud-services" remote="yocto" revision="kirkstone"/>
-  <project name="meta-virtualization" path="poky/meta-virtualization" remote="yocto" revision="kirkstone"/>
-  <project name="poky" path="poky" remote="yocto" revision="kirkstone"/>
-  <!-- open embedded layer -->
-  <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="kirkstone"/>
-  <!-- open source bisdn layers -->
-  <project name="bisdn/bisdn-linux.git" path="poky/build-bisdn-linux" remote="github" revision="master"/>
-  <project name="bisdn/meta-ofdpa.git" path="poky/meta-ofdpa" remote="github" revision="master"/>
-  <project name="bisdn/meta-open-network-linux.git" path="poky/meta-open-network-linux" remote="github" revision="master"/>
-  <project name="bisdn/meta-switch.git" path="poky/meta-switch" remote="github" revision="master"/>
-  <!-- closed source bisdn layers -->
-  <project name="yocto-meta-layers/meta-ofdpa.git" path="poky/meta-ofdpa-closed" remote="gitlab" revision="master" groups="notdefault,ofdpa-gitlab"/>
+  <remote name="github" fetch="https://github.com/"/>
+  <remote name="gitlab" fetch="ssh://git@gitlab.bisdn.de/"/>
+  <remote name="oe" fetch="git://git.openembedded.org/"/>
+  <remote name="yocto" fetch="git://git.yoctoproject.org/"/>
+  
+  <project name="bisdn/bisdn-linux.git" path="poky/build-bisdn-linux" remote="github" revision="7ce44862b688063119db5a2de92cea2632396c4b" upstream="v4.8.2" dest-branch="v4.8.2"/>
+  <project name="bisdn/meta-ofdpa.git" path="poky/meta-ofdpa" remote="github" revision="b83fb57adba7b11bc48af24a30ea40aa67b24bdb" upstream="master" dest-branch="master"/>
+  <project name="bisdn/meta-open-network-linux.git" path="poky/meta-open-network-linux" remote="github" revision="4c53c1f436728fc56516a657f85ca8ad3521e7a6" upstream="master" dest-branch="master"/>
+  <project name="bisdn/meta-switch.git" path="poky/meta-switch" remote="github" revision="489d9726f983aeccc28b380ace60e11dc4a52fd5" upstream="master" dest-branch="master"/>
+  <project name="meta-cloud-services" path="poky/meta-cloud-services" remote="yocto" revision="12efde8056a004e8d3a337edb2728d05edbc383b" upstream="kirkstone" dest-branch="kirkstone"/>
+  <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="744a4b6eda88b9a9ca1cf0df6e18be384d9054e3" upstream="kirkstone" dest-branch="kirkstone"/>
+  <project name="meta-virtualization" path="poky/meta-virtualization" remote="yocto" revision="9a487c1851aa2021cf24f951957e22fd429c8025" upstream="kirkstone" dest-branch="kirkstone"/>
+  <project name="poky" remote="yocto" revision="94d917219993b45b9d69a87aba1b69a6ca8f4d1e" upstream="kirkstone" dest-branch="kirkstone"/>
+  <project name="yocto-meta-layers/meta-ofdpa.git" path="poky/meta-ofdpa-closed" remote="gitlab" revision="0ea43c8db3a32546c849a1e41a69058873603754" upstream="master" dest-branch="master" groups="notdefault,ofdpa-gitlab"/>
 </manifest>
