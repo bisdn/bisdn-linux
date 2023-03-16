@@ -12,10 +12,24 @@
 # variable as required.
 
 #
-# Machine Selection
+# Generic Machine Selection
 #
-# You need to select a specific machine to target the build with. There are a selection
-# of machines available which can boot and run BISDN Linux.
+# You need to select a specific machine to target the build with. Each machine
+# supports multiple switch platforms, grouped by their host CPU architecture.
+#
+# For the list of supported switch platforms see ONL_PLATFORM_SUPPORT defined in
+#   https://github.com/bisdn/meta-open-network-linux/blob/main/conf/machine/<MACHINE>.conf
+#
+#MACHINE ?= "generic-armel-iproc"
+#MACHINE ?= "generic-x86-64"
+#
+MACHINE ?= "generic-armel-iproc"
+
+#
+# Legacy Machine Selection
+#
+# These are platform-specific machines used for older releases, and target
+# exactly one platform. These exist only to avoid breaking existing setups.
 #
 #MACHINE ?= "accton-as4610"
 #MACHINE ?= "accton-as4630-54pe"
@@ -24,8 +38,6 @@
 #MACHINE ?= "agema-ag5648"
 #MACHINE ?= "agema-ag7648"
 #MACHINE ?= "cel-questone-2a"
-#
-MACHINE ?= "accton-as4610"
 
 #
 # Where to place downloads
