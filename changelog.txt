@@ -1,0 +1,516 @@
+Changes between v4.8.3 and v5.0.0:
+
+build-bisdn-linux:
+scripts: add a script for managing release branches
+scripts: add script for generating changelogs
+conf: add new generic machines and default to generic-armel-iproc
+layers: switch revision from master to main
+
+meta-ofdpa:
+ofdpa: don't hardcode the version in the recipe
+ofdpa-grpc: rename the recipe to reflect the version
+openbcm-gpl-modules: do not force loading of modules
+ofdpa-grpc: split out non-common parts into their own include file
+ofdpa: switch to new generic platform implementation
+ofdpa-platform: add supported switch configurations
+ofdpa-platform: add LED data formats
+ofdpa-platform: add a package for platform configs
+ofdpa: drop the old cmicx LED options
+ofdpa: use leddata for trident3 switches
+
+meta-openembedded:
+python3-m2crypto: fix for CVE-2020-25657
+libyang: backport a fix for CVE-2023-26916
+python3-django: upgrade 4.0.2 -> 4.2.1
+frr: Security fix CVE-2022-43681
+frr: Security fix CVE-2022-40318
+frr: Security fix CVE-2022-36440 / CVE-2022-40302
+libbpf: installing uapi headers for native package
+Revert "pahole: fix native package build error"
+freerdp: fix CVE-2022-39316/39318/39319
+nodejs: Fix build with gcc13
+abseil-cpp: backport a fix for build with gcc-13
+capnproto: upgrade to 0.9.2
+tinyproxy: fix CVE-2022-40468
+python3-gcovr: Add missing runtime dependency
+meta-networking/licenses/netperf: remove unused license
+libbpf: add native and nativesdk BBCLASSEXTEND
+pointercal: Add native & nativestdk package support
+pahole: fix native package build error
+tslib: Add native & nativestdk package support
+python3-werkzeug: fix for CVE-2023-25577
+redis: fix do_patch fuzz warning
+apache2: upgrade 2.4.56 -> 2.4.57
+redis: upgrade 7.0.10 -> 7.0.11
+redis: upgrade 7.0.9 -> 7.0.10
+redis: upgrade 6.2.11 -> 6.2.12
+zabbix: fix CVE-2023-29451
+dlt-daemon: fix CVE-2023-26257
+zsh: fix installed-vs-shipped with multilib
+dleyna-{server,renderer}: fix dev-so QA issue with multilib
+lirc: fix do_install with multilib
+libcroco: Add fix for CVE-2020-12825
+lvgl,lv-lib-png,lv-drivers: fix installed-vs-shipped QA issue with multilib
+pahole: respect libdir
+postfix: Fix build on systems with linux 6.x
+mongodb: fix chown user for multilib builds
+restinio: fix S variable in multilib builds
+openwsman: Change download branch from master to main.
+jack: fix compatibility with python-3.11
+postgresql: fix ptest failure of sysviews test
+flatbuffers: adapt for cross-compilation environments
+syslog-ng: fix CVE-2022-38725
+phpmyadmin: fix CVE-2023-25727
+duktape: Add ptest
+mariadb: Fix CVE-2022-47015
+libcrypt-openssl-rsa-perl: upgrade 0.32 -> 0.33
+monkey: use git fetcher
+monkey: Fix build with musl
+dnsmasq: fix CVE-2023-28450
+c-ares: fix CVE-2022-4904
+mbedtls: upgrade 2.28.0 -> 2.28.2
+jansson: whitelist CVE-2020-36325
+mariadb: Upgrade to 10.7.8
+ntp: whitelist CVE-2019-11331
+apache2: upgrade 2.4.55 -> 2.4.56
+apache2: use /run instead of /var/run for systemd volatile config
+nodejs: Upgrade 16.19.0 -> 16.19.1
+nlohmann-json: Allow empty main package for SDK
+php: Upgrade to 8.1.16
+redis: upgrade 6.2.8 -> 6.2.11
+redis: upgrade 7.0.7 -> 7.0.9
+postgresql: fix CVE-2022-41862
+cifs-utils: fix CVE-2022-27239 CVE-2022-29869
+grpc: upgrade 1.46.6 -> 1.46.7
+poppler: fix CVE-2021-30860
+liblockfile: fix do_install failure when ldconfig is not installed
+fluidsynth: update SRC_URI to remove non-existing 2.2.x branch
+mpd: Upgrade to 0.23.12 release
+ncmpc: Upgrade to 0.47
+mpd: Upgrade to 0.23.9
+mpd: Update to 0.23.8
+python3-pillow: add tk to RDEPENDS ptest pkg only if x11 in DISTRO_FEATURES
+multipath-tools: fix CVE-2022-41974
+mdns: use git fetcher
+exiv2: fix SRC_URI
+nss: fix cross-compilation error
+phoronix-test-suite: Fix CVE-2022-40704
+apache2: upgrade 2.4.54 -> 2.4.55
+frr: Security fix for CVE-2022-42917
+freeradius: Security fixes for CVE-2022-41860 CVE-2022-41861
+chrony: add pkgconfig class as pkg-config is explicitly searched for
+python3-pillow: Add distutils, unixadmin for ptest
+python3-pillow: add ptest support
+python3-pillow: upgrade 9.3.0 -> 9.4.0
+python3-pillow: upgrade 9.2.0 -> 9.3.0
+python3-pillow: upgrade 9.1.1 -> 9.2.0
+python3-pillow: upgrade 9.0.1 -> 9.1.1
+
+meta-open-network-linux:
+linux-yocto-onl/5.15: update to 5.15.114
+linux-yocto-onl/6.1: update to 6.1.31
+linux-yocto-onl: enable IP_SCTP
+conf/machine: remove unused variables
+linux-yocto-onl/6.1: update to 6.1.25
+linux-yocto-onl/5.15: update to 5.15.108
+accton-as4610-poe-mcu: increase high power limit to 30W
+accton-as4610-poe-mcu: enable class based power limits
+linux-yocto-onl/6.1: manually load i2c-i801
+linux-yocto-onl/5.15: manually load i2c-i801
+platform-onl-init: modprobe i2c-i801
+linux-yocto-onl/6.1: x86_64-intel: enable NVME support
+linux-yocto-onl/5.15: x86_64-intel: enable NVME support
+linux-yocto-onl/6.1: x86_64-intel: enable features for csp7551
+linux-yocto-onl/5.15: x86_64-intel: enable features for csp7551
+linux-yocto-onl/6.1: x86_64-intel: changes for csp7551
+linux-yocto-onl/5.15: x86_64-intel: changes for csp7551
+accton-as4610-poe-mcu: do not force autoload on boot
+accton-as4610-poe-mcu: fix on-demand loading
+conf/machine: fix generic machine KMACHINE definition
+linux-yocto-onl/6.1: x86_64-intel: enable XHCI HCD
+linux-yocto-onl/5.15: x86_64-intel: enable XHCI HCD
+conf: add a generic armel iProc machine
+conf: add a generic x86-64 machine
+platform-onl-init: as5835-54x: use add_port()
+platform-onl-init: as7726-32x: use the new create_i2c_dev()
+platform-onl-init: as5835-54x: use the new create_i2c_dev()
+platform-onl-init: as4630-54*: use the new create_i2c_dev()
+platform-onl-init: add_port(): use the new create_i2c_dev()
+platform-onl-init: create_i2c_dev(): allow passing parameters
+linux-yocto-onl/6.1: update to 6.1.14
+linux-yocto-onl/6.1: update to 6.1.13
+platform-onl-init: accton-as7726-32x: fix SFP+ optoe driver
+platform-onl-init: accton-as4630-54pe/te: use distinct init code
+platform-onl-init: accton-as4610-30/54: use distinct init code
+platform-onl-init: let create_i2c_dev() wait for parent bus
+platform-onl-init: add_port(): use local variables
+platform-onl-init: move add_port() to common init
+platform-onl-init: move create_i2c_dev() to common init
+platform-onl-init: wait_for_file(): use local variables
+platform-onl-init: move wait_for_file() to common init
+platform-onl-init: unify the code formatting
+platform-onl-init: change interpreter to bash
+linux-yocto-onl/6.1: update to 6.1.8
+Revert "linux-yocto-onl/6.1: use master for kmeta for now"
+platform-onl-init: manually load i2c-ismt
+cel-questone-2a: drop old platform questone-2a rdepends
+linux-yocto-onl: add missing module conf for i2c-ismt
+conf: switch machines to linux 6.1
+linux-yocto-onl/6.1: use master for kmeta for now
+linux-yocto-onl: add linux 6.1 support
+accton-as4630-poe-mcu: update module for linux 6.1
+onl: update modules for linux 6.1
+linux-yocto-onl: build i2c_i801 as a module and fix probe order
+Revert "linux-yocto-onl: build i2c_i801 as a module"
+linux-yocto-onl: allow additional options to be set
+linux-yocto-onl: build i2c_i801 as a module
+platform-as4610: merge into platform-onl-init
+platform-questone-2a: merge into platform-onl-init
+platform-as7726-32x: merge into platform-onl-init
+platform-as5835-54x: merge into platform-onl-init
+platform-as4630-54pe: merge into platform-onl-init
+platform-ag7648: merge into platform-onl-init
+platform-ag5648: merge into platform-onl-init
+platform-onl-init: add a wrapper for platform init scripts
+platform-as4610: drop the fw_env.config file
+
+meta-switch:
+Revert "frr: fix CVEs CVE-2022-36440, CVE-2022-40318, CVE-2022-43681"
+docs: cleanup outdated comment in distro conf related to release 1.0.0
+release: bump distro version to 5.0.0 and update codename to Ortolana
+frr: fix CVEs CVE-2022-36440, CVE-2022-40318, CVE-2022-43681
+accton-csp7551-mods: updates for Linux 6.1
+machine: add accton-csp7551.conf
+csp7551: add platform drivers
+csp7551: add platform init script
+installer: csp7551: create 160 GB disk partition
+installer: make BISDN Linux partition size configurable
+installer: csp7551: prevent renaming of Tofino CPU port
+installer: csp7551: rename interfaces to ice0, ice1
+accton-csp7551: add platform.conf
+baseboxd: Bump version to 2.0.3
+mstpd: use PV as branch name
+mstpd: rename recipe to match version
+images: full: remove redundant bde kernel modules
+base-files: do not backup /etc/modprobe.d/i2c-i801.conf
+baseboxd: Bump version to 2.0.2
+bundle-debug-info: dereference symlinks when copying them to TMPDIR
+bundle-debug-info: dereference all symlinks while archiving
+baseboxd: Bump version to 2.0.0
+grpc: relax bbappend a bit to apply to any 1.46 release
+distro: update FEEDURIPREFIX from master to main
+rofl-ofdpa: change branch from master to main
+rofl-common: change branch from master to main
+baseboxd: change branch from master to main
+baseboxd: Bump version to 1.12.7
+base-files: do not backup /etc/modprobe.d/i2c-ismt.conf
+baseboxd: Bump version to 1.12.6
+
+meta-virtualization:
+libvirt: CVE-2023-2700 Memory leak in virPCIVirtualFunctionList cleanup
+xtf: chang the old override syntax
+ovs: update to 2.17.6
+kubernetes: update to v1.23.17
+containerd: upgrade to 1.6.19
+lxc: add -L and -f for curl in templates-use-curl-instead-of-wget.patch
+lxc: backport changes from master for templates-use-curl-instead-of-wget.patch
+container-host-config: extend to native and nativesdk
+container-host-config: provide /etc/containers/policy.json
+README: remove some cri-o specific layer dependencies
+skopeo: use container-host bbclass to provide configuration
+containers: add container-host-config recipe
+containers: introduce container-host class
+cri-o: update crio.conf to match the current version 1.23
+cri-o: create /var/lib/crio
+cri-o: use PACKAGECONFIG to handle selinux
+cri-o: remove meta-security check
+containerd: update to 1.6.12
+irqbalance: Use built-in irqbalance.service instead of local one
+
+poky:
+kernel-devicetree: recursively search for dtbs
+package: enable recursion on file globs
+kernel-devicetree: make shell scripts posix compliant
+kernel-devicetree: allow specification of dtb directory
+linux-yocto/5.10: update to v5.10.180
+linux-yocto/5.10: update to v5.10.179
+linux-yocto/5.10: update to v5.10.178
+linux-yocto/5.10: update to v5.10.177
+linux-yocto/5.10: update to v5.10.176
+curl: Fix CVE-2023-28322
+curl: Fix CVE-2023-28321
+curl: Fix CVE-2023-28320
+curl: Fix CVE-2023-28319
+overview-manual: concepts.rst: Fix a typo
+migration-guides: add release notes for 4.0.10
+migration-guides: use new cve_mitre macro
+conf.py: add macro for Mitre CVE links
+Revert "docs: conf.py: fix cve extlinks caption for sphinx <4.0"
+piglit: Add missing glslang dependencies
+piglit: Fix build time dependency
+piglit: Add PACKAGECONFIG for glx and opencl
+weston: add xwayland to DEPENDS for PACKAGECONFIG xwayland
+license.bbclass: Include LICENSE in the output when it fails to parse
+dhcpcd: use git instead of tarballs
+package_manager/ipk: fix config path generation in _create_custom_config()
+quilt: Fix merge.test race condition
+maintainers.inc: Move repo to unassigned
+maintainers.inc: Fix email address typo
+systemd-systemctl: fix instance template WantedBy symlink construction
+p11-kit: add native to BBCLASSEXTEND
+avahi: fix D-Bus introspection
+nghttp2: Deleted the entries for -client and -server, and removed a dependency on them from the main package.
+llvm: backport a fix for build with gcc-13
+gcc-runtime: Use static dummy libstdc++
+cpio: Fix wrong CRC with ASCII CRC for large files
+waffle: upgrade 1.7.0 -> 1.7.2
+gstreamer1.0: upgrade 1.20.5 -> 1.20.6
+go: fix CVE-2023-24540
+git: ignore CVE-2023-25815
+build-appliance-image: Update to kirkstone head revision
+poky.conf: bump version for 4.0.10
+update-alternatives.bbclass: fix old override syntax
+kernel: improve initramfs bundle processing time
+oeqa/utils/metadata.py: Fix running oe-selftest running with no distro set
+libpam: Fix the xtests/tst-pam_motd[1|3] failures
+populate_sdk_ext.bbclass: set METADATA_REVISION with an DISTRO override
+libarchive: Enable acls, xattr for native as well as target
+kernel-devsrc: depend on python3-core instead of python3
+linux-firmware: upgrade 20230210 -> 20230404
+xserver-xorg: upgrade 21.1.7 -> 21.1.8
+Revert "xserver-xorg: backport fix for CVE-2023-1393"
+wpebackend-fdo: upgrade 1.14.0 -> 1.14.2
+linux-yocto: Exclude 121 CVEs already fixed upstream
+libxml2: patch CVE-2023-28484 and CVE-2023-29469
+git: fix CVE-2023-25652
+git: fix CVE-2023-29007
+run-postinsts: Set dependency for ldconfig to avoid boot issues
+libbsd: Add correct license for all packages
+wic/bootimg-efi: if fixed-size is set then use that for mkdosfs
+python3-cryptography: fix for CVE-2023-23931
+webkitgtk: fix CVE-2022-32888 & CVE-2022-32923
+binutils : Fix CVE-2023-25588
+binutils : Fix CVE-2023-1972
+binutils : Fix CVE-2023-25585
+binutils : Fix CVE-2023-25584
+go: Security fix for CVE-2023-24538
+go: fix CVE-2023-24534 denial of service from excessive memory allocation
+freetype: fix CVE-2023-2004 integer overflowin in tt_hvadvance_adjust() in src/truetype/ttgxvar.c
+connman: fix CVE-2023-28488 DoS in client.c
+ffmpeg: fix for CVE-2022-48434
+glibc: stable 2.35 branch updates.
+populate_sdk_base: add zip options
+cmake: add CMAKE_SYSROOT to generated toolchain file
+libxpm: upgrade 3.5.13 -> 3.5.15
+xorg-lib-common: Add variable to set tarball type
+linux-yocto/5.15: update to v5.15.108
+linux-yocto/5.15: update to v5.15.107
+linux-yocto/5.15: update to v5.15.106
+qemu: Whitelist CVE-2023-0664
+nasm: fix CVE-2022-44370
+xserver-xorg: backport fix for CVE-2023-1393
+ghostscript: fix CVE-2023-29979
+ruby: Fix CVE-2023-28755
+migration-guides: add release-notes for 4.0.9
+go: fix CVE-2023-24537 Infinite loop in parsing
+screen: CVE-2023-24626 allows sending SIGHUP to arbitrary PIDs
+go: ignore CVE-2022-41716
+shadow: backport patch to fix CVE-2023-29383
+go-runtime: Security fix for CVE-2022-41722
+cargo : non vulnerable cve-2022-46176 added to excluded list
+curl: Security fix for CVE-2023-27535, CVE-2023-27536, CVE-2023-27538
+ruby: CVE-2023-28756 ReDoS vulnerability in Time
+bitbake: bin/utils: Ensure locale en_US.UTF-8 is available on the system
+package.bbclass: correct check for /build in copydebugsources()
+openssl: Move microblaze to linux-latomic config
+go: fix CVE-2022-41724, 41725
+tiff: Add fix for CVE-2022-4645
+curl: CVE-2023-27534 SFTP path resolving discrepancy
+curl: CVE-2023-27533 TELNET option IAC injection
+binutils : Fix CVE-2023-1579
+poky.conf: bump version for 4.0.9
+uninative: Upgrade to 3.9 to include glibc 2.37
+uninative: Upgrade to 3.8.1 to include libgcc
+patchelf: replace a rejected patch with an equivalent uninative.bbclass tweak
+json-c: Add ptest for json-c
+curl: Add fix for CVE-2023-23916
+go-runtime: Security fix for CVE-2022-41723
+rsync: Turn on -pedantic-errors at the end of 'configure'
+rsync: Add missing prototypes to function declarations
+scripts/lib/buildstats: handle top-level build_stats not being complete
+gcc-shared-source: do not use ${S}/.. in deploy_source_date_epoch
+bmap-tools: switch to main branch
+selftest: devtool: set BB_HASHSERVE_UPSTREAM when setting SSTATE_MIRROR
+vim: upgrade 9.0.1403 -> 9.0.1429
+linux-yocto/5.15: update to v5.15.103
+linux-yocto/5.15: update to v5.15.98
+lttng-modules: update to v2.13.9
+linux-yocto/5.10: update to v5.10.175
+linux-yocto/5.10: update to v5.10.172
+linux-yocto/5.10: update to v5.10.170
+linux-yocto/5.10: update to v5.10.168
+linux-yocto/5.10: update to v5.10.166
+linux-yocto/5.10: update to v5.10.164
+linux-yocto/5.10: update to v5.10.162
+cve-check: Fix false negative version issue
+openssl: Security fix for CVE-2023-0464, CVE-2023-0465, CVE-2023-0466
+go: fix CVE-2022-2879 and CVE-2022-41720
+Revert "qemu: fix CVE-2021-3507"
+bitbake: fetch/git: Fix local clone url to make it work with repo
+systemd: fix wrong nobody-group assignment
+cracklib: update github branch to 'main'
+pybootchartui: Fix python syntax issue
+tzcode-native: fix build with gcc-13 on host
+tzdata: use separate B instead of WORKDIR for zic output
+timezone: use 'tz' subdir instead of ${WORKDIR} directly
+lib/resulttool: fix typo breaking resulttool log --ptest
+oeqa rtc.py: skip if read-only-rootfs
+image_types: fix multiubi var init
+systemd.bbclass: Add /usr/lib/systemd to searchpaths as well
+devtool/upgrade: do not delete the workspace/recipes directory
+git: ignore CVE-2023-22743
+systemd: fix CVE-2022-4415
+curl: Add fix for CVE-2023-23914, CVE-2023-23915
+base-files: Drop localhost.localdomain from hosts file
+dhcpcd: Fix install conflict when enable multilib.
+populate_sdk_ext: Handle spaces within user $PATH
+toolchain-scripts: Handle spaces within user $PATH
+buildtools-tarball: Handle spaces within user $PATH
+cups: add/fix web interface packaging
+cups: check PACKAGECONFIG for pam feature
+cups: use BUILDROOT instead of DESTDIR
+selftest/recipetool: Stop test corrupting tinfoil class
+selftest/runtime_test/virgl: Disable for all Rocky Linux
+glibc: Add missing binutils dependency
+staging/multilib: Fix manifest corruption
+staging: Separate out different multiconfig manifests
+mdadm: Fix raid0 tests
+mdadm: fix tests/02lineargrow
+mdadm: Fix testcase 06wrmostly
+vim: set modified-by to the recipe MAINTAINER
+vim: upgrade to 9.0.1403
+python3-git: fix indent error
+python3: fix CVE-2023-24329
+pkgconf: fix CVE-2023-24056
+vala: Fix install conflict when enable multilib.
+lua: Fix install conflict when enable multilib.
+linux: inherit pkgconfig in kernel.bbclass
+oeqa/sdk: Improve Meson test
+meson: Fix wrapper handling of implicit setup command
+vim: add missing pkgconfig inherit
+systemd: add group sgx to udev package
+oeqa/selftest/prservice: Improve debug output for failure
+python3-setuptools-rust-native: Add direct dependency of native python3 modules
+binutils: Fix nativesdk ld.so search
+iso-codes: upgrade 4.12.0 -> 4.13.0
+linux-yocto-rt/5.15: update to -rt59
+linux-yocto/5.15: update to v5.15.96
+linux-yocto/5.15: update to v5.15.94
+sudo: update 1.9.12p2 -> 1.9.13p3
+libmicrohttpd: upgrade 0.9.75 -> 0.9.76
+shadow: ignore CVE-2016-15024
+tiff: fix multiple CVEs
+harfbuzz: Security fix for CVE-2023-25193
+gnutls: fix CVE-2023-0361 timing side-channel in the TLS RSA key exchange code
+glibc: Security fix for CVE-2023-0687
+epiphany: Security fix for CVE-2023-26081
+migration-guides: add 4.0.8 release notes
+bitbake: cookerdata: Drop dubious exception handling code
+bitbake: cookerdata: Improve early exception handling
+bitbake: cookerdata: Remove incorrect SystemExit usage
+bitbake: utils: Allow to_boolean to support int values
+nghttp2: never build python bindings
+runqemu: kill qemu if it hangs
+oeqa ssh.py: fix hangs in run()
+libseccomp: fix for the ptest result format
+kernel-yocto: fix kernel-meta data detection
+lib/buildstats: handle tasks that never finished
+oeqa/selftest/resulttooltests: fix minor typo
+libssh2: Clean up ptest patch/coverage
+lttng-modules: fix for kernel 6.2+
+dhcpcd: fix dhcpcd start failure on qemuppc64
+sstatesig: Improve output hash calculation
+busybox: Fix depmod patch
+wic: Fix usage of fstype=none in wic
+curl: fix dependencies when building with ldap/ldaps
+wireless-regdb: upgrade 2022.08.12 -> 2023.02.13
+linux-firmware: upgrade 20230117 -> 20230210
+linux-firmware: add yamato fw files to qcom-adreno-a2xx package
+linux-firmware: properly set license for all Qualcomm firmware
+openssl: Upgrade 3.0.7 -> 3.0.8
+dbus: upgrade 1.14.4 -> 1.14.6
+xwayland: upgrade 22.1.7 -> 22.1.8
+libjpeg-turbo: upgrade 2.1.5 -> 2.1.5.1
+vim: update 9.0.1211 -> 9.0.1293 to resolve open CVEs
+xserver-xorg: 21.1.6 -> 21.1.7
+package.bbclase: Add check for /build in copydebugsources()
+less: backport the fix for CVE-2022-46663
+libsdl2: fix CVE-2022-4743
+binutils : Fix CVE-2023-22608
+build-appliance-image: Update to kirkstone head revision
+poky.conf: bump version for 4.0.8
+oeqa/selftest/bbtests: Update message lookup for test_git_unpack_nonetwork_fail
+oeqa qemurunner.py: try to avoid reading one character at a time
+oeqa qemurunner.py: add timeout to QMP calls
+oeqa qemurunner: read more data at a time from serial
+oeqa dump.py: add error counter and stop after 5 failures
+oeqa ssh.py: add connection keep alive options to ssh client
+oeqa ssh.py: move output prints to new line
+devshell: Do not add scripts/git-intercept to PATH
+image.bbclass: print all QA functions exceptions
+update-alternatives: fix typos
+qemu: fix compile error
+libgit2: upgrade 1.4.4 -> 1.4.5
+libgit2: uprade 1.4.3 -> 1.4.4
+sudo: upgrade 1.9.12p1 -> 1.9.12p2
+git: upgrade 2.35.6 -> 2.35.7
+linux-firmware: upgrade 20221214 -> 20230117
+libjpeg-turbo: upgrade 2.1.4 -> 2.1.5
+bind: upgrade 9.18.10 -> 9.18.11
+apr-util: update 1.6.1 -> 1.6.3
+apr: update 1.7.0 -> 1.7.2
+lttng-tools: update 2.13.8 -> 2.13.9
+diffutils: update 3.8 -> 3.9
+tar: CVE-2022-48303
+bitbake: fetch2/git: show SRCREV and git repo in error message about fixed SRCREV
+dev-manual: common-tasks.rst: add link to FOSDEM 2023 video
+system-requirements.rst: add Fedora 36 and AlmaLinux 8.7 to list of supported distros
+poky.conf: Update SANITY_TESTED_DISTROS to match autobuilder
+bitbake: bitbake-diffsigs: break on first dependent task difference
+bitbake: bitbake-diffsigs: Make PEP8 compliant
+bitbake: utils/ply: Update md5 to better report errors with hashlib
+bitbake: siggen: Fix inefficient string concatenation
+oeqa context.py: fix --target-ip comment to include ssh port number
+lsof: fix old override syntax
+recipe_sanity: fix old override syntax
+bootchart2: Fix usrmerge support
+libc-locale: Fix on target locale generation
+testimage: Fix error message to reflect new syntax
+oeqa/selftest/locales: Add selftest for locale generation/presence
+apt: fix do_package_qa failure
+meta: remove True option to getVar and getVarFlag calls (again)
+glslang: branch rename master -> main
+httpserver: add error handler that write to the logger
+sdkext/cases/devtool: pass a logger to HTTPService
+oeqa/qemurunner: do not use Popen.poll() when terminating runqemu with a signal
+scons.bbclass: Make MAXLINELENGTH overridable
+scons: Pass MAXLINELENGTH to scons invocation
+make-mod-scripts: Ensure kernel build output is deterministic
+gdk-pixbuf: do not use tools from gdk-pixbuf-native when building tests
+classes/fs-uuid: Fix command output decoding issue
+kernel/linux-kernel-base: Fix kernel build artefact determinism issues
+buildtools-tarball: set pkg-config search path
+vulkan-samples: branch rename master -> main
+linux-yocto/5.15: update to v5.15.91
+linux-yocto/5.15: update to v5.15.89
+git: ignore CVE-2022-41953
+git: upgrade to 2.35.6
+python3-pytest: depend on python3-tomli instead of python3-toml
+python3-certifi: fix for CVE-2022-23491
+manuals: update patchwork instance URL
+bsp-guide: fix broken git URLs and missing word
+profile-manual: update WireShark hyperlinks
+migration-guides: add release-notes for 4.0.7
+ref-manual: document SSTATE_EXCLUDEDEPS_SYSROOT
+dev-manual: fix old override syntax
+
