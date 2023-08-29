@@ -1,0 +1,287 @@
+Changes between v5.0.0 and v5.0.1:
+
+meta-ofdpa:
+ofdpa: do not crash on maximum length interface names
+
+meta-openembedded:
+nodejs: upgrade 16.20.1 -> 16.20.2
+python3-can: Add missing runtime dependencies
+lmsensors: do not pull in unneeded perl modules for run-time dependencies
+redis: upgrade 7.0.11 -> 7.0.12
+Fix groupname gid change warning
+zabbix: fix CVE-2023-29450
+zabbix: fix CVE-2023-29449
+python3-django: upgrade 4.2.1 -> 4.2.3
+python3-django: upgrade 3.2.19 -> 3.2.20
+yasm: fix CVE-2023-31975
+python3-gcovr: Fix parsing of gcc-11 gcov metadata
+yaml-cpp: Fix cmake export
+libyang: fix CVE-2023-26917
+frr: fix for CVE-2023-31490
+mbedtls: build with v2 version by default
+nodejs: upgrade 16.19.1 -> 16.20.1
+webserver: nginx: Add stream Signed-off-by: Luke Schaefer <lukeschafer17@gmail.com>
+python3-werkzeug: fix for patch-fuzz
+yajl: CVE-2023-33460 memory leak in yajl_tree_parse function
+ntp: backport patch for 5 CVEs CVE-2023-26551/2/3/4/5
+mbedtls: add support for v3.x
+tcpreplay: upgrade 4.4.2 -> 4.4.4
+grpc: ignore CVE-2023-32732
+libssh: CVE-2020-16135 Fix NULL pointer dereference in sftpserver.c
+opensc: Fix CVE-2023-2977
+wireshark: Fix Multiple CVEs
+postgresql: fix CVE-2023-2454 & CVE-2023-2455
+frr: fix for CVE-2023-31489
+opencv: fix for CVE-2023-2618
+c-ares: backport patch for CVE-2023-31147
+ExprTk: Update package to release/0.0.2
+Googletest: Adapt googletest 1.11.0 with gcc11
+samba: fix CVE-2021-44758
+samba: fix CVE-2022-41916
+samba: fix CVE-2022-45142
+samba: fix CVE-2022-3437
+wireshark: CVE-2023-2952 XRA dissector infinite loop
+python3-sqlparse: fix for CVE-2023-30608
+python3-django: upgrade 3.2.12 -> 3.2.19
+python3-django: fix for CVE-2023-31047
+redis: use the files path correctly
+meta-oe: add pahole to NON_MULTILIB_RECIPES
+openldap: Fix CVE-2023-2953
+c-ares: ignore CVE-2023-31124
+opencv: Fix for CVE-2023-2617
+lapack: add packageconfig for lapacke
+python3-werkzeug: fix for CVE-2023-23934
+gnulib: Update recipe name to 2018-12-18
+c-ares: fix CVEs CVE-2023-32067 and CVE-2023-31130
+wireshark: Fix CVE-2023-2858 & CVE-2023-2879
+wireshark: CVE-2023-2856 VMS TCPIPtrace file parser crash
+wireshark: CVE-2023-2855 Candump log file parser crash
+
+meta-open-network-linux:
+linux-yocto-onl/6.1: update to 6.1.47
+linux-yocto-onl/6.1: update to 6.1.46
+linux-yocto-onl/6.1: update to 6.1.45
+linux-yocto-onl/6.1: update to 6.1.44
+linux-yocto-onl/6.1: update to 6.1.38
+
+meta-switch:
+distro: bump version to 5.0.1
+baseboxd: Bump version to 2.0.5
+baseboxd: Bump version to 2.0.4
+onie-tools: user proper interface on u-boot for kernel arguments
+
+meta-virtualization:
+docker-ce: bump SRCREV_docker
+docker: update to v20.10.25 + 58 commits to fix compatibility with go currently in kirkstone
+docker-distribution: fix for CVE-2023-2253
+
+poky:
+poky.conf: update SANITY_TESTED_DISTROS to match autobuilder
+dev-manual: wic.rst: Update native tools build command
+libxcrypt: update PV to match SRCREV
+rpm2cpio.sh: update to the last 4.x version
+scripts/rpm2cpio.sh: Use bzip2 instead of bunzip2
+npm.bbclass: avoid DeprecationWarning with new python
+linux-firmware: Fix mediatek mt7601u firmware path
+linux-yocto/5.10: update to v5.10.188
+linux-yocto/5.10: update to v5.10.187
+linux-yocto/5.10: update to v5.10.186
+dmidecode: fixup for CVE-2023-30630
+curl: Backport fix CVE-2023-32001
+qemu: fix CVE-2023-3180
+procps: patch CVE-2023-4016
+ghostscript: fix CVE-2023-38559
+qemu: fix CVE-2023-3354 VNC: improper I/O watch removal in TLS handshake can lead to remote unauthenticated denial of service
+qemu: fix CVE-2020-14394
+python3-certifi: fix CVE-2023-37920
+build-appliance-image: Update to kirkstone head revision
+poky.conf: bump version for 4.0.12
+gcc: fix runpath errors in cc1 binary
+openssl: Upgrade 3.0.9 -> 3.0.10
+gcc : upgrade to v11.4
+cve-update-nvd2-native: always pass str for json.loads()
+go: fix CVE-2023-24531
+go: fix CVE-2023-24536
+qemu: fix CVE-2023-2861
+qemu: fix CVE-2023-3255
+qemu: fix CVE-2023-3301
+libarchive: ignore CVE-2023-30571
+libpcre2: patch CVE-2022-41409
+bitbake: bitbake-layers: initialize tinfoil before registering command line arguments
+ref-manual: document image-specific variant of INCOMPATIBLE_LICENSE
+util-linux: add alternative links for ipcs,ipcrm
+openssl: use a glob on the PERLEXTERNAL to track updates on the path
+openssl: add PERLEXTERNAL path to test its existence
+oeqa/selftest/devtool: add unit test for "devtool add -b"
+oeqa/runtime/cases/rpm: fix wait_for_no_process_for_user failure case
+meson.bbclass: Point to llvm-config from native sysroot
+python3: fix missing comma in get_module_deps3.py
+mdadm: skip running known broken ptests
+mdadm: fix segfaults when running ptests
+mdadm: fix 07revert-inplace ptest
+mdadm: fix util-linux ptest dependency
+uboot-extlinux-config.bbclass: fix old override syntax in comment
+systemd-systemctl: fix errors in instance name expansion
+recipetool: Fix inherit in created -native* recipes
+kernel: add missing path to search for debug files
+libxcrypt: fix build with perl-5.38 and use master branch
+lttng-ust: upgrade 2.13.5 -> 2.13.6
+libksba: upgrade 1.6.3 -> 1.6.4
+libassuan: upgrade 2.5.5 -> 2.5.6
+diffutils: update 3.9 -> 3.10
+python3: upgrade 3.10.9 -> 3.10.12
+dmidecode: fix CVE-2023-30630
+openssh: fix CVE-2023-38408
+libtiff: fix CVE-2023-26965 heap-based use after free
+tiff: fix multiple CVEs
+go: fix CVE-2023-29406 net/http insufficient sanitization of Host header
+tiff: fix multiple CVEs
+python3: ignore CVE-2023-36632
+libjpeg-turbo: patch CVE-2023-2804
+package.bbclass: moving field data process before variable process in process_pkgconfig
+gcc-testsuite: Fix ppc cpu specification
+machine/arch-arm64: add -mbranch-protection=standard
+gcc: don't pass --enable-standard-branch-protection
+linux-yocto/5.15: update to v5.15.120
+linux-yocto/5.15: update to v5.15.119
+ghostscript: fix CVE-2023-36664
+qemu: backport Debian patch to fix CVE-2023-0330
+ref-manual: release-process: update for LTS releases
+ref-manual: add LTS and Mixin terms
+migration-guides: add release notes for 4.0.11
+docs: ref-manual: terms: fix typos in SPDX term
+cmake: Fix CMAKE_SYSTEM_PROCESSOR setting for SDK
+wic: Add dependencies for erofs-utils
+sysfsutils: fetch a supported fork from github
+unzip: fix configure check for cross compilation
+zip: fix configure check by using _Static_assert
+sdk.py: fix moving dnf contents
+sdk.py: error out when moving file fails
+bitbake.conf: add unzstd in HOSTTOOLS
+rust-llvm: backport a fix for build with gcc-13
+systemd: Backport nspawn: make sure host root can write to the uidmapped mounts we prepare for the container payload
+pybootchartgui: show elapsed time for each task
+logrotate: Do not create logrotate.status file
+libpng: Add ptest for libpng
+selftest/reproducible: Allow chose the package manager
+selftest reproducible.py: support different build targets
+vim: upgrade 9.0.1527 -> 9.0.1592
+wireless-regdb: upgrade 2023.02.13 -> 2023.05.03
+linux-firmware: upgrade 20230404 -> 20230515
+wget: upgrade 1.21.3 -> 1.21.4
+serf: upgrade 1.3.9 -> 1.3.10
+tzdata: upgrade to 2023c
+libwebp: Fix CVE-2023-1999
+curl: Added CVE-2023-28320 Follow-up patch
+libx11: Fix CVE-2023-3138 for kirkstone branch
+bind : fix CVE-2023-2828 & CVE-2023-2911
+sqlite3: CVE-2023-36191 CLI fault on missing -nonce
+perl: Fix CVE-2023-31486
+cve-update-nvd2-native: actually use API keys
+cve-update-nvd2-native: log a little more
+cve-update-nvd2-native: increase retry count
+cve-update-nvd2-native: retry all errors and sleep between retries
+cve-update-nvd2-native: fix cvssV3 metrics
+cve-update-nvd2-native: use exact times, don't truncate
+cve-update-nvd2-native: handle all configuration nodes, not just first
+strace: Update patches/tests with upstream fixes
+strace: Merge two similar patches
+strace: Disable failing test
+grub: submit determinism.patch upstream
+devtool: Fix the wrong variable in srcuri_entry
+useradd-staticids.bbclass: improve error message
+babeltrace2: Always use BFD linker when building tests with ld-is-lld distro feature
+maintainers.inc: unassign Ricardo Neri from ovmf
+maintainers.inc: unassign Alistair Francis from opensbi
+maintainers.inc: unassign Adrian Bunk from wireless-regdb
+oeqa/selftest/bbtests: add non-existent prefile/postfile tests
+scripts/runqemu: allocate unfsd ports in a way that doesn't race or clash with unrelated processes
+scripts/runqemu: split lock dir creation into a reusable function
+meta: lib: oe: npm_registry: Add more safe caracters
+image_types: Fix reproducible builds for initramfs and UKI img
+v86d: Improve kernel dependency
+linux-yocto/5.15: cfg: fix DECNET configuration warning
+linux-yocto/5.15: update to v5.15.118
+linux-yocto/5.15: update to v5.15.117
+linux-yocto/5.15: update to v5.15.116
+linux-yocto/5.15: update to v5.15.115
+linux-yocto/5.15: update to v5.15.114
+cups: fix CVE-2023-34241 use-after-free in cupsdAcceptClient() in scheduler/client.c
+oe-depends-dot: Handle new format for task-depends.dot
+libxcrypt: fix hard-coded ".so" extension
+cpio: Replace fix wrong CRC with ASCII CRC for large files with upstream backport
+libcap: fix CVE-2023-2603 Integer Overflow in _libcap_strdup()
+go: fix CVE-2023-29400 html/template improper handling of empty HTML attributes
+bitbake: runqueue: Fix deferred task/multiconfig race issue
+blktrace: ask for python3 specifically
+layer.conf: Add missing dependency exclusion
+maintainers.inc: correct Carlos Rafael Giani's email address
+selftest/license: Exclude from world
+connman: fix warning by specifying runstatedir at configure time
+maintainers.inc: correct unassigned entries
+maintainers.inc: unassign Pascal Bach from cmake entry
+maintainers.inc: unassign Andreas Müller from itstool entry
+maintaines.inc: unassign Richard Weinberger from erofs-utils entry
+pm-utils: fix multilib conflictions
+kmod: remove unused ptest.patch
+minicom: remove unused patch files
+psmisc: Set ALTERNATIVE for pstree to resolve conflict with busybox
+linux-yocto/5.10: cfg: fix DECNET configuration warning
+linux-yocto/5.10: update to v5.10.185
+linux-yocto/5.10: update to v5.10.184
+linux-yocto/5.10: update to v5.10.183
+linux-yocto/5.10: update to v5.10.182
+dbus: upgrade 1.14.6 -> 1.14.8
+mobile-broadband-provider-info: upgrade 20221107 -> 20230416
+xdpyinfo: upgrade 1.3.3 -> 1.3.4
+libxpm: upgrade 3.5.15 -> 3.5.16
+fribidi: upgrade 1.0.12 -> 1.0.13
+babeltrace2: upgrade 2.0.4 -> 2.0.5
+go: fix CVE-2023-29402
+ninja: ignore CVE-2021-4336, wrong ninja
+libcap: CVE-2023-2602 Memory Leak on pthread_create() Error
+go: fix CVE-2023-29405
+go: fix CVE-2023-29404
+build-appliance-image: Update to kirkstone head revision
+poky.conf: bump version for 4.0.11
+lib/terminal.py: Add urxvt terminal
+staging.bbclass: do not add extend_recipe_sysroot to prefuncs of prepare_recipe_sysroot
+oeqa/selftest/cases/devtool.py: skip all tests require folder a git repo
+kmscube: Correct DEPENDS to avoid overwrite
+kernel: don't force PAHOLE=false
+conf: add nice level to the hash config ignred variables
+go.bbclass: don't use test to check output from ls
+iso-codes: upgrade 4.13.0 -> 4.15.0
+nasm: fix CVE-2022-46457
+profile-manual: fix blktrace remote usage instructions
+ref-manual: add clarification for SRCREV
+Revert "ipk: Decode byte data to string in manifest handling"
+e2fsprogs: fix ptest bug for second running
+systemd-systemctl: support instance expansion in WantedBy
+vim: upgrade 9.0.1429 -> 9.0.1527
+linux-yocto/5.15: update to v5.15.113
+linux-yocto/5.15: update to v5.15.112
+linux-yocto/5.15: update to v5.15.111
+linux-yocto/5.15: update to v5.15.110
+linux-yocto/5.15: update to v5.15.109
+glibc: stable 2.35 branch updates
+cve-update-nvd2-native: added the missing http import
+cve-update-nvd2-native: new CVE database fetcher
+webkitgtk: fix CVE-2022-46700
+webkitgtk: fix CVE-2022-42867
+webkitgtk: fix CVE-2022-46699
+webkitgtk: fix CVE-2022-46691
+cups: Fix CVE-2023-32324
+openssh: fix CVE-2023-28531
+uninative: Upgrade to 4.0 to include latest gcc 13.1.1
+uninative: Upgrade to 3.10 to support gcc 13
+selftest/reproducible: Allow native/cross reuse in test
+systemd-networkd: backport fix for rm unmanaged wifi
+openssh: Remove BSD-4-clause contents completely from codebase
+python3-requests: fix for CVE-2023-32681
+openssl: Upgrade 3.0.8 -> 3.0.9
+perl: fix CVE-2023-31484
+curl: Correction for CVE-2023-27536
+go: fix CVE-2023-24539 html/template improper sanitization of CSS values
+sysstat: Fix CVE-2023-33204
+
