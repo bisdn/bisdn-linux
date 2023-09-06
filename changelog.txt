@@ -58,6 +58,7 @@ wireshark: CVE-2023-2856 VMS TCPIPtrace file parser crash
 wireshark: CVE-2023-2855 Candump log file parser crash
 
 meta-open-network-linux:
+linux-yocto-onl/6.1: armel-iproc: reset i2c bus when stuck in START_BUSY
 linux-yocto-onl/6.1: update to 6.1.47
 linux-yocto-onl/6.1: update to 6.1.46
 linux-yocto-onl/6.1: update to 6.1.45
@@ -65,6 +66,8 @@ linux-yocto-onl/6.1: update to 6.1.44
 linux-yocto-onl/6.1: update to 6.1.38
 
 meta-switch:
+baseboxd: Bump version to 2.0.7
+baseboxd: Bump version to 2.0.6
 distro: bump version to 5.0.1
 baseboxd: Bump version to 2.0.5
 baseboxd: Bump version to 2.0.4
