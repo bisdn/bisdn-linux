@@ -4,10 +4,11 @@
   <remote name="gitlab" fetch="ssh://git@gitlab.bisdn.de/"/>
   <remote name="oe" fetch="git://git.openembedded.org/"/>
   <remote name="yocto" fetch="git://git.yoctoproject.org/"/>
+  
   <project name="bisdn/bisdn-linux.git" path="poky/build-bisdn-linux" remote="github" revision="74c4b284fddbe8c671ace2d2861b9bb52720646c" upstream="release/v5.0.1" dest-branch="release/v5.0.1"/>
   <project name="bisdn/meta-ofdpa.git" path="poky/meta-ofdpa" remote="github" revision="4699a723c0d5b67690dabdcd2b0362faf5464ddf" upstream="main" dest-branch="main"/>
   <project name="bisdn/meta-open-network-linux.git" path="poky/meta-open-network-linux" remote="github" revision="1e0887217839ada619b3de678164ed372b877f38" upstream="main" dest-branch="main"/>
-  <project name="bisdn/meta-switch.git" path="poky/meta-switch" remote="github" revision="99263e4898d9128f2e98991a826b15d36e8fbd52" upstream="main" dest-branch="main"/>
+  <project name="bisdn/meta-switch.git" path="poky/meta-switch" remote="github" revision="69f386233255fab831d2b10d0f3330c91d645935" upstream="main" dest-branch="main"/>
   <project name="meta-cloud-services" path="poky/meta-cloud-services" remote="yocto" revision="64243dfa700653faecb68b75459503ccf566bbd7" upstream="kirkstone" dest-branch="kirkstone"/>
   <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="529620141e773080a6a7be4615fb7993204af883" upstream="kirkstone" dest-branch="kirkstone"/>
   <project name="meta-virtualization" path="poky/meta-virtualization" remote="yocto" revision="e60f59f3567b78286ea34337dbae468a5f18f1c6" upstream="kirkstone" dest-branch="kirkstone"/>
