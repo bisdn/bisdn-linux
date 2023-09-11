@@ -1,5 +1,10 @@
 Changes between v5.0.0 and v5.0.1:
 
+build-bisdn-linux:
+update changelog.txt
+default.xml: update release revisions
+default.xml: switch build-bisdn-linux to release branch
+
 meta-ofdpa:
 ofdpa: do not crash on maximum length interface names
 
@@ -66,6 +71,8 @@ linux-yocto-onl/6.1: update to 6.1.44
 linux-yocto-onl/6.1: update to 6.1.38
 
 meta-switch:
+mstpd: do not try to read beyond the end of vlan messages
+libnl: bridge_vlan: properly account for the bridge_vlan header
 baseboxd: Bump version to 2.0.7
 baseboxd: Bump version to 2.0.6
 distro: bump version to 5.0.1
