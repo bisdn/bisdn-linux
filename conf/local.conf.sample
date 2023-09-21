@@ -26,20 +26,6 @@
 MACHINE ?= "generic-armel-iproc"
 
 #
-# Legacy Machine Selection
-#
-# These are platform-specific machines used for older releases, and target
-# exactly one platform. These exist only to avoid breaking existing setups.
-#
-#MACHINE ?= "accton-as4610"
-#MACHINE ?= "accton-as4630-54pe"
-#MACHINE ?= "accton-as5835-54x"
-#MACHINE ?= "accton-as7726-32x"
-#MACHINE ?= "agema-ag5648"
-#MACHINE ?= "agema-ag7648"
-#MACHINE ?= "cel-questone-2a"
-
-#
 # Where to place downloads
 #
 # During a first build the system will download many different source code tarballs
