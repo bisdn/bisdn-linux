@@ -82,7 +82,7 @@ sanity_check_meta-ofdpa() {
 generate_changelog() {
 	echo "Generating changelog (this may take a while) ..."
 
-	$TOPDIR/scripts/changelog.sh -w $WORKDIR -n $NEW -i meta-ofdpa-closed $OLD "$RELEASE_BRANCH" > changelog.txt
+	$TOPDIR/scripts/changelog.sh -f -w $WORKDIR -n $NEW -i meta-ofdpa-closed $OLD "$RELEASE_BRANCH" > changelog.txt
 	git add changelog.txt
 
 	if [ "$UPDATE" -eq 1 ]; then
