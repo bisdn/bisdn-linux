@@ -16,7 +16,7 @@ ONELINE_FORMAT='%C(auto)%s'
 
 IGNORED_LAYERS=""
 
-while getopts 'cehi:n:o:p:vw:' c
+while getopts 'cefhi:n:o:p:vw:' c
 do
 	case "$c" in
 	c)
@@ -24,6 +24,9 @@ do
 		;;
 	e)
 		PRINT_EMPTY=1
+		;;
+	f)
+		PRINT_CVE_FIXES=1
 		;;
 	h)
 		PRINT_HELP=1
@@ -55,10 +58,12 @@ NEW=$2
 
 # $1 list of packages in the image
 # $2 packages available and their versions
-collect_package_versions() {
-	local package_list pkg_name pkg_version depends_file
+# $3 list of open CVE issues
+collect_bitbake_info() {
+	local package_list pkg_name pkg_version depends_file cve_file cve_list
 	declare -n packages=$1
 	declare -n versions=$2
+	declare -n cve_issues=$3
 
 	# BB_ENV_EXTRAWHITE was renamed to BB_ENV_PASSTHROUGH_ADDITIONS and
 	# bitbake will error out if the old one exists in the environment, so
@@ -70,9 +75,16 @@ collect_package_versions() {
 	sed -i 's|^TMPDIR = .*|TMPDIR = "${TOPDIR}/tmp"|' conf/local.conf.sample
 	sed -i 's|^DL_DIR ?= .*|DL_DIR = "${TOPDIR}/dl"|' conf/local.conf.sample
 	sed -i 's|^SSTATE_DIR ?= .*|SSTATE_DIR = "${TOPDIR}/sstate-cache"|' conf/local.conf.sample
+	if [ -n "$PRINT_CVE_FIXES" ]; then
+		echo 'INHERIT += "cve-check"' >> conf/local.conf.sample
+	fi
 	source ../oe-init-build-env . >&2
 	git checkout conf/local.conf.sample >&2
 	bitbake -g full >&2
+	if [ -n "$PRINT_CVE_FIXES" ]; then
+		bitbake --runall cve_check full >&2
+		cve_file="$(pwd)/tmp/log/cve/cve-summary.json"
+	fi
 
 	# This is a list of recipe names, not (sub-)packages, but unless we
 	# also want to build an image, this is the closest we can get.
@@ -85,6 +97,39 @@ collect_package_versions() {
 		pkg_name=$(echo $package | awk '{ print $1}')
 		pkg_version=$(echo $package | awk -F: '{print $2}')
 		versions[$pkg_name]=$pkg_version
+		if [ -n "$PRINT_CVE_FIXES" ]; then
+			# JSON format example:
+			# {
+			#   "version": "1",
+			#   "package": [
+			#     {
+			#       "name": "python3-cryptography",
+			#       "layer": "meta",
+			#       "version": "36.0.2",
+			#       "products": [
+			#         {
+			#           "product": "cryptography",
+			#           "cvesInRecord": "No"
+			#         }
+			#       ],
+			#       "issue": [
+			#         {
+			#           "id": "CVE-2023-23931",
+			#           "summary": "(omitted for readability)",
+			#           "scorev2": "0.0",
+			#           "scorev3": "6.5",
+			#           "vector": "NETWORK",
+			#           "status": "Patched",
+			#           "link": "https://nvd.nist.gov/vuln/detail/CVE-2023-23931"
+			#         }
+			#       ]
+			#     }
+			#   ]
+			# }
+			# collect all issue ids with status 'Unpatched' for this package:
+			cve_list=$(jq -r '.package[] | select (.name == "'${pkg_name}'") | .issue[] | select ( .status == "Unpatched" ) | { id } | join(" ")' $cve_file)
+			cve_issues[$pkg_name]="$cve_list"
+		fi
 	done
 	IFS=$oIFS
 
@@ -106,6 +151,7 @@ collect_package_versions() {
 	echo "Options:"
 	echo "  -c		print commit hashes"
 	echo "  -e		print repos without changes"
+	echo "  -f		print a list of fixed CVEs (may take a long time)"
 	echo "  -h		print this help"
 	echo "  -i		comma separated list of layers to ignore"
 	echo "  -n <new>	set the name of the new version (default: <newbranch|newtag>)"
@@ -127,6 +173,8 @@ declare -A repos
 declare -A repo_paths
 declare -A old_versions
 declare -A new_versions
+declare -A old_open_cves
+declare -A new_open_cves
 
 # use WORKDIR if defined, else create a temporary directory
 if [ -z "$WORKDIR" ]; then
@@ -157,9 +205,9 @@ for dir in $dirs; do
 	repos[$layer]=1
 done
 
-if [ -n "$PRINT_VERSIONS" ]; then
+if [ -n "$PRINT_VERSIONS" ] || [ -n "$PRINT_CVE_FIXES" ]; then
 	pushd $(repo list -p | grep 'build-') > /dev/null
-	collect_package_versions old_packages old_versions
+	collect_bitbake_info old_packages old_versions old_open_cves
 	popd > /dev/null
 fi
 
@@ -186,9 +234,9 @@ for dir in $dirs; do
 	repo_paths[$layer]=$dir
 done
 
-if [ -n "$PRINT_VERSIONS" ]; then
+if [ -n "$PRINT_VERSIONS" ] || [ -n "$PRINT_CVE_FIXES" ]; then
 	pushd $(repo list -p | grep 'build-') > /dev/null
-	collect_package_versions new_packages new_versions
+	collect_bitbake_info new_packages new_versions new_open_cves
 	popd > /dev/null
 fi
 
@@ -210,6 +258,31 @@ if [ -n "$PRINT_VERSIONS" ]; then
 		fi
 
 		echo "$package ($bump)"
+	done
+fi
+
+if [ -n "$PRINT_CVE_FIXES" ]; then
+	packages=$(echo $old_packages $new_packages | tr '"' ' ' | tr ' ' '\n' | sort -u | tr '\n' ' ')
+	echo -e "\nFixed CVEs:"
+	for package in $packages; do
+		old_cves=$(echo ${old_open_cves[$package]})
+		new_cves=$(echo ${new_open_cves[$package]})
+		old_version=$(echo ${old_versions[$package]})
+		new_version=$(echo ${new_versions[$package]})
+
+		if [ -z "$old_version" ] || [ -z "$new_version" ]; then
+			# we don't care about CVEs in deleted packages
+			# there are no CVE changes in new packages
+			continue
+		fi
+
+		fixed_cves=$(comm -23 <(echo "$old_cves") <(echo "$new_cves"))
+
+		if [ -n "$fixed_cves" ]; then
+			echo "$package:"
+			echo "  $fixed_cves"
+			echo ""
+		fi
 	done
 fi
 
