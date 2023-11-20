@@ -1,0 +1,399 @@
+
+Fixed CVEs:
+binutils:
+  CVE-2022-44840 CVE-2022-45703 CVE-2022-47007 CVE-2022-47008 CVE-2022-47010 CVE-2022-47011 CVE-2022-47673 CVE-2022-47695 CVE-2022-47696 CVE-2022-48063 CVE-2022-48064 CVE-2022-48065
+
+binutils-cross-arm:
+  CVE-2022-44840 CVE-2022-45703 CVE-2022-47007 CVE-2022-47008 CVE-2022-47010 CVE-2022-47011 CVE-2022-47673 CVE-2022-47695 CVE-2022-47696 CVE-2022-48063 CVE-2022-48064 CVE-2022-48065
+
+curl:
+  CVE-2023-38545 CVE-2023-38546
+
+file:
+  CVE-2022-48554
+
+gcc-source-11.4.0:
+  CVE-2023-4039
+
+glib-2.0:
+  CVE-2023-29499 CVE-2023-32611 CVE-2023-32636 CVE-2023-32643 CVE-2023-32665
+
+glibc:
+  CVE-2010-4756 CVE-2023-4527 CVE-2023-4813 CVE-2023-4911 CVE-2023-5156
+
+json-c:
+  CVE-2020-12762
+
+libxml2:
+  CVE-2023-45322
+
+linux-yocto-onl:
+  CVE-1999-0524 CVE-1999-0656 CVE-2006-2932 CVE-2007-2764 CVE-2007-4998 CVE-2008-2544 CVE-2008-4609 CVE-2010-0298 CVE-2010-4563 CVE-2014-8171 CVE-2014-9940 CVE-2016-0774 CVE-2016-3695 CVE-2016-3699 CVE-2017-1000255 CVE-2017-1000377 CVE-2017-6264 CVE-2018-10840 CVE-2018-10876 CVE-2018-10882 CVE-2018-10902 CVE-2018-14625 CVE-2018-6559 CVE-2019-14899 CVE-2019-3016 CVE-2019-3819 CVE-2019-3887 CVE-2020-10742 CVE-2020-11935 CVE-2020-16119 CVE-2020-1749 CVE-2020-25672 CVE-2020-27815 CVE-2020-27820 CVE-2020-8834 CVE-2021-20194 CVE-2021-20265 CVE-2021-3564 CVE-2021-3669 CVE-2021-3714 CVE-2021-3864 CVE-2021-4218 CVE-2022-0286 CVE-2022-0400 CVE-2022-1247 CVE-2022-2308 CVE-2022-2327 CVE-2022-2785 CVE-2022-3523 CVE-2022-3533 CVE-2022-3534 CVE-2022-3566 CVE-2022-3567 CVE-2022-3606 CVE-2022-3619 CVE-2022-3624 CVE-2022-3630 CVE-2022-3636 CVE-2022-36402 CVE-2022-38096 CVE-2022-4543 CVE-2022-48425 CVE-2022-48502 CVE-2023-0160 CVE-2023-0615 CVE-2023-1075 CVE-2023-1076 CVE-2023-1192 CVE-2023-1193 CVE-2023-1194 CVE-2023-1206 CVE-2023-1855 CVE-2023-1859 CVE-2023-1990 CVE-2023-2002 CVE-2023-2124 CVE-2023-2156 CVE-2023-2163 CVE-2023-2176 CVE-2023-2194 CVE-2023-23005 CVE-2023-23039 CVE-2023-2430 CVE-2023-28866 CVE-2023-2898 CVE-2023-2985 CVE-2023-30456 CVE-2023-30772 CVE-2023-3090 CVE-2023-3161 CVE-2023-3212 CVE-2023-3220 CVE-2023-32247 CVE-2023-32248 CVE-2023-32250 CVE-2023-32252 CVE-2023-32254 CVE-2023-32257 CVE-2023-3268 CVE-2023-33203 CVE-2023-33288 CVE-2023-3338 CVE-2023-3358 CVE-2023-3359 CVE-2023-3389 CVE-2023-3390 CVE-2023-33951 CVE-2023-33952 CVE-2023-3397 CVE-2023-34256 CVE-2023-3567 CVE-2023-35788 CVE-2023-35823 CVE-2023-35824 CVE-2023-35826 CVE-2023-35827 CVE-2023-35828 CVE-2023-35829 CVE-2023-3609 CVE-2023-3610 CVE-2023-3611 CVE-2023-3640 CVE-2023-37453 CVE-2023-37454 CVE-2023-3772 CVE-2023-3773 CVE-2023-3776 CVE-2023-3777 CVE-2023-38409 CVE-2023-38426 CVE-2023-38428 CVE-2023-38429 CVE-2023-38430 CVE-2023-38431 CVE-2023-38432 CVE-2023-3863 CVE-2023-39189 CVE-2023-39191 CVE-2023-39192 CVE-2023-39193 CVE-2023-39194 CVE-2023-39198 CVE-2023-4004 CVE-2023-4010 CVE-2023-4015 CVE-2023-40283 CVE-2023-40791 CVE-2023-4132 CVE-2023-4133 CVE-2023-4147 CVE-2023-4155 CVE-2023-4194 CVE-2023-4206 CVE-2023-4207 CVE-2023-4208 CVE-2023-4244 CVE-2023-4273 CVE-2023-42752 CVE-2023-42753 CVE-2023-42754 CVE-2023-42755 CVE-2023-42756 CVE-2023-44466 CVE-2023-4569 CVE-2023-45862 CVE-2023-45863 CVE-2023-45871 CVE-2023-45898 CVE-2023-4611 CVE-2023-4623 CVE-2023-46813 CVE-2023-46862 CVE-2023-47233 CVE-2023-4921 CVE-2023-5090 CVE-2023-5178 CVE-2023-5197 CVE-2023-5345 CVE-2023-5633 CVE-2023-5717 CVE-2023-6039
+
+ncurses:
+  CVE-2023-29491
+
+openssl:
+  CVE-2023-4807 CVE-2023-5363 CVE-2023-5678
+
+python3:
+  CVE-2023-27043 CVE-2023-40217
+
+python3-urllib3:
+  CVE-2023-43804 CVE-2023-45803
+
+vim:
+  CVE-2023-46246 CVE-2023-4733 CVE-2023-4734 CVE-2023-4735 CVE-2023-4736 CVE-2023-4738 CVE-2023-4750 CVE-2023-4752 CVE-2023-4781 CVE-2023-5344 CVE-2023-5441 CVE-2023-5535
+
+zlib:
+  CVE-2023-45853
+
+Changes between v5.0.1 and v5.1.0:
+
+build-bisdn-linux:
+prepare_release: include list of fixed CVEs in changelog.txt
+changelog: add support for printing fixed CVEs
+conf: document how to enable CVE checks during build
+conf: drop obsolete legacy machines
+
+meta-cloud-services:
+python3-ansible: Add locale-base-en-us to RDEPENDS
+python3-ansible: Upgrade to 2.14.11
+
+meta-ofdpa:
+ofdpa-platform: import accton as7726-32x custom_led.bin
+ofdpa-platform: import accton as5835-54x custom_led.bin
+ofdpa-platform: import accton as4630-54pe custom_led.bin
+ofdpa-platform: add code for importing custom_led.bin from SONiC
+ofdpa: actually include the log config in the package
+ofdpa: disable SDK file logging by default
+ofdpa: ship a ofdpa_log.cfg instead of creating it at start
+
+meta-openembedded:
+indent: fix CVE-2023-40305
+packagegroup-meta-multimedia: restore x11 restriction for projucer
+mbedtls: upgrade 3.4.0 -> 3.5.0
+suiteparse: Adapt to upstream branch name changes
+python-blivet: Adapt to upstream branch name changes
+grubby: Update branchname to match upstream
+ntfs-3g-ntfsprogs: Upgrade 2022.5.17 to 2022.10.3
+mbedtls: upgrade 2.28.2 -> 2.28.5
+nginx: add configure option
+mbedtls: set up /usr/bin/hello as alternative
+mosquitto: add missing Upstream-Status
+mosquitto: upgrade 2.0.17 -> 2.0.18
+mosquitto: upgrade 2.0.15 -> 2.0.17
+mosquitto: do not automatically depend on dlt-daemon, it's a non-mandatory logging system
+mosquitto: upgrade 2.0.14 -> 2.0.15
+python3-gevent: fix CVE-2023-41419
+open-vm-tools: fix CVE-2023-20867
+samba: fix CVE-2023-34968
+samba:fix CVE-2023-34967
+samba: fix CVE-2022-2127
+samba: fix CVE-2023-34966
+python3-django: upgrade 4.2.3 -> 4.2.5
+python3-django: upgrade 3.2.20 -> 3.2.21
+python3-django: fix CVE-2023-41164
+c-ares: CVE-ID correction for CVE-2022-4904
+openldap: update to 2.5.16
+frr: Fix CVE-2023-41909
+freeglut: Add packageconfigs for x11/wayland/gles
+wireshark: Fix CVE-2023-2906
+redis: upgrade 7.0.12 -> 7.0.13
+rabbitmq-c: Fix CVE-2023-35789
+opensc: ignore CVE-2021-34193
+hdf5: Fix CVE-2021-37501
+hwloc: fix CVE-2022-47022
+iperf3: upgrade 3.11 -> 3.14
+frr: Fix CVE-2023-38802 and CVE-2023-41358
+tcpdump: upgrade 4.99.3 -> 4.99.4
+tcpdump: upgrade 4.99.2 -> 4.99.3
+tcpdump: upgrade 4.99.1 -> 4.99.2
+meta-oe-components: Avoid usage of nobranch=1
+libiio: use main branch instead of master
+nodejs: fix CVE-2022-25883
+spice-protocol: fix populate_sdk error when spice is installed
+krb5: Fix CVE-2023-36054
+nlohmann-json: Avoid usage of nobranch=1
+rapidjson: Avoid usage of nobranch=1
+python3-aiohttp: upgrade 3.8.1 -> 3.8.5
+python3-kivy: Require X11 or Wayland in DISTRO_FEATURES
+postgresql: Update to 14.9
+python3-django: fix CVE-2023-36053
+poppler: fix CVE-2023-34872
+libqb: upgrade 2.0.6 -> 2.0.8
+php: upgrade 8.1.16 -> 8.1.22
+
+meta-open-network-linux:
+onl: split platform libraries into their own packages
+onl: use packagegroups for onl kernel modules
+linux-yocto-onl/6.1: update to 6.1.60
+linux-yocto-onl/6.1: update to 6.1.57
+linux-yocto-onl: fix warning after enabling PPP modules
+onl: optoe: fix race in sysfs registration on probe
+include: onl.inc: drop obsolete ONL_MODULE_VENDORS
+onl: use onl platform names directly
+onl: always build all platforms
+onl: update to latest
+onl: use commit date as version
+linux-yocto-onl/6.1: update to 6.1.55
+conf: drop obsolete legacy machines
+linux-yocto-onl: enable PPP modules
+linux-yocto-onl/6.1: add generated CVE exclusion list
+linux-yocto-onl/5.15: add generated CVE exclusion list
+
+meta-switch:
+baseboxd: Bump version to 2.0.13
+baseboxd: Bump version to 2.0.12
+packagegroup-bisdn-linux-extra: add packages from CSP7551
+distro: bump version to 5.1.0
+accton-csp7551: drop onl package removal
+images: minimal: drop explicit onl dependency
+packagegroup-bisdn-linux-extra: add helpers for debugging
+packagegroup-bisdn-linux-extra: add rp-pppoe(-server)
+packagegroups: add a base packagegroup recipe
+python3-ryu: add CVE_PRODUCT for CVE reporting
+onie-tools: onie-bisdn-upgrade: drop ip configuration support
+libnl: update to 3.8.0
+frr: update to 9.0.1
+libyang: import 2.1.111 from master
+libyang2: drop obsolete recipe
+baseboxd: Bump version to 2.0.9
+libnl: backport default route handling from 3.8.0
+baseboxd: Bump version to 2.0.8
+
+meta-virtualization:
+packagegroup-container: require ipv6 for podman
+nerdctl: fix installed-vs-shipped with usrmerge
+nerdctl: update branch to main
+go-mux: Switch to main branch
+go-context: Switch to main branch
+
+poky:
+python3-jinja2: Fixed ptest result output as per the standard
+cve-check: don't warn if a patch is remote
+cve-check: slightly more verbose warning when adding the same package twice
+cve-check: sort the package list in the JSON report
+xserver-xorg: Fix for CVE-2023-5367 and CVE-2023-5380
+libwebp: Fix CVE-2023-4863
+binutils: Fix CVE-2022-47010
+bitbake: Fix disk space monitoring on cephfs
+bitbake: runqueue: convert deferral messages from bb.note to bb.debug
+bitbake: tinfoil: Do not fail when logging is disabled and full config is used
+bitbake: bitbake-getvar: Make --quiet work with --recipe
+build-appliance-image: Update to kirkstone head revision
+poky.conf: bump version for 4.0.14
+test-manual: reproducible-builds: stop mentioning LTO bug
+dev-manual: add security team processes
+manuals: correct "yocto-linux" by "linux-yocto"
+glibc: ignore CVE-2023-4527
+tiff: CVE patch correction for CVE-2023-3576
+libxml2: Patch CVE-2023-45322
+linux-firmware: create separate packages
+linux-firmware: create separate package for cirrus and cnm firmwares
+package_rpm: Allow compression mode override
+openssl: Upgrade 3.0.11 -> 3.0.12
+curl: fix CVE-2023-38546
+curl: fix CVE-2023-38545
+cve-exclusion_5.10.inc: update for 5.10.197
+ref-manual: variables: add example for SYSROOT_DIRS variable
+ref-manual: variables: add TOOLCHAIN_OPTIONS variable
+ref-manual: variables: add RECIPE_SYSROOT and RECIPE_SYSROOT_NATIVE
+dev-manual: start.rst: remove obsolete reference
+brief-yoctoprojectqs: use new CDN mirror for sstate
+dev-manual: layers: Add notes about layer.conf
+ref-manual: variables: provide no-match example for COMPATIBLE_MACHINE
+profile-manual: aesthetic cleanups
+ref-manual: Fix PACKAGECONFIG term and add an example
+dev/ref-manual: Document INIT_MANAGER
+dev-manual: new-recipe.rst: add missing parenthesis to "Patching Code" section
+bsp-guide: bsp: skip Intel machines no longer supported in Poky
+sdk-manual: appendix-obtain: improve and update descriptions
+dev-manual: wic: update "wic list images" output
+manuals: update linux-yocto append examples
+ref-manual: Warn about COMPATIBLE_MACHINE skipping native recipes
+vim: Upgrade 9.0.2009 -> 9.0.2048
+libx11: Security Fix for CVE-2023-43785, CVE-2023-43786 and CVE-2023-43787
+linux-firmware: upgrade 20230625 -> 20230804
+zlib: patch CVE-2023-45853
+gawk: backport Debian patch to fix CVE-2023-4156
+qemu: ignore RHEL specific CVE-2023-2680
+SECURITY.md: Add file
+bitbake: SECURITY.md: add file
+uboot-extlinux-config.bbclass: fix missed override syntax migration
+libxpm: upgrade to 3.5.17
+tiff: Security fix for CVE-2023-40745
+libtiff: Add fix for tiffcrop CVE-2023-1916
+binutils: CVE-2022-48063
+binutils: Fix CVE-2022-47011
+binutils: Fix CVE-2022-47008
+binutils: Mark CVE-2022-47696 as patched
+binutils: Mark CVE-2022-47673 as patched
+binutils: Fix CVE-2022-47695
+migration-guides: add release notes for 4.0.13
+overview: Add note about non-reproducibility side effects
+dev-manual: fix testimage usage instructions
+ref-manual: releases.svg: Scarthgap is now version 5.0
+apt: add missing <cstdint> for uint16_t
+python3-urllib3: 1.26.15 -> 1.26.17
+python3-urllib3: upgrade 1.26.14 -> 1.26.15
+python3-urllib3: upgrade 1.26.13 -> 1.26.14
+python3-urllib3: upgrade 1.26.12 -> 1.26.13
+python3-urllib3: upgrade 1.26.11 -> 1.26.12
+python3-urllib3: upgrade 1.26.10 -> 1.26.11
+python3-urllib3: upgrade 1.26.9 -> 1.26.10
+vim: Upgrade 9.0.1894 -> 9.0.2009
+binutils: Fix CVE-2022-45703
+binutils: Fix CVE-2022-44840
+xdg-utils: Fix CVE-2022-4055
+libtiff: fix CVE-2022-40090 improved IFD-Loop handling
+bitbake: bitbake-worker/runqueue: Avoid unnecessary bytes object copies
+bitbake: bitbake-getvar: Add a quiet command line argument
+contributor-guide: style-guide: discourage using Pending patch status
+contributor-guide: deprecate "Accepted" patch status
+contributor-guide: discourage marking patches as Inappropriate
+contributor-guide: recipe-style-guide: add section about CVE patches
+contributor-guide: recipe-style-guide: add more patch tagging examples
+dev-manual: new-recipe.rst: replace reference to wiki
+bsp-guide: bsp.rst: replace reference to wiki
+contributor-guide/style-guide: Add a note about task idempotence
+contributor-guide/style-guide: Refer to recipes, not packages
+glibc: Update to latest on stable 2.35 branch
+glibc: Update to latest on stable 2.35 branch
+fontcache.bbclass: avoid native recipes depending on target fontconfig
+python3-jinja2: fix for the ptest result format
+ccache: fix build with gcc-13
+linux-yocto/5.10: update to v5.10.197
+linux-yocto/5.10: update to v5.10.194
+linux-yocto/5.10: update to v5.10.192
+linux-yocto/5.10: update to v5.10.191
+linux-yocto/5.10: update to v5.10.189
+go: Update fix for CVE-2023-24538 & CVE-2023-39318
+json-c: define CVE_VERSION
+kernel.bbclass: Add force flag to rm calls
+cml1: Fix KCONFIG_CONFIG_COMMAND not conveyed fully in do_menuconfig
+bind: update to 9.18.19
+python3-git: upgrade 3.1.32 -> 3.1.37
+openssl: Upgrade 3.0.10 -> 3.0.11
+libwebp: Fix CVE-2023-5129
+cups: Fix CVE-2023-4504
+xserver-xorg: ignore CVE-2022-3553 as it is XQuartz-specific
+webkitgtk: fix CVE-2023-32439
+ruby: fix CVE-2023-36617
+linux-yocto: update CVE exclusions
+go: Fix CVE-2023-39318
+gstreamer1.0-plugins-bad: fix CVE-2023-40476
+gstreamer1.0-plugins-bad: fix CVE-2023-40475
+gstreamer1.0-plugins-bad: fix CVE-2023-40474
+ghostscript: fix CVE-2023-43115
+shadow: Fix CVE-2023-4641
+build-appliance-image: Update to kirkstone head revision
+Revert "oeqa/utils/gitarchive: fix tag computation when creating archive"
+build-appliance-image: Update to kirkstone head revision
+poky.conf: bump version for 4.0.13
+dev-manual: licenses: update license manifest location
+manuals: document "mime-xdg" class and MIME_XDG_PACKAGES
+ref-manual: qa-checks: align with master
+template: fix typo in section header
+dev-manual: licenses: mention SPDX for license compliance
+contributor-guide: recipe-style-guide: add Upstream-Status
+dev-manual: new-recipe.rst fix inconsistency with contributor guide
+documentation/README: align with master
+dev-manual: disk-space: improve wording for obsolete sstate cache files
+sdk-manual: extensible.rst: align with master branch
+manuals: update former references to dev-manual/common-tasks
+dev-manual: split common-tasks.rst
+ref-manual: add new variables
+ref-manual: add Initramfs term
+ref-manual: add meson class and variables
+cargo.bbclass: set up cargo environment in common do_compile
+dbus: Specify runstatedir configure option
+tcl: prevent installing another copy of tzdata
+wic: fix wrong attempt to create file system in upartitioned regions
+build-sysroots: Add SUMMARY field
+resulttool/report: Avoid divide by zero
+oeqa/utils/gitarchive: fix tag computation when creating archive
+scripts/create-pull-request: update URLs to git repositories
+externalsrc: fix dependency chain issues
+pseudo: Fix to work with glibc 2.38
+vim: Upgrade 9.0.1664 -> 9.0.1894
+vim: upgrade 9.0.1592 -> 9.0.1664
+vim: update obsolete comment
+tar: upgrade 1.34 -> 1.35
+binutils: stable 2.38 branch updates
+glibc: stable 2.35 branch updates
+gcc: Fix -fstack-protector issue on aarch64
+binutils: Fix CVE-2022-48065
+cups: fix CVE-2023-32360
+go: Fix CVE-2023-39319
+dev-manual: common-tasks: mention faster "find" command to trim sstate cache
+yocto-uninative: Update to 4.3
+gdb: Fix CVE-2023-39128
+webkitgtk: fix CVE-2022-48503
+flac: fix CVE-2020-22219
+libxml2: Fix CVE-2023-39615
+qemu: fix CVE-2021-3638
+dropbear: fix CVE-2023-36328
+python3-pygments: Fix CVE-2022-40896
+manuals: add new contributor guide
+ref-manual: system-requirements: update supported distros
+migration-guides: add release notes for 4.0.12
+sysklogd: fix integration with systemd-journald
+libdnf: resolve cstdint inclusion for newer gcc versions
+efivar: backport 5 patches to fix build with gold
+python3: upgrade to 3.10.13
+nasm: fix CVE-2020-21528
+file: fix CVE-2022-48554
+libssh2: fix CVE-2020-22218
+webkitgtk: fix CVE-2023-23529
+busybox: fix CVE-2022-48174
+ncurses: fix CVE-2023-29491
+json-c: fix CVE-2021-32292
+libtiff: fix CVE-2023-26966 Buffer Overflow
+inetutils: Backport fix for CVE-2023-40303
+tiff: fix CVE-2023-2908,CVE-2023-3316,CVE-2023-3618
+python3-git: upgrade 3.1.27 -> 3.1.32
+linux/cve-exclusion: remove obsolete manual entries
+linux/cve-exclusion: add generated CVE_CHECK_IGNORES.
+linux-yocto: add script to generate kernel CVE_CHECK_IGNORE entries
+nghttp2: fix CVE-2023-35945
+Qemu: Resolve undefined reference issue in CVE-2023-2861
+go: Fix CVE-2023-29409
+ffmpeg: add CVE_CHECK_IGNORE for CVE-2023-39018
+glibc-locale: use stricter matching for metapackages' runtime dependencies
+oeqa/ssh: Further improve process exit handling
+target/ssh: Ensure exit code set for commands
+oeqa/runtime/ltp: Increase ltp test output timeout
+oeqa/target/ssh: Ensure EAGAIN doesn't truncate output
+selftest/cases/glibc.py: switch to using NFS over TCP
+oeqa/utils/nfs: allow requesting non-udp ports
+selftest/cases/glibc.py: increase the memory for testing
+glibc/check-test-wrapper: don't emit warnings from ssh
+mdadm: add util-linux-blockdev ptest dependency
+kernel: Fix path comparison in kernel staging dir symlinking
+rpm: Pick debugfs package db files/dirs explicitly
+rootfs: Add debugfs package db file copy and cleanup
+selftest/cases/glibc.py: fix the override syntax
+automake: fix buildtest patch
+resulttool/resultutils: allow index generation despite corrupt json
+shadow-sysroot: add license information
+acl/attr: ptest fixes and improvements
+lib/package_manager: Improve repo artefact filtering
+pixman: Remove duplication of license MIT
+yocto-uninative: Update to 4.2 for glibc 2.38
+yocto-uninative: Update hashes for uninative 4.1
+linux-yocto/5.15: update to v5.15.124
+linux-yocto/5.15: update to v5.15.123
+linux-yocto/5.15: update to v5.15.122
+linux-firmware: split platform-specific Adreno shaders to separate packages
+linux-firmware : Add firmware of RTL8822 serie
+linux-firmware: package firmare for Dragonboard 410c
+linux-firmware: upgrade 20230515 -> 20230625
+libnss-nis: upgrade 3.1 -> 3.2
+bind: 9.18.11 -> 9.18.17
+gstreamer1.0: upgrade 1.20.6 -> 1.20.7
+librsvg: 2.52.7 -> 2.52.10
+glib-2.0: Fix CVE-2023-32643 and CVE-2023-32636
+glib-2.0: Fix CVE-2023-29499 and CVE-2023-32611
+glib-2.0: Fix CVE-2023-32665
+
