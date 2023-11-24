@@ -1,8 +1,10 @@
 bitbake.lock
+build
 cache
 conf/bblayers.conf
 conf/local.conf
 conf/sanity_info
-tmp
-sstate-cache
 downloads
+poky
+sstate-cache
+tmp
