@@ -1,0 +1,6 @@
+header:
+  version: 14
+
+target:
+  - full
+  - packagegroup-bisdn-linux-extra
