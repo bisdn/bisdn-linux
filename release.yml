@@ -1,0 +1,10 @@
+header:
+  version: 14
+
+local_conf_header:
+  custom-local-conf: |
+    FEEDURIPREFIX = "pub/onie/${MACHINE}/packages-v${DISTRO_VERSION}"
+
+target:
+  - full
+  - packagegroup-bisdn-linux-extra
