@@ -1,0 +1,82 @@
+header:
+    version: 14
+distro: bisdn-linux
+build_system: oe
+machine: generic-armel-iproc
+target:
+  - full
+
+local_conf_header:
+    default-local-conf: |
+        CONF_VERSION = "2"
+        PACKAGE_CLASSES ?= "package_ipk"
+        USER_CLASSES ?= "buildstats"
+        PATCHRESOLVE = "noop"
+        BB_DISKMON_DIRS = "\
+            STOPTASKS,${TMPDIR},1G,100K \
+            STOPTASKS,${DL_DIR},1G,100K \
+            STOPTASKS,${SSTATE_DIR},1G,100K \
+            STOPTASKS,/tmp,100M,100K \
+            HALT,${TMPDIR},100M,1K \
+            HALT,${DL_DIR},100M,1K \
+            HALT,${SSTATE_DIR},100M,1K \
+            HALT,/tmp,10M,1K"
+        DL_DIR ?= "/tmp/downloads"
+        CCACHE_TOP_DIR ?= "/tmp/ccache"
+        SSTATE_DIR ?= "/tmp/sstate-cache"
+        TMPDIR = "/tmp/${MACHINE}"
+
+repos:
+    # Yocto base (must come first)
+    poky:
+        url: "git://git.yoctoproject.org/poky"
+        branch: "kirkstone"
+        path: "poky"
+        layers:
+            meta:
+            meta-poky:
+            meta-yocto-bsp:
+
+    # additional yocto layers
+    meta-cloud-services:
+        url: "git://git.yoctoproject.org/meta-cloud-services"
+        branch: "kirkstone"
+        path: "poky/meta-cloud-services"
+        layers:
+            .:
+            meta-openstack:
+
+    meta-virtualization:
+        url: "git://git.yoctoproject.org/meta-virtualization"
+        branch: "kirkstone"
+        path: "poky/meta-virtualization"
+
+    # open embedded layers
+    meta-openembedded:
+        url: "git://git.openembedded.org/meta-openembedded"
+        branch: "kirkstone"
+        path: "poky/meta-openembedded"
+        layers:
+            meta-filesystems:
+            meta-networking:
+            meta-oe:
+            meta-python:
+            meta-webserver:
+
+    # open source BISDN layers
+    meta-bisdn-linux:
+        url: "https://github.com/bisdn/meta-bisdn-linux.git"
+        branch: "main"
+        path: "poky/meta-bisdn-linux"
+
+    meta-ofdpa:
+        url: "https://github.com/bisdn/meta-ofdpa.git"
+        branch: "main"
+        path: "poky/meta-ofdpa"
+
+    meta-open-network-linux:
+        url: "https://github.com/bisdn/meta-open-network-linux.git"
+        branch: "main"
+        path: "poky/meta-open-network-linux"
+
+
