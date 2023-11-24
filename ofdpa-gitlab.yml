@@ -1,0 +1,8 @@
+header:
+  version: 14
+
+repos:
+    meta-ofdpa-closed:
+        url: "ssh://git@gitlab.bisdn.de/yocto-meta-layers/meta-ofdpa.git"
+        branch: "main"
+        path: "poky/meta-ofdpa-closed"
