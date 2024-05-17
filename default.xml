@@ -4,8 +4,7 @@
   <remote name="gitlab" fetch="ssh://git@gitlab.bisdn.de/"/>
   <remote name="oe" fetch="git://git.openembedded.org/"/>
   <remote name="yocto" fetch="git://git.yoctoproject.org/"/>
-  
-  <project name="bisdn/bisdn-linux.git" path="poky/build-bisdn-linux" remote="github" revision="0a6b270b977fef0dd89f2d70797b4d98fba84a98" upstream="v5.1.x" dest-branch="v5.1.x"/>
+  <project name="bisdn/bisdn-linux.git" path="poky/build-bisdn-linux" remote="github" revision="098b7e9e4d0f70ed3ff7e74c2022fbb927b2bdd9" upstream="release/v5.1.1" dest-branch="release/v5.1.1"/>
   <project name="bisdn/meta-ofdpa.git" path="poky/meta-ofdpa" remote="github" revision="73deb8c4b3f99c1b78faace24267759d55af10c4" upstream="v5.1.x" dest-branch="v5.1.x"/>
   <project name="bisdn/meta-open-network-linux.git" path="poky/meta-open-network-linux" remote="github" revision="1fb8155395c684bf97fa6d183b5d5b052203b20d" upstream="v5.1.x" dest-branch="v5.1.x"/>
   <project name="bisdn/meta-switch.git" path="poky/meta-switch" remote="github" revision="5c94d7f9c64b49b083f2ca710f5744ab7bc792c5" upstream="v5.1.x" dest-branch="v5.1.x"/>
