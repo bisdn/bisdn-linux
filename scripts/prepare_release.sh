@@ -96,10 +96,12 @@ generate_changelog() {
 
 set_feed_uri_prefix() {
 	echo "Setting FEEDURIPREFIX to release value ..."
-	echo 'FEEDURIPREFIX = "pub/onie/${MACHINE}/packages-v${DISTRO_VERSION}"' >> conf/local.conf.sample
+	mkdir -p conf
+	echo 'SCONF_VERSION = "1"' > conf/site.conf
+	echo 'FEEDURIPREFIX = "pub/onie/${MACHINE}/packages-v${DISTRO_VERSION}"' >> conf/site.conf
 	git commit -s -m "conf: set release FEEDURIPREFIX
 
-Set the FEEDURIPREFIX to the release path." conf/local.conf.sample
+Set the FEEDURIPREFIX to the release path." conf/site.conf
 }
 
 update_default_xml() {
