@@ -135,7 +135,7 @@ repo init -b ${BRANCHNAME} -u https://github.com/bisdn/bisdn-linux.git
 repo sync
 
 # init build system
-. poky/oe-init-build-env poky/build-bisdn-linux/
+TEMPLATECONF="meta-switch/conf/templates/bisdn-linux" . poky/oe-init-build-env poky/build-bisdn-linux/
 ```
 
 ## Configure target machine and cache directory
