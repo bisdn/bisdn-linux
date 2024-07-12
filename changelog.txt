@@ -1,0 +1,158 @@
+
+Fixed CVEs:
+linux-yocto-onl:
+  CVE-1999-0524 CVE-1999-0656 CVE-2006-2932 CVE-2007-2764 CVE-2007-4998 CVE-2008-2544 CVE-2008-4609 CVE-2010-4563 CVE-2016-0774 CVE-2016-3695 CVE-2016-3699 CVE-2017-1000377 CVE-2017-6264 CVE-2018-6559 CVE-2019-14899 CVE-2021-3714 CVE-2021-3864 CVE-2022-0400 CVE-2022-1247 CVE-2022-3533 CVE-2022-3606 CVE-2022-38096 CVE-2022-4543 CVE-2023-23005 CVE-2023-23039 CVE-2023-3397 CVE-2023-3640 CVE-2023-37454 CVE-2023-39191 CVE-2023-4010 CVE-2023-4133 CVE-2023-52452 CVE-2023-52760 CVE-2023-52827 CVE-2023-6039 CVE-2023-6238 CVE-2023-6240 CVE-2023-6535 CVE-2023-6560 CVE-2024-1312 CVE-2024-21803 CVE-2024-22386 CVE-2024-23848 CVE-2024-24855 CVE-2024-24857 CVE-2024-24858 CVE-2024-24859 CVE-2024-24864 CVE-2024-25739 CVE-2024-25740 CVE-2024-26595 CVE-2024-26596 CVE-2024-26900 CVE-2024-26902 CVE-2024-26913 CVE-2024-26930 CVE-2024-26949 CVE-2024-26952 CVE-2024-36288 CVE-2024-36477 CVE-2024-36481 CVE-2024-36891 CVE-2024-36893 CVE-2024-36897 CVE-2024-36901 CVE-2024-36902 CVE-2024-36926 CVE-2024-36930 CVE-2024-36938 CVE-2024-36971 CVE-2024-38662 CVE-2024-38664 CVE-2024-38667 CVE-2024-38780 CVE-2024-39277 CVE-2024-39291 CVE-2024-39292 CVE-2024-39472 CVE-2024-39473 CVE-2024-39474 CVE-2024-39475 CVE-2024-39476 CVE-2024-39480 CVE-2024-39481 CVE-2024-39482 CVE-2024-39483 CVE-2024-39484 CVE-2024-39485
+
+openssh:
+  CVE-2024-6387
+
+Changes between v5.1.1 and v5.2.0:
+
+meta-ofdpa:
+openbcm-gpl-modules: bcm-knet: fixup DSCP value in packets to controller
+ofdpa-grpc: allow resetting switch non openflow configuration
+
+meta-openembedded:
+php: Upgrade to 8.1.29
+rdfind: fix build with gcc-13
+giflib: upgrade to version 5.2.2
+nano: Security fix for CVE-2024-5742
+gnome-shell: correct regression with glib-2.0 fix for CVE-2024-34397
+yajl: backport Debian patch for CVE-2022-24795
+sip3: Fix segmentation fault
+openvpn: fix multiple CVEs
+nginx-1.21.1: Drop reference to removed patch
+python3-pyyaml-include: support native and nativesdk build
+nginx: Remove obsolete patch
+nodejs: fix CVE-2023-46809
+nodejs: fix CVE-2024-22025
+nodejs: fix CVE-2024-22019
+ITS#10094 libldap/OpenSSL: fix setting ciphersuites
+nss: Backport fix CVE-2023-0767
+uriparser: upgrade 0.9.6 -> 0.9.8
+mbedtls: upgrade 2.28.7->2.28.8
+php: upgrade 8.1.22 -> 8.1.28
+libssh: Fix CVE CVE-2023-6004
+nss: patch CVE-2024-0743
+nss: patch CVE-2023-5388
+libeigen: Update GPL-3.0-only to GPL-2.0-only
+nginx: fix CVE-2023-44487
+python3-pyyaml-include: Drop pytest --automake
+
+meta-open-network-linux:
+platform-init-onl: as7726-32x: fix 10g setup
+platform-onl-init: accton-as7726-32x: fix 8v89307 init script invocation
+generic-armel-iproc: override GO linuxloader
+platform-onl-init: move scripts to /usr/libexec/
+linux-yocto-onl/6.6: update to 6.6.35
+linux-yocto-onl/6.6: update to 6.6.30
+linux-yocto-onl/6.6: update to 6.6.29
+layer.conf: prefer linux-libc-headers for 6.6
+linux-libc-headers: import 6.6 from poky master
+strace: import 6.7 recipe from poky master
+generic-x86-64: switch to kernel 6.6
+generic-armel-iproc: switch to kernel 6.6
+accton-as4630-54pe-poe-mcu: update i2c_driver::probe() for 6.3
+onl: modules: fix class_create() usage for kernel 6.4+
+onl: update missed module with 6.3 i2c_driver's probe signature
+scripts/coccinelle: update 6.3 probe function update script
+onl: delta-ag5648: fix compilation with 6.6
+linux-yocto-onl: add linux 6.6 support
+linux-yocto-onl/generic-armel-iproc: use modern gpio descriptors
+generic-armel-iproc: move devicetree files into separate package
+onl: make modules build with linux 6.6
+onl: allow building more platforms
+onl: replace individual platform patches with global ones
+onl: enable -Wno-error=unused-result instead of patching around it
+
+meta-switch:
+openssh: remove duplicate fix for CVE-2024-6387
+frr: update 9.0.2 to 9.0.3
+openssh: fix CVE-2024-6387
+images: full: include man pages
+distro: enable manpages
+baseboxd: Bump version to 2.2.0
+libnl: update to 3.9.0
+baseboxd: default configuration files to package
+install: move default files location
+Fix /usr/share/doc path
+installer: indicate when rootfs is getting written
+baseboxd: (actually) Bump version to 2.1.15
+baseboxd: Bump version to 2.1.15
+installer: add support for default configurations
+libnl: fix cloning links with slave ops
+libnl: backport fix for updated object notifications
+baseboxd: Bump version to 2.1.10
+distro: enable vfat support
+distro: disable usb gadget support
+distro: disable various graphical options
+distro: disable pcmcia
+distro: disable pulseaudio
+baseboxd: Bump version to 2.1.9
+Update onie-bisdn-upgrade documentation to warn about file loss
+Update onie-bisdn-upgrade documentation
+distro: bump version to 5.2.0
+Add man page for switch_tcpdump(8)
+switch_tcpdump: update usage examples and usage description
+switch_tcpdump: add custom signal handler
+switch_tcpdump: deal with missing/present acl rules automatically
+switch_tcpdump: capture output from ofdpa_acl_flow_cli
+switch_tcpdump: allow unlimited filesize
+switch_tcpdump: flush print output immediately
+switch_tcpdump: change error exit code
+baseboxd: Bump version to 2.1.7
+baseboxd: Bump version to 2.1.6
+installer: accton-as4610: drop fixup for boot_diag command
+baseboxd: Bump version to 2.1.3
+switch_tcpdump: update help message
+switch_tcpdump: clean up output
+switch_tcpdump: make stdout default
+switch_tcpdump: pass on extra args to tcpdump
+baseboxd: Bump version to 2.1.1
+baseboxd: Bump version to 2.1.0
+installer: accton-as4610: use explicit default fit configuration
+
+meta-virtualization:
+podman-compose: switch to main branch
+libvirt: Fix CVE-2024-1441 and CVE-2024-2496
+kubernetes: fix do_patch failure
+libvirt: Backport fix for CVE-2024-2494
+
+poky:
+glibc-tests: Add missing bash ptest dependency
+glibc-tests: correctly pull in the actual tests when installing -ptest package
+linuxloader: add -armhf on arm only for TARGET_FPU 'hard'
+openssh: fix CVE-2024-6387
+OpenSSL: Security fix for CVE-2024-5535
+gstreamer1.0-plugins-base: fix CVE-2024-4453
+wget: Fix for CVE-2024-38428
+man-pages: remove conflict pages
+man-pages: add an alternative link name for crypt_r.3
+gobject-introspection: Do not hardcode objdump name
+openssl: Upgrade 3.0.13 -> 3.0.14
+glibc: stable 2.35 branch updates
+ruby: fix CVE-2024-27280
+acpica: fix CVE-2024-24856
+libxml2: Security fix for CVE-2024-34459
+glib-2.0: patch CVE-2024-34397
+migration-guides: add release notes for 4.0.19
+bitbake: tests/fetch: Tweak test to match upstream repo url change Upstream changed their urls, update our test to match.
+build-appliance-image: Update to kirkstone head revision
+poky.conf: bump version for 4.0.19
+git: Fix multiple CVEs
+util-linux: Fix CVE-2024-28085
+ghostscript: fix CVE-2023-52722
+ghostscript: fix CVE-2024-29510
+ghostscript: fix CVE-2024-33871
+ghostscript: fix CVE-2024-33869
+ghostscript: fix CVE-2024-33870
+initscripts: Add custom mount args for /var/lib
+systemd-systemctl: Fix WantedBy processing
+classes: go-mod: do not pack go mod cache
+go.bbclass: fix path to linker in native Go builds
+go: Always pass interpreter to linker
+binutils: Rename CVE-2022-38126 patch to CVE-2022-35205
+openssl: patch CVE-2024-4603
+libarchive: fix CVE-2024-26256
+bitbake: parse: Improve/fix cache invalidation via mtime
+
