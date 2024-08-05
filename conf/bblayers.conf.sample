@@ -16,7 +16,7 @@ BBLAYERS ?= " \
   ##OEROOT##/meta-openembedded/meta-oe \
   ##OEROOT##/meta-openembedded/meta-python \
   ##OEROOT##/meta-openembedded/meta-webserver \
-  ##OEROOT##/meta-switch \
+  ##OEROOT##/meta-bisdn-linux \
   ##OEROOT##/meta-virtualization \
   ##OEROOT##/meta-poky \
   ##OEROOT##/meta-yocto-bsp \
