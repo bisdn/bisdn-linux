@@ -1,0 +1,17 @@
+# kas include file to override the package feed config for release builds
+# and to create source code tarballs
+---
+header:
+  version: 17
+
+local_conf_header:
+  package_feed_conf: |
+    # Configure /etc/opkg/base-feeds.conf in release images
+    FEEDDOMAIN = "http://repo.bisdn.de"
+    FEEDURIPREFIX = "pub/onie/${MACHINE}/packages-v${DISTRO_VERSION}"
+
+  source_archive_conf: |
+    # Create source code archives in deploy/sources
+    INHERIT += "archiver"
+    # Archive original tarballs along with any patch files we apply
+    ARCHIVER_MODE[src] = "original"
