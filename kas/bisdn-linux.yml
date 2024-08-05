@@ -1,0 +1,40 @@
+# kas configuration file for building BISDN Linux
+---
+header:
+  version: 17
+  includes:
+    - kas/include/generic-yocto-distro.yml
+
+repos:
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  # BISDN open source layers
+  meta-ofdpa:
+    url: https://github.com/bisdn/meta-ofdpa.git
+    branch: main
+    path: sources/meta-ofdpa
+
+  meta-open-network-linux:
+    url: https://github.com/bisdn/meta-open-network-linux.git
+    branch: main
+    path: sources/meta-open-network-linux
+
+  meta-bisdn-linux:
+    url: https://github.com/bisdn/meta-bisdn-linux.git
+    branch: main
+    path: sources/meta-bisdn-linux
+
+machine: generic-x86-64
+
+local_conf_header:
+  bisdn_linux_conf: |
+    DISTRO = "bisdn-linux"
+
+  package_feed_conf: |
+    # Configure /etc/opkg/base-feeds.conf in nightly images
+    FEEDDOMAIN = "http://repo.bisdn.de"
+    FEEDURIPREFIX = "nightly_builds/${MACHINE}/main/packages_latest-build"
+
+target:
+  # Recipes defined in https://github.com/bisdn/meta-bisdn-linux/
+  - full
+  - packagegroup-bisdn-linux-extra

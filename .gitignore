@@ -1,10 +1,5 @@
-bitbake.lock
-build
-cache
+/build/*
 conf/bblayers.conf
 conf/local.conf
 conf/sanity_info
-downloads
-poky
-sstate-cache
-tmp
+/sources/*

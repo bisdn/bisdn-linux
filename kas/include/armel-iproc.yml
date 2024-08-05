@@ -1,0 +1,8 @@
+# kas include file to build for armel-iproc architecture
+---
+header:
+  version: 17
+
+local_conf_header:
+  armel_iproc_conf: |
+    MACHINE = "generic-armel-iproc"

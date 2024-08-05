@@ -1,0 +1,16 @@
+# kas configuration file for building a generic yocto distro
+---
+header:
+  version: 17
+  includes:
+  - kas/include/generic-yocto-distro.yml
+
+machine: qemux86-64
+
+local_conf_header:
+  qemux86_64_conf: |
+    # x MB RAM for qemu VM
+    QB_MEM = "1024"
+
+    MACHINE_ESSENTIAL_EXTRA_RRECOMMENDS += "kernel-modules"
+    MACHINE ?= "qemux86-64"
