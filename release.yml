@@ -1,0 +1,12 @@
+header:
+  version: 14
+
+local_conf_header:
+  release-local-conf: |
+    FEEDURIPREFIX = "pub/onie/${MACHINE}/packages-v${DISTRO_VERSION}"
+    INHERIT += "archiver"
+    ARCHIVER_MODE[src] = "original"
+
+target:
+  - full
+  - packagegroup-bisdn-linux-extra
