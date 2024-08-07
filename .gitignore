@@ -1,5 +1,2 @@
 /build/*
-conf/bblayers.conf
-conf/local.conf
-conf/sanity_info
 /sources/*
