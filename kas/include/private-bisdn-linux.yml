@@ -1,0 +1,15 @@
+# kas include file which adds private repo to build ofdpa from source
+---
+header:
+  version: 17
+
+repos:
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  # BISDN closed source layers
+
+  # The recipes in meta-ofdpa-closed have a higher BBFILE_PRIORITY than those
+  # in the public meta-ofdpa repo and are therefore preferred when included.
+  meta-ofdpa-closed:
+    url: ssh://git@gitlab.bisdn.de/yocto-meta-layers/meta-ofdpa.git
+    branch: main
+    path: sources/meta-ofdpa-closed
