@@ -7,32 +7,49 @@ BASEBRANCH="main"
 BRANCHPREFIX="release"
 UPDATE=0
 
-generate_default_xml() {
-	if [ -n "$URI" ]; then
-		echo "Copying default.xml ..."
-		curl "$URI" -o $TOPDIR/default.xml
-		SOURCE=$URI
-	else
-		echo "Generating default.xml ..."
-		pushd $WORKDIR > /dev/null
-		repo init -q -b $BASEBRANCH -u $TOPDIR -g all,ofdpa-gitlab
-		repo sync
-		repo manifest --revision-as-HEAD -o $TOPDIR/default.xml
-		popd > /dev/null
-		SOURCE="current $BASEBRANCH branch"
-	fi
+lock_revisions() {
+	case "$URI" in
+		*.xml)
+			echo "Copying default.xml ..."
+			curl "$URI" -o $TOPDIR/default.xml
+			SOURCE=$URI
+			BASE=repo
+			;;
+		*.yaml)
+			echo "Copying bisdn-linux.lock.yaml ..."
+			curl "$URI" -o $TOPDIR/bisdn-linux.lock.yaml
+			SOURCE=$URI
+			BASE=kas
+			;;
+		*)
+			# todo
+			exit 1
+			;;
+	esac
+
+	case "$BASE" in
+		kas)
+			echo "Updating default.xml based on bisdn-linux.lock.yaml ..."
+			$TOPDIR/scripts/convert.sh bisdn-linux.lock.yaml default.xml
+			;;
+		repo)
+			echo "Generating bisdn-linux.lock.yaml based on default.xml ..."
+			$TOPDIR/scripts/convert.sh default.xml bisdn-linux.lock.yaml
+			;;
+	esac
 
 	if [ "$UPDATE" -eq 1 ]; then
-		MSG="default.xml: update release revisions
+		MSG="update release revisions
 
-Upate release revisions in default.xml based on $SOURCE."
+Update release revisions in bisdn-linux.lock.yaml and default.xml based on $SOURCE."
 	else
 		MSG="default.xml: set release revisions
 
-Set release revisions in default.xml based on $SOURCE."
+Set release revisions in in bidn-linux.lock.yaml and default.xml based on $SOURCE."
 	fi
 
-	git commit -s -m "$MSG" default.xml
+	git add bisdn-linux.lock.yaml
+	git commit -s -m "$MSG" default.xml bisdn-linux.lock.yaml
 }
 
 # Check that the top commits for OF-DPA and ofdpa-grpc recipes are identical
@@ -155,7 +172,7 @@ if [ -z "$OLD" -o -z "$NEW" ]; then
 	print_help
 fi
 
-REQUIRED_BINARIES="curl git repo xmlstarlet"
+REQUIRED_BINARIES="curl git repo xmlstarlet yq"
 FAILED=0
 
 for binary in $REQUIRED_BINARIES; do
@@ -196,7 +213,7 @@ else
 	set_feed_uri_prefix
 fi
 
-generate_default_xml
+lock_revisions
 sanity_check_meta-ofdpa
 generate_changelog
 update_default_xml
