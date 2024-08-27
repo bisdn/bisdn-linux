@@ -254,6 +254,13 @@ if [ -n "$PRINT_VERSIONS" ] || [ -n "$PRINT_CVE_FIXES" ]; then
 	popd > /dev/null
 fi
 
+# meta-switch was renamed to meta-bisdn-linux, so treat meta-switch as an
+# old version of meta-bisdn-linux and pretend meta-switch does not exist.
+if [ -n "${repos['meta-switch']}" ] && [ -n "${repos['meta-bisdn-linux']}" ]; then
+	old_revs["meta-bisdn-linux"]=${old_revs["meta-switch"]}
+	unset -v 'repos["meta-switch"]'
+fi
+
 repo_dirs=$(echo ${!repos[@]} | tr ' ' '\n' | sort | tr '\n' ' ')
 
 if [ -n "$PRINT_VERSIONS" ]; then
