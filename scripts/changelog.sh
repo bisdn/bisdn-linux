@@ -61,6 +61,7 @@ NEW=$2
 # $3 list of open CVE issues
 collect_bitbake_info() {
 	local package_list pkg_name pkg_version depends_file cve_file cve_list
+	local template_dir
 	declare -n packages=$1
 	declare -n versions=$2
 	declare -n cve_issues=$3
@@ -70,16 +71,29 @@ collect_bitbake_info() {
 	# make sure that neither is set
 	unset BB_ENV_EXTRAWHITE
 	unset BB_ENV_PASSTHROUGH_ADDITIONS
+
+	if [ ! -f conf/local.conf.sample ]; then
+		template_dir=../meta-bisdn-linux/conf/templates/bisdn-linux
+	else
+		# older version, not using TEMPLATECONF yet
+		template_dir=conf
+	fi
+
 	rm -f conf/local.conf
 	rm -f conf/bblayers.conf
-	sed -i 's|^TMPDIR = .*|TMPDIR = "${TOPDIR}/tmp"|' conf/local.conf.sample
-	sed -i 's|^DL_DIR ?= .*|DL_DIR = "${TOPDIR}/dl"|' conf/local.conf.sample
-	sed -i 's|^SSTATE_DIR ?= .*|SSTATE_DIR = "${TOPDIR}/sstate-cache"|' conf/local.conf.sample
+
+	sed -i 's|^TMPDIR = .*|TMPDIR = "${TOPDIR}/tmp"|' $template_dir/local.conf.sample
+	sed -i 's|^DL_DIR ?= .*|DL_DIR = "${TOPDIR}/dl"|' $template_dir/local.conf.sample
+	sed -i 's|^SSTATE_DIR ?= .*|SSTATE_DIR = "${TOPDIR}/sstate-cache"|' $template_dir/local.conf.sample
 	if [ -n "$PRINT_CVE_FIXES" ]; then
-		echo 'INHERIT += "cve-check"' >> conf/local.conf.sample
+		echo 'INHERIT += "cve-check"' >> $template_dir/conf/local.conf.sample
 	fi
-	source ../oe-init-build-env . >&2
-	git checkout conf/local.conf.sample >&2
+	TEMPLATECONF="meta-bisdn-linux/conf/templates/bisdn-linux" source ../oe-init-build-env . >&2
+
+	pushd $template_dir > /dev/null
+	git checkout local.conf.sample >&2
+	popd > /dev/null
+
 	bitbake -g full >&2
 	if [ -n "$PRINT_CVE_FIXES" ]; then
 		bitbake --runall cve_check full >&2
