@@ -29,11 +29,10 @@ local_conf_header:
         FEEDURIPREFIX ?= "latest/${MACHINE}/packages_latest-build"
 
 repos:
-    # Yocto base (must come first)
     poky:
         url: "git://git.yoctoproject.org/poky"
         branch: "kirkstone"
-        path: "poky"
+        path: "sources/poky"
         layers:
             meta:
             meta-poky:
@@ -43,7 +42,7 @@ repos:
     meta-cloud-services:
         url: "git://git.yoctoproject.org/meta-cloud-services"
         branch: "kirkstone"
-        path: "poky/meta-cloud-services"
+        path: "sources/meta-cloud-services"
         layers:
             .:
             meta-openstack:
@@ -51,13 +50,13 @@ repos:
     meta-virtualization:
         url: "git://git.yoctoproject.org/meta-virtualization"
         branch: "kirkstone"
-        path: "poky/meta-virtualization"
+        path: "sources/meta-virtualization"
 
     # open embedded layers
     meta-openembedded:
         url: "git://git.openembedded.org/meta-openembedded"
         branch: "kirkstone"
-        path: "poky/meta-openembedded"
+        path: "sources/meta-openembedded"
         layers:
             meta-filesystems:
             meta-networking:
@@ -69,16 +68,16 @@ repos:
     meta-bisdn-linux:
         url: "https://github.com/bisdn/meta-bisdn-linux.git"
         branch: "main"
-        path: "poky/meta-bisdn-linux"
+        path: "sources/meta-bisdn-linux"
 
     meta-ofdpa:
         url: "https://github.com/bisdn/meta-ofdpa.git"
         branch: "main"
-        path: "poky/meta-ofdpa"
+        path: "sources/meta-ofdpa"
 
     meta-open-network-linux:
         url: "https://github.com/bisdn/meta-open-network-linux.git"
         branch: "main"
-        path: "poky/meta-open-network-linux"
+        path: "sources/meta-open-network-linux"
 
 

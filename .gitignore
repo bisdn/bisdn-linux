@@ -5,6 +5,6 @@ conf/bblayers.conf
 conf/local.conf
 conf/sanity_info
 downloads
-poky
+sources
 sstate-cache
 tmp
