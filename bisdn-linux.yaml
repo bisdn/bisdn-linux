@@ -5,6 +5,10 @@ build_system: oe
 machine: generic-x86-64
 target: full
 
+env:
+    # Export variables (if set) to bitbake via BB_ENV_PASSTHROUGH_ADDITIONS
+    CCACHE_TOP_DIR: null
+
 local_conf_header:
     default-local-conf: |
         CONF_VERSION = "2"
