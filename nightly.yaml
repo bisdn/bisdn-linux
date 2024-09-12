@@ -1,0 +1,6 @@
+header:
+    version: 14
+
+local_conf_header:
+    feed-local-conf: |
+        FEEDURIPREFIX ?= "nightly_builds/${MACHINE}/main/packages_latest-build"

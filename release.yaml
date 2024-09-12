@@ -2,5 +2,5 @@ header:
     version: 14
 
 local_conf_header:
-    release-local-conf: |
+    feed-local-conf: |
         FEEDURIPREFIX = "pub/onie/${MACHINE}/packages-v${DISTRO_VERSION}"
