@@ -24,6 +24,8 @@ local_conf_header:
             HALT,${DL_DIR},100M,1K \
             HALT,${SSTATE_DIR},100M,1K \
             HALT,/tmp,10M,1K"
+    feed-local-conf: |
+        FEEDURIPREFIX ?= "latest/${MACHINE}/packages_latest-build"
 
 repos:
     # Yocto base (must come first)
