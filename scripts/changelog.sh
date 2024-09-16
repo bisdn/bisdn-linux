@@ -86,7 +86,7 @@ collect_bitbake_info() {
 	sed -i 's|^DL_DIR ?= .*|DL_DIR = "${TOPDIR}/dl"|' $template_dir/local.conf.sample
 	sed -i 's|^SSTATE_DIR ?= .*|SSTATE_DIR = "${TOPDIR}/sstate-cache"|' $template_dir/local.conf.sample
 	if [ -n "$PRINT_CVE_FIXES" ]; then
-		echo 'INHERIT += "cve-check"' >> $template_dir/conf/local.conf.sample
+		echo 'INHERIT += "cve-check"' >> $template_dir/local.conf.sample
 	fi
 	TEMPLATECONF="meta-bisdn-linux/conf/templates/bisdn-linux" source ../oe-init-build-env . >&2
 
