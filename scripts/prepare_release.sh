@@ -99,6 +99,7 @@ set_feed_uri_prefix() {
 	mkdir -p conf
 	echo 'SCONF_VERSION = "1"' > conf/site.conf
 	echo 'FEEDURIPREFIX = "pub/onie/${MACHINE}/packages-v${DISTRO_VERSION}"' >> conf/site.conf
+	git add conf/site.conf
 	git commit -s -m "conf: set release FEEDURIPREFIX
 
 Set the FEEDURIPREFIX to the release path." conf/site.conf
