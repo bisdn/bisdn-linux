@@ -4,8 +4,9 @@
   <remote name="gitlab" fetch="ssh://git@gitlab.bisdn.de/"/>
   <remote name="oe" fetch="git://git.openembedded.org/"/>
   <remote name="yocto" fetch="git://git.yoctoproject.org/"/>
+  
   <project name="bisdn/bisdn-linux.git" path="poky/build-bisdn-linux" remote="github" revision="45f19979250794835ddefcff85a205b7328ca788" upstream="release/v5.2.1" dest-branch="release/v5.2.1"/>
-  <project name="bisdn/meta-bisdn-linux.git" path="poky/meta-bisdn-linux" remote="github" revision="f32cae6f0b1bec28d5bca27532d3d2f84b67e0c7" upstream="main" dest-branch="main"/>
+  <project name="bisdn/meta-bisdn-linux.git" path="poky/meta-bisdn-linux" remote="github" revision="3f8add7d1c43687c5bbb07bc87889b4fc0c84775" upstream="main" dest-branch="main"/>
   <project name="bisdn/meta-ofdpa.git" path="poky/meta-ofdpa" remote="github" revision="3c3386625b8549b2f4a6003eaf3ba0a1c9308432" upstream="main" dest-branch="main"/>
   <project name="bisdn/meta-open-network-linux.git" path="poky/meta-open-network-linux" remote="github" revision="ec19b02fb84f34ca778871c512455bb9e549abfa" upstream="main" dest-branch="main"/>
   <project name="meta-cloud-services" path="poky/meta-cloud-services" remote="yocto" revision="783826eceb1b09496099f00a008062c0f9f4ee4e" upstream="kirkstone" dest-branch="kirkstone"/>
