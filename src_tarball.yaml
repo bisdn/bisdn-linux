@@ -1,0 +1,7 @@
+header:
+    version: 14
+
+local_conf_header:
+    source-tarball-conf: |
+        INHERIT += "archiver"
+        ARCHIVER_MODE[src] = "original"
