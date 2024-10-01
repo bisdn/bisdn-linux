@@ -2,7 +2,7 @@ header:
     version: 14
 distro: bisdn-linux
 build_system: oe
-machine: generic-armel-iproc
+machine: generic-x86-64
 target: full
 
 local_conf_header:
