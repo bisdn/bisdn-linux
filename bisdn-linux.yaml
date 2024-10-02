@@ -79,5 +79,3 @@ repos:
         url: "https://github.com/bisdn/meta-open-network-linux.git"
         branch: "main"
         path: "sources/meta-open-network-linux"
-
-
