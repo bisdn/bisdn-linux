@@ -1,0 +1,7 @@
+# Including this kas file lowers the disk space requirements when building.
+header:
+    version: 14
+
+local_conf_header:
+    rm-work-conf:
+        INHERIT += "rm_work"
