@@ -95,18 +95,6 @@ After the build process finishes, your image will be in
 `onie-bisdn-full-generic-armel-iproc.bin` will point to the actual image
 file named `onie-bisdn-full-generic-armel-iproc-<timestamp>.bin`.
 
-### ofdpa-gitlab
-
-If you want to build ofdpa from source, you need access to the
-ofdpa-gitlab repo. The most convenient way to authenticate when building
-with `kas-container` is to use your own `.ssh` directory (to avoid
-complaints that the authenticity of the host can't be established)
-and your ssh-agent (for authentication with gitlab.bisdn.de):
-
-```shell
-kas-container --ssh-agent --ssh-dir ~/.ssh build bisdn-linux.yaml:ofdpa-gitlab.yaml
-```
-
 ## Installing a BISDN Linux image
 
 Please refer to our
