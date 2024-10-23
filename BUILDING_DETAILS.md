@@ -38,6 +38,18 @@ of disk space required substantially:
 kas-container build bisdn-linux.yaml:rm-work.yaml
 ```
 
+## Building ofdpa-gitlab
+
+If you want to build ofdpa from source, you need access to the
+ofdpa-gitlab repo. The most convenient way to authenticate when building
+with `kas-container` is to use your own `.ssh` directory (to avoid
+complaints that the authenticity of the host can't be established)
+and your ssh-agent (for authentication with gitlab.bisdn.de):
+
+```shell
+kas-container --ssh-agent --ssh-dir ~/.ssh build bisdn-linux.yaml:ofdpa-gitlab.yaml
+```
+
 ## Troubleshooting
 
 If your build fails, it may be because your [`build`](build) directory
