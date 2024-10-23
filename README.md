@@ -15,7 +15,8 @@ are documentation or for the benefit of our CI/CD and release management
 systems.
 
 The remainder of this document provides a quick guide on how to build
-a BISDN Linux image.
+a BISDN Linux image. If the instructions below do not meet your needs,
+please refer to [BUILDING_DETAILS.md](BUILDING_DETAILS.md).
 
 ## Supported switches
 
