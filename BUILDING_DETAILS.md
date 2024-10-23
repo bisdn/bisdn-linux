@@ -38,6 +38,19 @@ of disk space required substantially:
 kas-container build bisdn-linux.yaml:rm-work.yaml
 ```
 
+## Limiting memory and CPU usage
+
+Even if you have the recommended RAM and CPU cores, the build process may
+expand to eat all resources on your build host and make it unresponsive
+to the point where only resetting the machine will help. To avoid this,
+you can limit the resources available to the build process by having
+kas-container pass additional options to `docker run`. For instance:
+
+```shell
+kas-container --runtime-args "--cpus=14" --runtime-args "--memory=16g" \
+  --runtime-args "--memory-swap=20g" build bisdn-linux.yaml:ofdpa-gitlab.yaml
+```
+
 ## Building ofdpa-gitlab
 
 If you want to build ofdpa from source, you need access to the
