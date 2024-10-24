@@ -21,6 +21,7 @@ jobs:
       MACHINE: "${{ matrix.machine }}"
       # Build full image (for faster pipeline tests, use "minimal")
       TARGET: "full"
+      SSTATE_CACHE_DIR: "build/sstate-cache"
 
     steps:
       - name: Check out repository
@@ -97,3 +98,13 @@ jobs:
           export KAS_MACHINE=$MACHINE
           export KAS_TARGET=$TARGET
           kas-container build "$KAS_CFG_FILES"
+
+      - name: Remove duplicates in sstate-cache
+        run: |
+          echo "##############################################################"
+          du -ms "$SSTATE_CACHE_DIR"
+          echo "Removing duplicates in sstate-cache."
+          ./sources/poky/scripts/sstate-cache-management.sh \
+            --cache-dir="$SSTATE_CACHE_DIR" --remove-duplicated --yes
+          echo "##############################################################"
+          du -ms "$SSTATE_CACHE_DIR"
