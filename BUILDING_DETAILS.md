@@ -11,8 +11,14 @@ Linux distributions due to incompatible versions of build tools.
 If you want to build without using containers, you can replace the
 `kas-container` command with `kas` in a suitable build environment.
 
-On Ubuntu 22.04 LTS (jammy), you would install the required packages
-and then run kas:
+BISDN Linux is currently based on the Yocto Project's Kirkstone release.
+The
+[system requirements page](https://docs.yoctoproject.org/4.0.22/ref-manual/system-requirements.html)
+lists suitable Linux distributions and required packages for
+building a Kirkstone-based system without containers.
+
+For example, on Ubuntu 22.04 LTS (jammy), you would install the required
+packages and then run kas:
 
 ```shell
 sudo apt-get install --no-install-recommends \
