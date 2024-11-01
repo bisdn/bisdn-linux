@@ -16,6 +16,9 @@ jobs:
     strategy:
       matrix:
         machine: [generic-x86-64, generic-armel-iproc]
+      # Allow matrix jobs to continue regardless of failures in other
+      # jobs.
+      fail-fast: false
 
     env:
       KAS_CFG_FILES: "bisdn-linux.yaml:rm-work.yaml"
