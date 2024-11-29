@@ -12,6 +12,8 @@ env:
 
 local_conf_header:
     default-local-conf: |
+        # To install additional yocto packages, add them to IMAGE_INSTALL, e.g.
+        # IMAGE_INSTALL:append = "iperf3 strongswan"
         CONF_VERSION = "2"
         PACKAGE_CLASSES ?= "package_ipk"
         USER_CLASSES ?= "buildstats"
