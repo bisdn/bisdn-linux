@@ -87,7 +87,7 @@ To build an image that works on all ARM platforms supported by BISDN Linux,
 run this command in the root of this repository:
 
 ```bash
-MACHINE=generic-armel-iproc kas-container build bisdn-linux.yaml
+KAS_MACHINE=generic-armel-iproc kas-container build bisdn-linux.yaml
 ```
 
 After the build process finishes, your image will be in
