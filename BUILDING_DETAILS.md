@@ -2,6 +2,9 @@
 
 This document covers details that may be useful to some users.
 
+All examples build for `generic-x86-64`. Replace it with
+`generic-armel-iproc` when building for ARM.
+
 ## Building additional yocto packages
 
 Assuming the packages you want to add are already present in one of the
@@ -19,7 +22,7 @@ local_conf_header:
     extra_packages: |
         IMAGE_INSTALL:append = "iperf3 strongswan"
 EOF
-$ kas build bisdn-linux.yaml:custom-configuration.yaml
+$ KAS_MACHINE=generic-x86-64 kas build bisdn-linux.yaml:custom-configuration.yaml
 ```
 
 For packages in other layer repos, you need to add the repos first. The repos
@@ -49,7 +52,7 @@ packages and then run kas:
 ```shell
 sudo apt-get install --no-install-recommends \
   build-essential chrpath diffstat lz4
-kas build bisdn-linux.yaml
+KAS_MACHINE=generic-x86-64 kas build bisdn-linux.yaml
 ```
 
 ## Building under disk space constraints
@@ -67,7 +70,7 @@ after a package has been successfully built which reduces the amount
 of disk space required substantially:
 
 ```shell
-kas-container build bisdn-linux.yaml:rm-work.yaml
+KAS_MACHINE=generic-x86-64 kas-container build bisdn-linux.yaml:rm-work.yaml
 ```
 
 ## Limiting memory and CPU usage
@@ -79,7 +82,7 @@ you can limit the resources available to the build process by having
 kas-container pass additional options to `docker run`. For instance:
 
 ```shell
-kas-container --runtime-args "--cpus=14" --runtime-args "--memory=16g" \
+KAS_MACHINE=generic-x86-64 kas-container --runtime-args "--cpus=14" --runtime-args "--memory=16g" \
   --runtime-args "--memory-swap=20g" build bisdn-linux.yaml:ofdpa-gitlab.yaml
 ```
 
@@ -92,7 +95,7 @@ complaints that the authenticity of the host can't be established)
 and your ssh-agent (for authentication with gitlab.bisdn.de):
 
 ```shell
-kas-container --ssh-agent --ssh-dir ~/.ssh build bisdn-linux.yaml:ofdpa-gitlab.yaml
+KAS_MACHINE=generic-x86-64 kas-container --ssh-agent --ssh-dir ~/.ssh build bisdn-linux.yaml:ofdpa-gitlab.yaml
 ```
 
 ## Troubleshooting

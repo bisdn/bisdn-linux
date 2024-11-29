@@ -66,34 +66,26 @@ A single build requires about 100 GiB of disk space. The cache directories in
 
 ## Building a BISDN Linux image
 
-### x86_64 platforms
+BISDN Linux supports two different architectures: Broadcom XGS iProc (ARM), and
+Intel x86-64.
 
-The default image works on all x86_64 platforms supported by BISDN
-Linux. To build the image from the latest sources, clone this repo and
-run the following command in its root directory:
+To select the target machine for BISDN Linux, pass the appropriate name via
+the`KAS_MACHINE` environment variable:
+
+* `generic-armel-iproc` for devices based on Broadcom XGS iProc (Accton AS4610 series)
+* `generic-x86-64` for devices with an Intel x86 host CPU (all other supported devices)
+
+To build the image from the latest sources, clone this repo and run the
+following command in its root directory, e.g.:
 
 ```bash
-kas-container build bisdn-linux.yaml
+KAS_MACHINE=generic-x86-64 kas-container build bisdn-linux.yaml
 ```
 
 After the build process has finished, your image will be in
-`build/tmp/deploy/images/generic-x86-64/`. A symlink named
-`onie-bisdn-full-generic-x86-64.bin` will point to the actual image
-file named `onie-bisdn-full-generic-x86-64-<timestamp>.bin`.
-
-### ARM platforms (Edgecore AS4610)
-
-To build an image that works on all ARM platforms supported by BISDN Linux,
-run this command in the root of this repository:
-
-```bash
-KAS_MACHINE=generic-armel-iproc kas-container build bisdn-linux.yaml
-```
-
-After the build process finishes, your image will be in
-`build/tmp/deploy/images/generic-armel-iproc/`. A symlink named
-`onie-bisdn-full-generic-armel-iproc.bin` will point to the actual image
-file named `onie-bisdn-full-generic-armel-iproc-<timestamp>.bin`.
+`build/tmp/deploy/images/<KAS_MACHINE>/`. A symlink named
+`onie-bisdn-full-<KAS_MACHINE>.bin` will point to the actual image
+file named `onie-bisdn-full-<KAS_MACHINE>-<timestamp>.bin`.
 
 ## Installing a BISDN Linux image
 
