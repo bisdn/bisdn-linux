@@ -2,6 +2,32 @@
 
 This document covers details that may be useful to some users.
 
+## Building additional yocto packages
+
+Assuming the packages you want to add are already present in one of the
+layers configured in [`bisdn-linux.yaml`](bisdn-linux.yaml), you can have
+them included in the BISDN Linux image by adding an `IMAGE_INSTALL:append`
+line to the configuration. You can do that by creating your own kas
+configuration file and pass it to kas:
+
+```shell
+$ cat > custom-configation.yaml << EOF
+header:
+    version: 14
+
+local_conf_header:
+    extra_packages: |
+        IMAGE_INSTALL:append = "iperf3 strongswan"
+EOF
+$ kas build bisdn-linux.yaml:custom-configuration.yaml
+```
+
+For packages in other layer repos, you need to add the repos first. The repos
+configured in `bisdn-linux.yaml` demonstrate how to do this. The
+[kas documentation](https://kas.readthedocs.io/en/latest/userguide/project-configuration.html)
+provides more information on how to further customize your kas configuration
+file.
+
 ## Building without containers
 
 We recommend building with containers to ensure a reproducible
