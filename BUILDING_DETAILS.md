@@ -5,7 +5,7 @@ This document covers details that may be useful to some users.
 All examples build for `generic-x86-64`. Replace it with
 `generic-armel-iproc` when building for ARM.
 
-## Building additional yocto packages
+## Adding additional yocto packages to the image
 
 Assuming the packages you want to add are already present in one of the
 layers configured in [`bisdn-linux.yaml`](bisdn-linux.yaml), you can have
