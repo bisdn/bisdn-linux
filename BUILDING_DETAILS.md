@@ -5,6 +5,27 @@ This document covers details that may be useful to some users.
 All examples build for `generic-x86-64`. Replace it with
 `generic-armel-iproc` when building for ARM.
 
+## Building additional Yocto packages
+
+Assuming the packages you want to add are already present in one of the
+layers configured in [`bisdn-linux.yaml`](bisdn-linux.yaml), you can build
+them by passing them via `--target` to kas:
+
+```shell
+KAS_MACHINE=generic-x86-64 kas build --target lldpd bisdn-linux.yaml -- --runall=do_package_write_ipk
+```
+
+The `--runall=do_package_write_ipk` ensures that not only the package itself,
+but also all packages it depends on will be created.
+
+The resulting package and its dependencies will appear in the subdirectories
+of `build/tmp/deploy/ipk`. After transferring the package to the switch, it
+can be installed with `opkg`:
+
+```shell
+opkg install lldpd_1.0.8-r0_corei7-64.ipk
+```
+
 ## Adding additional Yocto packages to the image
 
 Assuming the packages you want to add are already present in one of the
