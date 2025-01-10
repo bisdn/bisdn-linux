@@ -41,7 +41,7 @@ header:
 
 local_conf_header:
     extra_packages: |
-        IMAGE_INSTALL:append = "iperf3 strongswan"
+        IMAGE_INSTALL:append = " iperf3 strongswan"
 EOF
 KAS_MACHINE=generic-x86-64 kas build bisdn-linux.yaml:custom-configuration.yaml
 ```
