@@ -14,7 +14,7 @@ line to the configuration. You can do that by creating your own kas
 configuration file and pass it to kas:
 
 ```shell
-$ cat > custom-configation.yaml << EOF
+cat > custom-configation.yaml << EOF
 header:
     version: 14
 
@@ -22,7 +22,7 @@ local_conf_header:
     extra_packages: |
         IMAGE_INSTALL:append = "iperf3 strongswan"
 EOF
-$ KAS_MACHINE=generic-x86-64 kas build bisdn-linux.yaml:custom-configuration.yaml
+KAS_MACHINE=generic-x86-64 kas build bisdn-linux.yaml:custom-configuration.yaml
 ```
 
 For packages in other layer repos, you need to add the repos first. The repos
