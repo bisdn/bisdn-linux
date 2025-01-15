@@ -1,5 +1,7 @@
 # BISDN Linux build system
 
+[![BISDN Linux CI status](https://github.com/bisdn/bisdn-linux/actions/workflows/build-bisdn-linux.yml/badge.svg)](https://github.com/bisdn/bisdn-linux/actions/workflows/build-bisdn-linux.yml)
+
 This repository holds files for building the
 [BISDN Linux](https://docs.bisdn.de/) network operating system.
 
