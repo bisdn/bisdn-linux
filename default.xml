@@ -5,11 +5,11 @@
   <remote name="oe" fetch="git://git.openembedded.org/" />
   <remote name="yocto" fetch="git://git.yoctoproject.org/" />
   <!-- yocto layer -->
-  <project name="meta-cloud-services" path="poky/meta-cloud-services" remote="yocto" revision="kirkstone"/>
-  <project name="meta-virtualization" path="poky/meta-virtualization" remote="yocto" revision="kirkstone"/>
-  <project name="poky" path="poky" remote="yocto" revision="kirkstone"/>
+  <project name="meta-cloud-services" path="poky/meta-cloud-services" remote="yocto" revision="scarthgap"/>
+  <project name="meta-virtualization" path="poky/meta-virtualization" remote="yocto" revision="scarthgap"/>
+  <project name="poky" path="poky" remote="yocto" revision="scarthgap"/>
   <!-- open embedded layer -->
-  <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="kirkstone"/>
+  <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="scarthgap"/>
   <!-- open source bisdn layers -->
   <project name="bisdn/bisdn-linux.git" path="poky/build-bisdn-linux" remote="github" revision="main"/>
   <project name="bisdn/meta-bisdn-linux.git" path="poky/meta-bisdn-linux" remote="github" revision="main"/>

@@ -31,7 +31,7 @@ local_conf_header:
 repos:
     poky:
         url: "git://git.yoctoproject.org/poky"
-        branch: "kirkstone"
+        branch: "scarthgap"
         path: "sources/poky"
         layers:
             meta:
@@ -41,7 +41,7 @@ repos:
     # additional yocto layers
     meta-cloud-services:
         url: "git://git.yoctoproject.org/meta-cloud-services"
-        branch: "kirkstone"
+        branch: "scarthgap"
         path: "sources/meta-cloud-services"
         layers:
             .:
@@ -49,13 +49,13 @@ repos:
 
     meta-virtualization:
         url: "git://git.yoctoproject.org/meta-virtualization"
-        branch: "kirkstone"
+        branch: "scarthgap"
         path: "sources/meta-virtualization"
 
     # open embedded layers
     meta-openembedded:
         url: "git://git.openembedded.org/meta-openembedded"
-        branch: "kirkstone"
+        branch: "scarthgap"
         path: "sources/meta-openembedded"
         layers:
             meta-filesystems:
