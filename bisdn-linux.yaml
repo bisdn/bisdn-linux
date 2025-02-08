@@ -67,15 +67,15 @@ repos:
     # open source BISDN layers
     meta-bisdn-linux:
         url: "https://github.com/bisdn/meta-bisdn-linux.git"
-        branch: "main"
+        branch: "jogo_staging"
         path: "sources/meta-bisdn-linux"
 
     meta-ofdpa:
         url: "https://github.com/bisdn/meta-ofdpa.git"
-        branch: "main"
+        branch: "jogo_staging"
         path: "sources/meta-ofdpa"
 
     meta-open-network-linux:
         url: "https://github.com/bisdn/meta-open-network-linux.git"
-        branch: "main"
+        branch: "jogo_staging"
         path: "sources/meta-open-network-linux"

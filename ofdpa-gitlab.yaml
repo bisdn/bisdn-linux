@@ -4,5 +4,5 @@ header:
 repos:
     meta-ofdpa-closed:
         url: "ssh://git@gitlab.bisdn.de/yocto-meta-layers/meta-ofdpa.git"
-        branch: "main"
+        branch: "jogo_staging"
         path: "sources/meta-ofdpa-closed"
