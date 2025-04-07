@@ -81,7 +81,7 @@ write_manifest() {
 }
 
 case "$1" in
-	*.yml)
+	*.yaml)
 		read_lockfile $1
 		;;
 	*.xml)
@@ -93,7 +93,7 @@ case "$1" in
 esac
 
 case "$2" in
-	*.yml)
+	*.yaml)
 		write_lockfile $2
 		;;
 	*.xml)
