@@ -101,6 +101,22 @@ sanity_check_meta-ofdpa() {
 	fi
 }
 
+# check that DISTRO_VERSION matches the release version
+check_version() {
+	local distro_version
+
+	distro_version=$(grep '^DISTRO_VERSION' $WORKDIR/poky/meta-bisdn-linux/conf/distro/bisdn-linux.conf)
+
+	# extract value of 'DISTRO_VERSION = "X.Y.Z"'
+	distro_version=${source_version#*\"}
+	distro_version=${source_version%\"*}
+
+	if [ "v$source_version" != "$NEW" ]; then
+		echo "DISTRO_VERSION does not match release version (expected \"${NEW#v}\", got \"$distro_version\")" >&2
+		exit 1
+	fi
+}
+
 generate_changelog() {
 	echo "Generating changelog (this may take a while) ..."
 
@@ -221,6 +237,7 @@ fi
 lock_revisions
 prepare_workdir
 sanity_check_meta-ofdpa
+check_version
 generate_changelog
 update_default_xml
 
