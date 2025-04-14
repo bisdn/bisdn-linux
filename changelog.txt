@@ -1,0 +1,778 @@
+
+Fixed CVEs:
+binutils:
+  CVE-2025-0840
+
+binutils-cross-arm:
+  CVE-2025-0840
+
+curl:
+  CVE-2024-9681
+
+expat:
+  CVE-2023-52425 CVE-2024-45490 CVE-2024-45491 CVE-2024-45492
+
+libarchive:
+  CVE-2024-48957 CVE-2024-48958 CVE-2025-1632
+
+libpcap:
+  CVE-2023-7256 CVE-2024-8006
+
+libxml2:
+  CVE-2025-27113
+
+linux-yocto-onl:
+  CVE-1999-0524 CVE-1999-0656 CVE-2006-2932 CVE-2007-2764 CVE-2007-4998 CVE-2008-2544 CVE-2008-4609 CVE-2010-4563 CVE-2016-0774 CVE-2016-3695 CVE-2016-3699 CVE-2017-1000377 CVE-2017-6264 CVE-2018-6559 CVE-2019-14899 CVE-2021-3714 CVE-2021-3864 CVE-2022-0400 CVE-2022-1247 CVE-2022-38096 CVE-2022-4543 CVE-2023-3079 CVE-2023-3397 CVE-2023-3640 CVE-2023-4010 CVE-2023-52485 CVE-2023-52585 CVE-2023-52586 CVE-2023-52590 CVE-2023-52624 CVE-2023-52625 CVE-2023-52634 CVE-2023-52904 CVE-2023-52920 CVE-2023-52926 CVE-2023-6238 CVE-2023-6240 CVE-2023-6535 CVE-2024-21803 CVE-2024-23848 CVE-2024-24859 CVE-2024-24864 CVE-2024-25739 CVE-2024-25740 CVE-2024-25741 CVE-2024-26596 CVE-2024-26672 CVE-2024-26686 CVE-2024-26699 CVE-2024-26756 CVE-2024-26757 CVE-2024-26758 CVE-2024-26785 CVE-2024-26811 CVE-2024-26836 CVE-2024-26876 CVE-2024-26900 CVE-2024-26944 CVE-2024-26945 CVE-2024-26949 CVE-2024-26952 CVE-2024-26954 CVE-2024-26962 CVE-2024-27010 CVE-2024-27011 CVE-2024-27012 CVE-2024-27017 CVE-2024-27059 CVE-2024-27072 CVE-2024-27079 CVE-2024-35788 CVE-2024-35843 CVE-2024-35968 CVE-2024-36288 CVE-2024-36476 CVE-2024-36478 CVE-2024-36923 CVE-2024-38381 CVE-2024-38608 CVE-2024-39472 CVE-2024-40965 CVE-2024-41014 CVE-2024-41023 CVE-2024-41061 CVE-2024-41080 CVE-2024-41085 CVE-2024-42064 CVE-2024-42065 CVE-2024-42066 CVE-2024-42071 CVE-2024-42072 CVE-2024-42075 CVE-2024-42078 CVE-2024-42081 CVE-2024-42083 CVE-2024-42107 CVE-2024-42122 CVE-2024-42123 CVE-2024-42134 CVE-2024-42139 CVE-2024-42151 CVE-2024-42155 CVE-2024-42156 CVE-2024-42158 CVE-2024-42162 CVE-2024-42227 CVE-2024-42252 CVE-2024-43098 CVE-2024-43819 CVE-2024-43824 CVE-2024-43835 CVE-2024-43840 CVE-2024-43857 CVE-2024-43872 CVE-2024-43884 CVE-2024-43886 CVE-2024-43899 CVE-2024-43901 CVE-2024-43904 CVE-2024-43911 CVE-2024-43913 CVE-2024-44950 CVE-2024-44951 CVE-2024-44955 CVE-2024-44956 CVE-2024-44963 CVE-2024-45828 CVE-2024-46681 CVE-2024-46698 CVE-2024-46700 CVE-2024-46701 CVE-2024-46705 CVE-2024-46710 CVE-2024-46727 CVE-2024-46730 CVE-2024-46751 CVE-2024-46772 CVE-2024-46774 CVE-2024-46775 CVE-2024-46778 CVE-2024-46808 CVE-2024-46813 CVE-2024-46823 CVE-2024-46833 CVE-2024-46834 CVE-2024-46841 CVE-2024-46842 CVE-2024-46849 CVE-2024-46852 CVE-2024-46853 CVE-2024-46854 CVE-2024-46855 CVE-2024-46857 CVE-2024-46858 CVE-2024-46859 CVE-2024-46860 CVE-2024-46861 CVE-2024-46863 CVE-2024-46864 CVE-2024-46865 CVE-2024-46870 CVE-2024-47141 CVE-2024-47143 CVE-2024-47661 CVE-2024-47662 CVE-2024-47670 CVE-2024-47671 CVE-2024-47672 CVE-2024-47673 CVE-2024-47674 CVE-2024-47675 CVE-2024-47678 CVE-2024-47679 CVE-2024-47681 CVE-2024-47682 CVE-2024-47683 CVE-2024-47684 CVE-2024-47685 CVE-2024-47686 CVE-2024-47688 CVE-2024-47689 CVE-2024-47690 CVE-2024-47691 CVE-2024-47692 CVE-2024-47693 CVE-2024-47695 CVE-2024-47696 CVE-2024-47697 CVE-2024-47698 CVE-2024-47699 CVE-2024-47700 CVE-2024-47701 CVE-2024-47702 CVE-2024-47703 CVE-2024-47704 CVE-2024-47705 CVE-2024-47706 CVE-2024-47707 CVE-2024-47709 CVE-2024-47710 CVE-2024-47712 CVE-2024-47713 CVE-2024-47714 CVE-2024-47715 CVE-2024-47716 CVE-2024-47718 CVE-2024-47719 CVE-2024-47720 CVE-2024-47723 CVE-2024-47726 CVE-2024-47727 CVE-2024-47728 CVE-2024-47730 CVE-2024-47731 CVE-2024-47734 CVE-2024-47735 CVE-2024-47736 CVE-2024-47737 CVE-2024-47738 CVE-2024-47739 CVE-2024-47741 CVE-2024-47742 CVE-2024-47743 CVE-2024-47744 CVE-2024-47745 CVE-2024-47747 CVE-2024-47748 CVE-2024-47749 CVE-2024-47750 CVE-2024-47751 CVE-2024-47752 CVE-2024-47753 CVE-2024-47754 CVE-2024-47756 CVE-2024-47757 CVE-2024-47809 CVE-2024-48873 CVE-2024-48875 CVE-2024-48881 CVE-2024-49850 CVE-2024-49851 CVE-2024-49852 CVE-2024-49853 CVE-2024-49854 CVE-2024-49855 CVE-2024-49856 CVE-2024-49858 CVE-2024-49859 CVE-2024-49860 CVE-2024-49861 CVE-2024-49862 CVE-2024-49863 CVE-2024-49864 CVE-2024-49866 CVE-2024-49867 CVE-2024-49868 CVE-2024-49870 CVE-2024-49871 CVE-2024-49874 CVE-2024-49875 CVE-2024-49877 CVE-2024-49878 CVE-2024-49879 CVE-2024-49881 CVE-2024-49882 CVE-2024-49883 CVE-2024-49884 CVE-2024-49885 CVE-2024-49886 CVE-2024-49888 CVE-2024-49889 CVE-2024-49890 CVE-2024-49891 CVE-2024-49892 CVE-2024-49893 CVE-2024-49894 CVE-2024-49895 CVE-2024-49896 CVE-2024-49897 CVE-2024-49898 CVE-2024-49899 CVE-2024-49900 CVE-2024-49901 CVE-2024-49902 CVE-2024-49903 CVE-2024-49904 CVE-2024-49905 CVE-2024-49906 CVE-2024-49907 CVE-2024-49908 CVE-2024-49909 CVE-2024-49910 CVE-2024-49911 CVE-2024-49912 CVE-2024-49913 CVE-2024-49914 CVE-2024-49915 CVE-2024-49916 CVE-2024-49917 CVE-2024-49918 CVE-2024-49919 CVE-2024-49920 CVE-2024-49921 CVE-2024-49922 CVE-2024-49923 CVE-2024-49924 CVE-2024-49925 CVE-2024-49926 CVE-2024-49927 CVE-2024-49928 CVE-2024-49929 CVE-2024-49930 CVE-2024-49931 CVE-2024-49932 CVE-2024-49933 CVE-2024-49934 CVE-2024-49935 CVE-2024-49936 CVE-2024-49937 CVE-2024-49938 CVE-2024-49939 CVE-2024-49940 CVE-2024-49944 CVE-2024-49945 CVE-2024-49946 CVE-2024-49947 CVE-2024-49948 CVE-2024-49949 CVE-2024-49950 CVE-2024-49951 CVE-2024-49952 CVE-2024-49953 CVE-2024-49954 CVE-2024-49955 CVE-2024-49957 CVE-2024-49958 CVE-2024-49959 CVE-2024-49960 CVE-2024-49961 CVE-2024-49962 CVE-2024-49963 CVE-2024-49965 CVE-2024-49966 CVE-2024-49968 CVE-2024-49969 CVE-2024-49970 CVE-2024-49971 CVE-2024-49972 CVE-2024-49973 CVE-2024-49974 CVE-2024-49975 CVE-2024-49976 CVE-2024-49977 CVE-2024-49978 CVE-2024-49980 CVE-2024-49981 CVE-2024-49982 CVE-2024-49983 CVE-2024-49985 CVE-2024-49986 CVE-2024-49987 CVE-2024-49988 CVE-2024-49989 CVE-2024-49990 CVE-2024-49991 CVE-2024-49992 CVE-2024-49994 CVE-2024-49995 CVE-2024-49996 CVE-2024-49997 CVE-2024-49998 CVE-2024-50000 CVE-2024-50001 CVE-2024-50002 CVE-2024-50003 CVE-2024-50004 CVE-2024-50005 CVE-2024-50006 CVE-2024-50007 CVE-2024-50008 CVE-2024-50009 CVE-2024-50010 CVE-2024-50012 CVE-2024-50013 CVE-2024-50014 CVE-2024-50015 CVE-2024-50016 CVE-2024-50017 CVE-2024-50019 CVE-2024-50022 CVE-2024-50023 CVE-2024-50024 CVE-2024-50026 CVE-2024-50027 CVE-2024-50028 CVE-2024-50029 CVE-2024-50031 CVE-2024-50033 CVE-2024-50035 CVE-2024-50036 CVE-2024-50038 CVE-2024-50039 CVE-2024-50040 CVE-2024-50041 CVE-2024-50044 CVE-2024-50045 CVE-2024-50046 CVE-2024-50047 CVE-2024-50048 CVE-2024-50049 CVE-2024-50051 CVE-2024-50055 CVE-2024-50057 CVE-2024-50058 CVE-2024-50059 CVE-2024-50060 CVE-2024-50061 CVE-2024-50062 CVE-2024-50063 CVE-2024-50064 CVE-2024-50065 CVE-2024-50066 CVE-2024-50067 CVE-2024-50069 CVE-2024-50070 CVE-2024-50072 CVE-2024-50073 CVE-2024-50074 CVE-2024-50075 CVE-2024-50076 CVE-2024-50077 CVE-2024-50078 CVE-2024-50080 CVE-2024-50082 CVE-2024-50083 CVE-2024-50084 CVE-2024-50085 CVE-2024-50086 CVE-2024-50087 CVE-2024-50088 CVE-2024-50090 CVE-2024-50091 CVE-2024-50093 CVE-2024-50095 CVE-2024-50096 CVE-2024-50098 CVE-2024-50099 CVE-2024-50101 CVE-2024-50102 CVE-2024-50103 CVE-2024-50106 CVE-2024-50108 CVE-2024-50110 CVE-2024-50111 CVE-2024-50112 CVE-2024-50115 CVE-2024-50116 CVE-2024-50117 CVE-2024-50120 CVE-2024-50121 CVE-2024-50124 CVE-2024-50125 CVE-2024-50126 CVE-2024-50127 CVE-2024-50128 CVE-2024-50130 CVE-2024-50131 CVE-2024-50133 CVE-2024-50134 CVE-2024-50135 CVE-2024-50136 CVE-2024-50137 CVE-2024-50138 CVE-2024-50139 CVE-2024-50140 CVE-2024-50141 CVE-2024-50142 CVE-2024-50143 CVE-2024-50145 CVE-2024-50146 CVE-2024-50147 CVE-2024-50148 CVE-2024-50150 CVE-2024-50151 CVE-2024-50152 CVE-2024-50153 CVE-2024-50154 CVE-2024-50155 CVE-2024-50156 CVE-2024-50157 CVE-2024-50158 CVE-2024-50159 CVE-2024-50160 CVE-2024-50162 CVE-2024-50163 CVE-2024-50164 CVE-2024-50166 CVE-2024-50167 CVE-2024-50168 CVE-2024-50169 CVE-2024-50170 CVE-2024-50171 CVE-2024-50172 CVE-2024-50175 CVE-2024-50176 CVE-2024-50177 CVE-2024-50178 CVE-2024-50179 CVE-2024-50180 CVE-2024-50182 CVE-2024-50183 CVE-2024-50184 CVE-2024-50185 CVE-2024-50186 CVE-2024-50187 CVE-2024-50188 CVE-2024-50189 CVE-2024-50191 CVE-2024-50192 CVE-2024-50193 CVE-2024-50194 CVE-2024-50195 CVE-2024-50196 CVE-2024-50198 CVE-2024-50201 CVE-2024-50202 CVE-2024-50205 CVE-2024-50208 CVE-2024-50209 CVE-2024-50211 CVE-2024-50215 CVE-2024-50217 CVE-2024-50221 CVE-2024-50222 CVE-2024-50223 CVE-2024-50224 CVE-2024-50225 CVE-2024-50226 CVE-2024-50229 CVE-2024-50230 CVE-2024-50231 CVE-2024-50232 CVE-2024-50233 CVE-2024-50234 CVE-2024-50235 CVE-2024-50236 CVE-2024-50237 CVE-2024-50239 CVE-2024-50240 CVE-2024-50242 CVE-2024-50243 CVE-2024-50244 CVE-2024-50245 CVE-2024-50246 CVE-2024-50247 CVE-2024-50248 CVE-2024-50250 CVE-2024-50251 CVE-2024-50252 CVE-2024-50255 CVE-2024-50256 CVE-2024-50257 CVE-2024-50258 CVE-2024-50259 CVE-2024-50261 CVE-2024-50262 CVE-2024-50264 CVE-2024-50265 CVE-2024-50267 CVE-2024-50268 CVE-2024-50269 CVE-2024-50271 CVE-2024-50272 CVE-2024-50273 CVE-2024-50275 CVE-2024-50276 CVE-2024-50277 CVE-2024-50278 CVE-2024-50279 CVE-2024-50280 CVE-2024-50282 CVE-2024-50283 CVE-2024-50284 CVE-2024-50285 CVE-2024-50286 CVE-2024-50287 CVE-2024-50292 CVE-2024-50296 CVE-2024-50298 CVE-2024-50299 CVE-2024-50300 CVE-2024-50301 CVE-2024-50302 CVE-2024-50304 CVE-2024-52559 CVE-2024-53042 CVE-2024-53043 CVE-2024-53046 CVE-2024-53047 CVE-2024-53050 CVE-2024-53051 CVE-2024-53052 CVE-2024-53055 CVE-2024-53056 CVE-2024-53057 CVE-2024-53058 CVE-2024-53059 CVE-2024-53060 CVE-2024-53061 CVE-2024-53063 CVE-2024-53066 CVE-2024-53068 CVE-2024-53072 CVE-2024-53076 CVE-2024-53079 CVE-2024-53081 CVE-2024-53082 CVE-2024-53083 CVE-2024-53084 CVE-2024-53085 CVE-2024-53088 CVE-2024-53089 CVE-2024-53090 CVE-2024-53091 CVE-2024-53093 CVE-2024-53094 CVE-2024-53095 CVE-2024-53096 CVE-2024-53098 CVE-2024-53099 CVE-2024-53100 CVE-2024-53101 CVE-2024-53103 CVE-2024-53104 CVE-2024-53108 CVE-2024-53109 CVE-2024-53110 CVE-2024-53112 CVE-2024-53113 CVE-2024-53114 CVE-2024-53119 CVE-2024-53120 CVE-2024-53121 CVE-2024-53122 CVE-2024-53123 CVE-2024-53124 CVE-2024-53126 CVE-2024-53127 CVE-2024-53128 CVE-2024-53129 CVE-2024-53130 CVE-2024-53131 CVE-2024-53133 CVE-2024-53134 CVE-2024-53135 CVE-2024-53138 CVE-2024-53139 CVE-2024-53140 CVE-2024-53141 CVE-2024-53142 CVE-2024-53145 CVE-2024-53146 CVE-2024-53150 CVE-2024-53151 CVE-2024-53154 CVE-2024-53155 CVE-2024-53156 CVE-2024-53157 CVE-2024-53161 CVE-2024-53162 CVE-2024-53165 CVE-2024-53166 CVE-2024-53168 CVE-2024-53170 CVE-2024-53171 CVE-2024-53173 CVE-2024-53174 CVE-2024-53175 CVE-2024-53177 CVE-2024-53179 CVE-2024-53180 CVE-2024-53187 CVE-2024-53188 CVE-2024-53191 CVE-2024-53194 CVE-2024-53197 CVE-2024-53200 CVE-2024-53202 CVE-2024-53203 CVE-2024-53204 CVE-2024-53205 CVE-2024-53208 CVE-2024-53209 CVE-2024-53210 CVE-2024-53213 CVE-2024-53215 CVE-2024-53216 CVE-2024-53217 CVE-2024-53218 CVE-2024-53221 CVE-2024-53222 CVE-2024-53224 CVE-2024-53226 CVE-2024-53227 CVE-2024-53230 CVE-2024-53231 CVE-2024-53237 CVE-2024-53239 CVE-2024-54458 CVE-2024-54683 CVE-2024-55916 CVE-2024-56369 CVE-2024-56538 CVE-2024-56544 CVE-2024-56548 CVE-2024-56549 CVE-2024-56551 CVE-2024-56557 CVE-2024-56558 CVE-2024-56567 CVE-2024-56568 CVE-2024-56569 CVE-2024-56572 CVE-2024-56574 CVE-2024-56575 CVE-2024-56577 CVE-2024-56578 CVE-2024-56579 CVE-2024-56581 CVE-2024-56582 CVE-2024-56587 CVE-2024-56588 CVE-2024-56593 CVE-2024-56595 CVE-2024-56596 CVE-2024-56598 CVE-2024-56599 CVE-2024-56600 CVE-2024-56601 CVE-2024-56602 CVE-2024-56603 CVE-2024-56604 CVE-2024-56605 CVE-2024-56606 CVE-2024-56608 CVE-2024-56611 CVE-2024-56613 CVE-2024-56614 CVE-2024-56615 CVE-2024-56617 CVE-2024-56619 CVE-2024-56620 CVE-2024-56622 CVE-2024-56623 CVE-2024-56626 CVE-2024-56627 CVE-2024-56629 CVE-2024-56631 CVE-2024-56634 CVE-2024-56635 CVE-2024-56640 CVE-2024-56642 CVE-2024-56643 CVE-2024-56647 CVE-2024-56648 CVE-2024-56649 CVE-2024-56650 CVE-2024-56651 CVE-2024-56653 CVE-2024-56654 CVE-2024-56657 CVE-2024-56658 CVE-2024-56659 CVE-2024-56660 CVE-2024-56662 CVE-2024-56663 CVE-2024-56664 CVE-2024-56667 CVE-2024-56670 CVE-2024-56672 CVE-2024-56675 CVE-2024-56678 CVE-2024-56687 CVE-2024-56688 CVE-2024-56689 CVE-2024-56692 CVE-2024-56693 CVE-2024-56694 CVE-2024-56698 CVE-2024-56702 CVE-2024-56703 CVE-2024-56704 CVE-2024-56708 CVE-2024-56710 CVE-2024-56712 CVE-2024-56715 CVE-2024-56716 CVE-2024-56717 CVE-2024-56718 CVE-2024-56720 CVE-2024-56722 CVE-2024-56723 CVE-2024-56724 CVE-2024-56725 CVE-2024-56726 CVE-2024-56727 CVE-2024-56728 CVE-2024-56729 CVE-2024-56739 CVE-2024-56742 CVE-2024-56744 CVE-2024-56745 CVE-2024-56746 CVE-2024-56747 CVE-2024-56748 CVE-2024-56751 CVE-2024-56752 CVE-2024-56754 CVE-2024-56755 CVE-2024-56756 CVE-2024-56757 CVE-2024-56758 CVE-2024-56759 CVE-2024-56760 CVE-2024-56761 CVE-2024-56763 CVE-2024-56765 CVE-2024-56767 CVE-2024-56769 CVE-2024-56770 CVE-2024-56774 CVE-2024-56775 CVE-2024-56776 CVE-2024-56777 CVE-2024-56778 CVE-2024-56779 CVE-2024-56780 CVE-2024-56781 CVE-2024-56782 CVE-2024-56784 CVE-2024-56785 CVE-2024-56786 CVE-2024-56787 CVE-2024-57795 CVE-2024-57798 CVE-2024-57801 CVE-2024-57802 CVE-2024-57807 CVE-2024-57834 CVE-2024-57841 CVE-2024-57850 CVE-2024-57857 CVE-2024-57872 CVE-2024-57874 CVE-2024-57882 CVE-2024-57887 CVE-2024-57890 CVE-2024-57892 CVE-2024-57895 CVE-2024-57896 CVE-2024-57900 CVE-2024-57901 CVE-2024-57902 CVE-2024-57906 CVE-2024-57907 CVE-2024-57908 CVE-2024-57910 CVE-2024-57911 CVE-2024-57912 CVE-2024-57913 CVE-2024-57916 CVE-2024-57922 CVE-2024-57925 CVE-2024-57926 CVE-2024-57933 CVE-2024-57938 CVE-2024-57939 CVE-2024-57940 CVE-2024-57946 CVE-2024-57949 CVE-2024-57950 CVE-2024-57951 CVE-2024-57973 CVE-2024-57977 CVE-2024-57979 CVE-2024-57980 CVE-2024-57981 CVE-2024-57982 CVE-2024-57984 CVE-2024-57996 CVE-2024-57997 CVE-2024-58002 CVE-2024-58005 CVE-2024-58007 CVE-2024-58010 CVE-2024-58011 CVE-2024-58012 CVE-2024-58013 CVE-2024-58017 CVE-2024-58020 CVE-2024-58034 CVE-2024-58052 CVE-2024-58055 CVE-2024-58058 CVE-2024-58063 CVE-2024-58068 CVE-2024-58069 CVE-2024-58070 CVE-2024-58071 CVE-2024-58076 CVE-2024-58080 CVE-2024-58083 CVE-2024-58087 CVE-2024-58088 CVE-2024-58089 CVE-2025-21634 CVE-2025-21635 CVE-2025-21636 CVE-2025-21637 CVE-2025-21638 CVE-2025-21639 CVE-2025-21640 CVE-2025-21642 CVE-2025-21649 CVE-2025-21650 CVE-2025-21652 CVE-2025-21658 CVE-2025-21665 CVE-2025-21666 CVE-2025-21667 CVE-2025-21669 CVE-2025-21670 CVE-2025-21672 CVE-2025-21673 CVE-2025-21674 CVE-2025-21675 CVE-2025-21676 CVE-2025-21680 CVE-2025-21681 CVE-2025-21682 CVE-2025-21683 CVE-2025-21684 CVE-2025-21687 CVE-2025-21689 CVE-2025-21690 CVE-2025-21692 CVE-2025-21693 CVE-2025-21694 CVE-2025-21696 CVE-2025-21697 CVE-2025-21699 CVE-2025-21700 CVE-2025-21707 CVE-2025-21711 CVE-2025-21714 CVE-2025-21715 CVE-2025-21716 CVE-2025-21718 CVE-2025-21722 CVE-2025-21723 CVE-2025-21726 CVE-2025-21727 CVE-2025-21729 CVE-2025-21731 CVE-2025-21735 CVE-2025-21736 CVE-2025-21739 CVE-2025-21741 CVE-2025-21742 CVE-2025-21743 CVE-2025-21744 CVE-2025-21745 CVE-2025-21748 CVE-2025-21749 CVE-2025-21751 CVE-2025-21753 CVE-2025-21756 CVE-2025-21759 CVE-2025-21760 CVE-2025-21761 CVE-2025-21762 CVE-2025-21763 CVE-2025-21764 CVE-2025-21773 CVE-2025-21775 CVE-2025-21776 CVE-2025-21779 CVE-2025-21780 CVE-2025-21782 CVE-2025-21783 CVE-2025-21785 CVE-2025-21786 CVE-2025-21787 CVE-2025-21789 CVE-2025-21790 CVE-2025-21791 CVE-2025-21792 CVE-2025-21793 CVE-2025-21796 CVE-2025-21811 CVE-2025-21812 CVE-2025-21814 CVE-2025-21820 CVE-2025-21833 CVE-2025-21844 CVE-2025-21846 CVE-2025-21847 CVE-2025-21848 CVE-2025-21853 CVE-2025-21854 CVE-2025-21855 CVE-2025-21856 CVE-2025-21857 CVE-2025-21858 CVE-2025-21859 CVE-2025-21861 CVE-2025-21862 CVE-2025-21863 CVE-2025-21864 CVE-2025-21866 CVE-2025-21867 CVE-2025-21887 CVE-2025-21917 CVE-2025-21918 CVE-2025-21919 CVE-2025-21920 CVE-2025-21922 CVE-2025-21927 CVE-2025-21928 CVE-2025-21934 CVE-2025-21936 CVE-2025-21937 CVE-2025-21941 CVE-2025-21943 CVE-2025-21945 CVE-2025-21947 CVE-2025-21948 CVE-2025-21949 CVE-2025-21951 CVE-2025-21957 CVE-2025-21979 CVE-2025-21980 CVE-2025-21981 CVE-2025-21991 CVE-2025-21993 CVE-2025-21997 CVE-2025-21999 CVE-2025-22001 CVE-2025-22003 CVE-2025-22004 CVE-2025-22005 CVE-2025-22007 CVE-2025-22009 CVE-2025-22010 CVE-2025-22014
+
+openssh:
+  CVE-2025-26465
+
+perl:
+  CVE-2023-47038
+
+pixman:
+  CVE-2023-37769
+
+python3:
+  CVE-2023-27043 CVE-2024-6232 CVE-2024-7592 CVE-2024-9287
+
+vim:
+  CVE-2024-45306
+
+Changes between v5.2.1 and v5.3.1:
+
+build-bisdn-linux:
+convert.sh: check for .yaml, not .yml
+workflow: add status badge to README.md
+workflow: keep going even if one machine fails
+workflow: allow triggering from the github web UI
+workflow: maintain sstate-cache
+Add a github workflow for building BISDN Linux
+README.md: always be explicit about KAS_MACHINE
+Add documentation for installing additional packages
+README.md: fix call for building armel-iproc image
+BUILDING_DETAILS: Link to yocto system requirements
+BUILDING_DETAILS: limiting RAM and CPU use
+Move "Building ofdpa-gitlab" to BUILDING_DETAILS.md
+BUILDING_DETAILS.md: building w/o containers, troubleshooting
+Add BUILDING_DETAILS.md
+Add rm-work.yaml for building with limited disk space
+bisdn-linux.yaml: remove trailing empty lines
+Add README.md in build/, scripts/, sources/
+Add a new README.md to document new kas-based process
+Delete README.md
+Add a kas include file for building source tarballs
+Change directory structure for source repos
+bisdn-linux.yaml: add FEEDURIPREFIX
+Give kas configuration files appropriate FEEDURIPREFIX
+bisdn-linux.yaml: amend BB_ENV_PASSTHROUGH_ADDITIONS
+Build x86-64 image by default
+scripts/prepare_release.sh: allow both kas and repo
+scripts: add a proof of concept conversion script
+add kas artifacts to .gitignore and fix order
+add a kas snippet for release builds
+add a kas snippet for our closed OF-DPA repo
+add a kas project configuration file
+
+meta-bisdn-linux:
+conf: distro: bump version to 5.3.1
+Revert "baseboxd: update to 2.4.1"
+baseboxd: update to 2.4.1
+baseboxd: update to 2.4.0
+rofl-ofdpa: update to 2.1.0
+hostapd: fix potential crash with MAB and disconnected clients
+lmsensors: disable packaging sensord
+systemd: really fix compilation for v250.14
+net-snmp: replace borked patch to fix compilation
+systemd: fix compilation after update to 250.14
+distro: bump version to 5.3
+baseboxd-tools: get detailed link info in debug-info
+hostapd: add two fixes for 802.1x wired driver
+full: add radiusd and hostapd to image
+hostapd: improve 802.1x support
+hostapd: add PoC handler for locked ports
+baseboxd: update to 2.3.1
+systemd: add support for locking ports
+baseboxd: update to 2.3.0
+mstpd: use ${base_sbindir} instead of hardcoding /sbin
+libnl: import latest updates from upstream
+iproute2: backport iproute2 6.7 from scarthgap
+installer: add a naive systemd service state backup and restore
+installer: handle missing system/user-backup.txt and backup
+docker: disable service again
+distro: set PREFERRED_PROVIDER for docker to docker-moby
+full: replace docker-ce with docker-moby
+systemd: align wheel and sgx group GIDs with base-passwd
+files/groups: update wheel/sgx GIDs
+frr: update to 9.0.5
+libnl: update to 3.11
+full: include python3-docker
+packagegroup-bisdn-linux-extra: add valgrind
+packagegroup-bisdn-linux-extra: build strongswan package (ipsec)
+run-preinsts: run before systemd-tmpfiles-setup
+distro: enable static group ids and user ids
+man-pages: install switch_tcpdump man page
+baseboxd: drop service file location fixup
+mstpd: correctly reported version as 0.1.0+bisdn6
+frr: enable capabilities to fix racy unprivileged executions
+mstpd: fix path cost calculation for link speeds > 65G
+frr: update from 9.0.3 to 9.0.4
+
+meta-ofdpa:
+ofdpa: do not require unfiltered interfaces for egress vlan flows
+ofdpa-grpc: expose PortSourceMac{,Move}Learning()
+ofdpa: implement learning setting per port
+ofdpa-grpc: honor systemdunitdir
+ofdpa: fix crash in driverPrioMaxGet() for TD3X
+
+meta-open-network-linux:
+bcm591xx-poe-mcu: disable ports by default again
+linux-yocto-onl/6.6: update to 6.6.83
+linux-yocto-onl/5.15: update to 5.15.179
+bcm591xx-poe-mcu: accton-as4610: drop now unused reg variable
+bcm591xx-poe-mcu: accton-as4630-54pe: drop now unused reg variable
+bcm591xx-poe-mcu: accton-as4630-54pe: drop now unused ret variable
+bcm591xx-poe-mcu: accton-as4630-54pe: drop never used variables
+bcm591xx-poe-mcu: accton-as4630-54pe: drop unused include
+bcm591xx-poe-mcu: accton-as4610: drop unused include
+bcm591xx-poe-mcu: fix check for successful allocation of ports
+bcm591xx-poe-mcu: as4610: let common code init power limits
+bcm591xx-poe-mcu: init power limits
+bcm591xx-poe-mcu: let common code handle debugfs
+bcm591xx-poe-mcu: as4630-54pe: let common code take care of power
+bcm591xx-poe-pse: as4610: let common code take care of power
+bcm591xx-poe-mcu: add a set_power callback for providing power
+bcm591xx-poe-mcu: as4610: disable ports on remove
+bcm591xx-poe-mcu: as4630-54pe: disable ports on remove
+bcm591xx-poe-mcu: add remove callback
+bcm591xx-poe-mcu: let the generic code take care of initializing ports
+bcm591xx-poe-mcu: add a port command helper
+bcm591xx: as4610: use generic init
+bcm591xx-pse-mcu: add a config check callback
+bcm591xx-poe-mcu: as4630-54pe: use generic init
+bcm591xx-poe-mcu: add a generic init function
+bcm591xx-poe-mcu: as4630-54pe: switch to generic debugfs
+bcm591xx-poe-mcu: as4610: switch to generic debugfs
+bcm591xx-poe-mcu: add debugfs code to common module
+bcm591xx-poe-mcu: move port info to common code
+bcm591xx-poe-mcu: move mutex to common struct
+bcm591xx-poe-mcu: as4630-54pe: switch to common message code
+bcm591xx-poe-mcu: as4610: switch to common message code
+bcm591xx-poe-mcu: create a common library module
+bcm591xx-poe-mcu: move opcodes to shared header file
+accton-as46{10,30-54pe}-poe-mcu: merge packages
+onl: do not use ${nonarch_base_libdir} for internal ONL paths
+linux-yocto-onl/6.6: ensure link-local traffic cannot unlock a locked port
+linux-yocto-onl/5.15: update to 5.15.176
+linux-yocto-onl/6.6: update to 6.6.71
+linux-yocto-onl/5.15: update to 5.15.174
+linux-yocto-onl/6.6: update to 6.6.66
+linux-yocto-onl-5.15.y: armel-iproc: add IPsec policy matching
+linux-yocto-onl-6.6.y: armel-iproc: add IPsec policy matching
+linux-yocto-onl-5.15.y: enable IPsec support
+linux-yocto-onl-6.6.y: enable IPsec support
+onl: accton-as4610: do not enable v_out/i_out/p_out caps
+linux-yocto-onl/5.15: update to 5.15.173
+linux-yocto-onl: update 6.6 to 6.6.57
+
+meta-openembedded:
+openvpn: renew the sample keys
+chrony: fix do_fetch error
+eject: fix do_fetch error
+xfce-dusk-gtk3: fix do_fetch error
+geoip: fix do_fetch error
+Revert "net-snmp: fix memory leak"
+libmodbus: patch CVE-2024-10918
+lapack: upgrade 3.10.0 -> 3.10.1
+python3-grpcio(-tools): fix build concurrency issue
+nginx: fix CVE-2025-23419
+abseil-cpp: fix CVE-2025-0838
+postgresql: upgrade 14.14 -> 14.17
+dlt-daemon: fix CVE-2023-36321
+dlt-daemon: fix CVE-2022-39836 and CVE-2022-39837
+freediameter: fix do_fetch warning
+net-snmp: fix memory leak
+python3-future: upgrade 0.18.2 -> 0.18.3
+phpmyadmin: fix CVE-2025-24529/CVE-2025-24530
+mbedtls: fix CVE-2024-28755 and CVE-2024-28836
+python3-h5py: add -Wno-error to allow building native with gcc-14 on host
+hdf5: add -Wno-error to allow building native with gcc-14 on host
+libssh: Add ptest
+redis: fix CVE-2024-51741
+redis: fix CVE-2024-46981
+redis: fix CVE-2024-31449
+redis: fix CVE-2024-31228
+redis: fix CVE-2024-31227
+redis: fix CVE-2023-45145
+redis: fix CVE-2023-41056
+openjpeg: Backport fix CVE-2023-39327
+python3-sqlparse: Fix CVE-2024-4340
+opensc: fix CVE-2024-45620
+opensc: fix CVE-2024-45619
+opensc: fix CVE-2024-45618
+opensc: fix CVE-2024-45617
+opensc: fix CVE-2024-45616
+opensc: fix CVE-2024-45615
+opensc: fix CVE-2024-8443
+opensc: fix CVE-2024-1454
+openjpeg: fix CVE-2024-56827
+openjpeg: fix CVE-2024-56826
+python3-django: Fix CVE-2024-53907
+python3-django: Fix CVE-2024-45231
+python3-django: Fix CVE-2024-45230
+python3-django: Fix CVE-2024-41991
+python3-django: Fix CVE-2024-41990
+python3-django: Fix CVE-2024-41989
+python3-django: Fix CVE-2024-39614
+python3-django: Fix CVE-2023-23969
+python3-django: upgrade 4.2.15 -> 4.2.17
+python3-django: Fix CVE-2024-38875
+poppler: fix CVE-2024-56378
+poppler: fix CVE-2024-6239
+glade: fix CVE-2020-36774
+libsass: upgrade 3.6.5 -> 3.6.6
+meta-oe: Remove True option to getVar calls
+packagegroup-meta-multimedia: Remove library only packages from rdeps
+lldpd: Fix CVE-2023-41910
+python3-werkzeug: Fix CVE-2024-49767
+python3-werkzeug: Fix CVE-2024-34069
+asio: Add ptest support
+postgresql: upgrade 14.13 -> 14.14
+php: upgrade 8.1.30 -> 8.1.31
+mosquitto: upgrade 2.0.19 -> 2.0.20
+mosquitto: upgrade 2.0.18 -> 2.0.19
+nspr: Fix build with clang16
+hostapd: Patch security advisory 2024-2
+hostapd: Patch CVE-2024-3596
+libgsf: Upgrade 1.14.49 -> 1.14.53
+python3-aiohttp: fix CVE-2023-49081/CVE-2024-30251/CVE-2024-52304/CVE-2023-49082/CVE-2024-27306
+protobuf: fix CVE-2024-7254
+php: upgrade 8.1.29 -> 8.1.30
+p7zip: Fix CVE-2023-52169 and CVE-2023-52168
+hostapd: Security fix for CVE-2023-52160
+ntfs-3g-ntfsprogs: fix CVE-2023-52890
+indent: fix CVE-2024-0911
+frr: fix multiple CVEs
+freeradius: upgrade 3.0.21 -> 3.0.27
+openvpn: upgrade 2.5.6 -> 2.5.11
+apache2: Upgrade 2.4.60 -> 2.4.62
+nss: patch CVE-2024-6609
+nss: patch CVE-2024-6602
+open-vm-tools: Security fixes CVE-2023-34059
+mbedtls: Upgrade 2.28.8 -> 2.28.9
+freeradius: Security fix for CVE-2024-3596
+squid: conditionally set status of CVE-2024-45802
+openipmi: upgrade 2.0.32->2.0.36
+python3-geomet: fix branch parameter
+poco: use main instead of master branch
+libjs-jquery-cookie: update branch from master to main
+python3-lxml: ignore incompatible-pointer-types issues in native build
+gitpkgv: Fix python deprecation warning
+flatbuffers: fix native build with gcc-14 on host
+vk-gl-cts: Fix branch names
+wireguard-tools: clean the do_fecth warning
+sound-theme-freedesktop: Update SRC_URI
+keyutils: Update SRC_URI
+libatasmart: Update SRC_URI to fix fetch issue
+xmlrpc-c: fix do_fetch error
+rocksdb: Add ptest support
+cjson: upgrade 1.7.17 -> 1.7.18
+android-tools: Create flag file /etc/usb-debugging-enabled
+android-tools-adbd.service: Update ConditionPathExists to /etc
+tgt: Security fix for CVE-2024-45751
+frr: fix CVE-2024-44070
+libdevmapper: Inherit nopackages
+python3-smbus2: Fix LIC_FILES_CHKSUM
+python3-haversine: Fix LIC_FILES_CHKSUM
+python3-googleapis-common-protos: Fix LIC_FILES_CHKSUM
+python3-pycurl: Fix LICENSE
+python3-fann2: Fix LICENSE
+python3-colorama: Fix LICENSE
+python3-pillow: Fix LICENSE and change SUMMARY to DESCRIPTION
+python3-parse-type: Fix LICENSE
+python3-mock: Fix LICENSE
+python3-crc32c: Amend LICENSE declaration
+python3-cbor2: Fix LICENSE and LIC_FILES_CHKSUM
+python3-xlsxwriter: Fix LICENSE
+python3-pybind11: Fix LICENSE
+opensc: Fix LICENSE declaration
+squid: Security fix CVE-2023-5824
+libndp: Patch CVE-2024-5564
+
+meta-virtualization:
+buildah: upgrade 1.26.8 -> 1.26.9
+criu: Adjust to glibc __rseq_size semantic change
+docker-distribution: fix CVE-2025-24976
+Revert "runc-docker: upgrade 1.1.4 -> 1.1.12"
+runc-docker: upgrade 1.1.4 -> 1.1.12
+podman: fix CVE-2024-9676
+cri-o: fix CVE-2024-9676
+buildah: fix CVE-2024-9676
+buildah: add seccomp and ipv6 to REQUIRED_DISTRO_FEATURES
+buildah: update to 1.26.8
+CVE-2023-37154: check_by_ssh in Nagios nagios-plugins 2.4.5 allows arbitrary command execution via ProxyCommand, LocalCommand, and PermitLocalCommand with \${IFS}. This has been categorized both as fixed in e8810de, and as intended behavior.
+Revert "nagios-plugins: fix CVE-2023-37154"
+nagios-plugins: fix CVE-2023-37154
+go-cli: use main branch
+python3-colorama: drop recipe
+
+poky:
+build-appliance-image: Update to kirkstone head revision
+poky.conf: bump version for 4.0.26
+mesa: Update SRC_URI
+yocto-uninative: Update to 4.7 for glibc 2.41
+llvm : Fix CVE-2024-0151
+freetype: patch CVE-2025-27363
+perl: ignore CVE-2023-47038
+libarchive: ignore CVE-2025-1632
+zlib: fix CVE-2014-9485
+cve-update-nvd2-native: handle missing vulnStatus
+linux-yocto/5.10: update to v5.10.234
+linux-yocto/5.15: update to v5.15.179
+vim: Upgrade 9.1.1115 -> 9.1.1198
+python3: patch CVE-2025-0938
+poky.conf: add ubuntu2404 to SANITY_TESTED_DISTROS
+libxcrypt-compat: Remove libcrypt.so to fix conflict with libcrypt
+xwayland: fix CVE-2022-49737
+xserver-xorg: fix CVE-2022-49737
+libxslt: Fix for CVE-2025-24855
+libxslt: Fix for CVE-2024-55549
+tiff: mark CVE-2023-30774 as patched
+bitbake: cache: bump cache version
+vim: Upgrade 9.1.1043 -> 9.1.1115
+mpg123: fix CVE-2024-10573
+ruby: Fix CVE-2025-27219
+grub: Fix multiple CVEs
+grub: Fix multiple CVEs
+libarchive: patch CVE-2025-25724
+puzzles: ignore three new CVEs for a different puzzles
+bitbake: siggen.py: Improve taskhash reproducibility
+tzcode-native: Fix compiler setting from 2023d version
+tzdata/tzcode-native: upgrade 2024b -> 2025a
+libtasn1: upgrade 4.19.0 -> 4.20.0
+ruby: Fix CVE-2025-27220
+binutils: Fix CVE-2025-0840
+openssh: Fix CVE-2025-26465
+ref-manual: don't refer to poky-lsb
+Remove all mention of core-image-lsb
+migration-guides: add release notes for 4.0.25
+mesa: Fix missing GLES3 headers in SDK sysroot
+xwayland: Fix CVE-2025-26601
+xwayland: Fix CVE-2025-26600
+xwayland: Fix CVE-2025-26599
+xwayland: Fix CVE-2025-26598
+xwayland: Fix CVE-2025-26597
+xwayland: Fix CVE-2025-26596
+xwayland: Fix CVE-2025-26595
+xwayland: Fix CVE-2025-26594
+xwayland: Fix CVE-2024-9632
+xwayland: Fix CVE-2024-31083
+xwayland: Fix CVE-2024-31081
+xwayland: Fix CVE-2024-31080
+xwayland: Fix CVE-2024-21886
+xwayland: Fix CVE-2024-21885
+libxml2: mark patch as fixing CVE-2025-27113
+elfutils: Fix multiple CVEs
+xz: Update SRC_URI
+tzcode: Update SRC_URI
+meta: Enable '-o pipefail' for the SDK installer
+virglrenderer: fix do_fetch error
+boost: fix do_fetch error
+systemd: upgrade 250.5 -> 250.14
+bind: Upgrade 9.18.28 -> 9.18.33
+xserver-xorg: Fix for CVE-2025-26601
+xserver-xorg: Fix for CVE-2025-26600
+xserver-xorg: Fix for CVE-2025-26599
+xserver-xorg: Fix for CVE-2025-26598
+xserver-xorg: Fix for CVE-2025-26597
+xserver-xorg: Fix for CVE-2025-26596
+xserver-xorg: Fix for CVE-2025-26595
+xserver-xorg: Fix for CVE-2025-26594
+vulnerabilities/classes: remove references to cve-check text format
+vim: Upgrade 9.1.0764 -> 9.1.1043
+ffmpeg: fix CVE-2025-25473
+ffmpeg: fix CVE-2024-35369
+ffmpeg: fix CVE-2024-28661
+ffmpeg: fix CVE-2024-36618
+gstreamer1.0-rtsp-server: fix CVE-2024-44331
+ffmpeg: ignore CVE-2024-7272
+ffmpeg: ignore 5 CVEs
+libcap: fix CVE-2025-1390
+libxml2: patch CVE-2025-24928
+libxml2: patch CVE-2024-56171
+libxml2: fix compilation of explicit child axis in pattern
+Revert "ovmf: Fix CVE-2023-45236"
+Revert "ovmf: Fix CVE-2023-45237"
+u-boot: fix CVE-2024-57259
+u-boot: fix CVE-2024-57258
+u-boot: fix CVE-2024-57257
+u-boot: fix CVE-2024-57256
+u-boot: fix CVE-2024-57255
+u-boot: fix CVE-2024-57254
+u-boot: fix CVE-2022-2347 and CVE-2022-30790
+u-boot: Fix CVE-2022-30767
+Add favicon for the documentation html
+contributor-guide/submit-changes: add policy on AI generated code
+procps: replaced one use of fputs(3) with a write(2) call
+scritps/runqemu: Ensure we only have two serial ports
+scripts/install-buildtools: Update to 4.0.24
+ffmpeg: fix CVE-2024-36617
+ffmpeg: fix CVE-2024-36616
+ffmpeg: fix CVE-2024-36613
+ffmpeg: CVE-2025-0518
+gnutls: fix CVE-2024-12243
+ruby: fix CVE-2024-41946
+libxml2: Fix for CVE-2022-49043
+libpcre2: ignore CVE-2022-1586
+subversion: ignore CVE-2024-45720
+build-appliance-image: Update to kirkstone head revision
+poky.conf: bump version for 4.0.25
+migration-guides: add release notes for 4.0.24
+documentation: Fix typo in standards.md
+classes-global/insane: Look up all runtime providers for file-rdeps
+lib/packagedata.py: Add API to iterate over rprovides
+openssl: upgrade 3.0.15 -> 3.0.16
+cmake: apply parallel build settings to ptest tasks
+python3: Treat UID/GID overflow as failure
+rust-common.bbclass: soft assignment for RUSTLIB path
+glibc: Suppress GCC -Os warning on user2netname for sunrpc
+linux-yocto/5.15: update to v5.15.178
+linux-yocto/5.15: update to v5.15.176
+go: Fix CVE-2024-45336
+dev-manual/building: document the initramfs-framework recipe
+glibc: stable 2.35 branch updates
+gdb: Fix CVE-2024-53589
+binutils: internal gdb: Fix CVE-2024-53589
+openssl: patch CVE-2024-13176
+bitbake: tests/fetch: Fix git shallow test failure with git >= 2.48
+test-manual/reproducible-builds: fix reproducible links
+Update autobuilder URLs to valkyrie
+classes/qemu: use tune to select QEMU_EXTRAOPTIONS, not package architecture
+classes/nativesdk: also override TUNE_PKGARCH
+scripts/install-buildtools: Update to 4.0.23
+ofono: patch CVE-2024-7540, CVE-2024-7541, CVE-2024-7542
+rsync: fix CVE-2024-12747
+rsync: fix CVE-2024-12088
+rsync: fix CVE-2024-12087
+rsync: fix CVE-2024-12086
+rsync: fix CVE-2024-12085
+rsync: fix CVE-2024-12084
+rsync: Delete pedantic errors re-ordering patch
+rsync: update 3.2.5 -> 3.2.7
+vte: fix CVE-2024-37535
+wget: fix CVE-2024-10524
+socat: patch CVE-2024-54661
+avahi: fix CVE-2024-52616
+ofono: fix CVE-2024-7547
+ofono: fix CVE-2024-7546
+ofono: fix CVE-2024-7545
+ofono: fix CVE-2024-7544
+ofono: fix CVE-2024-7543
+ofono: fix CVE-2024-7539
+gstreamer1.0: ignore CVEs fixed in plugins recipes
+ruby: fix CVE-2024-49761
+go: Fix CVE-2024-34158
+go: Fix CVE-2024-34156
+go: Fix CVE-2024-34155
+build-appliance-image: Update to kirkstone head revision
+poky.conf: bump version for 4.0.24
+ref-manual: move runtime-testing section to the test-manual
+ref-manual/packages: move ptest section to the test-manual
+SSTATE_MIRRORS/SOURCE_MIRROR_URL: add instructions for mirror authentication
+ref-manual/devtool-reference: add warning note on deploy-target and shared objects
+contributor-guide/submit-changes.rst: suggest to remove the git signature
+reproducible-builds.rst: show how to build a single package
+reproducible-builds.rst: document OEQA_REPRODUCIBLE_TEST_TARGET and OEQA_REPRODUCIBLE_TEST_SSTATE_TARGETS
+linux-yocto/5.15: update to v5.15.175
+linux-yocto/5.15: update to v5.15.174
+linux-yocto/5.15: update to v5.15.173
+linux-yocto/5.15: update to v5.15.171
+linux-yocto/5.15: update to v5.15.170
+linux-yocto/5.15: update to v5.15.169
+linux-yocto/5.15: update to v5.15.168
+linux-yocto/5.10: update to v5.10.227
+linux-yocto/5.10: update to v5.10.226
+linux-yocto/5.15: update to v5.15.167
+gstreamer1.0-plugins-good: Fix multiple CVE's
+gstreamer1.0-plugins-good: Fix CVE-2024-47774
+gstreamer1.0-plugins-good: Fix CVE-2024-47613
+gstreamer1.0-plugins-good: Fix CVE-2024-47606
+gstreamer1.0-plugins-good: Fix multiple CVEs
+gstreamer1.0-plugins-good: Fix for CVE-2024-47599
+gstreamer1.0-plugins-good: fix several CVE's
+gstreamer1.0: Backport fix for CVE-2024-47606
+gstreamer1.0-plugins-base: Fix for multiple CVE's
+ovmf-native: remove .pyc files from install
+python3: upgrade 3.10.15 -> 3.10.16
+ffmpeg: fix CVE-2024-35368
+ffmpeg: fix CVE-2024-35367
+ffmpeg: fix CVE-2024-35366
+webkitgtk: Security fix for CVE-2024-40776 and CVE-2024-40780
+libarchive: Fix CVE-2024-20696
+xwayland: patch CVE-2023-5380 CVE-2024-0229
+gstreame1.0: ignore CVEs from gstreamer1.0-plugins-bad
+tiff: patch CVE-2023-3164
+tiff: ignore CVE-2023-2731
+ghostscript: ignore CVE-2024-46954
+libsndfile1: Backport fix for CVE-2022-33065
+poky.conf: add new tested distros
+base-passwd: Add the sgx group
+base-passwd: fix patchreview warning
+base-passwd: add the wheel group
+base-passwd: Update the status for two patches
+base-passwd: Update to 3.5.52
+base-passwd: Regenerate the patches
+package.bbclass: Use shlex instead of deprecated pipes
+subversion: fix CVE-2024-46901
+xserver-xorg: fix CVE-2024-9632
+cve-update-nvd2-native: Tweak to work better with NFS DL_DIR
+system-requirements: update list of supported distros
+poky.yaml.in: add missing locales dependency
+Gather dependencies in poky.yaml.in
+ref-manual: use standardized method accross both ubuntu and debian for locale install
+dbus: disable assertions and enable only modular tests
+unzip: Fix configure tests to use modern C
+sanity: check for working user namespaces
+rootfs-postcommands.bbclass: make opkg status reproducible
+python3-requests: fix CVE-2024-35195
+libpam: fix CVE-2024-10041
+libsdl2: ignore CVE-2020-14409 and CVE-2020-14410
+migration-guides: add release notes for 4.0.23
+ref-manual: classes: fix bin_package description
+standards.md: add a section on admonitions
+resulttool: Improve repo layout for oeselftest results
+resulttool: Trim the precision of duration information
+resulttool: Clean up repoducible build logs
+resulttool: Handle ltp rawlogs as well as ptest
+resulttool: Add --logfile-archive option to store mode
+resulttool: Fix passthrough of --all files in store mode
+oeqa/utils/gitarchive: Return tag name and improve exclude handling
+resulttool: Use single space indentation in json output
+resulttool: Allow store to filter to specific revisions
+selftest/reproducible: Clean up pathnames
+selftest/reproducible: Drop rawlogs
+rxvt-unicode.inc: disable the terminfo installation by setting TIC to :
+do_package/sstate/sstatesig: Change timestamp clamping to hash output only
+diffoscope: fix CVE-2024-25711
+qemu: fix CVE-2024-3447
+qemu: fix CVE-2024-3446
+qemu: patch CVE-2024-6505
+pixman: ignore CVE-2023-37769
+grub: ignore CVE-2024-1048 and CVE-2023-4001
+qemu: ignore CVE-2022-36648
+gnupg: ignore CVE-2022-3515
+cpio: ignore CVE-2023-7216
+libsoup-2.4: Backport fix for CVE-2024-52531
+python3-zipp: fix CVE-2024-5569
+libsoup: fix CVE-2024-52531
+ovmf: fix CVE-2024-1298
+ovmf: fix CVE-2024-38796
+ovmf: Fix CVE-2022-36765
+ovmf: Fix CVE-2023-45236
+ovmf: Fix CVE-2023-45237
+ovmf: Fix CVE-2023-45229
+ovmf: Fix CVE-2023-45235
+ovmf: Fix CVE-2023-45234
+ovmf: Fix CVE-2023-45232, CVE-2023-45233
+ovmf: Fix CVE-2023-45231
+ovmf: Fix CVE-2023-45230
+ovmf: Fix CVE-2022-36764
+ovmf: Fix CVE-2022-36763
+gstreamer1.0: improve test reliability
+ninja: fix build with python 3.13
+package_rpm: restrict rpm to 4 threads
+package_rpm: use zstd's default compression level
+tzdata&tzcode-native: upgrade 2024a -> 2024b
+ffmpeg: fix CVE-2024-7055
+ffmpeg: fix CVE-2023-51796
+ffmpeg: fix CVE-2023-50007
+ffmpeg: fix CVE-2023-47342
+ffmpeg: fix CVE-2023-51798
+libsndfile: fix CVE-2024-50612
+coreutils: fix CVE-2024-0684
+builder: set CVE_PRODUCT
+python3-pip: fix CVE-2023-5752
+bitbake: fetch/wget: Increase timeout to 100s from 30s
+bitbake: fetch2: use persist_data context managers
+bitbake: persist_data: close connection in SQLTable __exit__
+udev-extraconf: fix network.sh script did not configure hotplugged interfaces
+toolchain-shar-extract.sh: exit when post-relocate-setup.sh fails
+llvm: reduce size of -dbg package
+webkitgtk: reduce size of -dbg package
+lttng-modules: fix build error after kernel update to 5.15.171
+webkitgtk: fix perl-native dependency
+webkitgtk: Fix build on 32bit arm
+scripts/install-buildtools: Update to 4.0.22
+wireless-regdb: upgrade 2024.07.04 -> 2024.10.07
+ffmpeg: fix CVE-2023-51794
+ffmpeg: fix CVE-2024-31578
+ffmpeg: fix CVE-2024-31582
+ffmpeg: fix CVE-2023-50008
+ffmpeg: fix CVE-2023-51793
+ffmpeg: fix CVE-2024-32230
+glib-2.0: Backport fix for CVE-2024-52533
+libsoup-2.4: Backport fix for CVE-2024-52530 and CVE-2024-52532
+libsoup: Fix for CVE-2024-52530 and CVE-2024-52532
+ghostscript: Backport fix for multiple CVE's
+build-appliance-image: Update to kirkstone head revision
+poky.conf: bump version for 4.0.23
+Revert "sphinx-static/switchers.js.in: do not refer to URL_ROOT anymore"
+Revert "doc: Makefile: remove inkscape, replace by rsvg-convert"
+Revert "doc: Makefile: add support for xelatex"
+Revert "doc: Makefile: publish pdf and epub versions too"
+Revert "doc: add a download page for epub and pdf"
+dev-manual: document how to provide confs from layer.conf
+conf.py: add a bitbake_git extlink
+sphinx-static/switchers.js.in: do not refer to URL_ROOT anymore
+doc: add a download page for epub and pdf
+doc: Makefile: publish pdf and epub versions too
+doc: Makefile: add support for xelatex
+doc: Makefile: remove inkscape, replace by rsvg-convert
+doc/Makefile: fix epub and latexpdf targets
+contributor-guide: Remove duplicated words
+pseudo: Fix envp bug and add posix_spawn wrapper
+pseudo: Update to include open symlink handling bugfix
+pseudo: Fix to work with glibc 2.40
+pseudo: Update to pull in python 3.12+ fix
+pseudo: Update to pull in fchmodat fix
+pseudo: Update to pull in gcc14 fix and missing statvfs64 intercept
+pseudo: Update to pull in syncfs probe fix
+pseudo: Update to pull in fd leak fix
+pseudo: Update to include logic fix
+pseudo: Switch back to the master branch
+pseudo: Disable LFS on 32bit arches
+pseudo: Update to pull in linux-libc-headers race fix
+cmake: Fix sporadic issues when determining compiler internals
+patch.py: Use shlex instead of deprecated pipe
+glib-2.0: patch regression of CVE-2023-32665
+expat: patch CVE-2024-50602
+gstreamer1.0: ignore CVE-2024-0444
+curl: patch CVE-2024-9681
+ghostscript: fix CVE-2023-46361
+bitbake: codeparser: Fix handling of string AST nodes with older Python versions
+ref-manual: variables: add SIGGEN_LOCKEDSIGS* variables
+styles: vocabularies: Yocto: add sstate
+documentation: Makefile: add SPHINXLINTDOCS to specify subset to sphinx-lint
+README: add instruction to run Vale on a subset
+ref-manual: add description for the "sysroot" term
+conf.py: rename :cve: role to :cve_nist:
+ref-manual: devtool-reference: document missing commands
+xmlto: backport a patch to fix build with gcc-14 on host
+package: Switch debug source handling to use prefix map
+gcc: restore a patch for Neoverse N2 core
+cve_check: Use a local copy of the database during builds
+zstd: patch CVE-2022-4899
+local.conf.sample: update BB_HASHSERVE_UPSTREAM for new infrastructure
+release-notes-4.0,brief-yoctoprojectqs: update BB_HASHSERVE_UPSTREAM for new infrastructure
+ref-manual: devtool-reference: refresh example outputs
+ref-manual: release-process: add a reference to the doc's release
+ref-manual: release-process: update releases.svg with month after "Current"
+util-linux: Define pidfd_* function signatures
+at-spi2-core: backport a patch to fix build with gcc-14 on host
+libffi: backport a fix to build libffi-native with gcc-14
+cracklib: Modify patch to compile with GCC 14
+vala: add -Wno-error=incompatible-pointer-types work around
+zip: Fix build with gcc-14
+zip: Make configure checks to be more robust
+nativesdk-intercept: Fix bad intercept chgrp/chown logic
+bmap-tools: update HOMEPAGE and SRC_URI
+overlayfs-etc: add option to skip creation of mount dirs
+orc: upgrade 0.4.39 -> 0.4.40
+vim: Upgrade 9.1.0698 -> 9.1.0764
+vim: Upgrade 9.1.0682 -> 9.1.0698
+cve-check: add support for cvss v4.0
+cve-check: add CVSS vector string to CVE database and reports
+python3: ignore fixed CVEs
+qemu: fix CVE-2023-3019
+openssl: patch CVE-2024-9143
+ghostscript: Backport CVE-2024-29508
+migration-guide: add release notes for 4.0.22
+ref-manual: release-process: refresh the current LTS releases
+ref-manual: release-process: update releases.svg
+overview-manual: concepts: add details on package splitting
+bitbake: tests/fetch: Use our own mirror of mobile-broadband-provider to decouple from gnome gitlab
+bitbake: tests/fetch: Use our own mirror of sysprof to decouple from gnome gitlab
+bitbake: gitsm: Remove downloads/tmpdir when failed
+bitbake: gitsm: Add call_process_submodules() to remove duplicated code
+bitbake: bitbake: doc/user-manual: Update the BB_HASHSERVE_UPSTREAM
+bitbake: fetch2/git: Use quote from shlex, not pipes
+ref-manual: structure.rst: document missing tmp/ dirs
+ref-manual: add missing OPKGBUILDCMD variable
+ref-manual: add missing EXTERNAL_KERNEL_DEVICETREE variable
+ref-manual: add missing CVE_CHECK manifest variables
+ref-manual: introduce CVE_CHECK_REPORT_PATCHED variable
+kmscube: create_framebuffer: backport modifier fix
+syslinux: Disable error on implicit-function-declaration
+linux-firmware: upgrade 20240220 -> 20240909
+libarchive: Fix CVE-2024-48957 & CVE-2024-48958
+gcc: ignore CVE-2023-4039
+build-appliance-image: Update to kirkstone head revision
+poky.conf: bump version for 4.0.22
+selftest/runtime_test/virgl: Disable for all fedora
+valgrind: disable avx_estimate_insn.vgtest
+zstd: fix LICENSE statement
+cdrtools-native: fix build with gcc-14
+meta-world-pkgdata: Inherit nopackages
+rust: ignore CVE-2024-43402
+cups: Backport fix for CVE-2024-47175
+migration-guide: add release notes for 4.0.21
+bitbake: hashserv: tests: Omit client in slow server start test
+bitbake: fetch2/wget: Canonicalize DL_DIR paths for wget2 compatibility
+bitbake: fetch/wget: Move files into place atomically
+bitbake: tests/fetch: Tweak to work on Fedora40
+bitbake: wget: Make wget --passive-ftp option conditional on ftp/ftps
+populate_sdk_base: inherit nopackages
+kmscube: Add patch to fix -int-conversion build error
+scripts/install-buildtools: Update to 4.0.21
+install-buildtools: fix "test installation" step
+install-buildtools: remove md5 checksum validation
+install-buildtools: support buildtools-make-tarball and update to 4.1
+curl: free old conn better on reuse
+bintuils: stable 2.38 branch update
+glibc: stable 2.35 branch updates
+gcc: upgrade to v11.5
+procps: patch CVE-2023-4016
+wpa-supplicant: Patch security advisory 2024-2
+wpa-supplicant: Patch CVE-2024-3596
+wpa-supplicant: Ignore CVE-2024-5290
+gnupg: Document CVE-2022-3219 and mark wontfix
+curl: backport Debian patch for CVE-2024-8096
+doc/features: remove duplicate word in distribution feature ext2
+lib/oeqa: rename assertRaisesRegexp to assertRaisesRegex
+testexport: fallback for empty IMAGE_LINK_NAME
+testimage: fallback for empty IMAGE_LINK_NAME
+runqemu: keep generating tap devices
+buildhistory: Simplify intercept call sites and drop SSTATEPOSTINSTFUNC usage
+buildhistory: Restoring files from preserve list
+buildhistory: Fix intermittent package file list creation
+udev-extraconf: Add collect flag to mount
+busybox: Fix cut with "-s" flag
+python3: Upgrade 3.10.14 -> 3.10.15
+yocto-uninative: Update to 4.6 for glibc 2.40
+yocto-uninative: Update to 4.5 for gcc 14
+cups: Security fix for CVE-2024-35235
+webkitgtk: Security fix CVE-2024-40779
+libpcap: Security fix for CVE-2023-7256 & CVE-2024-8006
+libedit: Make docs generation deterministic
+ruby: Make docs generation deterministic
+gcr: Fix LICENSE
+tiff: Fix LICENSE
+zip: Fix LICENSE
+unzip: Fix LICENSE
+dejagnu: Fix LICENSE
+iw: Fix LICENSE
+cve-exclusion: Drop the version comparision/warning
+linux-yocto/5.15: update to v5.15.166
+linux-yocto/5.15: update to v5.15.165
+linux-yocto/5.10: fix NFSV3 config warning
+linux-yocto/5.10: update to v5.10.223
+linux-yocto/5.10: remove obsolete options
+linux-yocto/5.10: update to v5.10.216
+openssl: Upgrade 3.0.14 -> 3.0.15
+expat: fix CVE-2024-45492
+expat: fix CVE-2024-45491
+expat: fix CVE-2024-45490
+qemu: Backport fix for CVE-2024-4467
+python3: fix CVE-2023-27043
+python3: CVE-2024-6232 CVE-2024-7592 fixes
+
