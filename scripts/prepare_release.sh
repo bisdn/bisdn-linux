@@ -52,6 +52,13 @@ Set release revisions in in bidn-linux.lock.yaml and default.xml based on $SOURC
 	git commit -s -m "$MSG" default.xml bisdn-linux.lock.yaml
 }
 
+prepare_workdir() {
+	pushd $WORKDIR > /dev/null
+	repo init -q -b $RELEASE_BRANCH -u $TOPDIR -g all,ofdpa-gitlab
+	repo sync
+	popd > /dev/null
+}
+
 # Check that the top commits for OF-DPA and ofdpa-grpc recipes are identical
 # between open and closed repositories by comparing the subjects.
 #
@@ -61,8 +68,6 @@ sanity_check_meta-ofdpa() {
 	echo "Ensuring public and closed meta-ofdpa are in sync ..."
 	local abort=0
 	pushd $WORKDIR > /dev/null
-	repo init -q -b $RELEASE_BRANCH -u $TOPDIR -g all,ofdpa-gitlab
-	repo sync
 
 	pushd poky/meta-ofdpa > /dev/null
 	OFDPA_OPEN_TOP="$(git log --no-merges --pretty='format:%s' -1 recipes-ofpda/ofdpa/ofdpa_*.bb)"
@@ -92,6 +97,22 @@ sanity_check_meta-ofdpa() {
 	fi
 
 	if [ "$abort" = "1" ]; then
+		exit 1
+	fi
+}
+
+# check that DISTRO_VERSION matches the release version
+check_version() {
+	local distro_version
+
+	distro_version=$(grep '^DISTRO_VERSION' $WORKDIR/poky/meta-bisdn-linux/conf/distro/bisdn-linux.conf)
+
+	# extract value
+	distro_version=${source_version#*\"}
+	distro_version=${source_version%\"*}
+
+	if [ "v$source_version" != "$NEW" ]; then
+		echo "DISTRO_VERSION does not match release version (expected \"${NEW#v}\", got \"$distro_version\")" >&2
 		exit 1
 	fi
 }
@@ -214,7 +235,9 @@ else
 fi
 
 lock_revisions
+prepare_workdir
 sanity_check_meta-ofdpa
+check_version
 generate_changelog
 update_default_xml
 
