@@ -108,10 +108,10 @@ check_version() {
 	distro_version=$(grep '^DISTRO_VERSION' $WORKDIR/poky/meta-bisdn-linux/conf/distro/bisdn-linux.conf)
 
 	# extract value of 'DISTRO_VERSION = "X.Y.Z"'
-	distro_version=${source_version#*\"}
-	distro_version=${source_version%\"*}
+	distro_version=${distro_version#*\"}
+	distro_version=${distro_version%\"*}
 
-	if [ "v$source_version" != "$NEW" ]; then
+	if [ "v$distro_version" != "$NEW" ]; then
 		echo "DISTRO_VERSION does not match release version (expected \"${NEW#v}\", got \"$distro_version\")" >&2
 		exit 1
 	fi
