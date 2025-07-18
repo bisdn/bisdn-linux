@@ -1,0 +1,284 @@
+
+Fixed CVEs:
+curl:
+  CVE-2025-0725
+
+glibc:
+  CVE-2010-4756 CVE-2025-4802
+
+libarchive:
+  CVE-2024-48615 CVE-2025-5914
+
+libxml2:
+  CVE-2025-32414 CVE-2025-32415
+
+linux-yocto-onl:
+  CVE-1999-0524 CVE-1999-0656 CVE-2006-2932 CVE-2007-2764 CVE-2007-4998 CVE-2008-2544 CVE-2008-4609 CVE-2010-4563 CVE-2016-0774 CVE-2016-3695 CVE-2016-3699 CVE-2017-1000377 CVE-2017-6264 CVE-2018-6559 CVE-2019-14899 CVE-2021-3714 CVE-2021-3864 CVE-2022-0400 CVE-2022-1247 CVE-2022-38096 CVE-2022-4543 CVE-2023-3079 CVE-2023-3397 CVE-2023-3640 CVE-2023-4010 CVE-2023-52485 CVE-2023-52585 CVE-2023-52586 CVE-2023-52590 CVE-2023-52624 CVE-2023-52625 CVE-2023-52634 CVE-2023-52904 CVE-2023-52920 CVE-2023-52979 CVE-2023-6238 CVE-2023-6240 CVE-2023-6535 CVE-2024-21803 CVE-2024-23848 CVE-2024-24859 CVE-2024-24864 CVE-2024-25739 CVE-2024-25740 CVE-2024-25741 CVE-2024-26596 CVE-2024-26672 CVE-2024-26686 CVE-2024-26699 CVE-2024-26756 CVE-2024-26757 CVE-2024-26758 CVE-2024-26785 CVE-2024-26811 CVE-2024-26836 CVE-2024-26900 CVE-2024-26944 CVE-2024-26945 CVE-2024-26949 CVE-2024-26954 CVE-2024-26962 CVE-2024-27010 CVE-2024-27011 CVE-2024-27012 CVE-2024-27017 CVE-2024-27079 CVE-2024-35843 CVE-2024-35968 CVE-2024-36288 CVE-2024-36478 CVE-2024-38608 CVE-2024-39472 CVE-2024-40965 CVE-2024-41023 CVE-2024-41061 CVE-2024-41080 CVE-2024-41085 CVE-2024-42064 CVE-2024-42065 CVE-2024-42066 CVE-2024-42071 CVE-2024-42075 CVE-2024-42078 CVE-2024-42081 CVE-2024-42083 CVE-2024-42107 CVE-2024-42122 CVE-2024-42123 CVE-2024-42134 CVE-2024-42139 CVE-2024-42151 CVE-2024-42155 CVE-2024-42156 CVE-2024-42158 CVE-2024-42162 CVE-2024-42227 CVE-2024-42252 CVE-2024-43819 CVE-2024-43824 CVE-2024-43835 CVE-2024-43840 CVE-2024-43857 CVE-2024-43872 CVE-2024-43884 CVE-2024-43886 CVE-2024-43899 CVE-2024-43901 CVE-2024-43904 CVE-2024-43911 CVE-2024-43913 CVE-2024-44950 CVE-2024-44951 CVE-2024-44956 CVE-2024-44963 CVE-2024-46681 CVE-2024-46698 CVE-2024-46701 CVE-2024-46705 CVE-2024-46710 CVE-2024-46727 CVE-2024-46730 CVE-2024-46751 CVE-2024-46772 CVE-2024-46774 CVE-2024-46775 CVE-2024-46778 CVE-2024-46808 CVE-2024-46813 CVE-2024-46823 CVE-2024-46833 CVE-2024-46834 CVE-2024-46841 CVE-2024-46842 CVE-2024-46870 CVE-2024-47661 CVE-2024-47662 CVE-2024-47702 CVE-2024-47703 CVE-2024-47726 CVE-2024-47736 CVE-2024-49885 CVE-2024-49888 CVE-2024-49891 CVE-2024-49893 CVE-2024-49897 CVE-2024-49898 CVE-2024-49899 CVE-2024-49904 CVE-2024-49906 CVE-2024-49908 CVE-2024-49909 CVE-2024-49910 CVE-2024-49911 CVE-2024-49914 CVE-2024-49915 CVE-2024-49916 CVE-2024-49917 CVE-2024-49918 CVE-2024-49919 CVE-2024-49920 CVE-2024-49921 CVE-2024-49922 CVE-2024-49923 CVE-2024-49926 CVE-2024-49928 CVE-2024-49932 CVE-2024-49934 CVE-2024-49940 CVE-2024-49945 CVE-2024-49968 CVE-2024-49970 CVE-2024-49971 CVE-2024-49972 CVE-2024-49974 CVE-2024-49990 CVE-2024-49994 CVE-2024-49998 CVE-2024-50004 CVE-2024-50009 CVE-2024-50010 CVE-2024-50014 CVE-2024-50017 CVE-2024-50027 CVE-2024-50028 CVE-2024-50067 CVE-2024-50090 CVE-2024-50091 CVE-2024-50102 CVE-2024-50106 CVE-2024-50137 CVE-2024-50138 CVE-2024-50146 CVE-2024-50157 CVE-2024-50177 CVE-2024-50178 CVE-2024-50217 CVE-2024-50221 CVE-2024-50225 CVE-2024-50277 CVE-2024-50304 CVE-2024-52559 CVE-2024-53050 CVE-2024-53051 CVE-2024-53056 CVE-2024-53084 CVE-2024-53085 CVE-2024-53089 CVE-2024-53090 CVE-2024-53098 CVE-2024-53114 CVE-2024-53124 CVE-2024-53128 CVE-2024-53133 CVE-2024-53170 CVE-2024-53187 CVE-2024-53201 CVE-2024-53203 CVE-2024-53204 CVE-2024-53205 CVE-2024-53209 CVE-2024-53221 CVE-2024-53222 CVE-2024-56544 CVE-2024-56549 CVE-2024-56588 CVE-2024-56599 CVE-2024-56608 CVE-2024-56620 CVE-2024-56647 CVE-2024-56702 CVE-2024-56712 CVE-2024-56742 CVE-2024-56757 CVE-2024-56758 CVE-2024-56759 CVE-2024-56761 CVE-2024-56775 CVE-2024-56782 CVE-2024-56784 CVE-2024-57795 CVE-2024-57857 CVE-2024-57872 CVE-2024-57950 CVE-2024-57977 CVE-2024-57982 CVE-2024-58012 CVE-2024-58089 CVE-2024-58097 CVE-2025-21634 CVE-2025-21635 CVE-2025-21649 CVE-2025-21650 CVE-2025-21672 CVE-2025-21682 CVE-2025-21693 CVE-2025-21696 CVE-2025-21714 CVE-2025-21722 CVE-2025-21723 CVE-2025-21729 CVE-2025-21739 CVE-2025-21751 CVE-2025-21786 CVE-2025-21833 CVE-2025-21861 CVE-2025-21927 CVE-2025-21949 CVE-2025-21957 CVE-2025-21959 CVE-2025-21961 CVE-2025-21962 CVE-2025-21963 CVE-2025-21964 CVE-2025-21966 CVE-2025-21967 CVE-2025-21968 CVE-2025-21969 CVE-2025-21979 CVE-2025-21980 CVE-2025-21981 CVE-2025-21991 CVE-2025-21993 CVE-2025-21995 CVE-2025-21996 CVE-2025-21997 CVE-2025-21999 CVE-2025-22001 CVE-2025-22003 CVE-2025-22004 CVE-2025-22005 CVE-2025-22007 CVE-2025-22009 CVE-2025-22010 CVE-2025-22014 CVE-2025-22018 CVE-2025-22020 CVE-2025-22027 CVE-2025-22033 CVE-2025-22035 CVE-2025-22037 CVE-2025-22038 CVE-2025-22040 CVE-2025-22041 CVE-2025-22054 CVE-2025-22056 CVE-2025-22062 CVE-2025-22063 CVE-2025-22066 CVE-2025-22070 CVE-2025-22080 CVE-2025-22081 CVE-2025-22088 CVE-2025-22097 CVE-2025-23136 CVE-2025-37785 CVE-2025-37800 CVE-2025-37801 CVE-2025-37802 CVE-2025-37803 CVE-2025-37805 CVE-2025-37838 CVE-2025-37860 CVE-2025-37893 CVE-2025-37925 CVE-2025-38152 CVE-2025-39728 CVE-2025-39735 CVE-2025-40014
+
+openssh:
+  CVE-2025-32728
+
+perl:
+  CVE-2024-56406
+
+python3-setuptools:
+  CVE-2025-47273
+
+systemd:
+  CVE-2022-3821 CVE-2022-4415 CVE-2022-45873
+
+Changes between v5.3.1 and v5.4.0:
+
+build-bisdn-linux:
+prepare_release: add a check that DISTRO_VERSION is correct
+scripts/prepare_release.sh: move repo checkout to separate call
+
+meta-bisdn-linux:
+rofl-common: update to 0.13.6
+distro: drop PREFERRED_PROVIDER for udev{,-utils}
+distro: set INIT_MANAGER to systemd
+baseboxd: update to 2.4.4
+onie-tools: fix usage text for onie-bisdn-upgrade
+distro: bump version to 5.4.0
+full: add wireguard-tools
+baseboxd-tools: bundle-debug-info: include port counters
+baseboxd: update to 2.4.3
+net-snmp: drop borked patch fixup
+lmsensors: fix build without sensord
+baseboxd: update to 2.4.2
+b-isdn-feed-config-opkg: drop package in favor of Yocto vars
+prevent backup of /etc/opkg/arch.conf again
+
+meta-ofdpa:
+ofdpa-platform: fix LICENSE paths
+odfpa: decrease counter update interval from 2 to 1 second
+ofdpa: push hw counters to knet interfaces
+openbcm-gpl-modules: allow pushing hw counters to knet interfaces
+ofdpa-platform: disable lossless MMU on Edgecore AS4610
+
+meta-openembedded:
+libssh: fix CVE-2025-5318
+mariadb: fix CVE-2024-21096
+mariadb: fix CVE-2023-52969 and CVE-2023-52970
+mariadb: fix CVE-2023-52968
+protobuf: fix CVE-2025-4565
+python3-protobuf: fix RDEPENDS
+protobuf: fix ptest with python PACKAGECONFIG enabled
+xfce4 update HOMEPAGEs
+canutils: use https instead of git protocol
+libsocketcan: use https instead of git protocol
+python3-aiohttp: fix CVE-2024-42367
+postgresql: upgrade 14.17 -> 14.18
+redis: Fix CVE-2025-21605
+syslog-ng: fix CVE-2024-47619
+proftpd: Fix CVE-2024-57392
+tcpdump: patch CVE-2024-2397
+imagemagick: Fix CVE vulnerablities
+lmsensors: Fix build without sensord
+poppler: fix CVE-2025-43903
+python3-twisted: Fix CVE-2024-41671
+frr: fix CVE-2024-55553
+poppler: fix CVE-2025-32365
+poppler: fix CVE-2025-32364
+net-snmp: fix memory leak
+netplan: Fix CVE-2022-4968
+lmsensors: Clean stale files for sensord to avoid incorrect GCC header dependencies
+corosync: fix CVE-2025-30472
+
+meta-open-network-linux:
+linux-yocto-onl/6.6: update to 6.6.96
+linux-yocto-onl/6.6: enable wireguard module
+linux-yocto-onl/6.6: update to 6.6.89
+
+meta-virtualization:
+cri-o: fix CVE-2023-6476
+python3-docker: Fix for requests 2.32.0: CVE-2024-35195 backport
+ceph: fix CVE-2023-43040
+
+poky:
+conf.py: improve SearchEnglish to handle terms with dots
+overview-manual/concepts.rst: fix sayhello hardcoded bindir
+migration-guides: add release notes for 4.0.28
+linux-yocto/5.15: update to v5.15.186
+libarchive: fix CVE-2025-5917
+libarchive: fix CVE-2025-5916
+libarchive: fix CVE-2025-5915
+curl: fix CVE-2025-0167
+curl: fix CVE-2024-11053
+libsoup: fix CVE-2025-4945
+libsoup-2.4: fix CVE-2025-4945
+coreutils: fix CVE-2025-5278
+libxml2: fix CVE-2025-6021
+libsoup-2.4: refresh CVE-2025-4969.patch
+ref-manual: document KERNEL_SPLIT_MODULES variable
+xwayland: fix CVE-2025-49180
+xwayland: fix CVE-2025-49179
+xwayland: fix CVE-2025-49178
+xwayland: fix CVE-2025-49177
+xwayland: fix CVE-2025-49176
+xwayland: fix CVE-2025-49175
+python3-urllib3: fix CVE-2025-50181
+systemd: backport patches to fix CVE-2025-4598
+libarchive: Fix CVE-2025-5914
+build-appliance-image: Update to kirkstone head revision
+poky.conf: bump version for 4.0.28
+ffmpeg: fix CVE-2022-48434
+go: fix CVE-2025-4673
+cmake: Correctly handle cost data of tests with arbitrary chars in name
+systemtap: add sysroot Python paths to configure flags
+go: ignore CVE-2024-3566
+libsoup-2.4: fix CVE-2025-4476
+libsoup-2.4: fix CVE-2025-4948
+libsoup-2.4: fix CVE-2025-46421
+libsoup-2.4: fix CVE-2025-32907
+libsoup-2.4: Fix CVE-2025-4969
+libsoup: fix CVE-2025-4948
+libsoup: fix CVE-2025-46421
+libsoup: fix CVE-2025-32051
+libsoup: fix CVE-2025-32907
+libsoup: Fix CVE-2025-4969
+libsoup: patch CVE-2025-4476
+bsp-guide: update lonely "4.12" kernel reference to "6.12"
+bsp guide: update kernel version example to 6.12
+ref-manual: classes: nativesdk: move note to appropriate section
+ref-manual: classes: reword to clarify that native/nativesdk options are exclusive
+glibc: nptl Use all of g1_start and g_signals
+glibc: nptl rename __condvar_quiesce_and_switch_g1
+glibc: nptl Fix indentation
+glibc: nptl Use a single loop in pthread_cond_wait instaed of a nested loop
+glibc: nptl Remove unnecessary quadruple check in pthread_cond_wait
+glibc: nptl Remove unnecessary catch-all-wake in condvar group switch
+glibc: nptl Update comments and indentation for new condvar implementation
+glibc: pthreads NPTL lost wakeup fix 2
+e2fsprogs: removed 'sed -u' option
+xz: Update LICENSE variable for xz packages
+libpng: Improve ptest
+babeltrace/libatomic-ops: correct the SRC_URI
+scripts/install-buildtools: Update to 4.0.27
+ffmpeg: Add "libswresample libavcodec" to CVE_PRODUCT
+ffmpeg: fix CVE-2025-1373
+libsoup: Fix CVE-2025-46420
+libsoup: Fix CVE-2025-32053
+libsoup-2.4: Fix CVE-2025-32053
+libsoup: Fix CVE-2025-32052
+libsoup-2.4: Fix CVE-2025-32052
+libsoup: Fix CVE-2025-32050
+libsoup-2.4: Fix CVE-2025-32050
+libsoup: Fix CVE-2025-2784
+libsoup-2.4: Fix CVE-2025-2784
+net-tools: patch CVE-2025-46836
+python3-requests: fix CVE-2024-47081
+Glibc: Fix for CVE-2025-4802
+docs: conf.py: silence SyntaxWarning on js_splitter_code
+docs: README: specify how to contribute instead of pointing at another file
+ref-manual: clarify KCONFIG_MODE default behaviour
+Clean up explanation of minimum required version numbers
+migration-guides: add release notes for 4.0.27
+brief-yoctoprojectqs/ref-manual: Switch to new CDN
+kernel.bbclass: add original package name to RPROVIDES for -image and -base
+python3: upgrade 3.10.16 -> 3.10.18
+git: Fix CVE-2024-50349 and CVE-2024-52006
+screen: fix CVE-2025-46804
+screen: fix CVE-2025-46802
+binutils: Fix CVE-2025-5244 & CVE-2025-5245
+python3-setuptools: Fix CVE-2025-47273
+binutils: add CVE-2025-1182 patch file to SRC_URI
+ffmpeg: fix CVE-2025-22921
+ffmpeg: fix CVE-2025-22919
+ffmpeg: upgrade 5.0.1 -> 5.0.3
+taglib: fix CVE-2023-47466
+libsoup-2.4: Backport auth tests for CVE-2025-32910
+icu: fix CVE-2025-5222
+ghostscript: fix CVE-2025-48708
+nfs-utils: don't use signals to shut down nfs server.
+sysstat: correct the SRC_URI
+linux-yocto/5.15: update to v5.15.184
+linux-yocto/5.15: update to v5.15.183
+linux-yocto/5.15: update to v5.15.182
+linux-yocto/5.15: update to v5.15.181
+linux-yocto/5.15: update to v5.15.180
+binutils: fix CVE-2025-1180
+screen: Fix CVE-2025-46805
+binutils: Fix CVE-2025-1182
+ref-manual/variables.rst: document INHIBIT_UPDATERCD_BBCLASS
+ref-manual/variables.rst: document SSTATE_SKIP_CREATION
+ref-manual/variables.rst: document INHIBIT_DEFAULT_RUST_DEPS
+conf.py: tweak SearchEnglish to be hyphen-friendly
+ref-manual/variables.rst: document the INITRAMFS_MAXSIZE variable
+ref-manual/variables.rst: document the IMAGE_ROOTFS_MAXSIZE variable
+sphinx-lint: unbalanced inline literal markup
+sphinx-lint: role missing opening tag colon
+sphinx-lint: trailing whitespace
+ref-manual/variables.rst: document WIC_CREATE_EXTRA_ARGS
+contributor-guide/submit-changes: encourage patch version changelogs
+ref-manual: kernel-fitimage.bbclass does not use SPL_SIGN_KEYNAME
+migration-guides: add release notes for 4.0.26
+ref-manual/release-process: update releases.svg
+test-manual/intro: remove Buildbot version used
+dev-manual/sbom.rst: fix wrong build outputs
+gcc: AArch64 - Fix strict-align cpymem/setmem
+util-linux: Add fix to isolate test fstab entries using CUSTOM_FSTAB
+ruby: fix CVE-2025-27221
+glib-2.0: fix CVE-2025-4373
+libsoup-2.4: Fix CVE-2025-32914
+libsoup-2.4: Fix CVE-2025-32912
+libsoup-2.4: Fix CVE-2025-32911 & CVE-2025-32913
+libsoup-2.4: Fix CVE-2025-32910
+libsoup-2.4: Fix CVE-2025-46420
+connman :fix CVE-2025-32366
+iputils: Security fix for CVE-2025-47268
+openssh: Fix CVE-2025-32728
+build-appliance-image: Update to kirkstone head revision
+poky.conf: bump version for 4.0.27
+perl: enable _GNU_SOURCE define via d_gnulibc
+module.bbclass: add KBUILD_EXTRA_SYMBOLS to install
+glibc: stable 2.35 branch updates
+scripts/install-buildtools: Update to 4.0.26
+libsoup: Fix CVE-2025-32914
+libsoup: Fix CVE-2025-32912
+libsoup: Fix CVE-2025-32911 & CVE-2025-32913
+libsoup: Fix CVE-2025-32910
+libsoup: Fix CVE-2025-32909
+libsoup: Fix CVE-2025-32906
+libsoup: update fix CVE-2024-52532
+libsoup-2.4: Fix CVE-2025-32909
+libsoup-2.4: Fix CVE-2025-32906
+libsoup-2.4: Update fix CVE-2024-52532
+perl: patch CVE-2024-56406
+glibc: Add single-threaded fast path to rand()
+qemu: ignore CVE-2023-1386
+busybox: fix CVE-2023-39810
+connman :fix CVE-2025-32743
+ghostscript: ignore CVE-2024-29507
+ghostscript: ignore CVE-2025-27837
+Fix dead links that use the DISTRO macro
+poky.yaml: introduce DISTRO_LATEST_TAG
+manuals: remove repeated word
+ref-manual/variables.rst: document autotools class related variables
+Revert "cve-update-nvd2-native: Tweak to work better with NFS DL_DIR"
+systemd: systemd-journald fails to setup LogNamespace
+systemd: backport patch to fix journal issue
+tzdata/tzcode-native: upgrade 2025a -> 2025b
+python3-setuptools: Fix CVE-2024-6345
+binutils: Fix CVE-2025-1178
+glib-2.0: patch CVE-2025-3360
+libxml2: patch CVE-2025-32415
+libxml2: patch CVE-2025-32414
+libarchive: ignore CVE-2024-48615
+ghostscript: ignore CVE-2025-27833
+ppp: patch CVE-2024-58250
+libpam: Update fix for CVE-2024-10041
+sqlite3: patch CVE-2025-29088
+ruby: fix CVE-2024-43398
+go: fix CVE-2025-22871
+systemd: ignore CVEs which reappeared after upgrade to 250.14
+cve-update-nvd2-native: add workaround for json5 style list
+ghostscript: Fix CVE-2025-27836
+ghostscript: Fix CVE-2025-27835
+ghostscript: Fix CVE-2025-27834
+ghostscript: Fix CVE-2025-27832
+ghostscript: Fix CVE-2025-27831
+ghostscript: Fix CVE-2025-27830
+ofono: patch CVE-2024-7537
+curl: ignore CVE-2025-0725
+
