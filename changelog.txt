@@ -1,0 +1,147 @@
+
+Fixed CVEs:
+frr:
+  CVE-2024-31948 CVE-2024-31949 CVE-2024-31950 CVE-2024-31951 CVE-2024-34088 CVE-2024-44070
+
+glib-2.0:
+  CVE-2025-4056
+
+jq:
+  CVE-2024-23337 CVE-2024-53427 CVE-2025-48060
+
+libarchive:
+  CVE-2025-5918
+
+libxml2:
+  CVE-2025-6170
+
+python3:
+  CVE-2020-1171 CVE-2020-1192 CVE-2020-17163 CVE-2024-49050 CVE-2025-49714
+
+sqlite3:
+  CVE-2025-6965
+
+sudo:
+  CVE-2025-32462 CVE-2025-32463
+
+Changes between v5.4.0 and v5.5.0:
+
+build-bisdn-linux:
+convert.sh: use remote bisdn-linux HEAD on conversion from kas to repo
+prepare_release: fix version check
+
+meta-bisdn-linux:
+hostapd: add example auth events handler
+hostapd: add MAB specific events
+baseboxd: update to 3.0.2
+hostapd: add missing ifname to log messages in 802.1x
+hostapd: fix STAs being instantly forgotten after MAB authentication
+packagegroup-bisdn-linux-extra: add more text editors
+baseboxd: update to 3.0.1
+baseboxd: update to 3.0.0
+rofl-ofdpa: udpate to 2.2.0
+baseboxd-tools: drop obsolete email instructions for debug bundles
+frr: mark open CVEs as fixed/NA
+distro: bump version to 2.5.0
+baseboxd: update to 2.5.0
+
+meta-ofdpa:
+ofdpa: fix deletion of BPDU termination MAC flows
+openbcm-gpl-modules: bcm-knet: do not mark BPDU packets as forwarded
+ofdpa: allow creating termination MAC entries for local multicast traffic
+ofdpa-grpc: expose ofdpaRxRateSet()
+ofdpa: expose bcm_rx_rate_set()
+
+meta-openembedded:
+poco: Fix ptests
+poco: Remove pushd/popd from run-ptest
+poco: patch CVE-2025-6375
+spdlog: patch CVE-2025-6140
+tcpreplay: fix CVE-2024-22654
+open-vm-tools: fix CVE-2025-22247
+jq: Fix CVEs
+imagemagick: Fix CVE vulnerablities
+udisks2: Hardening measure of CVE-2025-6019
+libblockdev: fix CVE-2025-6019
+
+meta-open-network-linux:
+linux-yocto-onl/6.6: update to 6.6.100
+
+poky:
+Revert "sqlite3: patch CVE-2025-7458"
+libarchive: patch regression of patch for CVE-2025-5918
+dpkg: patch CVE-2025-6297
+glib-2.0: patch CVE-2025-7039
+qemu: ignore CVE-2024-7730
+gstreamer1.0-plugins-base: fix CVE-2025-47807
+xserver-xorg: Fix for CVE-2025-49180
+xserver-xorg: Fix for CVE-2025-49179
+xserver-xorg: Fix for CVE-2025-49178
+openssl: fix CVE-2023-50781
+libubootenv: backport patch to fix unknown type name 'size_t'
+glib-2.0: ignore CVE-2025-4056
+git: fix CVE-2025-27614-CVE-2025-27613-CVE-2025-46334-CVE-2025-46835
+xserver-xorg: Fix for CVE-2025-49177
+xserver-xorg: Fix for CVE-2025-49176
+xserver-xorg: Fix for CVE-2025-49175
+gstreamer1.0-plugins-good: fix CVE-2025-47183 & CVE-2025-47219
+gstreamer1.0-plugins-base: fix CVE-2025-47806 & CVE-2025-47808
+systemd: Fix manpage build after CVE-2025-4598
+ref-manual/classes.rst: document the testexport class
+ref-manual/variables.rst: document SPL_DTB_BINARY
+ref-manual/variables.rst: document the FIT_CONF_PREFIX variable
+overview-manual/yp-intro.rst: fix broken link to article
+ref-manual/system-requirements.rst: update supported distributions
+go-helloworld: fix license
+gnupg: disable tests to avoid running target binaries at build time
+libxslt: fix CVE-2023-40403
+libarchive: patch CVE-2025-5918
+go: ignore CVE-2025-0913
+python3: patch CVE-2025-8194
+tiff: fix CVE-2025-8177
+tiff: fix CVE-2025-8176
+build-appliance-image: Update to kirkstone head revision
+poky.conf: bump version for 4.0.29
+glibc: stable 2.35 branch updates
+sqlite3: ignore CVE-2025-3277
+sqlite3: patch CVE-2025-7458
+avahi: fix CVE-2024-52615
+dev-manual/start.rst: added missing command in Optimize your VHDX file using DiskPart
+sqlite3: Fix CVE-2025-6965
+binutils: Fix CVE-2025-7545
+libxml2: patch CVE-2025-6170
+gnutls: patch CVE-2025-6395
+gnutls: patch CVE-2025-32990
+gnutls: patch CVE-2025-32988
+gnutls: patch reject zero-length version in certificate request
+gnutls: patch read buffer overrun in the "pre_shared_key" extension
+gnutls: patch CVE-2025-32989
+dropbear: patch CVE-2025-47203
+db: ignore implicit-int and implicit-function-declaration issues fatal with gcc-14
+scripts/install-buildtools: Update to 4.0.28
+glibc: stable 2.35 branch updates
+ncurses: patch CVE-2025-6141
+ruby: correct fix for CVE-2024-43398
+libpam: fix CVE-2025-6020
+ffmpeg: Ignore two CVEs fixed in 5.0.3
+gnupg: fix CVE-2025-30258
+orc: set CVE_PRODUCT
+binutils: Fix CVE-2025-7546
+bitbake: test/fetch: Switch u-boot based test to use our own mirror
+tcf-agent: correct the SRC_URI
+oeqa/core/decorator: add decorators to skip based on HOST_ARCH
+bintuils: stable 2.38 branch update
+sudo: upgrade 1.9.15p5 -> 1.9.17p1
+sudo: upgrade from 1.9.15p2 to 1.9.15p5
+gdk-pixbuf: fix CVE-2025-7345
+iputils: patch CVE-2025-48964
+ghostscript: ignore CVE-2025-46646
+ofono: fix CVE-2023-4235
+ofono: fix CVE-2023-4232
+openssl: fix CVE-2024-41996
+openssl: upgrade 3.0.16 -> 3.0.17
+python3: update CVE product
+libxml2: fix CVE-2025-49794 & CVE-2025-49796
+coreutils: fix CVE-2025-5278
+Revert "coreutils: fix CVE-2025-5278"
+
