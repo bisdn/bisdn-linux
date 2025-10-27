@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="github" fetch="https://github.com/" />
-  <remote name="gitlab" fetch="ssh://git@gitlab.bisdn.de/" />
-  <remote name="oe" fetch="git://git.openembedded.org/" />
-  <remote name="yocto" fetch="git://git.yoctoproject.org/" />
+  <remote name="github" fetch="https://github.com/"/>
+  <remote name="gitlab" fetch="ssh://git@gitlab.bisdn.de/"/>
+  <remote name="oe" fetch="git://git.openembedded.org/"/>
+  <remote name="yocto" fetch="git://git.yoctoproject.org/"/>
   <!-- yocto layer -->
-  <project name="meta-cloud-services" path="poky/meta-cloud-services" remote="yocto" revision="kirkstone"/>
-  <project name="meta-virtualization" path="poky/meta-virtualization" remote="yocto" revision="kirkstone"/>
-  <project name="poky" path="poky" remote="yocto" revision="kirkstone"/>
+  <project name="meta-cloud-services" path="poky/meta-cloud-services" remote="yocto" revision="783826eceb1b09496099f00a008062c0f9f4ee4e"/>
+  <project name="meta-virtualization" path="poky/meta-virtualization" remote="yocto" revision="16155ae737d96f0f53721ad7270c3fe19729d496"/>
+  <project name="poky" path="poky" remote="yocto" revision="d847c8aac132c557e93933c10c51a4caa397f52a"/>
   <!-- open embedded layer -->
-  <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="kirkstone"/>
+  <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="96fbc156364fd78530d2bfbe1b8a77789f52997d"/>
   <!-- open source bisdn layers -->
-  <project name="bisdn/bisdn-linux.git" path="poky/build-bisdn-linux" remote="github" revision="main"/>
-  <project name="bisdn/meta-bisdn-linux.git" path="poky/meta-bisdn-linux" remote="github" revision="main"/>
-  <project name="bisdn/meta-ofdpa.git" path="poky/meta-ofdpa" remote="github" revision="main"/>
-  <project name="bisdn/meta-open-network-linux.git" path="poky/meta-open-network-linux" remote="github" revision="main"/>
+  <project name="bisdn/bisdn-linux.git" path="poky/build-bisdn-linux" remote="github" revision="be1122c4a7308d615a1a18c89e91759379052ee0"/>
+  <project name="bisdn/meta-bisdn-linux.git" path="poky/meta-bisdn-linux" remote="github" revision="757946f8ffb3ca9eb54fcb5362e63a27d0352afb"/>
+  <project name="bisdn/meta-ofdpa.git" path="poky/meta-ofdpa" remote="github" revision="58225ac50adbd14aa05fff51b066a86e38183cbe"/>
+  <project name="bisdn/meta-open-network-linux.git" path="poky/meta-open-network-linux" remote="github" revision="454674cf54defd181af1a57b7e30ff2271f1d93d"/>
   <!-- closed source bisdn layers -->
-  <project name="yocto-meta-layers/meta-ofdpa.git" path="poky/meta-ofdpa-closed" remote="gitlab" revision="main" groups="notdefault,ofdpa-gitlab"/>
+  <project name="yocto-meta-layers/meta-ofdpa.git" path="poky/meta-ofdpa-closed" remote="gitlab" revision="45a3ea003a28e2382d0e95228ba9b0bbe40defda" groups="notdefault,ofdpa-gitlab"/>
 </manifest>
