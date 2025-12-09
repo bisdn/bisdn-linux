@@ -9,6 +9,7 @@ sources
 ├── bitbake
 ├── meta-bisdn-linux
 ├── meta-cloud-services
+├── meta-erlang
 ├── meta-ofdpa
 ├── meta-openembedded
 ├── meta-open-network-linux

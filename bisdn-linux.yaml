@@ -29,20 +29,20 @@ local_conf_header:
 repos:
     bitbake:
         url: "https://git.openembedded.org/bitbake"
-        branch: "2.8"
+        branch: "2.18"
         path: "sources/bitbake"
         layers: {}
 
     openembedded-core:
         url: "https://git.openembedded.org/openembedded-core"
-        branch: "scarthgap"
+        branch: "wryonose"
         path: "sources/openembedded-core"
         layers:
             meta:
 
     meta-poky:
         url: "https://git.yoctoproject.org/meta-yocto"
-        branch: "scarthgap"
+        branch: "wryonose"
         path: "sources/meta-yocto"
         layers:
             meta-poky:
@@ -51,7 +51,7 @@ repos:
     # additional yocto layers
     meta-cloud-services:
         url: "https://git.yoctoproject.org/meta-cloud-services"
-        branch: "scarthgap"
+        branch: "wryonose"
         path: "sources/meta-cloud-services"
         layers:
             .:
@@ -59,13 +59,18 @@ repos:
 
     meta-virtualization:
         url: "https://git.yoctoproject.org/meta-virtualization"
-        branch: "scarthgap"
+        branch: "wryonose"
         path: "sources/meta-virtualization"
+
+    meta-erlang:
+        url: "https://github.com/joaohf/meta-erlang.git"
+        branch: "wryonose"
+        path: "sources/meta-erlang"
 
     # open embedded layers
     meta-openembedded:
         url: "https://git.openembedded.org/meta-openembedded"
-        branch: "scarthgap"
+        branch: "wryonose"
         path: "sources/meta-openembedded"
         layers:
             meta-filesystems:

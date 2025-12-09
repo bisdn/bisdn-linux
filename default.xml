@@ -5,13 +5,15 @@
   <remote name="oe" fetch="https://git.openembedded.org/" />
   <remote name="yocto" fetch="https://git.yoctoproject.org/" />
   <!-- yocto layer -->
-  <project name="meta-cloud-services" path="poky/meta-cloud-services" remote="yocto" revision="scarthgap"/>
-  <project name="meta-virtualization" path="poky/meta-virtualization" remote="yocto" revision="scarthgap"/>
-  <project name="meta-yocto" path="poky/meta-yocto" remote="yocto" revision="scarthgap"/>
+  <project name="meta-cloud-services" path="poky/meta-cloud-services" remote="yocto" revision="master"/>
+  <project name="meta-virtualization" path="poky/meta-virtualization" remote="yocto" revision="master"/>
+  <project name="meta-yocto" path="poky/meta-yocto" remote="yocto" revision="master"/>
   <!-- open embedded layer -->
-  <project name="bitbake" path="poky/bitbake" remote="oe" revision="2.8"/>
-  <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="scarthgap"/>
-  <project name="openembedded-core" path="poky" remote="oe" revision="scarthgap"/>
+  <project name="bitbake" path="poky/bitbake" remote="oe" revision="master"/>
+  <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="master"/>
+  <project name="openembedded-core" path="poky" remote="oe" revision="master"/>
+  <!-- other open source layers -->
+  <project name="joaohf/meta-erlang.git" path="poky/meta-erlang" remote="github" revision="master"/>
   <!-- open source bisdn layers -->
   <project name="bisdn/bisdn-linux.git" path="poky/build-bisdn-linux" remote="github" revision="main"/>
   <project name="bisdn/meta-bisdn-linux.git" path="poky/meta-bisdn-linux" remote="github" revision="main"/>
