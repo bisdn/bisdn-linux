@@ -7,9 +7,11 @@
   <!-- yocto layer -->
   <project name="meta-cloud-services" path="poky/meta-cloud-services" remote="yocto" revision="scarthgap"/>
   <project name="meta-virtualization" path="poky/meta-virtualization" remote="yocto" revision="scarthgap"/>
-  <project name="poky" path="poky" remote="yocto" revision="scarthgap"/>
+  <project name="meta-yocto" path="poky/meta-yocto" remote="yocto" revision="scarthgap"/>
   <!-- open embedded layer -->
+  <project name="bitbake" path="poky/bitbake" remote="oe" revision="2.8"/>
   <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="scarthgap"/>
+  <project name="openembedded-core" path="poky" remote="oe" revision="scarthgap"/>
   <!-- open source bisdn layers -->
   <project name="bisdn/bisdn-linux.git" path="poky/build-bisdn-linux" remote="github" revision="main"/>
   <project name="bisdn/meta-bisdn-linux.git" path="poky/meta-bisdn-linux" remote="github" revision="main"/>

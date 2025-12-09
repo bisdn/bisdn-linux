@@ -27,12 +27,24 @@ local_conf_header:
             HALT,/tmp,10M,1K"
 
 repos:
-    poky:
-        url: "https://git.yoctoproject.org/poky"
+    bitbake:
+        url: "https://git.openembedded.org/bitbake"
+        branch: "2.8"
+        path: "sources/bitbake"
+        layers: {}
+
+    openembedded-core:
+        url: "https://git.openembedded.org/openembedded-core"
         branch: "scarthgap"
-        path: "sources/poky"
+        path: "sources/openembedded-core"
         layers:
             meta:
+
+    meta-poky:
+        url: "https://git.yoctoproject.org/meta-yocto"
+        branch: "scarthgap"
+        path: "sources/meta-yocto"
+        layers:
             meta-poky:
             meta-yocto-bsp:
 
