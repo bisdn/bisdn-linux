@@ -6,13 +6,15 @@ after which it looks something like this:
 
 ```
 sources
+├── bitbake
 ├── meta-bisdn-linux
 ├── meta-cloud-services
 ├── meta-ofdpa
 ├── meta-openembedded
 ├── meta-open-network-linux
+├── meta-poky
 ├── meta-virtualization
-├── poky
+├── openembedded-core
 └── README.md
 ```
 
