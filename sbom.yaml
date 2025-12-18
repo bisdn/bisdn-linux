@@ -1,0 +1,10 @@
+header:
+    version: 14
+
+local_conf_header:
+    spdx-sbom-conf: |
+        INHERIT:remove = " create-spdx"
+        INHERIT += " vex"
+        INHERIT += " create-spdx-3.0"
+        SPDX_INCLUDE_COMPILED_SOURCES:pn-linux-yocto-onl = "1"
+        SPDX_PRETTY = "1"
