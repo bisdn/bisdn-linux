@@ -1,0 +1,7 @@
+header:
+    version: 14
+
+local_conf_header:
+    spdx-sbom-conf: |
+        INHERIT += "create-spdx"
+        SPDX_PRETTY = "1"
