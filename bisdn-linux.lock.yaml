@@ -1,0 +1,20 @@
+header:
+    version: 14
+overrides:
+    repos:
+        meta-bisdn-linux:
+            commit: c8c98f970ef34be8bbd39debcefc33b0192371d6
+        meta-cloud-services:
+            commit: 783826eceb1b09496099f00a008062c0f9f4ee4e
+        meta-ofdpa:
+            commit: 04fea450bce118cf007a707ee31e326a879c425c
+        meta-ofdpa-closed:
+            commit: 15e32d3dcfb1294e99b069da0a784602d0a7f3eb
+        meta-open-network-linux:
+            commit: 83ab82ff009b91f7191d408b323f812f66a245b1
+        meta-openembedded:
+            commit: 8f5f5cf4b335a09313c48394c62bfb614868fc1e
+        meta-virtualization:
+            commit: c474ae21b11a816be607eb7b44d2cf77d1125bce
+        poky:
+            commit: ff118ede826a9ae45eb35025a5f7f612880fba01
