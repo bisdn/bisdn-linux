@@ -1,0 +1,602 @@
+
+Fixed CVEs:
+containerd-opencontainers:
+  CVE-2024-25621 CVE-2025-64329
+
+curl:
+  CVE-2025-10966 CVE-2025-14017 CVE-2025-14524 CVE-2025-15079 CVE-2025-15224
+
+hostapd:
+  CVE-2022-37660 CVE-2025-24912
+
+jq:
+  CVE-2025-9403
+
+keepalived:
+  CVE-2021-44225
+
+libarchive:
+  CVE-2025-60753
+
+linux-yocto-onl:
+  CVE-1999-0524 CVE-2008-4609 CVE-2010-4563 CVE-2014-8171 CVE-2017-1000255 CVE-2018-10840 CVE-2018-10876 CVE-2018-10882 CVE-2018-10902 CVE-2018-14625 CVE-2019-14899 CVE-2019-3016 CVE-2019-3819 CVE-2019-3887 CVE-2020-10742 CVE-2020-16119 CVE-2020-1749 CVE-2020-25672 CVE-2020-27815 CVE-2020-8834 CVE-2021-20194 CVE-2021-20265 CVE-2021-3564 CVE-2021-3669 CVE-2021-3714 CVE-2021-3759 CVE-2021-3864 CVE-2021-4218 CVE-2022-0286 CVE-2022-0400 CVE-2022-1247 CVE-2022-1462 CVE-2022-2308 CVE-2022-2327 CVE-2022-2663 CVE-2022-2785 CVE-2022-3435 CVE-2022-3523 CVE-2022-3534 CVE-2022-3566 CVE-2022-3567 CVE-2022-3619 CVE-2022-3621 CVE-2022-3624 CVE-2022-3629 CVE-2022-3630 CVE-2022-3633 CVE-2022-3636 CVE-2022-36402 CVE-2022-3646 CVE-2022-38096 CVE-2022-42895 CVE-2022-4382 CVE-2022-4543 CVE-2023-1073 CVE-2023-1074 CVE-2023-1075 CVE-2023-1076 CVE-2023-2898 CVE-2023-3079 CVE-2023-3397 CVE-2023-3640 CVE-2023-3772 CVE-2023-3773 CVE-2023-39176 CVE-2023-39179 CVE-2023-39180 CVE-2023-4010 CVE-2023-4155 CVE-2023-50431 CVE-2023-52485 CVE-2023-52586 CVE-2023-52590 CVE-2023-52624 CVE-2023-52625 CVE-2023-6176 CVE-2023-6200 CVE-2023-6238 CVE-2023-6240 CVE-2023-6270 CVE-2023-6531 CVE-2023-6535 CVE-2023-6606 CVE-2023-6610 CVE-2023-6679 CVE-2023-6915 CVE-2023-6931 CVE-2023-7042 CVE-2024-0193 CVE-2024-0565 CVE-2024-0607 CVE-2024-1151 CVE-2024-23848 CVE-2024-23849 CVE-2024-23850 CVE-2024-23851 CVE-2024-24859 CVE-2024-24860 CVE-2024-24861 CVE-2024-24864 CVE-2024-25739 CVE-2024-25740 CVE-2024-25741 CVE-2024-26672 CVE-2024-26756 CVE-2024-26757 CVE-2024-26758 CVE-2024-26944 CVE-2024-26948 CVE-2024-26962 CVE-2024-27010 CVE-2024-27012 CVE-2024-27079 CVE-2024-35794 CVE-2024-35808 CVE-2024-35843 CVE-2024-35931 CVE-2024-36024 CVE-2024-38608 CVE-2024-40979 CVE-2024-40999 CVE-2024-41008 CVE-2024-41023 CVE-2024-41045 CVE-2024-41067 CVE-2024-41082 CVE-2024-41085 CVE-2024-41932 CVE-2024-42107 CVE-2024-42118 CVE-2024-42123 CVE-2024-42139 CVE-2024-42155 CVE-2024-42158 CVE-2024-42162 CVE-2024-42317 CVE-2024-43819 CVE-2024-43824 CVE-2024-43826 CVE-2024-43872 CVE-2024-43899 CVE-2024-43901 CVE-2024-46681 CVE-2024-46698 CVE-2024-46701 CVE-2024-46727 CVE-2024-46729 CVE-2024-46730 CVE-2024-46754 CVE-2024-46775 CVE-2024-46808 CVE-2024-46834 CVE-2024-46842 CVE-2024-46870 CVE-2024-47661 CVE-2024-47662 CVE-2024-47702 CVE-2024-47703 CVE-2024-47794 CVE-2024-49885 CVE-2024-49888 CVE-2024-49893 CVE-2024-49908 CVE-2024-49910 CVE-2024-49916 CVE-2024-49918 CVE-2024-49920 CVE-2024-49921 CVE-2024-49922 CVE-2024-49932 CVE-2024-49940 CVE-2024-49945 CVE-2024-49968 CVE-2024-49970 CVE-2024-49998 CVE-2024-50028 CVE-2024-50102 CVE-2024-50217 CVE-2024-50225 CVE-2024-50277 CVE-2024-50289 CVE-2024-52560 CVE-2024-53050 CVE-2024-53051 CVE-2024-53056 CVE-2024-53089 CVE-2024-53090 CVE-2024-53114 CVE-2024-53147 CVE-2024-53187 CVE-2024-53219 CVE-2024-56544 CVE-2024-56591 CVE-2024-56647 CVE-2024-56702 CVE-2024-56712 CVE-2024-56742 CVE-2024-56775 CVE-2024-56782 CVE-2024-57795 CVE-2024-57804 CVE-2024-57809 CVE-2024-57857 CVE-2024-57872 CVE-2024-57875 CVE-2024-57898 CVE-2024-57974 CVE-2024-57975 CVE-2024-57976 CVE-2024-57982 CVE-2024-57994 CVE-2024-57999 CVE-2024-58006 CVE-2024-58012 CVE-2024-58015 CVE-2024-58089 CVE-2024-58093 CVE-2024-58094 CVE-2024-58095 CVE-2024-58096 CVE-2024-58097 CVE-2025-21634 CVE-2025-21635 CVE-2025-21649 CVE-2025-21650 CVE-2025-21651 CVE-2025-21682 CVE-2025-21693 CVE-2025-21696 CVE-2025-21714 CVE-2025-21722 CVE-2025-21723 CVE-2025-21729 CVE-2025-21732 CVE-2025-21739 CVE-2025-21768 CVE-2025-21801 CVE-2025-21825 CVE-2025-21868 CVE-2025-21870 CVE-2025-21885 CVE-2025-21888 CVE-2025-21892 CVE-2025-21907 CVE-2025-21927 CVE-2025-21949 CVE-2025-21961 CVE-2025-21972 CVE-2025-21976 CVE-2025-21985 CVE-2025-22022 CVE-2025-22026 CVE-2025-22039 CVE-2025-22070 CVE-2025-22101 CVE-2025-22103 CVE-2025-22104 CVE-2025-22105 CVE-2025-22107 CVE-2025-22108 CVE-2025-22109 CVE-2025-22111 CVE-2025-22113 CVE-2025-22115 CVE-2025-22121 CVE-2025-22125 CVE-2025-22127 CVE-2025-23130 CVE-2025-23131 CVE-2025-23132 CVE-2025-23133 CVE-2025-23135 CVE-2025-23155 CVE-2025-37743 CVE-2025-37745 CVE-2025-37759 CVE-2025-37802 CVE-2025-37806 CVE-2025-37807 CVE-2025-37822 CVE-2025-37826 CVE-2025-37833 CVE-2025-37834 CVE-2025-37856 CVE-2025-37860 CVE-2025-37861 CVE-2025-37870 CVE-2025-37877 CVE-2025-37880 CVE-2025-37882 CVE-2025-37899 CVE-2025-37907 CVE-2025-37920 CVE-2025-37926 CVE-2025-37945 CVE-2025-37977 CVE-2025-38011 CVE-2025-38022 CVE-2025-38029 CVE-2025-38038 CVE-2025-38041 CVE-2025-38042 CVE-2025-38057 CVE-2025-38064 CVE-2025-38069 CVE-2025-38096 CVE-2025-38099 CVE-2025-38125 CVE-2025-38129 CVE-2025-38132 CVE-2025-38140 CVE-2025-38162 CVE-2025-38189 CVE-2025-38199 CVE-2025-38201 CVE-2025-38203 CVE-2025-38204 CVE-2025-38206 CVE-2025-38207 CVE-2025-38232 CVE-2025-38234 CVE-2025-38237 CVE-2025-38248 CVE-2025-38261 CVE-2025-38264 CVE-2025-38269 CVE-2025-38272 CVE-2025-38279 CVE-2025-38292 CVE-2025-38303 CVE-2025-38311 CVE-2025-38333 CVE-2025-38359 CVE-2025-38361 CVE-2025-38408 CVE-2025-38414 CVE-2025-38426 CVE-2025-38438 CVE-2025-38507 CVE-2025-38531 CVE-2025-38556 CVE-2025-38584 CVE-2025-38585 CVE-2025-38591 CVE-2025-38593 CVE-2025-38595 CVE-2025-38597 CVE-2025-38605 CVE-2025-38627 CVE-2025-38636 CVE-2025-38643 CVE-2025-38656 CVE-2025-38660 CVE-2025-38678 CVE-2025-38704 CVE-2025-38705 CVE-2025-38710 CVE-2025-38717 CVE-2025-38722 CVE-2025-39677 CVE-2025-39705 CVE-2025-39707 CVE-2025-39732 CVE-2025-39745 CVE-2025-39746 CVE-2025-39747 CVE-2025-39748 CVE-2025-39754 CVE-2025-39762 CVE-2025-39764 CVE-2025-39779 CVE-2025-39789 CVE-2025-39805 CVE-2025-39810 CVE-2025-39829 CVE-2025-39833 CVE-2025-39850 CVE-2025-39851 CVE-2025-39859 CVE-2025-39862 CVE-2025-39901 CVE-2025-39905 CVE-2025-39910 CVE-2025-39925 CVE-2025-39927 CVE-2025-39932 CVE-2025-39933 CVE-2025-39940 CVE-2025-39958 CVE-2025-40325 CVE-2025-4598
+
+python3:
+  CVE-2025-12084 CVE-2025-12781 CVE-2025-13836 CVE-2025-13837
+
+python3-urllib3:
+  CVE-2024-37891 CVE-2025-66418 CVE-2025-66471 CVE-2026-21441
+
+tmux:
+  CVE-2020-27347
+
+Changes between v5.6.0 and v5.6.1:
+
+build-bisdn-linux:
+kas: always use nightly_builds for feeds for non-releases
+
+meta-bisdn-linux:
+baseboxd: update to 3.2.1
+distro: bump version to 5.6.1
+baseboxd: update to 3.2.0
+Reapply "distro: ensure license texts are available on device"
+Revert "distro: ensure license texts are available on device"
+distro: ensure license texts are available on device
+frr: mark zebra.conf as config file again
+libnl: fix replacing nhid of routes
+base-files: back up frr.conf if it exists
+frr: add /etc/frr/daemons to conffiles
+libnl: update to libnl 3.12
+baseboxd: update to 3.1.1
+
+meta-ofdpa:
+ofdpa: allow do_populate_lic to run
+ofdpa-platform: fix license package generation
+ofdpa-grpc: expose knet helpers
+ofdpa: add convenience functions for creating KNET netifs
+ofdpa-platform: delta-ag5648: fix tx lane map for port 49
+ofdpa-grpc: prevent parallel OF-DPA RPC calls
+
+meta-open-network-linux:
+linux-yocto-onl/6.6: update to 6.6.121
+linux-yocto-onl/6.6: update to 6.6.119
+linux-yocto-onl/6.6: update to 6.6.116
+
+meta-openembedded:
+python3-django: (4.2.27) add back setuptools3 support
+python3-django: upgrade 4.2.26 -> 4.2.27
+python3-django: fix CVE-2023-36053 patch
+python3-django: (v3.2.25) fix tests
+python3-django: (v3.2.25) fix ipv6 validation
+python3-django: (v2.2.28) fix tests
+python3-django: (v2.2.28) fix ipv6 validation
+python3-django: fix hostname length validation in URLvalidator
+python3-django: handle non-existing import from CVE patch
+python3-django: implement group method for FakeMatch
+python3-django: fix regression from CVE-2024-24680 patch
+python3-django: fix intendation error in CVE patch
+python3-django: Fix missing JSONField in django.db.models
+python3-django: Fix undefined _lazy_re_compile
+libsodium: patch CVE-2025-69277
+memcached: ignore disputed CVE-2022-26635
+wireshark: ignore CVE-2024-24476, CVE-2024-24478 and CVE-2024-24479
+wireshark: upgrade 3.4.12 -> 3.4.16
+wireshark: fix CVE-2025-11626
+python3-tqdm: patch CVE-2024-34062
+python3-tornado: patch CVE-2024-52804
+python3-tornado: patch CVE-2023-28370
+openflow: don't overwrite CVE_CHECK_IGNORE
+php: ignore CVE-2024-3566
+net-snmp: Fix for CVE-2025-68615
+python3-m2crypto: ignore CVE-2009-0127
+python3-waitress: patch CVE-2024-49769
+python3-waitress: patch CVE-2024-49768
+python3-werkzeug: ignore CVE-2024-49766 and CVE-2025-66221
+python3-waitress: upgrade 2.1.1 -> 2.1.2
+Add missing HOMEPAGEs to xfce recipes
+python3-mpmath: patch CVE-2021-29063
+python3-pyjwt: patch CVE-2022-29217
+python3-joblib: upgrade 1.1.0 -> 1.1.1
+python3-ipython: patch CVE-2023-24816
+tinyproxy: patch CVE-2025-63938
+python3-flask: patch CVE-2023-30861
+python3-configobj: patch CVE-2023-26112
+python3-cbor2: ignore CVE-2025-64076
+python3-protobuf: set CVE_PRODUCT
+python-grpcio(-tools): add grpc:grpc to cve product
+lldpd: patch CVE-2021-43612
+spitools: upgrade 1.0.1 -> 1.0.2
+tree: upgrade 2.0.2 -> 2.0.4
+usb-modeswitch: upgrade 2.6.0 -> 2.6.2
+xdg-user-dirs: upgrade 0.17 -> 0.18
+recipes-core/toybox: Switch SRC_URI to HTTPS for reliable fetch
+netdata: ignore CVE-2024-32019
+nodejs: ignore CVE-2024-36137
+nodejs: ignore CVE-2024-3566 and CVE-2024-36138
+sassc: ignore CVE-2022-43357
+phpmyadmin: ignore CVE-2020-22452
+nodejs: patch CVE-2024-27983
+nodejs: ignore CVE-2024-22017
+nodejs: patch CVE-2023-39333
+nodejs: ignore CVE-2023-30583, CVE-2023-30584 and CVE-2023-30587
+fio: ignore CVE-2025-10824
+python3-django: ignore CVE-2024-22199
+proftpd: set status of CVE-2001-0027
+civetweb: patch CVE-2025-9648
+atop: patch CVE-2025-31160
+php: upgrade 8.1.33 -> 8.1.34
+nbdkit: remove unused patch
+nbdkit: patch CVE-2025-47712
+nbdkit: patch CVE-2025-47711
+xmlsec1: update SRC_URI
+softhsm: correct SRC_URI branch
+thrift: fix SRC_URI
+srecord: fix SRC_URI
+pcp: switch SRC_URI to git
+tcsh: update SRC_URI
+hunspell: patch CVE-2019-16707
+smarty: patch CVE-2023-28447
+smarty: update CVE_PRODUCT
+smarty: patch CVE-2018-25047
+snappy: add CVE_PRODUCT
+dbus-broker: patch CVE-2022-31212
+cups-filters: patch CVE-2023-24805
+cups-filters: patch CVE-2025-64524
+cups-filters: patch CVE-2025-57812
+redis: ignore CVE-2025-46686
+nanopb: patch CVE-2024-53984
+mpd: Update status for CVE-2020-7465 and CVE-2020-7466
+mtr: patch CVE-2025-49809
+vlc: upgrade 3.0.17-1 -> 3.0.17.4
+vorbis-tools: upgrade 1.4.2 -> 1.4.3
+libmediaart-2.0: upgrade 1.9.6 -> 1.9.7
+zabbix: patch CVE-2025-49643
+imagemagick: patch CVE-2025-62171
+imagemagick: patch CVE-2025-65955
+imagemagick: patch CVE-2022-1115
+krb5: fix for CVE-2024-3596
+nodejs: fix CVE_PRODUCT
+xdebug: upgrade 3.1.1 -> 3.1.5
+phpmyadmin: upgrade 5.1.3 -> 5.1.4
+hiawatha: set a working SRC_URI
+cherokee: patch CVE-2020-12845
+thunar: upgrade 4.16.9 -> 4.16.11
+tumbler: upgrade 4.16.0 -> 4.16.1
+xfce4-panel: upgrade 4.16.3 -> 4.16.6
+xfdesktop: upgrade 4.16.0 -> 4.16.1
+python3-django: fix CVE-2025-64459
+proftpd: patch CVE-2024-48651
+openh264: patch CVE-2025-27091
+postgresql: upgrade 14.19 -> 14.20
+accountservice: ignore CVE-2023-3297
+botan: patch CVE-2024-34702
+audit: Fix CVE_PRODUCT
+wireshark: fix CVE-2025-13499
+mbedtls: fix CVE-2025-47917
+gosu: set SRCREV_FORMAT variable
+sysdig: set SRCREV_FORMAT
+zlog: patch CVE-2024-22857
+znc: patch CVE-2024-39844
+ImageMagick: Fix CVE-2023-34151
+ImageMagick: Fix CVE-2025-55298
+ImageMagick: Fix CVE-2025-55154
+ImageMagick: Fix CVE-2025-57807
+ImageMagick: Fix CVE-2025-57803
+ImageMagick: Fix CVE-2025-55004
+ImageMagick: Fix CVE-2025-53019
+ImageMagick: Fix CVE-2025-55005
+ImageMagick: Fix CVE-2025-55160
+ImageMagick: Fix CVE-2025-53101
+ImageMagick: Fix CVE-2025-53014
+gflags: switch Git branch from master to main
+apache2: upgrade 2.4.65 -> 2.4.66
+gupnp-igd: add ptest support
+gupnp-av: add ptest support
+gupnp: add ptest support
+gssdp: add ptest support
+xrdp: add ptest support
+xrdp: patch CVE-2022-23493
+xrdp: patch CVE-2022-23484
+xrdp: patch CVE-2022-23483
+xrdp: patch CVE-2022-23481
+xrdp: patch CVE-2022-23480
+xrdp: patch CVE-2022-23479
+xrdp: patch CVE-2022-23478
+xrdp: patch CVE-2022-23477
+xrdp: patch CVE-2022-23468
+xrdp: upgrade 0.9.18 -> 0.9.18.1
+python3-django: fix CVE-2025-32873
+python3-django: fix CVE-2024-53907
+python3-django: fix CVE-2024-41991
+scsirastools: Fix build with usrmerge
+gradm: fix installation with usrmerge enabled
+babeld: fix installation with usrmerge
+fontforge: patch CVE-2024-25081 and CVE-2024-25082
+fontforge: patch CVE-2020-5395, CVE-2020-25690 and CVE-2020-5496
+fontforge: ignore CVE-2019-15785
+yasm: patch CVE-2021-33456
+yasm: patch CVE-2021-33464
+yasm: patch CVE-2023-29579
+yasm: add alternative CVE_PRODUCT
+python3-django: fix CVE-2024-39330
+python3-django: fix CVE-2024-39329
+python3-django: fix CVE-2025-57833
+python3-django: fix CVE-2024-56374
+python3-django: fix CVE-2025-26699
+python3-django: fix CVE-2024-27351
+python3-django: upgrade 4.2.17 -> 4.2.26
+python3-django: upgrade 3.2.23 -> 3.2.25
+libraw: patch CVE-2025-43964
+libraw: patch CVE-2025-43963
+libraw: patch CVE-2025-43961 and CVE-2025-43962
+libraw: patch CVE-2023-1729
+libraw: ignore CVE-2020-35535
+libraw: ignore CVE-2020-35534
+libraw: ignore CVE-2020-35533
+libraw: ignore CVE-2020-35532
+libraw: ignore CVE-2020-35531
+libraw: ignore CVE-2020-35530
+tigervnc: ignore CVE-2014-8241
+libao: ignore CVE-2017-11548
+cockpit: set correct CVE_PRODUCT
+libde265: patch CVE-2022-1253
+links: set CVE_PRODUCT
+jasper: patch CVE-2025-8837
+jasper: patch CVE-2025-8836
+jasper: patch CVE-2025-8835
+jasper: patch CVE-2023-51257
+redis-7: ignore CVE-2022-3734 and CVE-2022-0543
+redis: upgrade 7.0.13 -> 7.0.15
+redis: upgrade 6.2.12 -> 6.2.21
+redis: ignore CVE-2022-3734 and CVE-2022-0543
+exiv2: patch CVE-2021-34335
+exiv2: patch CVE-2021-34334
+exiv2: patch CVE-2021-32815
+exiv2: patch CVE-2021-32617
+exiv2: add missing CVE tag to patch
+exiv2: patch CVE-2021-29623
+libtorrent: ignore CVE-2016-5301
+logcheck: ignore CVE-2017-20148
+monkey: ignore CVE-2013-1771
+monkey: Update status for CVE-2013-2183
+poco: patch CVE-2023-52389
+p7zip: ignore CVE-2022-47069
+wxwidgets: fix CVE-2024-58249
+imagemagick: adds ptest for imagemagick recipe
+libssh : fix CVE-2025-8114
+libwebsockets: fix buildpath warnings from libcap.so
+libwebsockets: remove STAGING_LIBDIR with /
+libwebsockets: fix buildpath warnings
+libwebsockets: Fix reference to TMPDIR
+nspr: fix buildpaths issue
+linuxptp: ignore CVE-2024-42861
+rtmpdump: mark CVE-2015-8270, CVE-2015-8271 and CVE-2015-8272 as fixed
+evince: fix typo in CVE_CHECK_IGNORE
+audiofile: Fix build with clang++
+audiofile: patch CVE-2018-13440 and CVE-2018-17059
+audiofile: backport test for CVE-2015-7747
+audiofile: add ptest support
+audiofile: patch CVE-2019-13147 and CVE-2022-24599
+rsyslog: set status for CVE-2015-3243
+libwmf: patch CVE-2016-9011
+libwmf: patch CVE-2015-4696
+libwmf: patch CVE-2015-4695
+libwmf: patch CVE-2015-0848 and CVE-2015-4588
+libwmf: add missing CVE tag to patch
+libwmf: add proper CVE tag to patch
+tmux: ignore CVE-2020-27347
+usbredir: patch CVE-2021-3700
+usrsctp: patch CVE-2019-20503
+uw-imap: patch CVE-2018-19518
+audiofile: mark CVE-2020-18781 as patched
+redis: update test error message in CVE patch
+pyxdg: update SRC_URI
+python3-behave: update SRC_URI branch
+spice: correct SRC_URI
+spirv-shader-generator: fix SRC_URI branch
+wifi-test-suite: correct SRC_URI
+nng: Rename default branch of github.com:nanomsg/nng.git
+libvdpau: fix SRC_URI
+iksemel: fix SRC_URI branch
+mpd: fix SRC_URI branch
+breakpad: update SRC_URI branch
+unicode-ucd: Rename the license.txt in DL_DIR to avoid conflicts
+unicode-ucd: Updates due to license.txt updates
+consolation: fix SRC_URI protocol
+netsniff-ng: update SRC_URI branch
+ncftp: correct SRC_URI
+usbredir: update SRC_URI
+transmission: update SRC_URI branch
+xf86-video-armsoc: fix SRC_URI
+cmpi-bindings: update SRC_URI branch
+http-parser: fix SRC_URI branch
+zabbix: update SRC_URI
+libssh: fix CVE-2025-8277
+libssh: fix CVE-2025-4878
+poco: remove mongodb from ptest RDEPENDS
+python3-aiohttp: Fix CVE-2024-23829
+python3-pillow: Fix CVE-2024-28219
+gimp: patch CVE-2022-32990
+gimp: patch CVE-2022-30067
+inotify-tools: add PASS/FAIL status to run-ptest script
+inotify-tools: add ptest support for inotify-tools
+hostapd: patch CVE-2022-37660
+mbedtls: upgrade 2.28.9 -> 2.28.10
+frr: add CVE_PRODUCT
+gimp: ignore CVE-2007-3741
+hostapd: patch CVE-2025-24912
+libnet-dns-perl: fix ptests
+python3-aspectlib: fix ptests
+libxml++: fix ptests
+opensc: fix CVE-2023-5992
+ostree: fix ptests
+poco: fix ptests
+mongodb: add tzdata to runtime dependencies
+libencode-perl: fix ptests
+libmime-types-perl: fix ptests
+libfile-slurper-perl: fix ptests
+libdbd-sqlite-perl: fix ptests
+libcrypt-openssl-guess-perl: fix ptests
+libconfig-autoconf-perl: fix ptests
+libauthen-sasl-perl: fix ptest
+libopenmpt: fix ptests
+fuse3: fix ptests
+sshfs-fuse: fix ptests
+net-snmp: fix ptests
+openl2tp: Fix ptests
+frr: fix CVE-2024-31949
+freediameter: fix run-ptest reporting
+python3-scapy: fix ptests
+libtest-harness-perl: fix ptests
+libunix-statgrab: fix ptests
+libxml-libxml-perl: fix ptests
+keepalived: patch CVE-2021-44225
+iptraf-ng: patch CVE-2024-52949
+influxdb: Update CVE status for CVE-2019-10329
+id3lib: mark CVE-2007-4460 as fixed
+gattlib: ignore CVE-2019-6498
+evince: Update status for CVE-2011-0433 and CVE-2011-5244
+klibc: patch CVE-2021-31873
+klibc: patch CVE-2021-31872
+klibc: patch CVE-2021-31871
+klibc: patch CVE-2021-31870
+mariadb: fix CVE-2025-30722
+jq: fix CVE-2025-9403
+mariadb: fix CVE-2025-21490
+cjson: upgrade 1.7.18 -> 1.7.19
+python3-gunicorn: add patch work with geventlet
+python3-gevent: fix syntax error in cve patch
+python3-pint: fix ptests
+python3-requests-toolbelt: disable tests with expired certificate
+python3-py-cpuinfo: fix ptests
+unbound: Fix CVE-2022-3204
+unbound: Fix for CVE-2022-30698 and CVE-2022-30699
+squid: fix esi PACKAGECONFIG
+squid: patch CVE-2025-59362
+squid: patch CVE-2023-46724
+squid: patch CVE-2022-41318
+squid: patch CVE-2022-41317
+squid: patch CVE-2021-46784
+renderdoc: patch CVE-2023-33863, CVE-2023-33864 and CVE-2023-33865
+netkit-telnet: patch CVE-2022-39028
+dash: set CVE_PRODUCT
+wavpack: patch CVE-2016-10169
+zchunk: add ptest support
+cryptsetup: extend licenses with Apache and CC0
+python3-yarl: fix ptests (and make it compatible with current python)
+proftpd: Fix CVE-2023-48795
+python3-betamax: fix ptests
+python3-soupsieve: fix ptests
+python3-typeguard: update ptest dependencies
+python3-ujson: fix run-ptest script
+python3-whoosh: Fix an intermittent ptest
+sdbus-c++: fix ptest script output
+pv: fix ptests
+oprofile: Fix failing ptests
+libxml++-5.0: fix ptests
+libteam: Add missing dependencies revealed by ptests
+libmanette: fix ptests
+libjcat: fix ptests
+libdbi-perl: fix ptests
+jemalloc: include the missing shell scripts and source the corresponds shell scripts for some test cases.
+keyutils: add missing ptest dependencies
+keyutils: fix ptest failed since "+++ Can't Determine Endianness"
+kernel-selftest: fix ptest
+function2: fix ptests
+fmt: fix ptests
+cli11: fix ptests
+faad2: patch CVE-2021-32278
+faad2: patch CVE-2021-32274 and CVE-2021-32277
+faad2: patch CVE-2021-32273
+faad2: patch CVE-2021-32272
+redis: Fix CVE-2025-49844
+redis: Fix CVE-2025-46819
+redis: Fix CVE-2025-46818
+redis: Fix CVE-2025-46817
+redis: Fix CVE-2025-48367
+redis: Fix CVE-2025-32023
+redis: Fix CVE-2025-27151
+vorbis-tools: Fix CVE-2023-43361
+poppler: fix CVE-2025-52885
+yasm: fix CVE-2024-22653
+fio: fix CVE-2025-10823
+squid: mark CVE-2025-54574 as patched
+emlog: set CVE_PRODUCT
+apache2: ignore CVE-2025-3891
+st: Update status for CVE-2017-16224
+webmin: patch CVE-2022-0829
+webmin: patch CVE-2022-0824
+webmin: patch CVE-2019-15642
+webmin: patch CVE-2017-17089
+webmin: patch CVE-2017-15644, CVE-2017-15645 and CVE-2017-15646
+poppler: fix CVE-2025-43718
+xsp: CVE status update for CVE-2006-2658
+zchunk: patch CVE-2023-46228
+zlog: patch CVE-2021-43521
+iniparser: Fix CVE-2025-0633
+iperf2: ignore irrelevant CVEs
+open-vm-tools: fix CVE-2025-41244
+imagemagick: Fix CVE-2022-28463
+tcpreplay: fix CVE-2025-51006
+tcpreplay: fix CVE-2025-9157
+cryptsetup: Update the license field
+udisks2: fix CVE-2025-8067
+botan: patch CVE-2024-50382 and CVE-2024-50383
+botan: patch CVE-2024-39312
+botan: patch CVE-2022-43705
+dovecot: patch CVE-2021-33515
+dovecot: patch CVE-2022-30550
+civetweb: patch CVE-2020-27304
+apache2: ignore irrelevant CVEs
+ace: ignore CVE-2009-1147
+fbida: fix make fbpdf build optional
+
+meta-virtualization:
+kubernetes: Fix for CVE-2024-10220
+cloud-init: Fix CVE-2024-11584
+containerd-opencontainers: fix CVE-2025-64329
+containerd-opencontainers: fix CVE-2024-25621
+kubernetes: Fix for CVE-2025-5187
+
+poky:
+contributor-guide/recipe-style-guide.rst: explain difference between layer and recipe license(s)
+ref-manual/variables.rst: document the CCACHE_TOP_DIR variable
+overview-manual: convert YP-flow-diagram.png to SVG
+overview-manual/yp-intro.rst: fix SDK type in bullet list
+ref-manual/release-process.rst: add a "Development Cycle" section
+test-manual/ptest.rst: detail the exit code and output requirements
+ref-manual/classes.rst: document the image-container class
+Add a new "Security" section
+ref-manual/svg/releases.svg: mark whinlatter as current release
+ref-manual/svg/releases.svg: mark styhead and walnascar EOL
+overview-manual/yp-intro.rst: link to YP members and participants
+overview-manual/yp-intro.rst: change removed ECOSYSTEM to ABOUT
+build-appliance-image: Update to kirkstone head revision
+poky.conf: Bump version for 4.0.33 release
+oeqa: Use 2.14 release of cpio instead of 2.13
+pseudo: Update to pull in 'makewrappers: Fix EFAULT implementation'
+pseudo: Update to pull in openat2 and efault return code changes
+pseudo: Add hard sstate dependencies for pseudo-native
+pseudo: Update to pull in memleak fix
+pseudo: 1.9.0 -> 1.9.2
+pseudo: Upgrade to version 1.9.1
+binutils: Fix CVE-2025-1181
+gnupg: patch CVE-2025-68973
+curl: patch CVE-2025-15224
+curl: patch CVE-2025-15079
+curl: patch CVE-2025-14017
+libarchive: fix CVE-2025-60753 regression
+python3: fix CVE-2025-13836
+libpcap: patch CVE-2025-11964
+libpcap: patch CVE-2025-11961
+python3-urllib3: patch CVE-2025-66418
+dropbear: patch CVE-2019-6111
+cups: allow unknown directives in conf files
+cups: patch CVE-2025-61915
+cups: patch CVE-2025-58436
+qemu: ignore CVE-2025-54566 and CVE-2025-54567
+glib-2.0: patch CVE-2025-14512
+glib-2.0: patch CVE-2025-14087
+glib-2.0: patch CVE-2025-13601
+util-linux: patch CVE-2025-14104
+go: Fix CVE-2025-61729
+go: Fix CVE-2025-61727
+go: Update CVE-2025-58187
+grub: fix CVE-2025-61661 CVE-2025-61662 CVE-2025-61663 CVE-2025-61664
+cross.bbclass: Propagate dependencies to outhash
+scripts/install-buildtools: Update to 4.0.31
+libsoup: fix CVE-2025-12105
+libxslt: Fix CVE-2025-11731
+binutils: fix CVE-2025-11840
+binutils: fix CVE-2025-11839
+go: Fix CVE-2023-39323
+rsync: fix CVE-2025-10158
+qemu: fix CVE-2025-12464
+binutils: Fix CVE-2025-11494
+build-appliance-image: Update to kirkstone head revision
+poky.conf: bump version for 4.0.32
+libmicrohttpd: disable experimental code by default
+openssh: fix CVE-2025-61984
+libpng: patch CVE-2025-66293
+libxml2: Security fix for CVE-2025-7425
+systemd-bootchart: update SRC_URI branch
+go: fix CVE-2025-61724
+go: fix CVE-2025-61723
+go: fix CVE-2025-58189
+go: fix CVE-2025-58187
+libpng: patch CVE-2025-65018
+libpng: patch CVE-2025-64720
+libpng: patch CVE-2025-64506
+libpng: patch CVE-2025-64505
+gnutls: patch CVE-2025-9820
+flac: patch seeking bug
+libarchive: patch CVE-2025-60753
+libarchive: patch 3.8.3 security issue 2
+libarchive: patch 3.8.3 security issue 1
+python3: fix CVE-2025-6075
+ruby: fix CVE-2024-41123
+ruby: fix CVE-2024-39908
+ruby: fix CVE-2024-35176
+python3-idna: Fix CVE-2024-3651
+oe-build-perf-report: relax metadata matching rules
+musl: patch CVE-2025-26519
+xwayland: Fix for CVE-2025-62231
+xwayland: Fix for CVE-2025-62230
+xwayland: Fix for CVE-2025-62229
+elfutils: Fix CVE-2025-1377
+elfutils: Fix CVE-2025-1376
+migration-guides: add release notes for 4.0.31
+documentation: link to the Releases page on yoctoproject.org instead of wiki
+overview-manual: migrate to SVG + fix typo
+dev-manual: debugging: use bitbake-getvar in Viewing Variable Values section
+ref-manual: variables: migrate the OVERRIDES note to bitbake-getvar
+kernel-dev: common: migrate bitbake -e to bitbake-getvar
+kernel-dev: add disable config example
+dev-manual/new-recipe.rst: typo, "whith" -> "which"
+dev-manual/new-recipe.rst: replace 'bitbake -e' with 'bitbake-getvar'
+dev-manual/layers.rst: document "bitbake-layers show-machines"
+dev-manual/new-recipe.rst: update "recipetool -h" output
+goarch.bbclass: do not leak TUNE_FEATURES into crosssdk task signatures
+babeltrace2: fetch with https protocol
+xf86-video-intel: correct SRC_URI as freedesktop anongit is down
+efibootmgr: update SRC_URI branch
+python3-urllib3: Upgrade 1.26.18 -> 1.26.20
+xserver-xorg: Fix for CVE-2025-62231
+xserver-xorg: Fix for CVE-2025-62230
+xserver-xorg: Fix for CVE-2025-62229
+rust-cross-canadian: Ignore CVE-2024-43402
+curl: ignore CVE-2025-10966
+Don't use ftp.gnome.org
+bind: upgrade 9.18.33 -> 9.18.41
+go: fix CVE-2024-24783
+binutils: patch CVE-2025-11413
+binutils: patch CVE-2025-11412
+wpa-supplicant: patch CVE-2025-24912
+openssh: fix CVE-2025-61985
+u-boot: fix CVE-2024-42040
+build-appliance-image: Update to kirkstone head revision
+poky.conf: bump version for 4.0.31
+ref-manual/classes.rst: document the relative_symlinks class
+ref-manual/classes.rst: gettext: extend the documentation of the class
+ref-manual/variables.rst: document the USE_NLS variable
+ref-manual/variables.rst: document the REQUIRED_IMAGE_FEATURES variable
+ref-manual/variables.rst: document the REQUIRED_COMBINED_FEATURES variable
+ref-manual/variables.rst: document the REQUIRED_MACHINE_FEATURES variable
+ref-manual/classes,variables: document the CCACHE_DISABLE variable
+variables.rst: fix LAYERDEPENDS description
+dev-manual, test-manual: Update autobuilder output links
+ref-manual/classes.rst: extend the uninative class documentation
+ref-manual/variables.rst: document UNINATIVE_URL/CHECKSUM
+lz4: patch CVE-2025-62813
+git: fix CVE-2025-48386
+binutils: fix CVE-2025-8225
+binutils: fix CVE-2025-11081
+python3: upgrade 3.10.18 -> 3.10.19
+linux-yocto/5.15: update to v5.15.194
+linux-yocto/5.15: update to v5.15.193
+linux-yocto/5.15: update to v5.15.189
+linux-yocto/5.15: update to v5.15.188
+cmake: fix CVE-2025-9301
+glib-networking: fix CVE-2025-60019
+glib-networking: fix CVE-2025-60018
+
