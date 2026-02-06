@@ -106,12 +106,15 @@ collect_bitbake_info() {
 	oIFS=$IFS
 	IFS="
 "
-	package_list=$(bitbake -s full)
+	package_list=$(bitbake -s)
 	for package in $package_list; do
 		pkg_name=$(echo $package | awk '{ print $1}')
 		pkg_version=$(echo $package | awk -F: '{print $2}')
 		versions[$pkg_name]=$pkg_version
-		if [ -n "$PRINT_CVE_FIXES" ]; then
+	done
+
+	if [ -n "$PRINT_CVE_FIXES" ]; then
+		for pkg_name in $packages; do
 			# JSON format example:
 			# {
 			#   "version": "1",
@@ -143,8 +146,9 @@ collect_bitbake_info() {
 			# collect all issue ids with status 'Unpatched' for this package:
 			cve_list=$(jq -r '.package[] | select (.name == "'${pkg_name}'") | .issue[] | select ( .status == "Unpatched" ) | { id } | join(" ")' $cve_file)
 			cve_issues[$pkg_name]="$cve_list"
-		fi
-	done
+		done
+	fi
+
 	IFS=$oIFS
 
 	# reset to initial state
