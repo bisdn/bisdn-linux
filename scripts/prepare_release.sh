@@ -3,7 +3,7 @@
 set -e
 
 TOPDIR="$(git rev-parse --show-toplevel)"
-BASEBRANCH="main"
+BASEBRANCH="v5.x"
 BRANCHPREFIX="release"
 UPDATE=0
 
