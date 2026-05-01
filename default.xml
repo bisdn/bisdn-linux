@@ -11,7 +11,7 @@
   <!-- open embedded layer -->
   <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="9d8ef26a9693e2c70ae34abe1a753873d42ec588"/>
   <!-- open source bisdn layers -->
-  <project name="bisdn/bisdn-linux.git" path="poky/build-bisdn-linux" remote="github" revision="0ec0201fedc009a4afb1954529c57fe702f41f45"/>
+  <project name="bisdn/bisdn-linux.git" path="poky/build-bisdn-linux" remote="github" revision="a62d5cb1f16e159a9a0f848519fcb769bc548e1b"/>
   <project name="bisdn/meta-bisdn-linux.git" path="poky/meta-bisdn-linux" remote="github" revision="266fd630609632fd63c9d0d9f8e1b8fb50fd98d5"/>
   <project name="bisdn/meta-ofdpa.git" path="poky/meta-ofdpa" remote="github" revision="99d5937881fc550755f8a3e503c6bed8f583d1ff"/>
   <project name="bisdn/meta-open-network-linux.git" path="poky/meta-open-network-linux" remote="github" revision="05309b512fcb3c288cf960e72604915197f81f0a"/>
