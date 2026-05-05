@@ -55,13 +55,13 @@ read_manifest() {
 
 write_manifest() {
 	# KAS does not reference this repository, so take the HEAD revision of
-	# the remote branch, or main if the release branch does not exist yet.
+	# the remote branch, or v5.x if the release branch does not exist yet.
 	if [ -z "${REPOS["bisdn-linux"]}" ]; then
 		BRANCH="$(git branch --show-current)"
 		if git ls-remote --exit-code origin $BRANCH >/dev/null; then
 			REPOS["bisdn-linux"]="$(git rev-parse origin/$BRANCH)"
 		else
-			REPOS["bisdn-linux"]="$(git rev-parse origin/main)"
+			REPOS["bisdn-linux"]="$(git rev-parse origin/v5.x)"
 		fi
 	fi
 
