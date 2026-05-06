@@ -108,7 +108,7 @@ jobs:
           echo "##############################################################"
           du -ms "$SSTATE_CACHE_DIR"
           echo "Removing duplicates in sstate-cache."
-          ./sources/poky/scripts/sstate-cache-management.sh \
+          ./sources/poky/scripts/sstate-cache-management.py \
             --cache-dir="$SSTATE_CACHE_DIR" --remove-duplicated --yes
           echo "##############################################################"
           du -ms "$SSTATE_CACHE_DIR"
