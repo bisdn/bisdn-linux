@@ -62,6 +62,12 @@ repos:
             meta-python:
             meta-webserver:
 
+    # community fixes
+    meta-lts-collab:
+        url: "https://github.com/garmin/meta-lts-collab.git"
+        branch: "kirkstone"
+        path: "sources/meta-lts-collab"
+
     # open source BISDN layers
     meta-bisdn-linux:
         url: "https://github.com/bisdn/meta-bisdn-linux.git"

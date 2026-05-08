@@ -10,6 +10,8 @@
   <project name="poky" path="poky" remote="yocto" revision="kirkstone"/>
   <!-- open embedded layer -->
   <project name="meta-openembedded" path="poky/meta-openembedded" remote="oe" revision="kirkstone"/>
+  <!-- community fixes -->
+  <project name="https://github.com/garmin/meta-lts-collab.git" path="poky/meta-lts-collab" remote="github" revision="kirkstone"/>
   <!-- open source bisdn layers -->
   <project name="bisdn/bisdn-linux.git" path="poky/build-bisdn-linux" remote="github" revision="v5.x"/>
   <project name="bisdn/meta-bisdn-linux.git" path="poky/meta-bisdn-linux" remote="github" revision="v5.x"/>
