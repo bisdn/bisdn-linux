@@ -2,8 +2,8 @@
 <manifest>
   <remote name="github" fetch="https://github.com/" />
   <remote name="gitlab" fetch="ssh://git@gitlab.bisdn.de/" />
-  <remote name="oe" fetch="git://git.openembedded.org/" />
-  <remote name="yocto" fetch="git://git.yoctoproject.org/" />
+  <remote name="oe" fetch="https://git.openembedded.org/" />
+  <remote name="yocto" fetch="https://git.yoctoproject.org/" />
   <!-- yocto layer -->
   <project name="meta-cloud-services" path="poky/meta-cloud-services" remote="yocto" revision="kirkstone"/>
   <project name="meta-virtualization" path="poky/meta-virtualization" remote="yocto" revision="kirkstone"/>
