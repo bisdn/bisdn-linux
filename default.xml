@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="github" fetch="https://github.com/"/>
-  <remote name="gitlab" fetch="ssh://git@gitlab.bisdn.de/"/>
-  <remote name="oe" fetch="git://git.openembedded.org/"/>
-  <remote name="yocto" fetch="git://git.yoctoproject.org/"/>
+  <remote name="github" fetch="https://github.com/" />
+  <remote name="gitlab" fetch="ssh://git@gitlab.bisdn.de/" />
+  <remote name="oe" fetch="https://git.openembedded.org/" />
+  <remote name="yocto" fetch="https://git.yoctoproject.org/" />
   <!-- yocto layer -->
   <project name="meta-cloud-services" path="poky/meta-cloud-services" remote="yocto" revision="783826eceb1b09496099f00a008062c0f9f4ee4e"/>
   <project name="meta-virtualization" path="poky/meta-virtualization" remote="yocto" revision="16155ae737d96f0f53721ad7270c3fe19729d496"/>

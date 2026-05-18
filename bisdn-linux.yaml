@@ -30,7 +30,7 @@ local_conf_header:
 
 repos:
     poky:
-        url: "git://git.yoctoproject.org/poky"
+        url: "https://git.yoctoproject.org/poky"
         branch: "kirkstone"
         path: "sources/poky"
         layers:
@@ -40,7 +40,7 @@ repos:
 
     # additional yocto layers
     meta-cloud-services:
-        url: "git://git.yoctoproject.org/meta-cloud-services"
+        url: "https://git.yoctoproject.org/meta-cloud-services"
         branch: "kirkstone"
         path: "sources/meta-cloud-services"
         layers:
@@ -48,13 +48,13 @@ repos:
             meta-openstack:
 
     meta-virtualization:
-        url: "git://git.yoctoproject.org/meta-virtualization"
+        url: "https://git.yoctoproject.org/meta-virtualization"
         branch: "kirkstone"
         path: "sources/meta-virtualization"
 
     # open embedded layers
     meta-openembedded:
-        url: "git://git.openembedded.org/meta-openembedded"
+        url: "https://git.openembedded.org/meta-openembedded"
         branch: "kirkstone"
         path: "sources/meta-openembedded"
         layers:
