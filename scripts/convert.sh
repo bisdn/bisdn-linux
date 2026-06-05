@@ -7,6 +7,7 @@ declare -A REPOS
 read_lockfile() {
 	REPOS["meta-bisdn-linux"]=$(cat $1 | yq -r '.overrides.repos."meta-bisdn-linux".commit')
 	REPOS["meta-cloud-services"]=$(cat $1 | yq -r '.overrides.repos."meta-cloud-services".commit')
+	REPOS["meta-lts-collab"]=$(cat $1 | yq -r '.overrides.repos."meta-lts-collab".commit')
 	REPOS["meta-ofdpa"]=$(cat $1 | yq -r '.overrides.repos."meta-ofdpa".commit')
 	REPOS["meta-ofdpa-closed"]=$(cat $1 | yq -r '.overrides.repos."meta-ofdpa-closed".commit')
 	REPOS["meta-open-network-linux"]=$(cat $1 | yq -r '.overrides.repos."meta-open-network-linux".commit')
@@ -25,6 +26,8 @@ overrides:
         meta-bisdn-linux:
             commit: ${REPOS["meta-bisdn-linux"]}
         meta-cloud-services:
+            commit: ${REPOS["meta-cloud-services"]}
+        meta-lts-collab:
             commit: ${REPOS["meta-cloud-services"]}
         meta-ofdpa:
             commit: ${REPOS["meta-ofdpa"]}
@@ -45,6 +48,7 @@ read_manifest() {
 	REPOS["bisdn-linux"]=$(xmlstarlet select -t -v  "/manifest/project[@name='bisdn/bisdn-linux.git']/@revision" $1)
 	REPOS["meta-bisdn-linux"]=$(xmlstarlet select -t -v  "/manifest/project[@name='bisdn/meta-bisdn-linux.git']/@revision" $1)
 	REPOS["meta-cloud-services"]=$(xmlstarlet select -t -v  "/manifest/project[@name='meta-cloud-services']/@revision" $1)
+	REPOS["meta-lts-collab"]=$(xmlstarlet select -t -v  "/manifest/project[@name='garmin/meta-lts-collab']/@revision" $1)
 	REPOS["meta-ofdpa"]=$(xmlstarlet select -t -v  "/manifest/project[@name='bisdn/meta-ofdpa.git']/@revision" $1)
 	REPOS["meta-ofdpa-closed"]=$(xmlstarlet select -t -v  "/manifest/project[@name='yocto-meta-layers/meta-ofdpa.git']/@revision" $1)
 	REPOS["meta-open-network-linux"]=$(xmlstarlet select -t -v  "/manifest/project[@name='bisdn/meta-open-network-linux.git']/@revision" $1)
@@ -77,6 +81,7 @@ write_manifest() {
 	       --update "/manifest/project[@name='bisdn/bisdn-linux.git']/@revision" --value "${REPOS["bisdn-linux"]}" \
 	       --update "/manifest/project[@name='bisdn/meta-bisdn-linux.git']/@revision" --value "${REPOS["meta-bisdn-linux"]}" \
 	       --update "/manifest/project[@name='meta-cloud-services']/@revision" --value "${REPOS["meta-cloud-services"]}" \
+	       --update "/manifest/project[@name='garmin/meta-lts-collab.git']/@revision" --value "${REPOS["meta-lts-collab"]}" \
 	       --update "/manifest/project[@name='bisdn/meta-ofdpa.git']/@revision" --value "${REPOS["meta-ofdpa"]}" \
 	       --update "/manifest/project[@name='yocto-meta-layers/meta-ofdpa.git']/@revision" --value "${REPOS["meta-ofdpa-closed"]}" \
 	       --update "/manifest/project[@name='bisdn/meta-open-network-linux.git']/@revision" --value "${REPOS["meta-open-network-linux"]}" \
