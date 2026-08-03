@@ -17,6 +17,6 @@ overrides:
         meta-ofdpa:
             commit: f2741326ce4c0ec23feb07d877e12c4d71dd1bf9
         meta-open-network-linux:
-            commit: 974cb5d64608abe3925772c63e06d341ad944bfb
+            commit: edfc75948df0d469b76719d81a2992304491e54f
         meta-ofdpa-closed:
             commit: 2ded0f07e99fa178d2d6dbea796426469c6b40c8
