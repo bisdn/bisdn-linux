@@ -23,6 +23,9 @@ openssl:
 
 Changes between v5.6.3 and v5.6.4:
 
+build-bisdn-linux:
+default.xml: switch build-bisdn-linux to release branch
+
 meta-bisdn-linux:
 systemd: increase {r,w}mem_max
 baseboxd: update to 3.2.4
@@ -108,6 +111,7 @@ meta-ofdpa:
 ofdpa: backport indigo timout fixes
 
 meta-open-network-linux:
+linux-yocto-onl: update 6.6 to 6.6.148
 linux-yocto-onl: update 6.6 to 6.6.147
 linux-yocto-onl: update 6.6 to 6.6.146
 linux-yocto-onl: update 6.6 to 6.6.145
