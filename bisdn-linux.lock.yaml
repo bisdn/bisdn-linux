@@ -13,7 +13,7 @@ overrides:
         meta-lts-collab:
             commit: cd865d28937180a6d06fae3bc50a9a56e4da29b6
         meta-bisdn-linux:
-            commit: 5bc5d145ad89162ce25d38db0febe37deafcc6b6
+            commit: 0fd437fdda3bc1b434498fb98ea3692e0d13726a
         meta-ofdpa:
             commit: f2741326ce4c0ec23feb07d877e12c4d71dd1bf9
         meta-open-network-linux:
