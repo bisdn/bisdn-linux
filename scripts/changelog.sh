@@ -304,8 +304,9 @@ if [ -n "$PRINT_CVE_FIXES" ]; then
 		fixed_cves=$(comm -23 <(echo "$old_cves") <(echo "$new_cves"))
 
 		if [ -n "$fixed_cves" ]; then
-			echo "$package:"
-			echo "  $fixed_cves"
+			# print CVEs split into 80 character lines, indented
+			# with two spaces
+			fold -w 78 -s <<< "$fixed_cves" | sed 's/^/  /'
 			echo ""
 		fi
 	done
