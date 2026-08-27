@@ -7,6 +7,7 @@ target: full
 
 env:
     # Export variables (if set) to bitbake via BB_ENV_PASSTHROUGH_ADDITIONS
+    BUILD_ID: null
     CCACHE_TOP_DIR: null
     FEEDURIPREFIX: null
 
