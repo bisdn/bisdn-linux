@@ -5,7 +5,28 @@ This document covers details that may be useful to some users.
 All examples build for `generic-x86-64`. Replace it with
 `generic-armel-iproc` when building for ARM.
 
-## Building additional yocto packages
+## Building additional Yocto packages
+
+Assuming the packages you want to add are already present in one of the
+layers configured in [`bisdn-linux.yaml`](bisdn-linux.yaml), you can build
+them by passing them via `--target` to kas:
+
+```shell
+KAS_MACHINE=generic-x86-64 kas build --target lldpd bisdn-linux.yaml -- --runall=do_package_write_ipk
+```
+
+The `--runall=do_package_write_ipk` ensures that not only the package itself,
+but also all packages it depends on will be created.
+
+The resulting package and its dependencies will appear in the subdirectories
+of `build/tmp/deploy/ipk`. After transferring the package to the switch, it
+can be installed with `opkg`:
+
+```shell
+opkg install lldpd_1.0.8-r0_corei7-64.ipk
+```
+
+## Adding additional Yocto packages to the image
 
 Assuming the packages you want to add are already present in one of the
 layers configured in [`bisdn-linux.yaml`](bisdn-linux.yaml), you can have
@@ -14,15 +35,15 @@ line to the configuration. You can do that by creating your own kas
 configuration file and pass it to kas:
 
 ```shell
-$ cat > custom-configation.yaml << EOF
+cat > custom-configation.yaml << EOF
 header:
     version: 14
 
 local_conf_header:
     extra_packages: |
-        IMAGE_INSTALL:append = "iperf3 strongswan"
+        IMAGE_INSTALL:append = " iperf3 strongswan"
 EOF
-$ KAS_MACHINE=generic-x86-64 kas build bisdn-linux.yaml:custom-configuration.yaml
+KAS_MACHINE=generic-x86-64 kas build bisdn-linux.yaml:custom-configuration.yaml
 ```
 
 For packages in other layer repos, you need to add the repos first. The repos
