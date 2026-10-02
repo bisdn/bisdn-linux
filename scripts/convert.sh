@@ -28,7 +28,7 @@ overrides:
         meta-cloud-services:
             commit: ${REPOS["meta-cloud-services"]}
         meta-lts-collab:
-            commit: ${REPOS["meta-cloud-services"]}
+            commit: ${REPOS["meta-lts-collab"]}
         meta-ofdpa:
             commit: ${REPOS["meta-ofdpa"]}
         meta-ofdpa-closed:
