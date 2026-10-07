@@ -301,7 +301,7 @@ if [ -n "$PRINT_CVE_FIXES" ]; then
 			continue
 		fi
 
-		fixed_cves=$(comm -23 <(echo "$old_cves") <(echo "$new_cves"))
+		fixed_cves=$(comm -23 <(echo "$old_cves") <(echo "$new_cves") | sort -t- -k2 -k3 -n)
 
 		if [ -n "$fixed_cves" ]; then
 			echo "$package:"
