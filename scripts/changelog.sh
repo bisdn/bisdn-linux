@@ -290,8 +290,8 @@ if [ -n "$PRINT_CVE_FIXES" ]; then
 	packages=$(echo $old_packages $new_packages | tr '"' ' ' | tr ' ' '\n' | sort -u | tr '\n' ' ')
 	echo -e "\nFixed CVEs:"
 	for package in $packages; do
-		old_cves=$(echo ${old_open_cves[$package]})
-		new_cves=$(echo ${new_open_cves[$package]})
+		old_cves=${old_open_cves[$package]}
+		new_cves=${new_open_cves[$package]}
 		old_version=$(echo ${old_versions[$package]})
 		new_version=$(echo ${new_versions[$package]})
 
