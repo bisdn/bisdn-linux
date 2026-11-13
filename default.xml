@@ -13,7 +13,7 @@
   <!-- community fixes -->
   <project name="garmin/meta-lts-collab.git" path="poky/meta-lts-collab" remote="github" revision="68f3b8482b161773ad540433afda5371caa70c21"/>
   <!-- open source bisdn layers -->
-  <project name="bisdn/bisdn-linux.git" path="poky/build-bisdn-linux" remote="github" revision="55a8a863ffe471e0850a3a47953b9b1ad7f3e3b8"/>
+  <project name="bisdn/bisdn-linux.git" path="poky/build-bisdn-linux" remote="github" revision="0630a18602e82539403d90b979a7cbba0245644f"/>
   <project name="bisdn/meta-bisdn-linux.git" path="poky/meta-bisdn-linux" remote="github" revision="cc4d5ccee2d20f3304116a0b7951beaf87c6b976"/>
   <project name="bisdn/meta-ofdpa.git" path="poky/meta-ofdpa" remote="github" revision="bc282ec98f97fbd3b45be8424061aff79b4d2b39"/>
   <project name="bisdn/meta-open-network-linux.git" path="poky/meta-open-network-linux" remote="github" revision="3e6853d3936b08202f91445bd63acc6ae0aaa54d"/>
