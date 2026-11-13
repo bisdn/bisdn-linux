@@ -1,0 +1,289 @@
+
+Fixed CVEs:
+curl:
+  CVE-2026-8286 CVE-2026-8924 CVE-2026-9547 CVE-2026-12064 CVE-2026-80230
+
+expat:
+  CVE-2026-66046 CVE-2026-76956 CVE-2026-76957
+
+glibc:
+  CVE-2026-5450 CVE-2026-5928
+
+libpcre2:
+  CVE-2026-89156 CVE-2026-89157 CVE-2026-89158 CVE-2026-89160 CVE-2026-89161
+
+libxml2:
+  CVE-2026-86137 CVE-2026-86138 CVE-2026-86139 CVE-2026-86140 CVE-2026-86141 
+  CVE-2026-86142 CVE-2026-86143 CVE-2026-86144
+
+linux-yocto-onl:
+  CVE-2024-58074 CVE-2025-22109 CVE-2025-23132 CVE-2025-23135 CVE-2025-37743 
+  CVE-2025-37746 CVE-2025-37906 CVE-2025-38029 CVE-2025-38041 CVE-2025-38042 
+  CVE-2025-38064 CVE-2025-38132 CVE-2025-38137 CVE-2025-38140 CVE-2025-38187 
+  CVE-2025-38199 CVE-2025-38204 CVE-2025-38207 CVE-2025-38261 CVE-2025-38284 
+  CVE-2025-38359 CVE-2025-38421 CVE-2025-38597 CVE-2025-38605 CVE-2025-38636 
+  CVE-2025-38656 CVE-2025-39677 CVE-2025-39775 CVE-2025-39789 CVE-2025-39830 
+  CVE-2025-39834 CVE-2025-39859 CVE-2025-39862 CVE-2025-39910 CVE-2025-39933 
+  CVE-2025-39958 CVE-2025-71074 CVE-2025-71141 CVE-2025-71227 CVE-2025-71285 
+  CVE-2025-71313 CVE-2026-23007 CVE-2026-23017 CVE-2026-23208 CVE-2026-23217 
+  CVE-2026-23259 CVE-2026-23327 CVE-2026-23371 CVE-2026-23377 CVE-2026-23385 
+  CVE-2026-23472 CVE-2026-31493 CVE-2026-31526 CVE-2026-31562 CVE-2026-31579 
+  CVE-2026-31592 CVE-2026-31630 CVE-2026-31771 CVE-2026-43009 CVE-2026-43022 
+  CVE-2026-43034 CVE-2026-43042 CVE-2026-43048 CVE-2026-43053 CVE-2026-43083 
+  CVE-2026-43101 CVE-2026-43118 CVE-2026-43127 CVE-2026-43172 CVE-2026-43185 
+  CVE-2026-43191 CVE-2026-43204 CVE-2026-43213 CVE-2026-43234 CVE-2026-43263 
+  CVE-2026-43272 CVE-2026-43294 CVE-2026-43298 CVE-2026-43299 CVE-2026-43308 
+  CVE-2026-43309 CVE-2026-43310 CVE-2026-43311 CVE-2026-43325 CVE-2026-43337 
+  CVE-2026-43346 CVE-2026-43352 CVE-2026-43353 CVE-2026-43414 CVE-2026-43443 
+  CVE-2026-43463 CVE-2026-43464 CVE-2026-43465 CVE-2026-43485 CVE-2026-45932 
+  CVE-2026-45934 CVE-2026-45940 CVE-2026-45956 CVE-2026-45961 CVE-2026-46014 
+  CVE-2026-46032 CVE-2026-46044 CVE-2026-46059 CVE-2026-46066 CVE-2026-46071 
+  CVE-2026-46130 CVE-2026-46148 CVE-2026-46171 CVE-2026-46175 CVE-2026-46181 
+  CVE-2026-46228 CVE-2026-46245 CVE-2026-46256 CVE-2026-46272 CVE-2026-46302 
+  CVE-2026-46324 CVE-2026-46325 CVE-2026-46330 CVE-2026-52937 CVE-2026-52956 
+  CVE-2026-52983 CVE-2026-52991 CVE-2026-53000 CVE-2026-53009 CVE-2026-53017 
+  CVE-2026-53018 CVE-2026-53024 CVE-2026-53025 CVE-2026-53091 CVE-2026-53103 
+  CVE-2026-53104 CVE-2026-53108 CVE-2026-53109 CVE-2026-53118 CVE-2026-53178 
+  CVE-2026-53224 CVE-2026-53258 CVE-2026-53277 CVE-2026-53281 CVE-2026-53284 
+  CVE-2026-53285 CVE-2026-53292 CVE-2026-53297 CVE-2026-53321 CVE-2026-53330 
+  CVE-2026-53368 CVE-2026-53377 CVE-2026-53401 CVE-2026-63811 CVE-2026-63825 
+  CVE-2026-63832 CVE-2026-63853 CVE-2026-63857 CVE-2026-63859 CVE-2026-63879 
+  CVE-2026-63979 CVE-2026-63998 CVE-2026-63999 CVE-2026-64006 CVE-2026-64024 
+  CVE-2026-64036 CVE-2026-64038 CVE-2026-64060 CVE-2026-64068 CVE-2026-64076 
+  CVE-2026-64077 CVE-2026-64079 CVE-2026-64117 CVE-2026-64146 CVE-2026-64154 
+  CVE-2026-64159 CVE-2026-64190 CVE-2026-64213 CVE-2026-64283 CVE-2026-64388 
+  CVE-2026-64389 CVE-2026-64400 CVE-2026-98049 CVE-2026-98053 CVE-2026-98058 
+  CVE-2026-98062 CVE-2026-98099 CVE-2026-98124 CVE-2026-98131 CVE-2026-98134 
+  CVE-2026-98147 CVE-2026-98148 CVE-2026-98156 CVE-2026-98432 CVE-2026-100072 
+  CVE-2026-100074 CVE-2026-100076 CVE-2026-100077
+
+openssh:
+  CVE-2026-55653 CVE-2026-55654 CVE-2026-55655 CVE-2026-73281 CVE-2026-73282 
+  CVE-2026-73283 CVE-2026-123158
+
+openssl:
+  CVE-2026-35189 CVE-2026-35191 CVE-2026-42772 CVE-2026-54872 CVE-2026-54873 
+  CVE-2026-54875 CVE-2026-72897 CVE-2026-75804 CVE-2026-75805 CVE-2026-75806 
+  CVE-2026-77696 CVE-2026-84782 CVE-2026-84784
+
+python3-py:
+  CVE-2022-42969
+
+python3-urllib3:
+  CVE-2026-97689
+
+vim:
+  CVE-2026-51400 CVE-2026-51401
+
+Changes between v6.0.0 and v6.0.1:
+
+meta-bisdn-linux:
+bisdn-linux: bump version to 6.0.1
+python3-pip: drop emSign certificates from vendored certifi
+go: mark as unaffected by CVE-2026-111943
+systemd: merge .inc into bbappend
+keepalived: drop version from files path
+grpc: drop version from files
+
+meta-ofdpa:
+openbcm-gpl-modules: use generic license
+
+meta-open-network-linux:
+linux-yocto-onl: update 6.12 to 6.12.115
+linux-yocto-onl: update 6.12 to 6.12.114
+linux-yocto-onl: update 6.12 to 6.12.113
+
+meta-openembedded:
+python3-grpcio: update gRPC repo roots
+grpc: update gRPC repo roots
+nss: remove compromised eMudhra certificates
+php: upgrade 8.2.34 -> 8.2.35
+nodejs: Security fix for CVE-2026-48937
+nodejs: Security fix for CVE-2026-48619
+ntfs-3g-ntfsprogs: fix CVE-2026-40706
+ntfs-3g-ntfsprogs: fix CVE-2026-42616
+ntfs-3g-ntfsprogs: fix CVE-2026-42618
+ntfs-3g-ntfsprogs: fix CVE-2026-46569
+ntfs-3g-ntfsprogs: fix CVE-2026-46570
+ntfs-3g-ntfsprogs: fix CVE-2026-46571
+ntfs-3g-ntfsprogs: fix CVE-2026-46572 and CVE-2026-42617
+nodejs: Security fix for CVE-2026-48617
+apache2: upgrade 2.4.68 -> 2.4.69
+squid: patch CVE-2026-104786
+squid: patch CVE-2026-61642
+squid: patch CVE-2026-50012
+squid: patch CVE-2026-47729
+squid: patch CVE-2026-32748
+squid: patch CVE-2026-33515
+squid: patch CVE-2026-33526
+hdf5: Fix CVE-2026-17574
+hdf5: Fix CVE-2026-17573
+libwebsockets: patch CVE-2026-78161
+spidev-test: clean the build dir before configure
+syslog-ng: patch CVE-2026-39879
+cjson: patch CVE-2026-87933
+c-ares: patch CVE-2026-69184
+c-ares: patch CVE-2026-69186
+ntpsec: add CVE_STATUS for CVE-2016-1548
+ntp: add CVE-2016-1548 to CVE_STATUS_NTP
+python3-aiohttp: fix CVE-2026-54273
+python3-aiohttp: fix CVE-2026-54279
+python3-aiohttp: fix CVE-2026-54278
+python3-aiohttp: fix CVE-2026-54277
+python3-aiohttp: fix CVE-2026-54275
+python3-aiohttp: fix CVE-2026-54274
+python3-aiohttp: fix CVE-2026-50269
+python3-aiohttp: fix CVE-2026-47265
+python3-aiohttp: fix CVE-2026-34525
+python3-aiohttp: fix CVE-2026-34520
+python3-aiohttp: fix CVE-2026-34517
+python3-aiohttp: fix CVE-2026-34516
+python3-aiohttp: fix CVE-2026-34519
+
+meta-virtualization:
+podman: make manpages optional via PACKAGECONFIG
+crun: patch CVE-2026-47766
+
+poky:
+openssh: fix CVE-2026-123158 (aka "sshhole")
+contributor-guide: Adopt new AI-Assisted Contribution Policy
+docs-wide: convert diagrams that use Nimbus Roman to use Nimbus Sans
+standards.md: recommend Nimbus Sans instead of Nimbus Roman
+standards.md: update our admonitions encouraged usage
+theme_overrides.css: rework admonition colors
+migration-guide: add release notes for 5.0.21
+yocto-bsps: update to v6.6.160
+yocto-bsps: update to v6.6.159
+README.hardware.md: Add scarthgap subject-prefix to git-send-email suggestion
+util-linux: patch CVE-2026-53615
+apr-util: Fix CVE-2026-34502
+apr-util: Fix CVE-2026-34501
+apr-util: Mark CVE-2026-34191 not applicable
+apr-util: Fix CVE-2026-32327
+apr-util: Fix CVE-2025-49506
+systemd: try AT_EMPTY_PATH for access_fd() first
+libarchive: fix CVE-2026-15028
+curl: fix CVE-2026-80230
+linux-yocto/6.6: update CVE exclusions (6.6.160)
+linux-yocto/6.6: aufs: refresh to upstream aufs6.6.84
+linux-yocto/6.6: update to v6.6.160
+linux-yocto/6.6: update to v6.6.159
+linux-yocto/6.6: update to v6.6.157
+linux-yocto/6.6: update to v6.6.156
+gstreamer: skip test_queue:test_leaky_downstream test as it's flakey
+gstreamer1.0: disable an intermittently failing test
+shadow-native: Disable syslog usage
+python3: upgrade 3.12.15 -> 3.12.16
+dhcpcd: patch CVE-2025-70102
+glibc: stable 2.39 branch updates to b7a0de2c8f
+glibc: patch CVE-2026-97399
+glibc: patch CVE-2026-89092
+glibc: patch CVE-2026-8674
+glibc: patch CVE-2026-18374
+glibc: add tests for CVE-2026-77117 and CVE-2026-80489.
+glibc: patch CVE-2026-80489
+glibc: patch CVE-2026-77117
+glibc: patch CVE-2026-19499
+glibc: patch CVE-2026-19542
+glibc: patch CVE-2026-6368
+glibc: patch CVE-2026-6791
+glibc: patch CVE-2026-5450
+glibc: patch CVE-2026-5928
+python3-pyelftools: add python3-logging to RDEPENDS
+python3-urllib3: Fix CVE-2026-97689
+libpcre2: update to latest release branch hash 50b3c0d7ce
+go: fix CVE-2026-56862
+libpng: patch CVE-2026-46675
+glib-2.0: patch CVE-2026-16118
+glib-2.0: patch CVE-2026-15588
+popt: patch CVE-2026-18743
+expat: patch CVE-2026-77214
+expat: patch CVE-2026-102633
+tzdata/tzcode-native: upgrade 2026d -> 2026e
+util-linux: patch CVE-2026-76642
+util-linux: patch CVE-2026-78410
+util-linux: patch CVE-2026-78408
+util-linux: patch CVE-2024-28085 regression
+util-linux: patch CVE-2026-53612
+util-linux: patch CVE-2026-53613
+util-linux: patch CVE-2026-53614
+scripts/install-buildtools: Update to 5.0.21
+ref-manual/release-process.rst: add textual legend
+ref-manual/svg/releases.svg: update diagram
+python3-certifi: upgrade 2026.7.22 -> 2026.10.19
+python3-certifi: upgrade 2026.6.17 -> 2026.7.22
+python3-certifi: upgrade 2026.5.20 -> 2026.6.17
+python3-certifi: upgrade 2026.4.22 -> 2026.5.20
+python3-certifi: upgrade 2026.2.25 -> 2026.4.22
+python3-certifi: Upgrade 2026.1.4 -> 2026.2.25
+python3-certifi: upgrade 2025.11.12 -> 2026.1.4
+python3-certifi: upgrade 2025.8.3 -> 2025.11.12
+python3-certifi: upgrade 2025.7.9 -> 2025.8.3
+python3-certifi: upgrade 2025.6.15 -> 2025.7.9
+python3-certifi: upgrade 2025.4.26 -> 2025.6.15
+python3-certifi: upgrade 2025.1.31 -> 2025.4.26
+python3-certifi: upgrade 2024.12.14 -> 2025.1.31
+python3-certifi: upgrade 2024.8.30 -> 2024.12.14
+python3-certifi: upgrade 2024.7.4 -> 2024.8.30
+python3-certifi: upgrade 2024.6.2 -> 2024.7.4
+python3-certifi: upgrade 2024.2.2 -> 2024.6.2
+Revert "python3-certifi: Fix CVE-2024-39689"
+ca-certificates: Disable compromised CA certificates
+bitbake: prserv: commit new revisions when a request succeeds
+python3-click: fix CVE-2026-7246
+python3-py: ignore CVE-2022-42969
+python3-py: correct CVE_PRODUCT mapping
+libpcap: Fix CVE-2026-18238
+libpcap: Fix CVE-2026-18313
+libpcap: Fix CVE-2026-6554
+libpcap: Fix CVE-2026-6244
+libpcap: Fix CVE-2026-31911
+libpcap: Fix CVE-2026-31912
+libpcap: Fix CVE-2026-0799
+qemu: restore 64-bit file lock handling for 32-bit guests
+systemd: replace a bunch of assert() with friendlier checks
+connman: fix syslog identity with glibc
+openssl: upgrade 3.5.8 -> 3.5.9
+alsa-lib: patch CVE-2026-90781
+tzdata/tzcode-native: upgrade 2026c -> 2026d
+openssh: set status for CVE-2026-55654
+openssh: set status for CVE-2026-55655
+openssh: set status for CVE-2026-55653
+openssh: fix CVE-2026-73281
+openssh: fix CVE-2026-73282
+openssh: fix CVE-2026-73283
+python3: upgrade 3.12.14 -> 3.12.15
+curl: ignore CVE-2026-8924
+curl: fix CVE-2026-8286
+curl: set CVE_STATUS for CVE-2026-12064
+curl: set CVE_STATUS for CVE-2026-9547
+vim: set CVE_STATUS for CVE-2026-51401
+vim: set CVE_STATUS for CVE-2026-51400
+expat: patch CVE-2026-93990
+expat: patch CVE-2026-76957
+expat: patch CVE-2026-76956
+expat: patch CVE-2026-66046 and CVE-2026-76641
+libsolv: patch CVE-2026-48863
+libxml2: Fix CVE-2026-86144
+libxml2: Fix CVE-2026-86143
+libxml2: Fix CVE-2026-86142
+libxml2: Fix CVE-2026-86141
+libxml2: Fix CVE-2026-86140
+libxml2: mark CVE-2026-86139 fixed
+libxml2: Fix CVE-2026-86138
+libxml2: Fix CVE-2026-86137
+systemd: patch CVE-2026-4105
+mesa: patch CVE-2026-40393
+dhcpcd: set status for CVE-2026-56116
+libpng: patch CVE-2026-33416 regression
+oeqa/selftest/devtool: cover update-recipe --initial-rev
+devtool: standard: fix update-recipe/finish --initial-rev override
+gstreamer1.0-plugins-bad: Security fix for CVE-2026-3082
+gnutls: fix CVE-2026-5260
+gnutls: fix CVE-2026-42015
+gnutls: fix CVE-2026-42014
+gnutls: fix CVE-2026-42013
+gnutls: fix CVE-2026-42012
+libaio: update SRC_URI
+ref-manual: drop "partition" as a wic kickstart command
+
