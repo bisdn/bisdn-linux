@@ -290,8 +290,8 @@ if [ -n "$PRINT_CVE_FIXES" ]; then
 	packages=$(echo $old_packages $new_packages | tr '"' ' ' | tr ' ' '\n' | sort -u | tr '\n' ' ')
 	echo -e "\nFixed CVEs:"
 	for package in $packages; do
-		old_cves=$(echo ${old_open_cves[$package]})
-		new_cves=$(echo ${new_open_cves[$package]})
+		old_cves=${old_open_cves[$package]}
+		new_cves=${new_open_cves[$package]}
 		old_version=$(echo ${old_versions[$package]})
 		new_version=$(echo ${new_versions[$package]})
 
@@ -301,11 +301,13 @@ if [ -n "$PRINT_CVE_FIXES" ]; then
 			continue
 		fi
 
-		fixed_cves=$(comm -23 <(echo "$old_cves") <(echo "$new_cves"))
+		fixed_cves=$(comm -23 <(echo "$old_cves") <(echo "$new_cves") | sort -t- -k2 -k3 -n)
 
 		if [ -n "$fixed_cves" ]; then
 			echo "$package:"
-			echo "  $fixed_cves"
+			# print CVEs split into 80 character lines, indented
+			# with two spaces
+			fold -w 78 -s <<< "$(echo $fixed_cves)" | sed 's/^/  /'
 			echo ""
 		fi
 	done
